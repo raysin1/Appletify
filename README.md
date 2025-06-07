@@ -18,3 +18,11 @@
 
 ![image](https://github.com/user-attachments/assets/82cd3960-9401-4cc5-9cab-e68590e3ef75)
 | - |
+
+
+## To do:
+
+- Fix artist names in albums with multiple artists
+- Fix artist page play button bar
+- Appears on/ artist playlists tab
+- Hover play button
