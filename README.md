@@ -22,6 +22,7 @@
 
 ## To do:
 
+- Make artist image bigger
 - Fix artist names in albums with multiple artists
 - Fix artist page play button bar
 - Appears on/ artist playlists tab
