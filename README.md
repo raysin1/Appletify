@@ -7,10 +7,7 @@
 
 ## Installation
 
-  1. Copy the folder `apple-music` into `%appdata%\spicetify\Themes`
-  2. Run `spicetify config current_theme apple-music` on terminal
-  3. Copy the contents of the `extensions` folder into `%appdata%\spicetify\Extensions`
-  4. Run `spicetify config extensions left-sidebar.js top-playbar.js search-input.js` on terminal
+  Run https://github.com/thrway237/apple-music-spicetify/blob/main/install.ps1
 
 
 # To be used with:
