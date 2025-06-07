@@ -21,5 +21,4 @@
 
 ## To do:
 
-- Fix artist names in albums with multiple artists
 - Fix discography shelf
