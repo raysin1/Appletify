@@ -1,6 +1,7 @@
 # Apple Music theme for Spicetify
 
-![Screenshot 2025-06-07 011010](https://github.com/user-attachments/assets/d446ecdd-5fec-4dcf-b04a-f16064ac2035)
+
+![Screenshot 2025-06-07 020745](https://github.com/user-attachments/assets/bcecf0ad-1009-4288-9e48-7fa685ccefe5)
 
 
 
