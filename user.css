@@ -415,7 +415,12 @@ display:none;}
   margin-left:5px;
 }
 
+.bRRTUCB99PsPsPVYchRh .oaVwShR89gQxLH2tco5G{
+  transition: transform 0.4s ease-in-out!important;
+}
 
+.bRRTUCB99PsPsPVYchRh .oaVwShR89gQxLH2tco5G:hover {transform: scale(1.1) scale(0.85)!important; /* Zooms in then shrinks */
+}
 
 .b7r2WRiu5f9Q99qmyreh .main-topBar-searchBar {
     background: var(--background-elevated-highlight);
@@ -587,7 +592,6 @@ scale:1.1;}
 [data-testid="playlist-page"] .main-entityHeader-backgroundColor ,.main-entityHeader-backgroundColor.main-entityHeader-overlay{
   display:none;
 }
-
 
 
 
@@ -1368,15 +1372,13 @@ margin-top:50px;
 [data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow [aria-label*="More options for"] span{
 color:white;
 }
-  
+
 
 .Xo8dgIGCCWjHXWBoKhaV{
   zoom:1.1;
 }
 
-[data-testid="album-page"] > div.main-entityHeader-container.JYKKZFIXuf9lIHVeszuS > div.iWTIFTzhRZT0rCD0_gOK.contentSpacing > div.main-entityHeader-headerText > div > span:nth-child(4){
-  display:none;
-}
+
 
 [data-testid="album-page"] > div:nth-child(4) > div.Xo8dgIGCCWjHXWBoKhaV > div > div.main-rootlist-wrapper > div:nth-child(2) > div > div > div > div.main-trackList-rowSectionStart > div > span{
   display:none;
@@ -1485,29 +1487,6 @@ font-size:2.7rem!important;
 }
   
   
-/*Divider*/
-[data-testid="album-page"].main-entityHeader-metaDataText:not(:first-child)::before, .main-entityHeader-divider::before {
-  opacity:0.7;
-}
-
-
-/*Album year*/
-[data-testid="album-page"] .main-entityHeader-headerText > div > span:nth-child(3){
-  font-size:28px;
-  margin-left:5px;
-  color:rgba(255, 255, 255, 0.64);}
-
-/*Album artist*/
-[data-testid="album-page"] .main-entityHeader-headerText > div > div.main-entityHeader-metaDataText.main-entityHeader-creatorWrapper > span:has([href^="/artist"]) a{
-  font-size:28px;
-  font-weight:400;
- color:#fa586a;}
-  
-/*Various Artists*/  
-[data-testid="album-page"] .main-entityHeader-container.main-entityHeader-nonWrapped > div.iWTIFTzhRZT0rCD0_gOK.contentSpacing > div.main-entityHeader-headerText > div > div > span{
-  font-size:28px;
-  font-weight:400;}
-  
 .main-contextMenu-menu {
   border-radius: 10px;
   overflow: visible; 
@@ -1516,9 +1495,7 @@ font-size:2.7rem!important;
 }
 
 
-#main > div.Root.global-nav.centered-layout > div.Root__top-container > div.Root__main-view > div.main-view-container > div.main-view-container__scroll-node.ZjfaJlGQZ42nCWjD3FDm > div:nth-child(1) > div > main > section > div.main-entityHeader-container.JYKKZFIXuf9lIHVeszuS > div.iWTIFTzhRZT0rCD0_gOK.contentSpacing > div.main-entityHeader-headerText > div > div.GI8QLntnaSCh2ONX_y2c{
-  display:none;
-}
+
 
 
 
@@ -1631,8 +1608,38 @@ letter-spacing:0.25px;
 .main-trackList-trackListRow{
   border-radius:8px!important;}
 
-[data-testid="album-page"] .main-entityHeader-headerText [data-separator="true"]{
-  zoom:1.5;
+
+/*Sub title*/
+
+/*Hide song amount. duration, and the separator before it*/
+[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb .GI8QLntnaSCh2ONX_y2c{display:none;}
+
+[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb [data-separator="true"]:last-of-type{display:none;}
+
+
+[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb [data-encore-id="text"] [data-testid="creator-link"]{
+  font-size:28px;
+  font-weight:400;
+  color:#fa586a;}
+
+[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb .main-entityHeader-creatorWrapper [title="Various Artists"] ~ [data-encore-id="text"] {
+  font-size:28px;
+  font-weight:400;
+  color:#fa586a;
+  
+}
+
+  
+[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb > .w1TBi3o5CTM7zW1EB3Bm{
+  font-size:25px;
+  margin-left:3px;
+  margin-top:2px;
+  color:rgba(255, 255, 255, 0.64);}
+  
+
+ [data-testid="album-page"] .main-entityHeader-headerText [data-separator="true"],
+   [data-testid="album-page"] .blfR_YJUsKUvdgTejBSb .main-entityHeader-divider{
+  zoom:1.3;
   margin-right:2px;
     color:rgba(255, 255, 255, 0.64);
 }
@@ -1949,9 +1956,7 @@ display:none;}
 }
 .main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover{
   background-color:#a30012;
-
 }
-
 
 
 .BeautifulLyricsPage.Fullscreen .Content .PlayPanel{
@@ -2067,7 +2072,6 @@ display:none;
   margin-top:20px;
 }
 
-
 .ffFwfKcPDbmAPLXzxzKq:before{
   background-color:#3b3b3b
   
@@ -2122,6 +2126,4 @@ font-size:22px;
   height:0px;
   width:0px;
 }
-
-
 
