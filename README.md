@@ -11,9 +11,9 @@
 
 
 
-# Installation
+## Installation
 
-  ### Run [install.ps1](https://github.com/thrway237/apple-music-spicetify/blob/main/install.ps1)
+ Run [install.ps1](https://github.com/thrway237/apple-music-spicetify/blob/main/install.ps1)
 
 
 
