@@ -6,6 +6,11 @@
 | --- | --- |
 
 
+## Installation
+
+  1. Copy `apple-music` into `%appdata%\spicetify\Themes`
+  2. Run `spicetify config current_theme apple-music` on terminal
+  3. Copy the contents of the `extensions` folder into the `%appdata%\spicetify\Extensions`
 
 
 # To be used with:
