@@ -1,5 +1,5 @@
 <h3 align="center">
-	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Apple_Music_icon.svg/2048px-Apple_Music_icon.svg.png" width="140" alt="Logo"/><br/>
+	<img src="https://github.com/raysin1/Appletify/blob/main/screenshots/icon.png?raw=true" width="140" alt="Logo"/><br/>
 </h3>
 <div align="center">
   <h1>Appletify</h1>
