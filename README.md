@@ -1,5 +1,6 @@
 <h3 align="center">
-	<span style="font-size: 9em;">Appletify</span>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Apple_Music_icon.svg/2048px-Apple_Music_icon.svg.png" width="100" alt="Logo"/><br/>
+	<span style="font-size: 32px;">Apple Music</span> for <a href="https://github.com/spicetify/spicetify-cli">Spicetify</a>
 </h3>
 
 
