@@ -31,4 +31,4 @@
 
 - Fix discography shelf display
 - Weird grey dots upon tippy popups
-- Fix full songs search page
+- Fix full songs, albums, artists, search page
