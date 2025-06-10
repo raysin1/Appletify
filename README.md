@@ -5,9 +5,7 @@
 
 
 
-
-
-![Screenshot 2025-06-07 020745](https://github.com/user-attachments/assets/bcecf0ad-1009-4288-9e48-7fa685ccefe5)
+![image](https://github.com/thrway237/apple-music-spicetify/blob/main/screenshots/preview.png)
 
 
 
