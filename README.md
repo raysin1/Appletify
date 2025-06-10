@@ -29,4 +29,5 @@
 
 ## To do:
 
-- Fix discography shelf
+- Fix discography shelf display
+- Weird grey dots upon tippy popups
