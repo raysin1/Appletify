@@ -951,7 +951,7 @@ button[data-testid="control-button-skip-forward"] svg {
 
 
 
-.LayoutResizer__resize-bar{display:none;}
+
 
 
 .#Desktop_LeftSidebar_Id{
@@ -2193,4 +2193,4 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar{
   box-shadow: 1px 0 0 0 #626262;
 }
 
-
+.LayoutResizer__resize-bar{opacity:0!important;}
