@@ -26,7 +26,9 @@
 
 ### To be used with:
 
-<img src="https://github.com/user-attachments/assets/82cd3960-9401-4cc5-9cab-e68590e3ef75" width="240"/>
+<img src="https://github.com/user-attachments/assets/82cd3960-9401-4cc5-9cab-e68590e3ef75" width="280"/>
+
+**Credits to [ohitstom](https://github.com/ohitstom) and [Cali](https://github.com/surfbryce)**
 
 ### Disclaimers:
 - May conflict with other extensions
