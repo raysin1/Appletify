@@ -32,3 +32,4 @@
 - Fix artist page shelf display
 - Weird grey dots upon tippy popups
 - Fix full songs, albums, artists, search page
+- Add empty queue page
