@@ -1,4 +1,5 @@
-
+#Desktop_LeftSidebar_Id .main-yourLibraryX-libraryContainer.YourLibraryX .main-gridContainer-gridContainer.main-gridContainer-uniformRowHeight{
+--min-column-width: 122px!important;}
 
 /*COLORS*/
 
@@ -643,9 +644,6 @@ display:none;}
 }
 
 
- #Desktop_LeftSidebar_Id .main-yourLibraryX-libraryContainer.YourLibraryX .main-gridContainer-gridContainer.main-gridContainer-uniformRowHeight{
-  --min-column-width: 142px!important;
-}
 .main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover{
   background-color:#a30012;
 
@@ -1931,9 +1929,6 @@ display:none;}
 }
 
 
- #Desktop_LeftSidebar_Id .main-yourLibraryX-libraryContainer.YourLibraryX .main-gridContainer-gridContainer.main-gridContainer-uniformRowHeight{
-  --min-column-width: 142px!important;
-}
 .main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover{
   background-color:#a30012;
 
@@ -2239,3 +2234,23 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar{
 }
 
 .LayoutResizer__resize-bar{opacity:0!important;}
+[aria-label*="All songs for “"]{
+  margin-top:50px;
+  margin-left:60px;
+  margin-right:90px;
+  zoom:1.15
+}
+  
+[aria-label*="All songs for “"] .main-rootlist-wrapper > div:nth-child(2) > div:nth-child(1) > div:After{
+  border-top:none;
+}
+
+[aria-label*="All songs for “"] .main-rootlist-wrapper > div:nth-child(2) > div:nth-child(1) > div{
+  margin-top:-10px;
+}
+
+[id="searchPage"] .w7SWsAZah4vovAuFxjgk.Qmu4FPZCnrDpQ85s4az5{zoom:1.3;}
+
+
+
+
