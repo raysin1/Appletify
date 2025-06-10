@@ -347,9 +347,6 @@ display:none;}
 
 .main-globalNav-searchContainer{min-width:10px;width:100%;}
 
-.Root__nav-bar {
-  transition: width 0.25s ease;
-}
 
 .main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg .main-globalNav-searchSection [data-encore-id="formInput"]{
   background-color:transparent;
@@ -420,7 +417,8 @@ display:none;}
 
 .main-nowPlayingBar-left{padding-left:0px;}
 
-.Root__nav-bar{zoom:1.05;}
+
+
 
 .main-nowPlayingBar-left{zoom: 1.1;}
 
@@ -570,10 +568,7 @@ display:none;}
    background-color:#fa586a;
    border-radius:8px;}
  
-#context-menu{
-  outline:1px solid #929292;;
-  border-radius:10px;
-}
+
  .main-contextMenu-menuItemButton{
    padding-top:7px;
    padding-bottom:7px;
@@ -623,10 +618,6 @@ scale:1.1;}
 
 [data-testid="playlist-page"] .main-entityHeader-container.JYKKZFIXuf9lIHVeszuS{
   height: 495px;
-}
-
-[data-testid="playlist-page"] .main-entityHeader-backgroundColor ,.main-entityHeader-backgroundColor.main-entityHeader-overlay{
-  display:none;
 }
 
 
@@ -695,7 +686,7 @@ v.Root__now-playing-bar > footer > div > div.main-nowPlayingBar-right > div > bu
   opacity: 1;}
 
 [data-testid="playback-duration"]{
-  display:none;
+margin-right: -50px;
 }
 
 
@@ -962,7 +953,11 @@ button[data-testid="control-button-skip-forward"] svg {
 
 .LayoutResizer__resize-bar{display:none;}
 
-#Desktop_LeftSidebar_Id{max-width:310px}
+
+.#Desktop_LeftSidebar_Id{
+  zoom:1.05;
+  transition: width 0.25s ease;max-width:310px}
+
 .Root__right-sidebar{max-width:295px;}
 
 .BeautifulLyricsPage.Fullscreen.BeautifulLyricsBackground > div > div.PlayPanel > div.Timeline > div > div.Handle{display:none;}
@@ -1471,12 +1466,7 @@ font-size:2.7rem!important;
 }
   
   
-.main-contextMenu-menu {
-  border-radius: 10px;
-  overflow: visible; 
-  background-color: rgba(33, 33, 33, 0.45);
-  position: relative; 
-}
+
 
 
 
@@ -1948,11 +1938,6 @@ scale:1.1;}
 
 
 
-#Desktop_LeftSidebar_Id{
-      border-right: 1px solid #3b3b3b;
-}
-
-
 
 .main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg .main-yourLibraryX-collapseButton.iYP0xuQiJCgi7gx1jUPJ [aria-label="Open Your Library"] span svg path{
   d:path("M14.5498331,5.79055576 L14.8667346,5.79824073 C15.6519271,5.85753895 17.9167852,6.09354452 19.3663083,8.18658259 C19.2454992,8.2761902 16.6786385,9.72115188 16.7091378,12.7589876 C16.7390911,16.3870553 19.9696682,17.5970079 20,17.6265086 C19.9696682,17.7155832 19.487499,19.3381578 18.3096405,21.0185738 C17.2829229,22.4941235 16.2256873,23.9394547 14.5345925,23.9689736 C12.9038728,23.9984743 12.3599697,23.0246181 10.4887983,23.0246181 C8.61624942,23.0246181 8.01243658,23.9394547 6.47193668,23.9984743 C4.84148068,24.056773 3.60409403,22.4336653 2.57735781,20.9595512 C0.463094554,17.9799264 -1.13731196,12.5531248 1.03685791,8.89465382 C2.09390733,7.06587112 4.02671959,5.91602544 6.10974825,5.88615523 C7.71015477,5.85753895 9.18984525,6.91939744 10.1566562,6.91939744 C11.1229398,6.91939744 12.8433271,5.68057112 14.8667346,5.79824073 Z M14.882569,-1.50990331e-14 C15.034318,1.42063421 14.4589476,2.81085604 13.6110595,3.84623659 C12.7325883,4.85257077 11.3405768,5.6504798 9.94727779,5.53248307 C9.76560653,4.17140151 10.4624841,2.72297789 11.2498451,1.83563692 C12.1267465,0.799444643 13.6413789,0.0602553239 14.882569,-1.50990331e-14 Z");
@@ -2195,4 +2180,17 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar{
   height: 100%;
   box-shadow: inset 0 0 0 100vmax rgba(38, 38,38, 0.6);
   z-index: -1;}
+
+#context-menu [role="menu"]{
+    outline:1px solid #676767;
 }
+  
+  
+#context-menu [data-encore-id="icon"]{fill:#ffffffbd;}
+
+
+.main-navBar-mainNav{
+  box-shadow: 1px 0 0 0 #626262;
+}
+
+
