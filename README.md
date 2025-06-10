@@ -17,7 +17,7 @@
 
 # Installation
 1. Download the [.zip file](https://raw.githubusercontent.com/raysin1/Appletify/main/appletify.zip) and extract contents to `%appdata%\spicetify\Themes`
-2. Run `spicetify config current_theme appletify && spicetify apply
+2. Open terminal and run `spicetify config current_theme appletify && spicetify apply`
 
 
 
