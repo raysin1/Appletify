@@ -37,7 +37,7 @@
 # 
 ### To do:
 
-- Fix artist page shelf display
-- Weird grey dots upon tippy popups
+
 - Fix full page search result shelves
 - Add empty queue indicator
+- Fix tippy pop-up outline
