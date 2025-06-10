@@ -1,6 +1,5 @@
 @import url('https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/master/SF-Pro.ttf');
 
-
 /*COLORS*/
 
 .ix_8kg3iUb9VS5SmTnBY .ButtonInner-large-iconOnly{
@@ -2137,27 +2136,27 @@ font-size:22px;
 }
 
 /*Default grid view play button*/
-._7kcfiJ2UNEh3CDR9Wau{
+.main-yourLibraryX-libraryContainer ._7kcfiJ2UNEh3CDR9Wau{
   bottom:0;
   right:0;
   scale:0.6;
 }
-.ix_8kg3iUb9VS5SmTnBY button span span svg{fill:white;
+.main-yourLibraryX-libraryContainer .ix_8kg3iUb9VS5SmTnBY button span span svg{fill:white;
   scale:1.2;}
 }
 
 
-._7kcfiJ2UNEh3CDR9Wau{
+.main-yourLibraryX-libraryContainer ._7kcfiJ2UNEh3CDR9Wau{
   transform:unset!important;
  transition: none!important;
 }
 
-.ix_8kg3iUb9VS5SmTnBY button > span{
+.main-yourLibraryX-libraryContainer .ix_8kg3iUb9VS5SmTnBY button > span{
   background-color:#00000080!important;
   backdrop-filter:blur(30px)!important;
 }
 
-.ix_8kg3iUb9VS5SmTnBY .e-9890-button-primary:hover .e-9890-button-primary__inner{
+.main-yourLibraryX-libraryContainer .ix_8kg3iUb9VS5SmTnBY .e-9890-button-primary:hover .e-9890-button-primary__inner{
   background-color:unset;
 }
   
