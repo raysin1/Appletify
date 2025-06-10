@@ -35,7 +35,7 @@
 5. Set `Backdrop type` to **Acrylic**, and `Extend frame into client area` to **On**
 
 # 
-### To do:
+**To do:**
 
 
 - Fix full page search result shelves
