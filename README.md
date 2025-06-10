@@ -28,7 +28,7 @@
 
 ### Disclaimers:
 - May conflict with other extensions
-- May not work in languages besides English
+- May not work well in languages besides English
 
 # Transparency
 **Credit to [Ingan121](https://github.com/Ingan121/)**
@@ -42,10 +42,4 @@
 8. Enable `Extend frame into client area` and/or `Blur behind` if needed
 9. Reopen and close Spotify, tweak settings on/off, untill blur is applied
 
-# 
-**To do:**
 
-
-- Fix full page search result shelves
-- Add empty queue indicator
-- Touch up playlist bottom shelves
