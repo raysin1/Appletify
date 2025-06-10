@@ -1,4 +1,5 @@
-@import url('https://online-fonts.com/fonts/san-francisco-pro-text/download');
+@import url('https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/master/SF-Pro.ttf');
+
 
 [id="searchPage"] .main-trackList-trackListRow.main-trackList-trackListRowGrid:after{
   border-top:.5px solid hsla(0,0%,100%,.1);
@@ -160,6 +161,7 @@ html .WDC2Yzs811n7JCYtYQzc{
   color:white;
  font-size: 22px;
 }
+.playlist-playlist-playlistContent .main-trackList-rowMarker{visibility: hidden;}
 
 
 
@@ -174,7 +176,7 @@ html .WDC2Yzs811n7JCYtYQzc{
 
 [data-testid="playlist-page"] .main-entityHeader-title .e-9890-text.encore-text-headline-large.encore-internal-color-text-base{
   font-size:4.3rem!important;
-  margin-bottom:130px;
+  margin-bottom:220px;
 }
 /*Alternating gray background*/
 [data-testid="playlist-page"] .main-rootlist-wrapper > div:nth-child(2) > :nth-child(odd){
@@ -536,7 +538,7 @@ display:none;}
    border-radius:8px;}
  
 #context-menu{
-  outline:1px solid #535051;
+  outline:1px solid #929292;;
   border-radius:10px;
 }
  .main-contextMenu-menuItemButton{
@@ -593,6 +595,7 @@ scale:1.1;}
 [data-testid="playlist-page"] .main-entityHeader-backgroundColor ,.main-entityHeader-backgroundColor.main-entityHeader-overlay{
   display:none;
 }
+
 
 
 
@@ -953,7 +956,7 @@ button[data-testid="control-button-skip-forward"] svg {
   right: 0;
   bottom: 0;
   background-color: rgba(33, 33, 33, 0.45); 
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(60px);
   border-radius: 10px;
   z-index: -1;
 }
@@ -1094,7 +1097,7 @@ transition: none;
 /*Invisible marketplace*/
 .custom-navlinks-scrollable_container button[aria-label="Marketplace"]{
 opacity: 0;
-  transition: opacity 0.1s;
+  transition: opacity 0.3s;
 }
 
 .custom-navlinks-scrollable_container button[aria-label="Marketplace"]:hover{
@@ -1308,11 +1311,11 @@ margin-top:50px;
 
 
  [data-test-uri^="spotify:artist"] > div > div.EmeHQXR87mUskYK6xEde > div.contentSpacing > div:nth-child(1){
-   margin-left:20px; margin-right:30vw;
+   margin-left:20px; margin-right:35vw;
  }
 
 [data-test-uri*="spotify:artist"] .EmeHQXR87mUskYK6xEde > div.contentSpacing > [aria-label="Discography"] > .main-gridContainer-gridContainer > div:nth-child(1){
-    right: 5vw;
+    right: 10vw;
     z-index: 9;
     top: -370px;
     position: absolute;
@@ -1373,25 +1376,24 @@ margin-top:50px;
 [data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow [aria-label*="More options for"] span{
 color:white;
 }
-
-
-.Xo8dgIGCCWjHXWBoKhaV{
-  zoom:1.1;
-}
+  
 
 
 
+/*Make tracklist bigger*/
+[data-testid="album-page"] .Xo8dgIGCCWjHXWBoKhaV{
+  zoom:1.1;}
+
+
+/*Hide song artists*/
 [data-testid="album-page"] > div:nth-child(4) > div.Xo8dgIGCCWjHXWBoKhaV > div > div.main-rootlist-wrapper > div:nth-child(2) > div > div > div > div.main-trackList-rowSectionStart > div > span{
-  display:none;
-}
+  display:none;}
 
 .main-trackList-rowSectionEnd [aria-label="Add to playlist"]{
-  display:none;
-}
+  display:none;}
 
 .main-entityHeader-headerText .e-9890-text.encore-text-body-small.main-entityHeader-pretitle{
-  display:none;
-}
+  display:none;}
 
 /*Correct active tracklist color*/
 .main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker{
@@ -1417,7 +1419,7 @@ scale: 0.6;
   display:none;}
 }
   
-  /*Remove add playlist button*/
+/*Remove add playlist button*/
   [data-testid="album-page"] .main-rootlist-wrapper [aria-label="Add to playlist"]{
   display:none;}
 
@@ -1612,38 +1614,24 @@ letter-spacing:0.25px;
 
 /*Sub title*/
 
-/*Hide song amount. duration, and the separator before it*/
 [data-testid="album-page"] .blfR_YJUsKUvdgTejBSb .GI8QLntnaSCh2ONX_y2c{display:none;}
 
 [data-testid="album-page"] .blfR_YJUsKUvdgTejBSb [data-separator="true"]:last-of-type{display:none;}
 
-
 [data-testid="album-page"] .blfR_YJUsKUvdgTejBSb [data-encore-id="text"] [data-testid="creator-link"]{
-  font-size:28px;
-  font-weight:400;
-  color:#fa586a;}
+  font-size:28px;font-weight:400;color:#fa586a;}
 
 [data-testid="album-page"] .blfR_YJUsKUvdgTejBSb .main-entityHeader-creatorWrapper [title="Various Artists"] ~ [data-encore-id="text"] {
-  font-size:28px;
-  font-weight:400;
-  color:#fa586a;
-  
-}
-
+  font-size:28px;font-weight:400; color:#fa586a;}
   
 [data-testid="album-page"] .blfR_YJUsKUvdgTejBSb > .w1TBi3o5CTM7zW1EB3Bm{
-  font-size:25px;
-  margin-left:3px;
-  margin-top:2px;
-  color:rgba(255, 255, 255, 0.64);}
+  font-size:25px;margin-left:3px;margin-top:2px;color:rgba(255, 255, 255, 0.64);}
   
-
- [data-testid="album-page"] .main-entityHeader-headerText [data-separator="true"],
-   [data-testid="album-page"] .blfR_YJUsKUvdgTejBSb .main-entityHeader-divider{
-  zoom:1.3;
-  margin-right:2px;
-    color:rgba(255, 255, 255, 0.64);
+[data-testid="album-page"] .main-entityHeader-headerText [data-separator="true"],
+[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb .main-entityHeader-divider{
+  zoom:1.3;margin-right:2px;color:rgba(255, 255, 255, 0.64);
 }
+
 
 /*Make buttons no drag*/
 .Root__now-playing-bar button,
@@ -1749,7 +1737,7 @@ display:none;}
 
 
 
-.main-nowPlayingBar-left{padding-left:0px;}
+.main-nowPlayingBar-left{padding-left:4px;}
 
 .Root__nav-bar{zoom:1.05;}
 
@@ -1891,7 +1879,7 @@ display:none;}
 
 
 .b7r2WRiu5f9Q99qmyreh .main-topBar-searchBar:focus{
-  outline: 4px solid #a03f4a!important;
+  outline: 6px solid #a03f4a!important;
 }
 
 #recent-searches-dropdown{display:none;}
@@ -1912,10 +1900,7 @@ display:none;}
    background-color:#fa586a;
    border-radius:8px;}
  
-#context-menu{
-  outline:1px solid #535051;
-  border-radius:10px;
-}
+
  .main-contextMenu-menuItemButton{
    padding-top:7px;
    padding-bottom:7px;
@@ -1957,7 +1942,9 @@ display:none;}
 }
 .main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover{
   background-color:#a30012;
+
 }
+
 
 
 .BeautifulLyricsPage.Fullscreen .Content .PlayPanel{
@@ -2072,6 +2059,7 @@ display:none;
 .marketplace-tabBar.marketplace-tabBar-nav{
   margin-top:20px;
 }
+
 
 .ffFwfKcPDbmAPLXzxzKq:before{
   background-color:#3b3b3b
