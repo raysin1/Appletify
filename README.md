@@ -12,6 +12,8 @@
 
 
 ![image](https://github.com/thrway237/apple-music-spicetify/blob/main/screenshots/preview.png)
+![lyrics](https://github.com/user-attachments/assets/2156743e-d7d7-4667-83a7-e515167d2fa3)![artists](https://github.com/user-attachments/assets/92bd699a-5ed9-4fc2-8af2-e8cdfbe59b6c)
+
 
 
 
