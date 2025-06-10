@@ -15,6 +15,9 @@
 
 
 
+# Installation
+1. Download the [Appletify](https://github.com/raysin1/Appletify/tree/main/appletify) folder and move to `%appdata%\spicetify\Themes`
+2. Run `spicetify config current_theme appletify && spicetify apply
 
 
 
