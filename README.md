@@ -16,18 +16,26 @@
 
 
 # Installation
-1. Download the [.zip file](https://raw.githubusercontent.com/raysin1/Appletify/main/appletify.zip) and extract contents to `%appdata%\spicetify\Themes`
-2. Open terminal and run `spicetify config current_theme appletify && spicetify apply`
+1. Download the [.zip file](https://raw.githubusercontent.com/raysin1/Appletify/main/appletify.zip)
+2. Extract contents to `%appdata%\spicetify\Themes`
+3. Run `spicetify config current_theme appletify && spicetify apply` on terminal
 
 
 
-## To be used with:
+### To be used with:
 
-![image](https://github.com/user-attachments/assets/82cd3960-9401-4cc5-9cab-e68590e3ef75)
-| - |
+<img src="https://github.com/user-attachments/assets/82cd3960-9401-4cc5-9cab-e68590e3ef75" width="240"/>
 
+# Transparency
+**Credit to [Ingan121](https://github.com/Ingan121/)**
+1. Download [Windhawk](https://windhawk.net/)
+2. Install the `Spotify Tweaks` mod and under settings, enable **Transparent Rendering**
+3. Download [MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone)
+4. Add a new process rule for Spotify
+5. Set `Backdrop type` to **Acrylic**, and `Extend frame into client area` to **On**
 
-## To do:
+# 
+### To do:
 
 - Fix artist page shelf display
 - Weird grey dots upon tippy popups
