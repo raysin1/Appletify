@@ -48,3 +48,4 @@
 
 - Fix full page search result shelves
 - Add empty queue indicator
+- Touch up playlist bottom shelves
