@@ -1,4 +1,4 @@
-@import url('https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/master/SF-Pro.ttf');
+
 
 /*COLORS*/
 
@@ -239,7 +239,6 @@ html .WDC2Yzs811n7JCYtYQzc{
 [data-testid="playlist-page"] [data-testid="recommended-track"]{display:none;}
 
 
-[data-testid="playlist-page"] .playlist-playlist-seeMore{display:none;}
 
 [data-testid="playlist-page"] [data-encore-id="popoverTrigger"]{display: none;}
 
@@ -309,7 +308,7 @@ html .WDC2Yzs811n7JCYtYQzc{
   visibility:hidden;
 }
 
-[data-testid="playlist-page"] .main-trackList-rowSectionStart{margin-left:-39px;}
+
 
 
 [data-testid="playlist-page"] .main-trackList-playingIcon{display:block;z-index:99;margin-left:5px}
@@ -321,7 +320,48 @@ html .WDC2Yzs811n7JCYtYQzc{
 }
 
 
+.playlist-playlist-playlistContent > .main-useDropTarget-base > .contentSpacing{
+  zoom:1.12;}
 
+.playlist-playlist-seeMore > div{
+  font-weight:400;
+  color:#fa586a;
+}
+
+.playlist-playlist-seeMore {
+  margin-right:25px;
+  zoom:1.1;
+  cursor: pointer;
+}
+
+.playlist-playlist-searchResultListContainer:has(.playlist-playlist-emptySearchTermContainer){
+  display:none;}
+  
+  
+.playlist-playlist-playlistInlineCurationSection{
+  margin-left:20px;
+  margin-right:20px;}
+  
+  [data-testid="playlist-page"] .contentSpacing > .Xo8dgIGCCWjHXWBoKhaV .main-trackList-rowSectionStart{margin-left:-39px;}
+  
+.playlist-playlist-playlistInlineCurationSection > .playlist-playlist-playlistInlineCurationWrapper > h2{
+  color:transparent;
+   font-size:0px;
+}
+
+.playlist-playlist-playlistInlineCurationSection > .playlist-playlist-playlistInlineCurationWrapper > h2:before{
+  content:"Add Music";
+  color:white;
+  font-weight:300!important;
+   font-size:24px;
+}
+
+  
+.playlist-inlineSearchBox-searchIconContainer > svg {
+  fill:#Fa586a
+}
+  
+.playlist-playlist-playlistInlineCurationWrapper{width:370px;}
 
 
 .main-nowPlayingBar-nowPlayingBar .main-topBar-container {
@@ -2191,6 +2231,11 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar{
 
 .main-navBar-mainNav{
   box-shadow: 1px 0 0 0 #626262;
+}
+
+
+.playlist-inlineSearchBox-filterInput:focus{
+      outline: 5px solid #a03f4a !important;
 }
 
 .LayoutResizer__resize-bar{opacity:0!important;}
