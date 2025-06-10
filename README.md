@@ -48,5 +48,3 @@
 
 - Fix full page search result shelves
 - Add empty queue indicator
-- Fix tippy pop-up outline
-- Revisit playlist shelves, song adding search box
