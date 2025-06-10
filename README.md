@@ -31,7 +31,7 @@
 1. Download [Windhawk](https://windhawk.net/)
 2. Install the `Spotify Tweaks` mod and under settings, enable **Transparent Rendering**
 3. Download [MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone)
-4. Add a new process rule for Spotify
+4. Add a new **process rule** for 'Spotify'
 5. Set `Backdrop type` to **Acrylic**, and `Extend frame into client area` to **On**
 
 # 
