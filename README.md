@@ -29,6 +29,6 @@
 
 ## To do:
 
-- Fix discography shelf display
+- Fix artist page shelf display
 - Weird grey dots upon tippy popups
 - Fix full songs, albums, artists, search page
