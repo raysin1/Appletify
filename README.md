@@ -26,6 +26,10 @@
 
 <img src="https://github.com/user-attachments/assets/82cd3960-9401-4cc5-9cab-e68590e3ef75" width="240"/>
 
+### Disclaimers:
+- May conflict with other extensions
+- May not work in languages besides English
+
 # Transparency
 **Credit to [Ingan121](https://github.com/Ingan121/)**
 1. Download [Windhawk](https://windhawk.net/)
