@@ -1252,20 +1252,24 @@ opacity: 1;
   .Root__main-view:has([data-test-uri*="spotify:artist"]) .wozXSN04ZBOkhrsuY5i2.dhq75ObRGjfBoBlz6clW {
   display:none;}
   
-[data-test-uri*="spotify:artist"] [aria-colindex="1"] {visibility:hidden;}
+
   
 [data-test-uri*="spotify:artist"] [aria-colindex="2"]{
       margin-left:-40px;
 }
     
-.Root__main-view:has([data-test-uri*="spotify:artist"]) .wozXSN04ZBOkhrsuY5i2{
-  height: 64vh;
+/* fullscreen artist page*/
+.wozXSN04ZBOkhrsuY5i2, .XUwMufC5NCgIyRMyGXLD{
+  height: 87vh;
+
+}
+
+.main-entityHeader-container.main-entityHeader-withBackgroundImage {
+  height: 91vh;
 }
 
 
-[data-test-uri*="spotify:artist"] .main-entityHeader-container.main-entityHeader-withBackgroundImage{
-  margin-top: 200px;
-}
+
 
 [data-test-uri*="spotify:artist"] .main-entityHeader-container.main-entityHeader-withBackgroundImage:after{
   content: '';
@@ -2295,11 +2299,9 @@ color:rgba(255, 255, 255, 0.64);}
   background-color:unset;
 }
 
-.NI1OxoVdokxENPAjoeOk{
-  left:155px;
-  bottom:30px;
+#searchPage [aria-label="Top result"] .NI1OxoVdokxENPAjoeOk{
+  transform:translate(-210px,-6px);
 }
-
 
 .hSL9Sb4ko4GNvUVuPQOw:not(:last-child):after,
 .main-entityHeader-metaDataText:not(:first-child):before, .main-entityHeader-divider:before{
