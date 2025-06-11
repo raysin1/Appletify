@@ -18,6 +18,7 @@ body, button, input, select, textarea {
 --min-column-width: 122px!important;}
 
 /*COLORS*/
+  :root {--spice-button:#fa586a;}
 
 .ix_8kg3iUb9VS5SmTnBY .ButtonInner-large-iconOnly{
   --background-press:#d60017;
@@ -1331,12 +1332,12 @@ margin-top:50px;
 [data-test-uri*="spotify:artist"] .EmeHQXR87mUskYK6xEde > div.contentSpacing > [aria-label="Discography"] > .main-gridContainer-gridContainer > div:nth-child(1){
     right: 10vw;
     z-index: 9;
-    top: -345px;
+    top: -370px;
     position: absolute;
     height: 250px;
     width: 260px;
 }
-
+[data-test-uri*="spotify:artist"] .PHHrto0Qhh4dJcnnPhwu .Xo8dgIGCCWjHXWBoKhaV{zoom:1.1;}
 
 
 
@@ -2406,3 +2407,4 @@ color:rgba(255, 255, 255, 0.64);}
 
 
 
+body {zoom:0.8;}
