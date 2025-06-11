@@ -3,8 +3,7 @@
 </h3>
 <div align="center">
   <h1>Appletify</h1>
-  
-  **Apple Music theme for [Spicetify](https://github.com/spicetify/spicetify-cli)**
+
   
 </div>
 
@@ -39,8 +38,10 @@
 
 *Credits to [ohitstom](https://github.com/ohitstom) and [Cali](https://github.com/surfbryce)*
 
-<br><br>
-# Transparency effects
+<br>
+
+## Transparency
+***The theme will not have translucent sidebars if the steps below aren't followed***
 1. Download [Windhawk](https://windhawk.net/)
 2. Install the `Spotify Tweaks` mod
 3. Under settings, disable `native frames and title bars` and **enable** `Transparent Rendering`
