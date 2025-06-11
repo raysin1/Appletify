@@ -285,7 +285,7 @@ html .WDC2Yzs811n7JCYtYQzc{
 [data-testid="playlist-page"] .main-actionBarBackground-background{width:0px;}
   /*Overlay adjustment*/
 [data-testid="playlist-page"] .main-entityHeader-backgroundColor{
-display:nonel}
+display:none;}
   /*Margins*/
 [data-testid="playlist-page"]{
   margin-left:10px;
