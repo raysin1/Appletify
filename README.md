@@ -9,11 +9,9 @@
 </div>
 
 
-
-
+![album](https://github.com/user-attachments/assets/5ca525a0-d595-4d61-af3e-fc6b1b13a616)
 ![image](https://github.com/thrway237/apple-music-spicetify/blob/main/screenshots/preview.png)
 ![lyrics](https://github.com/user-attachments/assets/2156743e-d7d7-4667-83a7-e515167d2fa3)
-![album](https://github.com/user-attachments/assets/293a4460-f8d5-40c4-a698-562d16b40dec)
 ![artists](https://github.com/user-attachments/assets/92bd699a-5ed9-4fc2-8af2-e8cdfbe59b6c)
 
 
