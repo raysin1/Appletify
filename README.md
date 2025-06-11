@@ -8,12 +8,12 @@
   
 </div>
 
+![Preview](https://github.com/raysin1/Appletify/blob/main/screenshots/preview.png)
 
-![preview](https://github.com/user-attachments/assets/e76ab614-676f-495a-b1ba-36f78c83cd0b)
-![album](https://github.com/user-attachments/assets/5ca525a0-d595-4d61-af3e-fc6b1b13a616)
-![lyrics](https://github.com/user-attachments/assets/2156743e-d7d7-4667-83a7-e515167d2fa3)
-![artists](https://github.com/user-attachments/assets/311de281-bf2d-405a-a6fa-9b2a2e6c8bb5)
-
+<div style="display: flex; flex-direction: row; gap: 10px;">
+  <img src="https://raw.githubusercontent.com/raysin1/Appletify/main/screenshots/album.png" alt="Image 1" width="500">
+  <img src="https://raw.githubusercontent.com/raysin1/Appletify/main/screenshots/lyrics.png" alt="Image 2" width="500">
+</div>
 
 
 
@@ -22,27 +22,25 @@
 # Installation
 1. Get [Spicetify](https://spicetify.app/docs/getting-started)
 2. Run `iwr -useb https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.ps1 | iex && spicetify config current_theme marketplace` on Terminal
-3. Go to **Marketplace** > Themes, find **Appletify** and install.
+3. Go to **Marketplace** > **Themes**, find **Appletify** and install.
+<br>
 
 ### Manual Installation
 1. Download the [.zip file](https://raw.githubusercontent.com/raysin1/Appletify/main/appletify.zip)
 2. Extract contents to `%appdata%\spicetify\Themes`
 3. Run `spicetify config current_theme appletify && spicetify apply` on terminal
 
+<br>
+
+**Make sure to also install the following extensions on Marketplace:**
 
 
-### Make sure to also install the following extensions on Marketplace:
+<img src="https://github.com/user-attachments/assets/82cd3960-9401-4cc5-9cab-e68590e3ef75" width="320"/>
 
-<img src="https://github.com/user-attachments/assets/82cd3960-9401-4cc5-9cab-e68590e3ef75" width="380"/>
+*Credits to [ohitstom](https://github.com/ohitstom) and [Cali](https://github.com/surfbryce)*
 
-**Credits to [ohitstom](https://github.com/ohitstom) and [Cali](https://github.com/surfbryce)**
-
-### Disclaimers:
-- May conflict with other extensions
-- May not work well in languages besides English
-
-# Transparency
-**Credit to [Ingan121](https://github.com/Ingan121/)**
+<br><br>
+# Transparency effects
 1. Download [Windhawk](https://windhawk.net/)
 2. Install the `Spotify Tweaks` mod
 3. Under settings, disable `native frames and title bars` and **enable** `Transparent Rendering`
@@ -53,4 +51,4 @@
 8. Enable `Extend frame into client area` and/or `Blur behind` if needed
 9. Reopen and close Spotify, tweak settings on/off, untill blur is applied
 
-
+*Credit to [Ingan121](https://github.com/Ingan121/)*
