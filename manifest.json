@@ -1,7 +1,7 @@
 {
     "name": "Appletify",
     "description": "Apple Music theme for Spicetify",
-    "preview": "/screenshots/cover.png",
+    "preview": "/screenshots/marketplace.png",
     "readme": "README.md",
     "usercss": "/appletify/user.css",
     "schemes": "/appletify/color.ini",
