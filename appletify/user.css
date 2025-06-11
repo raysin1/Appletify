@@ -2328,4 +2328,6 @@ color:rgba(255, 255, 255, 0.64);}
   backdrop-filter:unset;
 }
 
-
+[data-test-uri*="spotify:artist:"] .main-trackList-trackList.main-trackList-indexable[aria-colcount="4"] .main-trackList-trackListRowGrid{
+  grid-template-columns: [index] var(--tracklist-index-column-width,16px) [first] minmax(120px,var(--col1,4fr)) [var1] minmax(0px,var(--col2,.01fr)) [last] minmax(01px,var(--col3,1fr))
+}
