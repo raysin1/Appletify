@@ -21,17 +21,17 @@
 
 # Installation
 1. Get [Spicetify](https://spicetify.app/docs/getting-started)
-2. Run `iwr -useb https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.ps1 | iex && spicetify config current_theme marketplace`
+2. Run `iwr -useb https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.ps1 | iex && spicetify config current_theme marketplace` on Terminal
 3. Go to **Marketplace** > Themes, find Appletify and install.
 
-## Manual Installation
+### Manual Installation
 1. Download the [.zip file](https://raw.githubusercontent.com/raysin1/Appletify/main/appletify.zip)
 2. Extract contents to `%appdata%\spicetify\Themes`
 3. Run `spicetify config current_theme appletify && spicetify apply` on terminal
 
 
 
-### To be used with:
+### To be used alongside:
 
 <img src="https://github.com/user-attachments/assets/82cd3960-9401-4cc5-9cab-e68590e3ef75" width="280"/>
 
