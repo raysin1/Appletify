@@ -1,4 +1,18 @@
-@import url("https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/8bfea09aa6f1139479f80358b2e1e5c6dc991a58/SF-Pro.ttf");
+@font-face {
+  font-family: 'San Francisco Pro';
+  src: url('https://raw.githubusercontent.com/sahibjotsaggu/San-Francisco-Pro-Fonts/master/SF-Pro.ttf') format('truetype');
+}
+
+body, button, input, select, textarea {
+    font-family: var(--encore-body-font-stack, 'SF Pro Text', SpotifyMixUI, var(--fallback-fonts, sans-serif)), sans-serif;
+}
+
+:root {
+    --encore-body-font-stack: 'SF Pro Text', SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+    --encore-title-font-stack: 'SF Pro Text', SpotifyMixUITitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+    --encore-variable-font-stack: 'SF Pro Text', SpotifyMixUITitleVariable, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+}
+
 
 #Desktop_LeftSidebar_Id .main-yourLibraryX-libraryContainer.YourLibraryX .main-gridContainer-gridContainer.main-gridContainer-uniformRowHeight{
 --min-column-width: 122px!important;}
@@ -1040,12 +1054,6 @@ button[data-testid="control-button-skip-forward"] svg {
   .N9r2VuXMBlhRSVF5dCek{padding-right:30px;}
 
 
-
-.main-topBar-background{
-    background-color: rgba(0, 0, 0, 0.15)!important; /* Adjust opacity for the frosted look */
-    backdrop-filter: blur(90px); 
-}
-
 .main-entityHeader-container.JYKKZFIXuf9lIHVeszuS{
   max-height:unset;}
   
@@ -1876,19 +1884,8 @@ display:none;}
 
 
 
-.encore-dark-theme .encore-bright-accent-set{
-  --background-press: #fa586a;
-}
 
-.e-9890-button--hover, .e-9890-button:hover{
-  transform:none;
-}
-.marketplace-header {
-    margin-top: 150px;}
 
-.main-topBar-container {
-  margin-top:75px;
-}
 
 
 .main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover{
@@ -2229,12 +2226,6 @@ font-weight:700!important;}
 .XVz4BMGP5zAEE5p90mYK
 {display:none;}
 
-:root {
-  --encore-body-font-stack: SF Pro Text;
-  --encore-title-font-stack:SF Pro Text;
-  --encore-variablefont-stack: SF Pro Text;
-}
-
 
 
 
@@ -2303,7 +2294,9 @@ color:rgba(255, 255, 255, 0.64);}
 
 .hSL9Sb4ko4GNvUVuPQOw:not(:last-child):after,
 .main-entityHeader-metaDataText:not(:first-child):before, .main-entityHeader-divider:before{
-  content: "•";
+    content: "•";
+    opacity: 0.6;
+    zoom: 1.5;
 }
 
 
@@ -2332,3 +2325,84 @@ color:rgba(255, 255, 255, 0.64);}
 [data-test-uri*="spotify:artist:"] .main-trackList-trackList.main-trackList-indexable[aria-colcount="4"] .main-trackList-trackListRowGrid{
   grid-template-columns: [index] var(--tracklist-index-column-width,16px) [first] minmax(120px,var(--col1,4fr)) [var1] minmax(0px,var(--col2,.01fr)) [last] minmax(01px,var(--col3,1fr))
 }
+
+
+[id="queue-panel"] .yvjS3DPkDIHgMUZxL972 [data-encore-id="listRowTitle"]{
+  width:110%;
+}
+
+
+
+/*Marketplace*/
+
+
+.marketplace-header{
+  background-color:unset;
+}
+
+.marketplace-card--installed{
+  border:unset;
+}
+
+.main-card-card .main-cardHeader-link{
+  margin-top:30px;
+}
+
+.marketplace-header .Dropdown-menu{ scrollbar-width: none}
+
+.main-cardHeader-text{font-weight:600; zoom:1.21}
+
+.marketplace-content .main-cardImage-imageWrapper{
+    scale: 1.17;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.marketplace-card__authors .marketplace-card__author{opacity:0.6;}
+
+.marketplace-cardSubHeader > span{position: absolute;
+    right: 15px;}
+
+.marketplace-card-type-heading{margin-bottom:20px;zoom:1.4;}
+
+.marketplace-card__tags-container{display:none;height:0px;}
+
+
+.marketplace-content{margin-top:0px;}
+
+
+.marketplace-tabBar-header{
+  zoom:1.2;
+  display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 0;
+    margin: 0;
+}
+
+.main-topBar-container:has(.marketplace-tabBar.marketplace-tabBar-nav){
+  height:80px;
+}
+
+
+.marketplace-tabBar-headerItem > a{
+  background-color:rgba(31,31,31, .65);
+}
+
+.main-topBar-background {
+  background-color: rgba(45, 45, 45, 0.69);
+  backdrop-filter: blur(60px);
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+#marketplace-readme{background:unset;max-width:1000px;}
+
+.GenericModal[aria-label="View Snippet"]{border-radius:20px;}
+
+
+
+
+
