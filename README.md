@@ -9,8 +9,8 @@
 </div>
 
 
-![album](https://github.com/user-attachments/assets/5ca525a0-d595-4d61-af3e-fc6b1b13a616)
 ![preview](https://github.com/user-attachments/assets/e76ab614-676f-495a-b1ba-36f78c83cd0b)
+![album](https://github.com/user-attachments/assets/5ca525a0-d595-4d61-af3e-fc6b1b13a616)
 ![lyrics](https://github.com/user-attachments/assets/2156743e-d7d7-4667-83a7-e515167d2fa3)
 ![artists](https://github.com/user-attachments/assets/311de281-bf2d-405a-a6fa-9b2a2e6c8bb5)
 
