@@ -58,3 +58,6 @@
 
 **To do:**
 - Fix playlist alignment and element visibility
+- Workaround to blank empty queue
+- Style connected device bar
+
