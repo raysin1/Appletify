@@ -3,9 +3,10 @@
     "description": "Apple Music theme for Spicetify",
     "preview": "screenshots/cover.png",
     "readme": "README.md",
-    "usercss": "https://github.com/raysin1/Appletify/blob/main/appletify/user.css",
-    "schemes": "https://github.com/raysin1/Appletify/blob/main/appletify/color.ini",
-    "include": ["https://github.com/raysin1/Appletify/blob/main/appletify/theme.js"],
+    "usercss": "appletify/user.css",
+    "schemes": "appletify/color.ini",
+    "include": ["https://raw.githubusercontent.com/raysin1/Appletify/blob/main/appletify/theme.js"],
     "branch": "https://github.com/raysin1/Appletify/blob/main/appletify/",
     "authors": [{ "name": "Raysin", "url": "https://github.com/raysin1" }]
+      "tags": ["Apple Music", "Dark"]
 }
