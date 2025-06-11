@@ -1323,7 +1323,7 @@ margin-top:50px;
 [data-test-uri*="spotify:artist"] .EmeHQXR87mUskYK6xEde > div.contentSpacing > [aria-label="Discography"] > .main-gridContainer-gridContainer > div:nth-child(1){
     right: 10vw;
     z-index: 9;
-    top: -370px;
+    top: -345px;
     position: absolute;
     height: 250px;
     width: 260px;
@@ -2210,7 +2210,7 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar{
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: inset 0 0 0 100vmax rgba(38, 38,38, 0.86);
+  box-shadow: inset 0 0 0 100vmax rgba(38, 38,38, 0.76);
   z-index: -1;}
 
 
@@ -2327,6 +2327,7 @@ color:rgba(255, 255, 255, 0.64);}
   background-color:unset;
   backdrop-filter:unset;
 }
+
 
 [data-test-uri*="spotify:artist:"] .main-trackList-trackList.main-trackList-indexable[aria-colcount="4"] .main-trackList-trackListRowGrid{
   grid-template-columns: [index] var(--tracklist-index-column-width,16px) [first] minmax(120px,var(--col1,4fr)) [var1] minmax(0px,var(--col2,.01fr)) [last] minmax(01px,var(--col3,1fr))
