@@ -53,3 +53,8 @@
 9. Reopen and close Spotify, tweak settings on/off, untill blur is applied
 
 *Credit to [Ingan121](https://github.com/Ingan121/)*
+
+<br><br>
+
+**To do:**
+- Fix playlist alignment and element visibility
