@@ -143,10 +143,6 @@ background-color:transparent;
 
 
 
-/*Remove hover play button*/
-#searchPage .NI1OxoVdokxENPAjoeOk{
-  display:none;}
-
 .mXNT9H2GU7lDW4cGx0q1{
   background-color:#363636;
 }
@@ -1091,13 +1087,9 @@ border-radius: 20px;}
   scale:1.2;}
 }
 
-.main-card-PlayButtonContainer button{
-
-}
-
 .main-card-PlayButtonContainer{
   transform:none;
-transition: none;
+  transition: none;
 }
 
 .main-card-PlayButtonContainer button > span{
@@ -1624,7 +1616,7 @@ letter-spacing:0.25px;
 .volume-bar.main-nowPlayingBar-volumeBar{
   -webkit-app-region: no-drag;}
 
-.main-yourLibraryX-libraryContainer [aria-label="Recents, Compact grid view"] span[data-encore-id="text"]{
+.main-yourLibraryX-libraryFilter [aria-controls="sort-and-view-picker"] > [data-encore-id="text"]{
   display:none;
 }
 
@@ -2249,14 +2241,13 @@ font-weight:700!important;}
 
   
   
-/*Make highlighted release title bigger*/
+  /*Make highlighted release title bigger*/
 [data-test-uri*="spotify:artist"] .EmeHQXR87mUskYK6xEde > div.contentSpacing > [aria-label="Discography"] > .main-gridContainer-gridContainer > div:nth-child(1) .MainArea{
 margin-top:15px!important;
 margin:3px;
 }
   
-  
-/*Make title smaller*/
+  /*Make title smaller*/
 [data-testid="album-page"] .e-9890-text.encore-text-headline-large.encore-internal-color-text-base {
 font-size:2.3rem !important;
 font-weight:600;
@@ -2280,3 +2271,61 @@ font-weight:600;
  font-weight:600;
 margin-left:1px;
 color:rgba(255, 255, 255, 0.64);}
+
+
+
+#searchPage [aria-label="Top result"] .ix_8kg3iUb9VS5SmTnBY button{
+  zoom:0.8;
+}
+#searchPage [aria-label="Top result"] .ix_8kg3iUb9VS5SmTnBY  button span span svg{fill:white;
+  scale:1.2;}
+}
+
+#searchPage [aria-label="Top result"] .ix_8kg3iUb9VS5SmTnBY{
+  transform:none;
+  transition: none;
+}
+
+#searchPage [aria-label="Top result"] .ix_8kg3iUb9VS5SmTnBY button > span{
+  background-color:#00000080!important;
+      backdrop-filter:blur(30px)!important;
+}
+
+#searchPage [aria-label="Top result"] .ix_8kg3iUb9VS5SmTnBY .e-9890-button-primary:hover .e-9890-button-primary__inner{
+  background-color:unset;
+}
+
+.NI1OxoVdokxENPAjoeOk{
+  left:155px;
+  bottom:30px;
+}
+
+
+.hSL9Sb4ko4GNvUVuPQOw:not(:last-child):after,
+.main-entityHeader-metaDataText:not(:first-child):before, .main-entityHeader-divider:before{
+  content: "•";
+}
+
+
+[role="grid"][aria-label="Your Library"] .main-useDropTarget-base.main-yourLibraryX-listItem .Areas__InteractiveArea-sc-8gfrea-0.Areas__TrailingSlot-sc-8gfrea-7.bJSfgC.jpzxju span > svg > path:nth-child(2){
+  display:none;
+}
+
+[role="grid"][aria-label="Your Library"] .main-useDropTarget-base.main-yourLibraryX-listItem .Areas__InteractiveArea-sc-8gfrea-0.Areas__TrailingSlot-sc-8gfrea-7.bJSfgC.jpzxju span > svg > path{
+  d:path('M599.609,180.688 C602.214,182.641 605.143,183.292 608.398,182.641 C611.654,181.99 614.258,180.199 616.211,177.27 C621.419,170.434 625.488,162.133 628.418,152.367 C631.348,142.602 632.813,132.673 632.813,122.582 C632.813,112.165 631.348,102.156 628.418,92.5527 C625.488,82.9499 621.419,74.5677 616.211,67.4063 C614.258,64.4766 611.654,62.7676 608.398,62.2793 C605.143,61.791 602.214,62.3607 599.609,63.9883 C596.68,66.2669 594.971,69.1152 594.482,72.5332 C593.994,75.9512 594.889,79.2878 597.168,82.543 C600.749,87.4258 603.516,93.4479 605.469,100.609 C607.422,107.771 608.398,115.095 608.398,122.582 C608.398,129.743 607.422,136.905 605.469,144.066 C603.516,151.228 600.749,157.25 597.168,162.133 C594.889,165.714 593.994,169.132 594.482,172.387 C594.971,175.642 596.68,178.409 599.609,180.688 M652.344,216.332 C655.273,217.96 658.285,218.529 661.377,218.041 C664.469,217.553 667.155,215.681 669.434,212.426 C677.572,200.382 684.163,186.547 689.209,170.922 C694.255,155.297 696.777,139.184 696.777,122.582 C696.777,105.655 694.417,89.3789 689.697,73.7539 C684.977,58.1289 678.223,44.2943 669.434,32.25 C667.155,29.3203 664.469,27.5299 661.377,26.8789 C658.285,26.2279 655.273,26.8789 652.344,28.832 C649.414,30.7852 647.705,33.3893 647.217,36.6445 C646.729,39.8997 647.624,43.1549 649.902,46.4102 C656.738,56.5013 662.272,68.2201 666.504,81.5664 C670.736,94.9128 672.852,108.585 672.852,122.582 C672.852,136.579 670.817,150.17 666.748,163.354 C662.679,176.537 657.064,188.337 649.902,198.754 C647.949,201.684 647.135,204.857 647.461,208.275 C647.786,211.693 649.414,214.379 652.344,216.332 M529.785,244.164 C534.668,244.164 538.737,242.618 541.992,239.525 C545.247,236.433 546.875,232.445 546.875,227.563 L546.875,18.5781 C546.875,13.6953 545.247,9.54492 541.992,6.12695 C538.737,2.70898 534.505,1 529.297,1 C526.042,1 522.949,1.73242 520.02,3.19727 C517.09,4.66211 513.672,7.34766 509.766,11.2539 L453.125,64.4766 C452.148,65.4531 451.172,65.9414 450.195,65.9414 L412.109,65.9414 C402.018,65.9414 394.45,68.5456 389.404,73.7539 C384.359,78.9622 381.836,86.9375 381.836,97.6797 L381.836,147.973 C381.836,158.389 384.359,166.283 389.404,171.654 C394.45,177.025 402.018,179.711 412.109,179.711 L450.195,179.711 C451.172,179.711 452.148,180.036 453.125,180.688 L509.766,234.887 C513.346,238.142 516.683,240.502 519.775,241.967 C522.868,243.432 526.204,244.164 529.785,244.164');
+  scale:0.045;
+  transform:translate(-410px,50px);
+}
+
+[role="grid"][aria-label="Your Library"] .main-useDropTarget-base.main-yourLibraryX-listItem .Areas__InteractiveArea-sc-8gfrea-0.Areas__TrailingSlot-sc-8gfrea-7.bJSfgC.jpzxju span > svg {
+  scale:1.5
+}
+
+
+
+[role="grid"][aria-label="Your Library"]  .ix_8kg3iUb9VS5SmTnBY button > span{
+  background-color:unset;
+  backdrop-filter:unset;
+}
+
+
