@@ -1,3 +1,5 @@
+@import url("https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/8bfea09aa6f1139479f80358b2e1e5c6dc991a58/SF-Pro.ttf");
+
 #Desktop_LeftSidebar_Id .main-yourLibraryX-libraryContainer.YourLibraryX .main-gridContainer-gridContainer.main-gridContainer-uniformRowHeight{
 --min-column-width: 122px!important;}
 
@@ -463,10 +465,7 @@ display:none;}
 
 .main-nowPlayingBar-left{zoom: 1.1;}
 
-.main-coverSlotCollapsed-container.main-coverSlotCollapsed-navAltContainer{
-  top: 3.5px;
-    scale: 1.15;
-}
+
     
 .dcSY8Zom_VXgK71Lbym_ {
     display: none;
@@ -1201,8 +1200,7 @@ opacity: 1;
 
    
    
-[data-test-uri^="spotify:artist"] .main-entityHeader-title span{font-size:40px!important;
-font-weight:100!important;}
+
 
 [data-test-uri^="spotify:artist"] > div > .EmeHQXR87mUskYK6xEde > .contentSpacing > div:has(.artist-artistOnTour-onTourShelfGrid)
 {display:none;}
@@ -1498,10 +1496,7 @@ padding-top:20px;}
 [data-testid="album-page"] .main-entityHeader-headerText{
   margin-left:20px;}
 
-/*Make title smaller*/
-[data-testid="album-page"] .e-9890-text.encore-text-headline-large.encore-internal-color-text-base {
-font-size:2.7rem!important;
-}
+
   
   
 
@@ -1621,25 +1616,6 @@ letter-spacing:0.25px;
   border-radius:8px!important;}
 
 
-/*Sub title*/
-
-[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb .GI8QLntnaSCh2ONX_y2c{display:none;}
-
-[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb [data-separator="true"]:last-of-type{display:none;}
-
-[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb [data-encore-id="text"] [data-testid="creator-link"]{
-  font-size:28px;font-weight:400;color:#fa586a;}
-
-[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb .main-entityHeader-creatorWrapper [title="Various Artists"] ~ [data-encore-id="text"] {
-  font-size:28px;font-weight:400; color:#fa586a;}
-  
-[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb > .w1TBi3o5CTM7zW1EB3Bm{
-  font-size:25px;margin-left:3px;margin-top:2px;color:rgba(255, 255, 255, 0.64);}
-  
-[data-testid="album-page"] .main-entityHeader-headerText [data-separator="true"],
-[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb .main-entityHeader-divider{
-  zoom:1.3;margin-right:2px;color:rgba(255, 255, 255, 0.64);
-}
 
 
 /*Make buttons no drag*/
@@ -1751,10 +1727,7 @@ display:none;}
 
 .main-nowPlayingBar-left{zoom: 1.1;}
 
-.main-coverSlotCollapsed-container.main-coverSlotCollapsed-navAltContainer{
-  top: 3.5px;
-    scale: 1.15;
-}
+
     
 .dcSY8Zom_VXgK71Lbym_ {
     display: none;
@@ -2042,9 +2015,7 @@ display:none;
 
 
 .Root__right-sidebar{
-border-left: 0.5px solid #4a4a4a;
 -webkit-app-region: no-drag;
-
 }
 
 .Root__right-sidebar [aria-label="Queue"] .W3E0IT3_STcazjTeyOJa{
@@ -2143,12 +2114,7 @@ font-size:22px;
 }
 
 
-  /*Make highlighted release title bigger*/
-[data-test-uri*="spotify:artist"] .EmeHQXR87mUskYK6xEde > div.contentSpacing > [aria-label="Discography"] > .main-gridContainer-gridContainer > div:nth-child(1) .MainArea{
-  zoom: 1.3;
-  margin: 5px;
-   margin-top: 9px;
-}
+
 
 /*Default grid view play button*/
 .main-yourLibraryX-libraryContainer ._7kcfiJ2UNEh3CDR9Wau{
@@ -2200,16 +2166,7 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar{
 
 [data-encore-id="buttonTertiary"]:has(.main-avatar-avatar){background-color:Transparent!important;}
 
-.Root__right-sidebar::before,
-#Desktop_LeftSidebar_Id::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: inset 0 0 0 100vmax rgba(38, 38,38, 0.6);
-  z-index: -1;}
+
 
 #context-menu [role="menu"]{
     outline:1px solid #676767;
@@ -2219,9 +2176,7 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar{
 #context-menu [data-encore-id="icon"]{fill:#ffffffbd;}
 
 
-.main-navBar-mainNav{
-  box-shadow: 1px 0 0 0 #626262;
-}
+
 
 
 .playlist-inlineSearchBox-filterInput:focus{
@@ -2248,4 +2203,80 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar{
 
 
 
+.main-coverSlotCollapsed-container.main-coverSlotCollapsed-navAltContainer{
+  top: 2.5px;
+  scale: 1.18;
+}
 
+.Root__right-sidebar::before,
+#Desktop_LeftSidebar_Id::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 100vmax rgba(38, 38,38, 0.86);
+  z-index: -1;}
+
+
+.main-navBar-mainNav{
+  border-right: 0.5px solid #424242;}
+
+
+.Root__right-sidebar{
+  border-left: 0.5px solid #424242;}
+
+
+
+[data-test-uri^="spotify:artist"] .main-entityHeader-title span{font-size:47.5px!important;
+font-weight:700!important;}
+
+.XVz4BMGP5zAEE5p90mYK
+{display:none;}
+
+:root {
+  --encore-body-font-stack: SF Pro Text;
+  --encore-title-font-stack:SF Pro Text;
+  --encore-variablefont-stack: SF Pro Text;
+}
+
+
+
+
+
+[data-testid="album-page"] .main-entityHeader-headerText .e-9890-text[data-separator="true"]{display:none;}
+
+  
+  
+/*Make highlighted release title bigger*/
+[data-test-uri*="spotify:artist"] .EmeHQXR87mUskYK6xEde > div.contentSpacing > [aria-label="Discography"] > .main-gridContainer-gridContainer > div:nth-child(1) .MainArea{
+margin-top:15px!important;
+margin:3px;
+}
+  
+  
+/*Make title smaller*/
+[data-testid="album-page"] .e-9890-text.encore-text-headline-large.encore-internal-color-text-base {
+font-size:2.3rem !important;
+font-weight:600;
+}
+
+/*Sub title*/
+
+[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb .GI8QLntnaSCh2ONX_y2c{display:none;}
+[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb [data-separator="true"]:last-of-type{display:none;}
+[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb [data-encore-id="text"] [data-testid="creator-link"]{
+  font-size:34px ;font-weight:400;color:#fa586a; 
+}
+  
+[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb .main-entityHeader-creatorWrapper [title="Various Artists"] ~ [data-encore-id="text"] {
+  font-size:28px;font-weight:400; color:#fa586a;}
+  
+[data-testid="album-page"] .blfR_YJUsKUvdgTejBSb > .w1TBi3o5CTM7zW1EB3Bm{
+ position:absolute;
+ margin-top:90px;
+ font-size:20px;
+ font-weight:600;
+margin-left:1px;
+color:rgba(255, 255, 255, 0.64);}
