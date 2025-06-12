@@ -1136,16 +1136,6 @@ border-radius: 20px;}
   background-color:unset;
 }
 
-/*Invisible marketplace*/
-.custom-navlinks-scrollable_container button[aria-label="Marketplace"]{
-opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.custom-navlinks-scrollable_container button[aria-label="Marketplace"]:hover{
-opacity: 1;
-}
-
 
 /*Fans also like*/
 [data-test-uri^="spotify:artist"] [aria-label="Fans also like"] .Gi6Lr1whYBA2jutvHvjQ{
@@ -2152,8 +2142,8 @@ font-size:22px;
 }
 
 .main-yourLibraryX-libraryContainer .ix_8kg3iUb9VS5SmTnBY button > span{
-  background-color:#00000080!important;
-  backdrop-filter:blur(30px)!important;
+  background-color:#00000080;
+  backdrop-filter:blur(30px);
 }
 
 .main-yourLibraryX-libraryContainer .ix_8kg3iUb9VS5SmTnBY .e-9890-button-primary:hover .e-9890-button-primary__inner{
@@ -2504,7 +2494,7 @@ margin-top: 170px;
 .marketplace-header__left .marketplace-sortBox{padding-top:07px;}
 
 
-
+.Root__globalNav .main-globalNav-navLink{background-color:unset;}
 
 
 
