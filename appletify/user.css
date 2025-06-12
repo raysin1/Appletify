@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'San Francisco Pro';
+  font-family: 'SF Pro';
   src: url('https://raw.githubusercontent.com/sahibjotsaggu/San-Francisco-Pro-Fonts/master/SF-Pro.ttf') format('truetype');
 }
 
@@ -2433,19 +2433,27 @@ color:rgba(255, 255, 255, 0.64);}
 
 .GenericModal[aria-label="View Snippet"]{border-radius:20px;}
 
-.marketplace-code-editor,
-#marketplace-add-snippet-container input, textarea {
-  border:unset;}
-
-#marketplace-add-snippet-container > div > label{
-  font-size:25px;
-  font-weight:400;
-  margin-bottom:20px;
+.BeautifulLyricsPage.Contained .ViewControls{
+  display:none;
 }
 
-.marketplace-code-editor{
-  zoom:1.2;
+
+
+.BeautifulLyricsPage.Contained .ViewControls{
+  position:absolute;
+  top:0;
+  right:0;
 }
 
-.marketplace-customCSS-image-preview{border-radius:4px;}
+.Root__now-playing-bar #BeautifulLyricsFullscreenButton{
+  opacity:0;
+  transition:opacity ease 0.1s;
+  position: absolute;
+  left: 20px;
+}
+
+.Root__now-playing-bar #BeautifulLyricsFullscreenButton:hover{
+  opacity:1;}
+  
+  #Desktop_LeftSidebar_Id,.Root__right-sidebar{max-width: 18vw;}
 
