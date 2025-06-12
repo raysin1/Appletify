@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'SF Pro';
+  font-family: 'San Francisco Pro';
   src: url('https://raw.githubusercontent.com/sahibjotsaggu/San-Francisco-Pro-Fonts/master/SF-Pro.ttf') format('truetype');
 }
 
@@ -2456,4 +2456,58 @@ color:rgba(255, 255, 255, 0.64);}
   opacity:1;}
   
   #Desktop_LeftSidebar_Id,.Root__right-sidebar{max-width: 18vw;}
+
+.main-topBar-background {
+  height: 150%;
+background: linear-gradient(
+    to bottom,
+    rgb(10, 10, 10) 0%,
+    rgba(10, 10, 10, 0.8) 30%,
+    rgba(10, 10, 10, 0.4) 60%,
+    transparent 100%
+  );
+}
+
+
+.marketplace-header{position:unset;
+margin-top: 170px;
+    padding-bottom: 0px;
+}
+
+.marketplace-tabBar.marketplace-tabBar-nav{
+  margin-top: 26px;
+}
+
+
+.marketplace-tabBar-headerItem > a {
+    box-shadow: 8px 0 0 5px rgb(20, 20, 20), -8px 0 0 5px rgb(20, 20, 20);
+    border-radius: 10px;
+    background-color: rgb(20, 20, 20);
+    transition: box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+
+.marketplace-tabBar-headerItem > .marketplace-tabBar-active{
+  background-color:#404040;
+   box-shadow: 8px 0 0 5px #404040, -8px 0 0 5px #404040;
+}
+
+
+.marketplace-tabBar-headerItem > a:hover{
+  background-color:#404040;
+   box-shadow: 8px 0 0 5px #404040, -8px 0 0 5px #404040;
+}
+
+:root{--spice-sidebar: rgb(20, 20, 20);}
+
+
+.marketplace-header__left .marketplace-sortBox{padding-top:07px;}
+
+
+
+
+
+
+
+
 
