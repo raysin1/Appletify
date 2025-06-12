@@ -25,7 +25,7 @@
 <br>
 
 ### Manual Installation
-1. Download the [.zip file](https://raw.githubusercontent.com/raysin1/Appletify/main/appletify.zip)
+1. Download the [.zip file](https://raw.githubusercontent.com/raysin1/Appletify/blob/main/appletify.zip)
 2. Extract contents to `%appdata%\spicetify\Themes`
 3. Run `spicetify config current_theme appletify && spicetify apply` on terminal
 
