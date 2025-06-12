@@ -46,7 +46,11 @@
 1. Download [Windhawk](https://windhawk.net/)
 2. Install the `Spotify Tweaks` mod
 3. Under settings, disable `native frames and title bars` and **enable** `Transparent Rendering`
-4. Reopen Spotify
+
+4. Download [MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone)
+5. Create a new **process rule** for Spotify and set `Backdrop type` to **Acrylic**
+6. Turn on `Blur from behind` and `Extend frame into client area` if necessary
+7. Close and reopen Spotify
    
 
 
