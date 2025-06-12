@@ -10,8 +10,8 @@
 ![Preview](https://github.com/raysin1/Appletify/blob/main/screenshots/preview.png)
 
 <div style="display: flex; flex-direction: row; gap: 10px;">
-  <img src="https://raw.githubusercontent.com/raysin1/Appletify/main/screenshots/album.png" alt="Image 1" width="500">
-  <img src="https://raw.githubusercontent.com/raysin1/Appletify/main/screenshots/lyrics.png" alt="Image 2" width="500">
+  <img src="https://raw.githubusercontent.com/raysin1/Appletify/main/screenshots/album.png" alt="Image 1" width="400">
+  <img src="https://raw.githubusercontent.com/raysin1/Appletify/main/screenshots/lyrics.png" alt="Image 2" width="400">
 </div>
 
 
