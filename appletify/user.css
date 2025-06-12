@@ -2161,7 +2161,7 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar{
 
 
 #context-menu [role="menu"]{
-    outline:1px solid #676767;
+    outline:1px solid #676767bf;
 }
   
   
@@ -2387,7 +2387,10 @@ color:rgba(255, 255, 255, 0.64);}
 
 
 .marketplace-tabBar-headerItem > a{
-  background-color:rgba(31,31,31, .65);
+  box-shadow:8px 0 0 5px rgb(20,20,20), -8px 0 0 5px rgb(20,20,20);
+  border-radius:10px;
+  background-color:rgb(20,20,20);
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .main-topBar-background {
@@ -2404,7 +2407,17 @@ color:rgba(255, 255, 255, 0.64);}
 .GenericModal[aria-label="View Snippet"]{border-radius:20px;}
 
 
+.main-topBar-background{
+  margin: 0px auto;
+    width: 63%;
+}
 
 
+.marketplace-tabBar-headerItem > a:hover{
+  background-color:rgb(15,15,15);
+  box-shadow:8px 0 0 5px rgb(15,15,15), -8px 0 0 5px rgb(15,15,15);
+}
 
-body {zoom:0.8;}
+:root {--spice-sidebar: #101010;}
+
+.znVZUymLCaOkuN62U7Sf{background-color:unset;}
