@@ -1,3 +1,14 @@
+//Transparency
+js
+try {
+    const whModule = window.cancelEsperantoCall('ctewh');
+    whModule.extendFrame(-1, -1, -1, -1);
+    whModule.setBackdrop('acrylic'); // or mica or tabbed
+} catch {
+    // mod not available
+}
+
+
 (function moveNavElementsMod() {
     // Select elements
     const globalNavBar = document.querySelector("#global-nav-bar");
