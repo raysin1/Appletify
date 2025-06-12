@@ -1,11 +1,11 @@
 {
     "name": "Appletify",
     "description": "Apple Music theme for Spicetify",
-    "preview": "/screenshots/marketplace.png",
+    "preview": "screenshots/marketplace.png",
     "readme": "README.md",
-    "usercss": "/appletify/user.css",
-    "schemes": "/appletify/color.ini",
-    "include": ["https://raw.githubusercontent.com/raysin1/Appletify/blob/main/appletify/theme.js"],
+    "usercss": "appletify/user.css",
+    "schemes": "appletify/color.ini",
+    "include": ["https://raw.githubusercontent.com/raysin1/Appletify/main/appletify/theme.js"],
     "authors": [{ "name": "Raysin", "url": "https://github.com/raysin1" }]
     "tags": ["apple-music", "dark"]
 }
