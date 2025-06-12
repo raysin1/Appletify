@@ -230,18 +230,19 @@ html .WDC2Yzs811n7JCYtYQzc{
 
 
 
+
 [data-testid="playlist-page"] .main-entityHeader-container{
   min-height:490px;
 }
 
 [data-testid="playlist-page"] .main-entityHeader-imageContainer{zoom:1.6;}
 
+[data-testid="playlist-page"] .main-entityHeader-headerText{
+margin-bottom:180px;}
 
-[data-testid="playlist-page"] .blfR_YJUsKUvdgTejBSb{display:none;}
 
 [data-testid="playlist-page"] .main-entityHeader-title .e-9890-text.encore-text-headline-large.encore-internal-color-text-base{
-  font-size:4.3rem!important;
-  margin-bottom:220px;
+  font-size:2.3rem!important;
 }
 /*Alternating gray background*/
 [data-testid="playlist-page"] .main-rootlist-wrapper > div:nth-child(2) > :nth-child(odd){
@@ -252,7 +253,34 @@ html .WDC2Yzs811n7JCYtYQzc{
 
 [data-testid="playlist-page"] [data-testid="recommended-track"]{display:none;}
 
+[data-testid="playlist-page"] .main-entityHeader-headerText{
+margin-bottom:180px;}
 
+[data-testid="playlist-page"] .main-entityHeader-creatorWrapper figure{display:none;}
+
+[data-testid="playlist-page"] [data-testid="creator-link"]{
+    font-size:24px ;font-weight:400;color:#fa586a; 
+}
+  
+[data-testid="playlist-page"] .GI8QLntnaSCh2ONX_y2c{
+   position:absolute;
+ margin-top:90px;
+}
+
+[data-testid="playlist-page"] .GI8QLntnaSCh2ONX_y2c > *{
+   font-size:20px; opacity: 0.8;
+}
+
+[data-testid="playlist-page"] .blfR_YJUsKUvdgTejBSb > [data-separator="true"]{
+  display:none;
+}
+
+.main-actionBar-ActionBarRow [aria-label="Remove from Your Library"],
+.main-actionBar-ActionBarRow [aria-label="Add to Your Library"]{
+  display:none;
+}
+
+[data-testid="playlist-page"] .blfR_YJUsKUvdgTejBSb > .w1TBi3o5CTM7zW1EB3Bm{display:none;}
 
 [data-testid="playlist-page"] [data-encore-id="popoverTrigger"]{display: none;}
 
@@ -1486,8 +1514,7 @@ scale: 0.6;
 [data-testid="album-page"] > div > div.EmeHQXR87mUskYK6xEde > div.contentSpacing{
 padding-top:20px;}
 
-.main-actionBar-ActionBarRow [aria-label^="Explore"], 
-.main-actionBar-ActionBarRow [aria-label="Remove from Your Library"]{
+.main-actionBar-ActionBarRow [aria-label^="Explore"]{
   display:none;
 }
 
@@ -2406,18 +2433,19 @@ color:rgba(255, 255, 255, 0.64);}
 
 .GenericModal[aria-label="View Snippet"]{border-radius:20px;}
 
+.marketplace-code-editor,
+#marketplace-add-snippet-container input, textarea {
+  border:unset;}
 
-.main-topBar-background{
-  margin: 0px auto;
-    width: 63%;
+#marketplace-add-snippet-container > div > label{
+  font-size:25px;
+  font-weight:400;
+  margin-bottom:20px;
 }
 
-
-.marketplace-tabBar-headerItem > a:hover{
-  background-color:rgb(15,15,15);
-  box-shadow:8px 0 0 5px rgb(15,15,15), -8px 0 0 5px rgb(15,15,15);
+.marketplace-code-editor{
+  zoom:1.2;
 }
 
-:root {--spice-sidebar: #101010;}
+.marketplace-customCSS-image-preview{border-radius:4px;}
 
-.znVZUymLCaOkuN62U7Sf{background-color:unset;}
