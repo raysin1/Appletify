@@ -2410,14 +2410,7 @@ color:rgba(255, 255, 255, 0.64);}
   transition: box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
-.main-topBar-background {
-  background-color: rgba(45, 45, 45, 0.69);
-  backdrop-filter: blur(60px);
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
-}
+
 
 #marketplace-readme{background:unset;max-width:1000px;}
 
@@ -2440,6 +2433,7 @@ color:rgba(255, 255, 255, 0.64);}
   transition:opacity ease 0.1s;
   position: absolute;
   left: 20px;
+    scale: 2 !important;
 }
 
 .Root__now-playing-bar #BeautifulLyricsFullscreenButton:hover{
@@ -2497,7 +2491,8 @@ margin-top: 170px;
 .Root__globalNav .main-globalNav-navLink{background-color:unset;}
 
 
-
+.marketplace-grid .main-card-draggable .main-card-cardMetadata .marketplace-card__bottom-meta{
+display:none;}
 
 
 
