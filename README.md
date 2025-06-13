@@ -63,4 +63,5 @@
 - Workaround to blank empty queue
 - Style connected device bar
 - User profile
+- Liquid glass skin
 
