@@ -6,6 +6,6 @@
     "usercss": "appletify/user.css",
     "schemes": "appletify/color.ini",
     "include": ["https://raw.githubusercontent.com/raysin1/Appletify/main/appletify/theme.js"],
-    "authors": [{ "name": "Raysin", "url": "https://github.com/raysin1" }]
+    "authors": [{ "name": "Raysin", "url": "https://github.com/raysin1" }],
     "tags": ["apple-music", "dark"]
 }
