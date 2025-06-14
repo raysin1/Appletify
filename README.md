@@ -62,6 +62,6 @@
 - Fix playlist alignment and element visibility
 - Workaround to blank empty queue
 - Style connected device bar
-- User profile
+- Fix play button hover lur delay
 - Liquid glass skin
 
