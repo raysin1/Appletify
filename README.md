@@ -25,12 +25,6 @@
 3. Go to **Marketplace** > **Themes**, find **Appletify** and install.
 <br>
 
-### Manual Installation
-1. Download the [.zip file](https://raw.githubusercontent.com/raysin1/Appletify/main/appletify.zip)
-2. Extract contents to `%appdata%\spicetify\Themes`
-3. Run `spicetify config current_theme appletify` and `spicetify apply` on terminal
-
-<br>
 
 **Make sure to also install the following extensions on Marketplace:**
 
