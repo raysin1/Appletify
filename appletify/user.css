@@ -1,3 +1,55 @@
+.Root__top-container {
+    grid-template-areas:
+   "left-sidebar now-playing-bar now-playing-bar"
+    "left-sidebar main-view right-sidebar";
+grid-template-rows: auto 1fr;
+}
+.main-nowPlayingBar-right{margin-right:20px}
+
+.Root__now-playing-bar{-webkit-app-region: drag;
+}
+
+.BeautifulLyricsBackground{border-radius:0px!important;}
+
+.main-nowPlayingBar-center{width:30%}
+
+
+.BeautifulLyricsBackground-Container {
+    border-radius: 0px;}
+
+.Root__now-playing-bar button,
+.main-nowPlayingWidget-trackInfo.main-trackInfo-container,
+.volume-bar.main-nowPlayingBar-volumeBar{
+  -webkit-app-region: no-drag;}
+
+.main-nowPlayingBar-left {
+    order: 2;}
+.main-nowPlayingBar-center {
+    order: 1;}
+.main-nowPlayingBar-right {
+    order: 3;}
+
+.main-nowPlayingBar-right .volume-bar{order:1;}
+.main-nowPlayingBar-right #BeautifulLyricsFullscreenButton{order:2!important;}
+.main-nowPlayingBar-right .GlueDropTarget{order:3;}
+
+.main-nowPlayingBar-extraControls{gap:21px; margin-right:18px}
+
+.gglUjikTBtMzCZFgSmpS {
+   position: absolute;
+   top: 90%;
+   left: 16%;
+   z-index:99999;
+    max-width:260px;
+}
+
+/*Improve scrollbar*/
+.os-scrollbar-handle{
+ width:30%!important;
+ height:50%!important;
+ margin-right:1px;
+ border-radius:15px !important;}
+
 @font-face {
   font-family: 'San Francisco Pro';
   src: url('https://raw.githubusercontent.com/sahibjotsaggu/San-Francisco-Pro-Fonts/master/SF-Pro.ttf') format('truetype');
@@ -409,11 +461,7 @@ display:none;}
 .main-yourLibraryX-filterArea.AJ_AzxWnimxNHc4ye3vk{display:none;}
 
 .Root__now-playing-bar{
-
-    zoom: 1.05;
-    position: absolute;
-    background: #00000059;
-    backdrop-filter: blur(60px);
+    background: #2c2c2c;
 }
 
 .Root__top-container{
@@ -431,14 +479,8 @@ display:none;}
 
 
 
-/*Hide thumb seekbar*/
-.Root__now-playing-bar > footer > div > div.main-nowPlayingBar-center > div > div.playback-bar.gglUjikTBtMzCZFgSmpS > div.playback-progressbar-container > div > div > div.x-progressBar-progressBarBg > div.progress-bar__slider.oShi2lRbnhFkEr2LlUqC{
-  display:none;}
-}
 
-.main-actionBar-ActionBarRow{
-  display:none;
-}
+
 
 .main-actionBar-ActionBar.contentSpacing{padding:8px}
 
@@ -464,7 +506,24 @@ display:none;}
 
 .main-nowPlayingBar-left{padding-left:0px;}
 
+.main-yourLibraryX-filterArea.AJ_AzxWnimxNHc4ye3vk{display:none;}
 
+.Root__now-playing-bar{
+    background: #2c2c2c;
+}
+
+
+.main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg .main-globalNav-searchSection [data-encore-id="formInput"]{
+  background-color:transparent;
+}
+
+.Root__nav-bar {
+  transition: width 0.25s ease;
+}
+
+.main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg .main-globalNav-searchSection [data-encore-id="formInput"]{
+  background-color:transparent;
+}
 
 
 .main-nowPlayingBar-left{zoom: 1.1;}
@@ -600,11 +659,6 @@ display:none;}
   gap:2px;
 }
 
-.T0fKO6B7LQSCE_VaSM1P[aria-label="Spotify – Search"]{
-  margin-top:50px;
-}
-
-
  [aria-label="Spotify – Search"] [title="Explicit"]{display:none;}
 
  
@@ -731,26 +785,12 @@ margin-right: -50px;
 }
 
 
-.playback-bar{
-  max-width:260px;}
-  
-.main-trackInfo-name{
-  width:120%;}
-  
-
-
 
 .player-controls{zoom:1.;}
 
 
 .player-controls__buttons{
   margin-bottom:5px;}
-
-
-
-.Root__now-playing-bar .main-nowPlayingBar-left *{
-  border-radius: 0px!important;}
-
 
 
 
@@ -769,9 +809,6 @@ margin-right: -50px;
   margin-left:10px;}
 
 
-/*Remove slider thumb*/
-.playback-bar.gglUjikTBtMzCZFgSmpS .progress-bar__slider{
-  display:none;}
   
 /*Progress bar colors*/
 .x-progressBar-fillColor{
@@ -914,7 +951,7 @@ button[data-testid="control-button-skip-forward"] svg {
 
 
 /*Lyrics button*/
-#main > div.Root.global-nav.centered-layout > div.Root__top-container > div.Root__main-view > div.Root__now-playing-bar > footer > div > div.main-nowPlayingBar-right > div > button:nth-child(2) > span > svg > g > path:nth-child(3){
+.Root__now-playing-bar .main-nowPlayingBar-extraControls > button:nth-child(2) > span > svg > g > path:nth-child(3){
   d: path("M 16.048828125,6.466796875 C 16.392578125,6.466796875 16.671875,6.66015625 16.97265625,6.896484375 L 24.79296875,13.556640625 L 42.990234375,13.556640625 C 47.673828125,13.556640625 50.681640625,16.62890625 50.681640625,21.26953125 L 50.681640625,40.17578125 C 50.681640625,44.794921875 47.673828125,47.8671875 42.990234375,47.8671875 L 13.169921875,47.8671875 C 8.486328125,47.8671875 5.478515625,44.859375 5.478515625,40.17578125 L 5.478515625,21.26953125 C 5.478515625,16.564453125 8.486328125,13.556640625 13.169921875,13.556640625 L 15.25390625,13.556640625 L 15.25390625,7.34765625 C 15.25390625,6.810546875 15.59765625,6.466796875 16.048828125,6.466796875 Z M 16.2421875,7.60546875 L 16.2421875,14.09375 C 16.2421875,14.458984375 16.091796875,14.609375 15.7265625,14.609375 L 13.234375,14.609375 C 9.173828125,14.609375 6.53125,17.251953125 6.53125,21.3125 L 6.53125,40.111328125 C 6.53125,44.171875 9.173828125,46.814453125 13.234375,46.814453125 L 42.947265625,46.814453125 C 46.87890625,46.814453125 49.62890625,44.171875 49.62890625,40.111328125 L 49.62890625,21.3125 C 49.62890625,17.251953125 46.87890625,14.609375 42.947265625,14.609375 L 25.029296875,14.609375 C 24.4921875,14.609375 24.234375,14.501953125 23.740234375,14.072265625 Z M 20.109375,31.904296875 C 20.109375,29.94921875 21.44140625,28.509765625 23.396484375,28.509765625 C 24.27734375,28.509765625 25.072265625,28.810546875 25.587890625,29.498046875 L 25.73828125,29.498046875 C 25.115234375,27.607421875 23.203125,26.490234375 22.322265625,26.232421875 C 21.828125,26.103515625 21.677734375,25.888671875 21.677734375,25.587890625 C 21.677734375,25.201171875 21.935546875,24.943359375 22.322265625,24.943359375 C 23.67578125,24.943359375 27.521484375,26.8125 27.521484375,31.23828125 C 27.521484375,33.81640625 25.6953125,35.427734375 23.71875,35.427734375 C 21.677734375,35.427734375 20.109375,33.859375 20.109375,31.904296875 Z M 30.013671875,31.904296875 C 30.013671875,29.94921875 31.345703125,28.509765625 33.30078125,28.509765625 C 34.181640625,28.509765625 34.9765625,28.810546875 35.4921875,29.498046875 L 35.642578125,29.498046875 C 35.01953125,27.607421875 33.107421875,26.490234375 32.2265625,26.232421875 C 31.732421875,26.103515625 31.58203125,25.888671875 31.58203125,25.587890625 C 31.58203125,25.201171875 31.83984375,24.943359375 32.2265625,24.943359375 C 33.580078125,24.943359375 37.42578125,26.8125 37.42578125,31.23828125 C 37.42578125,33.81640625 35.599609375,35.427734375 33.623046875,35.427734375 C 31.560546875,35.427734375 30.013671875,33.859375 30.013671875,31.904296875 Z");
   scale:0.5;
   transform: scale(1, -1) translate(-16px, -16px);
@@ -1173,8 +1210,7 @@ border-radius: 20px;}
    margin-bottom:80px;
    margin-left:20px;
  }
- 
- .main-view-container:has([data-test-uri^="spotify:artist"]){margin-top:75px;}
+
  
 
  [data-test-uri^="spotify:artist"] [aria-label="Discography"] div:nth-child(3){
@@ -1269,7 +1305,7 @@ border-radius: 20px;}
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 15%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
   z-index: -1;
 }
@@ -1477,7 +1513,7 @@ padding-top:20px;}
 
 /*Main text align*/
 [data-testid="album-page"] .iWTIFTzhRZT0rCD0_gOK.contentSpacing .main-entityHeader-headerText{
- height:280px;}
+ height:240px;}
 
 /*Move titles right*/
 [data-testid="album-page"] .main-entityHeader-headerText{
@@ -1527,7 +1563,8 @@ padding-top:20px;}
 
 /*Make album cover big*/
 [data-testid="album-page"] div.main-entityHeader-container, section.playlist-playlist-playlist div.main-entityHeader-container {
-  min-height: 510px !important; }
+  min-height: 450px !important; }
+
 [data-testid="album-page"] button.main-entityHeader-imageContainer.main-entityHeader-imageContainerNew.main-entityHeader-imageContainerClickable, .playlist-playlist-playlist div.main-entityHeader-imageContainer.main-entityHeader-imageContainerNew {
   width: 380px; 
   height: 380px;}
@@ -1623,88 +1660,7 @@ letter-spacing:0.25px;
   display:none;}
 }
 
-/*Sidebar*/
 
-.main-yourLibraryX-entryPoints, ..main-yourLibraryX-libraryContainer{background-color:transparent!important;}
-
-.main-yourLibraryX-libraryContainer.YourLibraryX > div.main-globalNav-searchSection > div > div > span > div > form > div.ODl7TwNawIfBwiZv1Czg > div.dM_TEJo05MxBvrLzfNrW > span.IYex0sXu8fnCz1FqFbRe{display:none;}
-
-.main-globalNav-searchContainer .e-9890-form-input-icon__icon.e-9890-form-input-icon__icon--trailing{
-display:none;}
-
-.main-globalNav-searchContainer [aria-label="Home"]{
-display:none;}
-
-.main-globalNav-searchSection{position:relative;}
-
-.main-globalNav-searchContainer{min-width:10px;width:100%;}
-
-.Root__nav-bar {
-  transition: width 0.25s ease;
-}
-
-.main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg .main-globalNav-searchSection [data-encore-id="formInput"]{
-  background-color:transparent;
-}
-
-
-
-.BZh0f1vbOmruyp4_t9wy.QO1vC7wN5xiIjBOHGElf{display:none;}
-
-
-.LedDBMWCxYhMD20KtPJo.main-actionButtons{display:none;}
-
-
-
-.Root__now-playing-bar{
-
-    zoom: 1.05;
-    position: absolute;
-    background: #2d2d2db0;
-    backdrop-filter: blur(60px);
-}
-
-.Root__top-container{
-  gap:0;
-  padding:0px;
- padding-right:0px!important;
- padding-top:0px!important;
-}
-
-.Root__main-view{border-top-left-radius:0px;}
-
-
-#global-nav-bar{margin-top:4px;}
-
-
-
-
-/*Hide thumb seekbar*/
-.Root__now-playing-bar > footer > div > div.main-nowPlayingBar-center > div > div.playback-bar.gglUjikTBtMzCZFgSmpS > div.playback-progressbar-container > div > div > div.x-progressBar-progressBarBg > div.progress-bar__slider.oShi2lRbnhFkEr2LlUqC{
-  display:none;}
-}
-
-.main-actionBar-ActionBarRow{
-  display:none;
-}
-
-.main-actionBar-ActionBar.contentSpacing{padding:8px}
-
-[data-encore-id="formInput"]{
-  border-radius:8px;
-
-}
-
-.main-yourLibraryX-libraryContainer.YourLibraryX .main-globalNav-searchContainer{
-  zoom:0.9;
-  margin:6px;
-}
-
-
-
-
-
-.SMBqsyNXIMb0yeYVwPxv{display:none;}
 
 
 
@@ -1835,9 +1791,6 @@ display:none;}
   gap:2px;
 }
 
-.T0fKO6B7LQSCE_VaSM1P[aria-label="Spotify – Search"]{
-  margin-top:50px;
-}
 
 
  [aria-label="Spotify – Search"] [title="Explicit"]{display:none;}
@@ -2181,19 +2134,9 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar{
 
 .main-coverSlotCollapsed-container.main-coverSlotCollapsed-navAltContainer{
   top: 2.5px;
-  scale: 1.18;
+  scale: 1.16;
 }
 
-.Root__right-sidebar::before,
-#Desktop_LeftSidebar_Id::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: inset 0 0 0 100vmax rgba(38, 38,38, 0.76);
-  z-index: -1;}
 
 
 .main-navBar-mainNav{
@@ -2399,7 +2342,7 @@ color:rgba(255, 255, 255, 0.64);}
   opacity:0;
   transition:opacity ease 0.1s;
   position: absolute;
-  left: 20px;
+ left: 885px;
     scale: 2 !important;
 }
 
@@ -2462,11 +2405,11 @@ margin-top: 170px;
 display:none;}
 
 
-
 /*Change liked songs thumbnail*/
 [data-testid="playlist-image"] .main-entityHeader-image,
 .GOcsybnoHYyJGQGDRuwj > div,
-.x-entityImage-imageContainer {
+.x-entityImage-imageContainer
+{
     &:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"]) {
         &::after {
             content: "";
@@ -2482,6 +2425,7 @@ display:none;}
     }
 }
 
+.gglUjikTBtMzCZFgSmpS .progress-bar__slider{display:none!important;}
 
 .main-contextMenu-menuItemButton.egE6UQjF_UUoCzvMxREj{
  display:none;
@@ -2502,4 +2446,84 @@ display:none;}
   margin-left:20px;
 }
 
+
 .znVZUymLCaOkuN62U7Sf{background-color:unset;}
+
+
+.Root__right-sidebar::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 100vmax rgb(65 64 64 / 94%);
+  z-index: -1;}
+
+#Desktop_LeftSidebar_Id::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 100vmax rgb(36 36 36 / 79%);
+  z-index: -1;}
+
+
+.Root__right-sidebar{
+  border-left: 1px solid #5a5a5a;}
+
+.main-nowPlayingWidget-nowPlaying:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+   bottom:-03px;
+   left:0px;
+   right:0;
+
+  background-color: #4d4d4d;
+  z-index: -1; /* Places it behind the main element */
+}
+
+.gglUjikTBtMzCZFgSmpS{flex-direction: row-reverse;}
+
+
+
+.gglUjikTBtMzCZFgSmpS [data-testid="playback-position"]{
+  top:-10px;
+  position: absolute;
+  right:5px;
+}
+
+
+.gglUjikTBtMzCZFgSmpS [data-testid="playback-duration"]{
+  left:5px;
+    top:-13px;
+  position: absolute;
+}
+
+.gglUjikTBtMzCZFgSmpS {
+   position: absolute;
+   top: 90%;
+   left: 13.5%;
+   z-index:99999;
+    max-width:382px;
+}
+
+.HD9s7U5E1RLSWKpXmrqx {border-radius:0px;}
+.main-coverSlotCollapsed-container{overflow:visible;}
+
+.main-nowPlayingWidget-trackInfo.main-trackInfo-container{
+   position: relative;
+    scale: 1.1;
+    margin: auto;
+    left: -10px;
+    top: -02px;
+}
+.main-trackInfo-artists{
+justify-content: center;
+}
+
+
+
