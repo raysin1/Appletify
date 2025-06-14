@@ -192,40 +192,7 @@ div.search-searchCategory-SearchCategory {
   text-align:center;
   margin-top:5px;}
 
-/*Browse page*/
-
-.main-shelf-shelf.Shelf.MKCgGhu_c8l6hsVuee46[aria-label="Recent searches"]{
-  display:none;
-}
-
-html .WDC2Yzs811n7JCYtYQzc{
-  -webkit-transform: rotate(15deg) translateX(-20px);
-  scale:1.35;
-}
-
-.main-shelf-shelf.Shelf.MKCgGhu_c8l6hsVuee46{
-  margin-top:-40px;
-  padding-left:20px;
- padding-right:30px;
-}
-
-
-#listrow-title-browse-all > span{
-  color:transparent;
-  zoom:0.8;
-  font-size: 0;
-}
-
-#listrow-title-browse-all > span{
-  color:transparent;
-  zoom:0.8;
-  font-size: 0;
-}
-#listrow-title-browse-all > span:before{
-  content:"Browse Categories";
-  color:white;
- font-size: 22px;
-}
+/
 .playlist-playlist-playlistContent .main-trackList-rowMarker{visibility: hidden;}
 
 
@@ -2496,7 +2463,6 @@ display:none;}
 
 
 /*Change liked songs thumbnail*/
-
 [data-testid="playlist-image"] .main-entityHeader-image,
 .GOcsybnoHYyJGQGDRuwj > div {
     &:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"]) {
@@ -2512,4 +2478,25 @@ display:none;}
             background-image: url("https://scontent.fyyc3-1.fna.fbcdn.net/v/t39.30808-6/481102905_1155699489888498_7004212485082003953_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=fZ-MCw2dDMcQ7kNvwFLIzho&_nc_oc=AdlHalySwWZnE-pk4BBE6SO-lXAagpHgsyMchsXHbjMiQxnQwA6r1zz-bBN1AovES27jBZlylniVCLfZHTXf0eI9&_nc_zt=23&_nc_ht=scontent.fyyc3-1.fna&_nc_gid=38p0KLGf1QI_pz3YXVq2tg&oh=00_AfPOQa0RDsWZit0Mafd6VgTUbmoczFBet7EWZT2uUoIc2w&oe=6852E575");
         }
     }
+}
+
+
+
+.main-contextMenu-menuItemButton.egE6UQjF_UUoCzvMxREj{
+ display:none;
+}
+
+.main-contextMenu-menuItemButton:has([aria-label="External link"]){
+  display:none;
+}
+
+.cubl27eU3uN3hmAiqdmQ{padding-top:75px;}
+
+.cubl27eU3uN3hmAiqdmQ .main-entityHeader-title > h1{
+  font-size:2.5rem!important;
+}
+
+.cubl27eU3uN3hmAiqdmQ .main-actionBar-ActionBarRow{
+  zoom:1.2;
+  margin-left:20px;
 }
