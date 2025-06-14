@@ -53,6 +53,7 @@
 <br><br>
 
 **To do:**
+- Fix fullscreen cover button
 - High res artwork extension
 - Workaround to blank empty queue
 - Style connected device bar
