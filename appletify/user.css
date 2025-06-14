@@ -31,13 +31,7 @@ grid-template-rows: auto 1fr;
 
 .main-nowPlayingBar-extraControls{gap:21px; margin-right:18px}
 
-.gglUjikTBtMzCZFgSmpS {
-   position: absolute;
-   top: 90%;
-   left: 16%;
-   z-index:99999;
-    max-width:260px;
-}
+
 
 /*Improve scrollbar*/
 .os-scrollbar-handle{
@@ -2495,11 +2489,11 @@ display:none;}
 }
 
 .gglUjikTBtMzCZFgSmpS {
+   left: 61px;
+   top: 54px;
    position: absolute;
-   top: 90%;
-   left: 15%;
-   z-index:999;
-    max-width:347px;
+   z-index:99;
+    max-width:300px;
 }
 
 .HD9s7U5E1RLSWKpXmrqx {border-radius:0px;}
@@ -2580,3 +2574,7 @@ transition: none!important;}
 
 
 .main-actionBar-ActionBar [aria-label="Save to Your Library"]{display:none;}
+
+.main-nowPlayingWidget-nowPlaying .cover-art{height:56.5px;width:56.5px;}
+
+.main-actionBarBackground-background{display:none;}
