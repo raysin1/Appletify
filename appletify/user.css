@@ -2181,7 +2181,7 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar{
 
 .main-coverSlotCollapsed-container.main-coverSlotCollapsed-navAltContainer{
   top: 2.5px;
-  scale: 1.16;
+  scale: 1.18;
 }
 
 .Root__right-sidebar::before,
@@ -2462,9 +2462,11 @@ margin-top: 170px;
 display:none;}
 
 
+
 /*Change liked songs thumbnail*/
 [data-testid="playlist-image"] .main-entityHeader-image,
-.GOcsybnoHYyJGQGDRuwj > div {
+.GOcsybnoHYyJGQGDRuwj > div,
+.x-entityImage-imageContainer {
     &:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"]) {
         &::after {
             content: "";
@@ -2479,7 +2481,6 @@ display:none;}
         }
     }
 }
-
 
 
 .main-contextMenu-menuItemButton.egE6UQjF_UUoCzvMxREj{
