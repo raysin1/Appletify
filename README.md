@@ -53,11 +53,9 @@
 <br><br>
 
 **To do:**
-- Move controls to left and playing widget to middle
-- Fix playlist alignment and element visibility
+- High res artwork extension
 - Workaround to blank empty queue
 - Style connected device bar
-- Fix play button hover lur delay
 - Liquid glass skin
 - Maybe make a  Apple music like sidebar with spicetify library app wth buttons to playlists/abums/artists
 
