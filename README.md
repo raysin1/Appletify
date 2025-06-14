@@ -64,4 +64,5 @@
 - Style connected device bar
 - Fix play button hover lur delay
 - Liquid glass skin
+- Maybe make a  Apple music like sidebar with spicetify library app wth buttons to playlists/abums/artists
 
