@@ -53,6 +53,7 @@
 <br><br>
 
 **To do:**
+- Move controls to left and playing widget to middle
 - Fix playlist alignment and element visibility
 - Workaround to blank empty queue
 - Style connected device bar
