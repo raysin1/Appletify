@@ -1312,7 +1312,8 @@ padding-left: 60px;
 margin-top:50px;
 }
 .T0fKO6B7LQSCE_VaSM1P[aria-label*="Artists Fans of"] .main-gridContainer-gridContainer.main-shelf-shelfGrid{
-  --min-column-width:250px!important;
+  --min-column-width:230px!important;
+gap: 40px;
 }
 
 [data-test-uri*="spotify:artist"] .EmeHQXR87mUskYK6xEde > div.contentSpacing > [aria-label="Discography"] > .main-gridContainer-gridContainer{
