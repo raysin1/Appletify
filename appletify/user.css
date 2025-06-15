@@ -9,13 +9,12 @@ grid-template-rows: auto 1fr;
 .Root__now-playing-bar{-webkit-app-region: drag;
 }
 
-.BeautifulLyricsBackground{border-radius:0px!important;}
 
 .main-nowPlayingBar-center{width:30%}
 
 
 .BeautifulLyricsBackground-Container {
-    border-radius: 0px;}
+    border-radius: 0!important;}
 
 
 .main-nowPlayingBar-left {
@@ -507,6 +506,8 @@ display:none;}
 
 .Root__nav-bar {
   transition: width 0.25s ease;
+   zoom:1.05;
+    border-right: 2px solid #3e3e3e;
 }
 
 .main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg .main-globalNav-searchSection [data-encore-id="formInput"]{
@@ -1119,7 +1120,11 @@ button[data-testid="control-button-skip-forward"] svg {
   margin-top:5px;
   zoom:1.25;
 }
-  
+
+[data-test-uri^="spotify:artist"] [aria-label="Fans also like"] .main-shelf-shelfGrid{
+column-gap:20px;}
+
+
 [data-test-uri^="spotify:artist"] .EmeHQXR87mUskYK6xEde .main-trackList-rowSectionStart > img{
   transform:unset;
 } 
@@ -1642,7 +1647,6 @@ letter-spacing:0.25px;
 
 .main-nowPlayingBar-left{padding-left:4px;}
 
-.Root__nav-bar{zoom:1.05;}
 
 .main-nowPlayingBar-left{zoom: 1.1;}
 
@@ -1918,6 +1922,7 @@ display:none;
 
 .Root__right-sidebar{
 -webkit-app-region: no-drag;
+    border-left: 2px solid #525252;
 }
 
 .Root__right-sidebar [aria-label="Queue"] .W3E0IT3_STcazjTeyOJa{
@@ -2112,10 +2117,6 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar{
 
 
 
-.Root__right-sidebar{
-  border-left: 0.5px solid #424242;}
-
-
 
 [data-test-uri^="spotify:artist"] .main-entityHeader-title span{font-size:47.5px!important;
 font-weight:700!important;}
@@ -2304,7 +2305,8 @@ color:rgba(255, 255, 255, 0.64);}
 .Root__now-playing-bar #BeautifulLyricsFullscreenButton:hover{
   opacity:1;}
   
-  #Desktop_LeftSidebar_Id,.Root__right-sidebar{max-width: 16vw;}
+  #Desktop_LeftSidebar_Id{max-width: 16vw;}
+.Root__right-sidebar{max-width: 14vw;}
 
 .main-topBar-background {
   height: 150%;
@@ -2413,7 +2415,7 @@ display:none;}
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: inset 0 0 0 100vmax rgb(65 64 64 / 94%);
+  box-shadow: inset 0 0 0 100vmax rgb(65 64 64 / 88%);
   z-index: -1;}
 
 #Desktop_LeftSidebar_Id::before{
@@ -2426,9 +2428,6 @@ display:none;}
   box-shadow: inset 0 0 0 100vmax rgb(36 36 36 / 79%);
   z-index: -1;}
 
-
-.Root__right-sidebar{
-  border-left: 1px solid #5a5a5a;}
 
 .main-nowPlayingWidget-nowPlaying:before {
   content: '';
@@ -2486,8 +2485,6 @@ justify-content: center;
 
 
 
-.BeautifulLyricsBackground-Container{border-radius:0px;}
-
 .main-nowPlayingBar-extraControls > [data-testid="control-button-npv"]{display:none;}
 
 .main-genericButton-button.main-genericButton-buttonActiveDot:after{
@@ -2504,12 +2501,12 @@ justify-content: center;
 [data-restore-focus-key="device_picker"] > span > svg > path:nth-child(1),
 [data-restore-focus-key="device_picker_overlay"] > span > svg > path:nth-child(1){
   d:path('M325.684,138.207 C325.684,157.087 329.183,174.828 336.182,191.43 C343.18,208.031 352.865,222.517 365.234,234.887 C367.188,236.514 368.978,236.352 370.605,234.398 L377.441,226.586 C379.069,224.958 379.069,223.168 377.441,221.215 C367.025,210.473 358.805,198.021 352.783,183.861 C346.761,169.701 343.75,154.483 343.75,138.207 C343.75,121.931 346.842,106.632 353.027,92.3086 C359.212,77.9857 367.757,65.3717 378.662,54.4668 C389.567,43.5618 402.262,35.0169 416.748,28.832 C431.234,22.6471 446.615,19.5547 462.891,19.5547 C479.167,19.5547 494.548,22.6471 509.033,28.832 C523.519,35.0169 536.214,43.5618 547.119,54.4668 C558.024,65.3717 566.569,77.9857 572.754,92.3086 C578.939,106.632 582.031,121.931 582.031,138.207 C582.031,154.483 579.02,169.701 572.998,183.861 C566.976,198.021 558.757,210.473 548.34,221.215 C546.712,223.168 546.712,224.958 548.34,226.586 L555.176,234.398 C556.803,236.352 558.594,236.514 560.547,234.887 C572.917,222.517 582.601,208.031 589.6,191.43 C596.598,174.828 600.098,157.087 600.098,138.207 C600.098,119.327 596.598,101.586 589.6,84.9844 C582.601,68.3828 572.754,53.8158 560.059,41.2832 C547.363,28.7507 532.715,18.9036 516.113,11.7422 C499.512,4.58073 481.771,1 462.891,1 C444.01,1 426.27,4.58073 409.668,11.7422 C393.066,18.9036 378.499,28.7507 365.967,41.2832 C353.434,53.8158 343.587,68.3828 336.426,84.9844 C329.264,101.586 325.684,119.327 325.684,138.207 M364.258,138.207 C364.258,151.228 366.618,163.516 371.338,175.072 C376.058,186.628 382.487,196.801 390.625,205.59 C392.578,207.543 394.531,207.543 396.484,205.59 L403.32,197.777 C404.948,196.15 404.948,194.359 403.32,192.406 C396.81,185.245 391.764,177.025 388.184,167.748 C384.603,158.471 382.813,148.624 382.813,138.207 C382.813,123.559 386.393,110.212 393.555,98.168 C400.716,86.1237 410.4,76.4395 422.607,69.1152 C434.814,61.791 448.242,58.1289 462.891,58.1289 C477.539,58.1289 490.967,61.791 503.174,69.1152 C515.381,76.4395 525.065,86.1237 532.227,98.168 C539.388,110.212 542.969,123.559 542.969,138.207 C542.969,148.624 541.178,158.389 537.598,167.504 C534.017,176.618 528.971,184.757 522.461,191.918 C520.833,194.197 520.833,196.15 522.461,197.777 L529.297,205.59 C531.25,207.543 533.203,207.543 535.156,205.59 C543.294,196.801 549.723,186.628 554.443,175.072 C559.163,163.516 561.523,151.228 561.523,138.207 C561.523,124.861 559.001,112.247 553.955,100.365 C548.91,88.4837 541.829,77.9857 532.715,68.8711 C523.6,59.7565 513.102,52.5951 501.221,47.3867 C489.339,42.1784 476.563,39.5742 462.891,39.5742 C449.219,39.5742 436.442,42.1784 424.561,47.3867 C412.679,52.5951 402.181,59.7565 393.066,68.8711 C383.952,77.9857 376.872,88.4837 371.826,100.365 C366.781,112.247 364.258,124.861 364.258,138.207 M376.465,258.813 C374.186,261.091 373.617,263.695 374.756,266.625 C375.895,269.555 378.092,271.02 381.348,271.02 L544.434,271.02 C547.689,271.02 549.886,269.555 551.025,266.625 C552.165,263.695 551.595,261.091 549.316,258.813 L469.238,167.504 C467.611,165.876 465.495,165.063 462.891,165.063 C460.286,165.063 458.171,165.876 456.543,167.504 L376.465,258.813 M402.832,138.207 C402.832,145.368 404.053,152.123 406.494,158.471 C408.936,164.818 412.272,170.596 416.504,175.805 C418.132,178.083 419.922,178.083 421.875,175.805 L429.199,168.48 C430.827,166.853 430.99,165.063 429.688,163.109 C427.083,159.529 425.049,155.622 423.584,151.391 C422.119,147.159 421.387,142.764 421.387,138.207 C421.387,130.72 423.258,123.884 427.002,117.699 C430.745,111.514 435.791,106.469 442.139,102.563 C448.486,98.6563 455.404,96.7031 462.891,96.7031 C470.378,96.7031 477.295,98.6563 483.643,102.563 C489.99,106.469 495.036,111.514 498.779,117.699 C502.523,123.884 504.395,130.72 504.395,138.207 C504.395,142.764 503.662,147.159 502.197,151.391 C500.732,155.622 498.698,159.529 496.094,163.109 C494.792,165.063 494.954,166.853 496.582,168.48 L503.906,175.805 C505.859,178.083 507.65,178.083 509.277,175.805 C513.509,170.596 516.846,164.818 519.287,158.471 C521.729,152.123 522.949,145.368 522.949,138.207 C522.949,127.465 520.182,117.536 514.648,108.422 C509.115,99.3073 501.872,92.0645 492.92,86.6934 C483.968,81.3223 473.958,78.6367 462.891,78.6367 C451.823,78.6367 441.813,81.3223 432.861,86.6934 C423.91,92.0645 416.667,99.3073 411.133,108.422 C405.599,117.536 402.832,127.465 402.832,138.207');
- scale:0.06;
-transform:translate(-325px,0px);  
+    scale: 0.058;
+    transform: translate(-326px, 0px);
 }
 
 [data-restore-focus-key="device_picker"] > span > svg,
-[data-restore-focus-key="device_picker_overlay"] > span > svg{scale:1.4;}
+[data-restore-focus-key="device_picker_overlay"] > span > svg{scale:1.5;}
 
 [data-restore-focus-key="device_picker"],
 [data-restore-focus-key="device_picker_overlay"]{color:rgb(255 255 255 / 40%);}
@@ -2611,5 +2608,8 @@ border-top: 1px solid #80808075;
 
 
 
+.BeautifulLyricsPage.Fullscreen .Content .PlayPanel .SliderBar .Handle{display:none;}
 
+
+.IkAuhlmCofCxyvdphgkv, .xiY2NMtQWcYIpFQ8QSEB{justify-content: center;}
 
