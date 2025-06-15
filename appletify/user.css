@@ -1020,7 +1020,6 @@ button[data-testid="control-button-skip-forward"] svg {
   zoom:1.05;
   transition: width 0.25s ease;max-width:310px}
 
-.Root__right-sidebar{max-width:295px;}
 
 .BeautifulLyricsPage.Fullscreen.BeautifulLyricsBackground > div > div.PlayPanel > div.Timeline > div > div.Handle{display:none;}
     
@@ -2113,10 +2112,6 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar{
 
 
 
-.main-navBar-mainNav{
-  border-right: 0.5px solid #424242;}
-
-
 .Root__right-sidebar{
   border-left: 0.5px solid #424242;}
 
@@ -2309,7 +2304,7 @@ color:rgba(255, 255, 255, 0.64);}
 .Root__now-playing-bar #BeautifulLyricsFullscreenButton:hover{
   opacity:1;}
   
-  #Desktop_LeftSidebar_Id,.Root__right-sidebar{max-width: 18vw;}
+  #Desktop_LeftSidebar_Id,.Root__right-sidebar{max-width: 16vw;}
 
 .main-topBar-background {
   height: 150%;

@@ -52,3 +52,39 @@
         });
     }
 })();
+
+
+function enhanceImageSizes() {
+  // Handle existing images
+  document.querySelectorAll(".main-image-image.main-entityHeader-image[srcset]").forEach(img => {
+    img.setAttribute("sizes", "9999px");
+  });
+
+  // Set up MutationObserver to handle future images
+  const observer = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+      if (mutation.addedNodes.length) {
+        mutation.addedNodes.forEach(node => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            if (node.matches(".main-image-image.main-entityHeader-image[srcset]")) {
+              node.setAttribute("sizes", "9999px");
+            }
+            node.querySelectorAll(".main-image-image.main-entityHeader-image[srcset]").forEach(img => {
+              img.setAttribute("sizes", "9999px");
+            });
+          }
+        });
+      }
+    });
+  });
+
+  // Observe the document body for changes
+  observer.observe(document.body, { childList: true, subtree: true });
+}
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', upgradeImage);
+} else {
+  upgradeImage();
+}
