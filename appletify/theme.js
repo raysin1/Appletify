@@ -1,5 +1,4 @@
 (function moveNavElementsMod() {
-   // Select elements
    const globalNavBar = document.querySelector("#global-nav-bar");
    const navTarget = document.querySelector("#Desktop_LeftSidebar_Id > nav > div");
    const searchSection = document.querySelector("#global-nav-bar > div.main-globalNav-searchSection");
@@ -7,31 +6,23 @@
    const newElement = document.querySelector(".gglUjikTBtMzCZFgSmpS");
    const nowPlayingWidget = document.querySelector(".main-nowPlayingWidget-nowPlaying");
    
-   // Check if elements exist, retry if not
    if (!globalNavBar || !navTarget || !searchSection || !libraryContainer || !newElement || !nowPlayingWidget) {
        setTimeout(moveNavElementsMod, 300);
        return;
    }
    
-   // Move global-nav-bar to first place in nav > div
    navTarget.insertBefore(globalNavBar, navTarget.firstChild);
-   
-   // Move search section to first place in library container
    libraryContainer.insertBefore(searchSection, libraryContainer.firstChild);
-   
-   // Move .gglUjikTBtMzCZFgSmpS to inside .main-nowPlayingWidget-nowPlaying
    nowPlayingWidget.appendChild(newElement);
 })();
 
 (function SpotifySearchMod() {
-    // Wait for search input to be ready
     const selector = '[data-encore-id="formInput"]';
     if (!document.querySelector(selector)) {
         setTimeout(SpotifySearchMod, 300);
         return;
     }
 
-    // Function to modify search placeholder
     function modifySearchPlaceholder() {
         const searchInput = document.querySelector(selector);
         if (searchInput) {
@@ -39,10 +30,8 @@
         }
     }
 
-    // Initial execution
     modifySearchPlaceholder();
 
-    // Create an observer for the search input
     const searchObserver = new MutationObserver(modifySearchPlaceholder);
     const searchInput = document.querySelector(selector);
     if (searchInput) {
@@ -53,14 +42,11 @@
     }
 })();
 
-
 function enhanceImageSizes() {
-  // Handle existing images
   document.querySelectorAll(".main-image-image.main-entityHeader-image[srcset]").forEach(img => {
     img.setAttribute("sizes", "9999px");
   });
 
-  // Set up MutationObserver to handle future images
   const observer = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
       if (mutation.addedNodes.length) {
@@ -78,13 +64,11 @@ function enhanceImageSizes() {
     });
   });
 
-  // Observe the document body for changes
   observer.observe(document.body, { childList: true, subtree: true });
-}
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', upgradeImage);
+  document.addEventListener('DOMContentLoaded', enhanceImageSizes);
 } else {
-  upgradeImage();
+  enhanceImageSizes();
 }
