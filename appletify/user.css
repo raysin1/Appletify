@@ -1,7 +1,7 @@
 .Root__top-container {
     grid-template-areas:
-   "left-sidebar now-playing-bar now-playing-bar"
-    "left-sidebar main-view right-sidebar";
+        "left-sidebar now-playing-bar right-sidebar"
+        "left-sidebar main-view right-sidebar";
 grid-template-rows: auto 1fr;
 }
 .main-nowPlayingBar-right{margin-right:20px}
@@ -2296,17 +2296,14 @@ color:rgba(255, 255, 255, 0.64);}
 .GenericModal[aria-label="View Snippet"]{border-radius:20px;}
 
 .BeautifulLyricsPage.Contained .ViewControls{
-  display:none;
+  display:none!important;
 }
 
 
-
-.BeautifulLyricsPage.Contained .ViewControls{
-  position:absolute;
-  top:0;
-  right:0;
+#searchPage .main-shelf-shelf{
+  margin-left:30px;
+  margin-right:30px;
 }
-
 
 
 .Root__now-playing-bar #BeautifulLyricsFullscreenButton:hover{
@@ -2472,7 +2469,7 @@ display:none;}
    top: 54px;
    position: absolute;
    z-index:99;
-    max-width:300px;
+    max-width:80%;
 }
 
 .HD9s7U5E1RLSWKpXmrqx {border-radius:0px;}
