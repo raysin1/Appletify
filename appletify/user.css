@@ -692,9 +692,6 @@ display:none;}
 
 
 
-.BeautifulLyricsPage.Fullscreen .Content .PlayPanel{
-scale:1.1;}
-
 [data-testid="playlist-page"] .main-entityHeader-container.JYKKZFIXuf9lIHVeszuS{
   height: 450px;
    margin-left: 30px;
@@ -1809,9 +1806,6 @@ letter-spacing:0.25px;
 }
 
 
-
-.BeautifulLyricsPage.Fullscreen .Content .PlayPanel{
-scale:1.1;}
 
 .main-connectBar-connectBar{display:none;}
 
