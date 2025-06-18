@@ -1528,7 +1528,7 @@ padding-top:20px;}
 }
   
 [data-testid="album-page"] .ix_8kg3iUb9VS5SmTnBY > button > span{
-  border-radius:8px;
+  border-radius:12px;
   width:120px;
   color:white;
       background-color:#d60017;}
@@ -2606,3 +2606,4 @@ border-top: 1px solid #80808075;
 
 .IkAuhlmCofCxyvdphgkv, .xiY2NMtQWcYIpFQ8QSEB{justify-content: center;}
 
+.main-nowPlayingBar-center{zoom:0.9;}
