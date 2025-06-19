@@ -2298,8 +2298,6 @@ color:rgba(255, 255, 255, 0.64);}
 .Root__now-playing-bar #BeautifulLyricsFullscreenButton:hover{
   opacity:1;}
   
-  #Desktop_LeftSidebar_Id{max-width: 16vw;}
-.Root__right-sidebar{max-width: 14vw;}
 
 .main-topBar-background {
   height: 150%;
@@ -2358,8 +2356,7 @@ display:none;}
 
 /*Change liked songs thumbnail*/
 [data-testid="playlist-image"] .main-entityHeader-image,
-.GOcsybnoHYyJGQGDRuwj > div,
-.x-entityImage-imageContainer
+.GOcsybnoHYyJGQGDRuwj > div
 {
     &:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"]) {
         &::after {
@@ -2367,14 +2364,34 @@ display:none;}
             position: absolute;
             pointer-events: none;
             inset: 0;
-            background: lime;
+            background: transparent;
             border-radius: 4px;
             background-repeat: no-repeat;
             background-size: cover;
-            background-image: url("https://scontent.fyyc3-1.fna.fbcdn.net/v/t39.30808-6/481102905_1155699489888498_7004212485082003953_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=fZ-MCw2dDMcQ7kNvwFLIzho&_nc_oc=AdlHalySwWZnE-pk4BBE6SO-lXAagpHgsyMchsXHbjMiQxnQwA6r1zz-bBN1AovES27jBZlylniVCLfZHTXf0eI9&_nc_zt=23&_nc_ht=scontent.fyyc3-1.fna&_nc_gid=38p0KLGf1QI_pz3YXVq2tg&oh=00_AfPOQa0RDsWZit0Mafd6VgTUbmoczFBet7EWZT2uUoIc2w&oe=6852E575");
+            background-image: url("https://github.com/raysin1/Appletify/blob/main/screenshots/liked%20songs.jpg?raw=true");
         }
     }
 }
+
+.x-entityImage-imageContainer
+{
+    &:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"]) {
+        &::after {
+    content: "";
+  position: absolute;
+pointer-events: none;
+width: 48px;
+height: 48px;
+background: transparent;
+border-radius: 4px;
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;
+            background-image: url("https://github.com/raysin1/Appletify/blob/main/screenshots/liked%20songs.jpg?raw=true");
+        }
+    }
+}
+
 
 .gglUjikTBtMzCZFgSmpS .progress-bar__slider{display:none!important;}
 
