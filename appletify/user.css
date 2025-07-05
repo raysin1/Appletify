@@ -34,9 +34,9 @@ grid-template-rows: auto 1fr;
 
 /*Improve scrollbar*/
 .os-scrollbar-handle{
- width:30%!important;
- height:50%!important;
- margin-right:1px;
+ width:60%!important;
+ height:20%!important;
+ margin-right:8px;
  border-radius:15px !important;}
 
 @font-face {
@@ -507,7 +507,8 @@ display:none;}
 .Root__nav-bar {
   transition: width 0.25s ease;
    zoom:1.05;
-    border-right: 2px solid #3e3e3e;
+   border-right: 2px solid #3e3e3e;
+  border-radius:0px;
 }
 
 .main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg .main-globalNav-searchSection [data-encore-id="formInput"]{
@@ -2284,9 +2285,6 @@ color:rgba(255, 255, 255, 0.64);}
 
 .GenericModal[aria-label="View Snippet"]{border-radius:20px;}
 
-.BeautifulLyricsPage.Contained .ViewControls{
-  display:none!important;
-}
 
 
 #searchPage .main-shelf-shelf{
@@ -2298,6 +2296,8 @@ color:rgba(255, 255, 255, 0.64);}
 .Root__now-playing-bar #BeautifulLyricsFullscreenButton:hover{
   opacity:1;}
   
+  #Desktop_LeftSidebar_Id{max-width: 16vw;}
+.Root__right-sidebar{max-width: 14vw;}
 
 .main-topBar-background {
   height: 150%;
@@ -2485,6 +2485,7 @@ background-position: center;
     margin: auto;
     left: -10px;
     top: -02px;
+    max-width: 70%;
 }
 .main-trackInfo-artists{
 justify-content: center;
