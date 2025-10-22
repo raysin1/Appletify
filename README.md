@@ -35,7 +35,7 @@
 <br>
 
 ## Transparency (optional)
-***The theme will not have translucent sidebars if the steps below aren't followed***
+***You can follow the steps bellow if you want the theme to have translucent sidebars***
 1. Download [Windhawk](https://windhawk.net/)
 2. Install the `Spotify Tweaks` mod
 3. Under settings, disable `native frames and title bars` and **enable** `Transparent Rendering`
