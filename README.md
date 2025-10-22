@@ -52,10 +52,6 @@
 <br><br>
 
 **To do:**
-- Fix fullscreen cover button
-- High res artwork extension
 - Workaround to blank empty queue
-- Style connected device bar
-- Liquid glass skin
-- Maybe make a  Apple music like sidebar with spicetify library app wth buttons to playlists/abums/artists
+- Refine progress bar
 
