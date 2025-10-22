@@ -34,7 +34,7 @@
 
 <br>
 
-## Transparency
+## Transparency (optional)
 ***The theme will not have translucent sidebars if the steps below aren't followed***
 1. Download [Windhawk](https://windhawk.net/)
 2. Install the `Spotify Tweaks` mod
