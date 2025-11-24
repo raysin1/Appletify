@@ -24,7 +24,7 @@ grid-template-rows: auto 1fr;
 .main-nowPlayingBar-right {
     order: 3;}
 
-.main-nowPlayingBar-right .volume-bar{order:1;}
+.main-nowPlayingBar-right .volume-bar{order:1; min-width:80px;}
 .main-nowPlayingBar-right button:has(.LyricsPageIcon){order:2!important;}
 .main-nowPlayingBar-right .GlueDropTarget{order:3;}
 
@@ -210,7 +210,6 @@ background-color:transparent;
 [aria-label="Podcasts"],
 [aria-label="Audiobooks"],
 [aria-label="Episodes"],
-[aria-label="Profiles"],
 [aria-label="Genres & Moods"]{display:none;}
 
 /*Hides search categories*/
@@ -233,7 +232,7 @@ div.search-searchCategory-SearchCategory {
   text-align:center;
   margin-top:5px;}
 
-/
+
 .playlist-playlist-playlistContent .main-trackList-rowMarker{visibility: hidden;}
 
 
@@ -624,7 +623,7 @@ display:none;}
   display:none;
 }
 
-[data-testid="playlist-page"] .ZjfaJlGQZ42nCWjD3FDm{
+[data-testid="playlist-page"] .artist-artistAbout-scrollbars{
    position: absolute;
     top: 364px;
     left: 455px;
@@ -872,32 +871,32 @@ button[data-testid="control-button-skip-forward"] svg {
 
 
 /*Shuffle button*/
-[aria-label*="Enable Shuffle for"] span svg path{
+[data-testid="now-playing-bar"] [aria-label*="Enable Shuffle for"] span svg path{
   d: path("M5.478515625,10.419921875 C5.478515625,9.58203125 6.080078125,8.98046875 6.91796875,8.98046875 L11.64453125,8.98046875 C14.888671875,8.98046875 16.80078125,9.947265625 19.142578125,12.71875 L23.9765625,18.4765625 L28.83203125,12.697265625 C31.173828125,9.904296875 33.0859375,8.958984375 36.330078125,8.958984375 L39.208984375,8.958984375 L39.208984375,3.91015625 C39.208984375,3.115234375 39.74609375,2.599609375 40.5625,2.599609375 C40.94921875,2.599609375 41.25,2.70703125 41.59375,2.986328125 L49.328125,8.830078125 C50.251953125,9.5390625 50.208984375,10.849609375 49.328125,11.515625 L41.59375,17.337890625 C41.25,17.6171875 40.94921875,17.724609375 40.5625,17.724609375 C39.74609375,17.724609375 39.208984375,17.208984375 39.208984375,16.4140625 L39.208984375,11.81640625 L36.158203125,11.81640625 C34.03125,11.81640625 32.634765625,12.6328125 30.701171875,14.931640625 L25.845703125,20.7109375 L30.701171875,26.490234375 C32.634765625,28.810546875 34.03125,29.60546875 36.158203125,29.60546875 L39.208984375,29.60546875 L39.208984375,24.986328125 C39.208984375,24.19140625 39.74609375,23.67578125 40.5625,23.67578125 C40.94921875,23.67578125 41.25,23.783203125 41.59375,24.0625 L49.328125,29.90625 C50.251953125,30.63671875 50.208984375,31.947265625 49.328125,32.591796875 L41.59375,38.4140625 C41.25,38.693359375 40.94921875,38.80078125 40.5625,38.80078125 C39.74609375,38.80078125 39.208984375,38.28515625 39.208984375,37.490234375 L39.208984375,32.484375 L36.330078125,32.484375 C33.0859375,32.484375 31.173828125,31.517578125 28.83203125,28.724609375 L23.9765625,22.9453125 L19.142578125,28.703125 C16.80078125,31.49609375 14.888671875,32.44140625 11.64453125,32.44140625 L6.91796875,32.44140625 C6.080078125,32.44140625 5.478515625,31.83984375 5.478515625,31.001953125 C5.478515625,30.228515625 6.123046875,29.5625 6.91796875,29.5625 L11.81640625,29.5625 C13.921875,29.5625 15.33984375,28.767578125 17.2734375,26.46875 L22.107421875,20.7109375 L17.2734375,14.953125 C15.33984375,12.654296875 13.921875,11.859375 11.81640625,11.859375 L6.91796875,11.859375 C6.123046875,11.859375 5.478515625,11.193359375 5.478515625,10.419921875 Z");
   scale:0.35;
   transform: translate(0px, -12px);
   transform-origin: center;
  stroke: currentColor;
   stroke-width: 0.01;}
-[aria-label*="Enable Shuffle for"] span svg {
+[data-testid="now-playing-bar"] [aria-label*="Enable Shuffle for"] span svg {
   overflow: visible; 
   width: 22px; 
   height: 22px;
   color:rgb(179, 179, 179);}
 
-[aria-label*="Disable Shuffle for"] span svg path{
+[data-testid="now-playing-bar"] [aria-label*="Disable Shuffle for"] span svg path{
   d: path("M5.478515625,10.419921875 C5.478515625,9.58203125 6.080078125,8.98046875 6.91796875,8.98046875 L11.64453125,8.98046875 C14.888671875,8.98046875 16.80078125,9.947265625 19.142578125,12.71875 L23.9765625,18.4765625 L28.83203125,12.697265625 C31.173828125,9.904296875 33.0859375,8.958984375 36.330078125,8.958984375 L39.208984375,8.958984375 L39.208984375,3.91015625 C39.208984375,3.115234375 39.74609375,2.599609375 40.5625,2.599609375 C40.94921875,2.599609375 41.25,2.70703125 41.59375,2.986328125 L49.328125,8.830078125 C50.251953125,9.5390625 50.208984375,10.849609375 49.328125,11.515625 L41.59375,17.337890625 C41.25,17.6171875 40.94921875,17.724609375 40.5625,17.724609375 C39.74609375,17.724609375 39.208984375,17.208984375 39.208984375,16.4140625 L39.208984375,11.81640625 L36.158203125,11.81640625 C34.03125,11.81640625 32.634765625,12.6328125 30.701171875,14.931640625 L25.845703125,20.7109375 L30.701171875,26.490234375 C32.634765625,28.810546875 34.03125,29.60546875 36.158203125,29.60546875 L39.208984375,29.60546875 L39.208984375,24.986328125 C39.208984375,24.19140625 39.74609375,23.67578125 40.5625,23.67578125 C40.94921875,23.67578125 41.25,23.783203125 41.59375,24.0625 L49.328125,29.90625 C50.251953125,30.63671875 50.208984375,31.947265625 49.328125,32.591796875 L41.59375,38.4140625 C41.25,38.693359375 40.94921875,38.80078125 40.5625,38.80078125 C39.74609375,38.80078125 39.208984375,38.28515625 39.208984375,37.490234375 L39.208984375,32.484375 L36.330078125,32.484375 C33.0859375,32.484375 31.173828125,31.517578125 28.83203125,28.724609375 L23.9765625,22.9453125 L19.142578125,28.703125 C16.80078125,31.49609375 14.888671875,32.44140625 11.64453125,32.44140625 L6.91796875,32.44140625 C6.080078125,32.44140625 5.478515625,31.83984375 5.478515625,31.001953125 C5.478515625,30.228515625 6.123046875,29.5625 6.91796875,29.5625 L11.81640625,29.5625 C13.921875,29.5625 15.33984375,28.767578125 17.2734375,26.46875 L22.107421875,20.7109375 L17.2734375,14.953125 C15.33984375,12.654296875 13.921875,11.859375 11.81640625,11.859375 L6.91796875,11.859375 C6.123046875,11.859375 5.478515625,11.193359375 5.478515625,10.419921875 Z");
   scale:0.35;
   transform: translate(0px, -12px);
   transform-origin: center;
  stroke: currentColor;
   stroke-width: 0.01;}
-[aria-label*="Disable Shuffle for"] span svg {
+[data-testid="now-playing-bar"] [aria-label*="Disable Shuffle for"] span svg {
   overflow: visible; 
   width: 22px; 
   height: 22px;}
 
-[aria-label*="Disable Shuffle for"]:after{
+[data-testid="now-playing-bar"] [aria-label*="Disable Shuffle for"]:after{
   display:none;}
 
 
@@ -948,13 +947,13 @@ button[data-testid="control-button-skip-forward"] svg {
   overflow:visible;}
 
 /*Fullscreen Icon*/
-.main-nowPlayingBar-extraControls [id="BeautifulLyricsFullscreenButton"] span svg path{
+.main-nowPlayingBar-extraControls #BeautifulLyricsFullscreenButton span svg path, .main-nowPlayingBar-extraControls #SpicyLyrics_FullscreenButton span svg path{
   d: path('M 5.994140625,28.123046875 C 6.337890625,28.123046875 6.552734375,28.359375 6.552734375,28.703125 L 6.552734375,35.814453125 L 6.380859375,42.603515625 L 14.544921875,34.439453125 L 22.21484375,26.7265625 C 22.322265625,26.619140625 22.451171875,26.5546875 22.580078125,26.5546875 C 22.923828125,26.5546875 23.138671875,26.76953125 23.138671875,27.11328125 C 23.138671875,27.2421875 23.07421875,27.37109375 22.98828125,27.478515625 L 15.189453125,35.255859375 L 7.068359375,43.333984375 L 13.87890625,43.119140625 L 21.01171875,43.119140625 C 21.291015625,43.119140625 21.5703125,43.333984375 21.5703125,43.677734375 C 21.5703125,44.021484375 21.333984375,44.21484375 21.01171875,44.21484375 L 6.4453125,44.21484375 C 5.865234375,44.21484375 5.478515625,43.828125 5.478515625,43.248046875 L 5.478515625,28.703125 C 5.478515625,28.380859375 5.650390625,28.123046875 5.994140625,28.123046875 Z M 29.77734375,4.404296875 L 44.34375,4.404296875 C 44.90234375,4.404296875 45.310546875,4.791015625 45.310546875,5.37109375 L 45.310546875,19.916015625 C 45.310546875,20.23828125 45.1171875,20.49609375 44.7734375,20.49609375 C 44.4296875,20.49609375 44.236328125,20.259765625 44.236328125,19.916015625 L 44.236328125,12.8046875 L 44.38671875,6.015625 L 36.22265625,14.1796875 L 28.552734375,21.892578125 C 28.4453125,22.0 28.31640625,22.064453125 28.1875,22.064453125 C 27.84375,22.064453125 27.650390625,21.849609375 27.650390625,21.505859375 C 27.650390625,21.376953125 27.693359375,21.248046875 27.80078125,21.140625 L 35.578125,13.36328125 L 43.720703125,5.28515625 L 36.888671875,5.5 L 29.77734375,5.5 C 29.498046875,5.5 29.240234375,5.28515625 29.197265625,4.94140625 C 29.197265625,4.59765625 29.43359375,4.404296875 29.77734375,4.404296875 Z');
   stroke: currentColor;
   stroke-width: 2.5;
     transform: translate(0px, 10px);
   scale:0.3;}
-.main-nowPlayingBar-extraControls [id="BeautifulLyricsFullscreenButton"] span svg{
+.main-nowPlayingBar-extraControls #BeautifulLyricsFullscreenButton span svg, .main-nowPlayingBar-extraControls #SpicyLyrics_FullscreenButton span svg{
   overflow:visible;
   scale:1.2;}
 
@@ -1000,11 +999,9 @@ button[data-testid="control-button-skip-forward"] svg {
   width:20px;}
   
   /*Queue button*/
-  
   .Root__now-playing-bar [data-testid="control-button-queue"] span svg {
   scale:1.3;
-  margin-top:-5px
-}
+  margin-top:-5px;}
 
 .Root__now-playing-bar [data-testid="control-button-queue"] span svg path{
   d:path('M2.634 5.537a.906.906 0 1 0 0-1.813.906.906 0 1 0 0 1.813zm3.192-.325h9.865a.576.576 0 0 0 .585-.578.578.578 0 0 0-.585-.585H5.826a.574.574 0 0 0-.585.585c0 .325.253.578.585.578zM2.634 9.906c.506 0 .91-.404.91-.91a.906.906 0 0 0-.91-.91.906.906 0 0 0-.91.91c0 .506.405.91.91.91zm3.192-.325h9.865a.582.582 0 1 0 0-1.162H5.826a.572.572 0 0 0-.585.577c0 .325.253.585.585.585zm-3.192 4.694a.91.91 0 1 0-.001-1.82.91.91 0 0 0 0 1.82zm3.192-.332h9.865a.576.576 0 0 0 .585-.577.578.578 0 0 0-.585-.585H5.826a.574.574 0 0 0-.585.585c0 .324.253.577.585.577z');
@@ -1233,8 +1230,10 @@ column-gap:20px;}
   margin-left:5px;
 }
 
-[data-test-uri*="spotify:artist"] .EmeHQXR87mUskYK6xEde > .contentSpacing{margin-top:30px;
-padding-left: 60px;
+[data-test-uri*="spotify:artist"] .EmeHQXR87mUskYK6xEde > .contentSpacing{
+    margin-top: -10px;
+    padding-top: 30px;
+    padding-left: 60px;
     padding-right: 60px;}
 
 
@@ -1273,7 +1272,7 @@ display:none;}
 
 
 .main-entityHeader-container.main-entityHeader-withBackgroundImage {
-  height: 58vh;
+  height: 59vh;
 }
 
 
@@ -1334,7 +1333,7 @@ margin-right:35vw;
  }
 
 [data-test-uri*="spotify:artist"] .EmeHQXR87mUskYK6xEde > div.contentSpacing > [aria-label="Discography"] > .main-gridContainer-gridContainer > div:nth-child(1){
-    right: 10vw;
+    right: 3vw;
     z-index: 9;
     top: -390px;
     position: absolute;
@@ -1349,10 +1348,12 @@ margin-right:35vw;
   margin-left:20px;
 }
   
-[data-test-uri*="spotify:artist"] .ZjfaJlGQZ42nCWjD3FDm > div{
-  margin-top: -86px;
-  z-index: 999;
-  position: absolute;}
+[data-test-uri*="spotify:artist"] .EmeHQXR87mUskYK6xEde > .artist-artistAbout-scrollbars{
+ margin-top: -87px;
+    z-index: 999;
+    position: absolute;
+    margin-left: 39px;
+    width: 92%;}
   
 [data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow [data-encore-id="popoverTrigger"],
 [data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow [data-encore-id="buttonSecondary"]{
@@ -1360,7 +1361,8 @@ margin-right:35vw;
 }
 
 
-[data-test-uri*="spotify:artist"] .iWTIFTzhRZT0rCD0_gOK.contentSpacing{margin-left:140px!important;}
+[data-test-uri*="spotify:artist"] .iWTIFTzhRZT0rCD0_gOK.contentSpacing{margin-left: 109px !important;
+    margin-bottom: 8px;}
 
 [data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow [aria-label="Play"] span span svg path{
   fill:white;}
@@ -1376,7 +1378,7 @@ margin-right:35vw;
   
 [data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow [aria-label*="More options for"]{
   zoom:0.9;
-  margin-left:-6px;}
+margin-left: auto;}
   
 [data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow [aria-label*="More options for"]:before{
     content: '';
@@ -1404,15 +1406,18 @@ border-bottom-right-radius:15px;}
 [data-testid="album-page"] .Xo8dgIGCCWjHXWBoKhaV{
   zoom:1.1;}
 
+[data-testid="album-page"] .main-rootlist-wrapper .in-trackList-rowSectionIndex{opacity:0!important;
+
 
 /*Hide song artists*/
-[data-testid="album-page"] > div:nth-child(4) > div.Xo8dgIGCCWjHXWBoKhaV > div > div.main-rootlist-wrapper > div:nth-child(2) > div > div > div > div.main-trackList-rowSectionStart > div > span{
-  display:none;}
+[data-testid="album-page"] .main-entityHeader-pretitle{
+  display:none!important;}
+
 
 .main-trackList-rowSectionEnd [aria-label="Add to playlist"]{
   display:none;}
 
-.main-entityHeader-headerText .e-9890-text.encore-text-body-small.main-entityHeader-pretitle{
+[data-testid="album-page"] .main-entityHeader-headerText .e-9890-text.encore-text-body-small.main-entityHeader-pretitle{
   display:none;}
 
 /*Correct active tracklist color*/
@@ -1455,7 +1460,7 @@ scale: 0.6;
 /*Hide artist pic*/[data-testid="album-page"] .main-avatar-avatar,
 /*Hide add to liked hover*/[data-testid="album-page"] .Button-sc-1dqy6lx-0.Button-small-small-buttonTertiary-iconOnly-condensed-useBrowserDefaultFocusStyle.main-trackList-curationButton[aria-label="Add to Liked Songs"],
 /*Hide artist and explicit signs below track*/
-[data-testid="album-page"] .encore-text.encore-text-body-small.encore-internal-color-text-subdued.UudGCx16EmBkuFPllvss.standalone-ellipsis-one-line,
+[data-testid="album-page"] div.main-rootlist-wrapper div.main-trackList-rowSectionStart > div > span,
 [data-testid="album-page"] .encore-text.encore-text-body-medium.encore-internal-color-text-subdued.main-trackList-rowBadges,
 /*Information*/
 [data-testid="album-page"] .main-entityHeader-headerText > div > span:nth-last-child(1),
@@ -1533,12 +1538,12 @@ padding-top:20px;}
   box-shadow:none;
 }
   
-[data-testid="album-page"] .ZjfaJlGQZ42nCWjD3FDm .main-playButton-PlayButton > button > span{
+[data-testid="album-page"] .artist-artistAbout-scrollbars .main-playButton-PlayButton > button > span{
   border-radius:12px;
   width:120px;
   color:white;
       background-color:#d60017;}
-[data-testid="album-page"] .ZjfaJlGQZ42nCWjD3FDm .main-playButton-PlayButton > button > span:after{
+[data-testid="album-page"] .artist-artistAbout-scrollbars .main-playButton-PlayButton > button > span:after{
   content:"Play";
   font-size:20px;
   margin-left:20px;
@@ -2105,7 +2110,7 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar{
   margin-top:-10px;
 }
 
-[id="searchPage"] .w7SWsAZah4vovAuFxjgk.Qmu4FPZCnrDpQ85s4az5{zoom:1.3;}
+[id="searchPage"] .w7SWsAZah4vovAuFxjgk.Qmu4FPZCnrDpQ85s4az5{zoom:1.2;}
 
 
 
@@ -2154,7 +2159,7 @@ font-weight:600;
 [data-testid="album-page"] .main-entityHeader-metaData .main-entityHeader-creatorWrapper [title="Various Artists"] ~ [data-encore-id="text"] {
   font-size:28px;font-weight:400; color:#fa586a;}
   
-[data-testid="album-page"] .main-entityHeader-metaData > .w1TBi3o5CTM7zW1EB3Bm{
+[data-testid="album-page"] .main-entityHeader-metaData > .main-entityHeader-metaDataTextSubdued{
  position:absolute;
  margin-top:90px;
  font-size:20px;
@@ -2302,7 +2307,7 @@ color:rgba(255, 255, 255, 0.64);}
   opacity:1;}
   
   #Desktop_LeftSidebar_Id{max-width: 16vw;}
-.Root__right-sidebar{max-width: 14vw;}
+.Root__right-sidebar{max-width: 16vw;}
 
 .main-topBar-background {
   height: 150%;
@@ -2623,10 +2628,34 @@ border-top: 1px solid #80808075;
 
 
 
-
 .BeautifulLyricsPage.Fullscreen .Content .PlayPanel .SliderBar .Handle{display:none;}
 
 
 .IkAuhlmCofCxyvdphgkv, .xiY2NMtQWcYIpFQ8QSEB{justify-content: center;}
 
-.main-nowPlayingBar-center{zoom:0.9;}
+.main-nowPlayingBar-center{zoom:0.9; margin-right:-60px;}
+
+
+
+
+.Root__now-playing-bar .main-nowPlayingBar-extraControls .main-genericButton-button.Button-sc-1dqy6lx-0:has(#SpicyLyricsPageSvg){
+order:2;}
+
+#SpicyLyricsPageSvg > path:not(:first-child){
+display:none!important;}
+
+#SpicyLyricsPageSvg > path:nth-child(1){
+d:path("M 16.048828125,6.466796875 C 16.392578125,6.466796875 16.671875,6.66015625 16.97265625,6.896484375 L 24.79296875,13.556640625 L 42.990234375,13.556640625 C 47.673828125,13.556640625 50.681640625,16.62890625 50.681640625,21.26953125 L 50.681640625,40.17578125 C 50.681640625,44.794921875 47.673828125,47.8671875 42.990234375,47.8671875 L 13.169921875,47.8671875 C 8.486328125,47.8671875 5.478515625,44.859375 5.478515625,40.17578125 L 5.478515625,21.26953125 C 5.478515625,16.564453125 8.486328125,13.556640625 13.169921875,13.556640625 L 15.25390625,13.556640625 L 15.25390625,7.34765625 C 15.25390625,6.810546875 15.59765625,6.466796875 16.048828125,6.466796875 Z M 16.2421875,7.60546875 L 16.2421875,14.09375 C 16.2421875,14.458984375 16.091796875,14.609375 15.7265625,14.609375 L 13.234375,14.609375 C 9.173828125,14.609375 6.53125,17.251953125 6.53125,21.3125 L 6.53125,40.111328125 C 6.53125,44.171875 9.173828125,46.814453125 13.234375,46.814453125 L 42.947265625,46.814453125 C 46.87890625,46.814453125 49.62890625,44.171875 49.62890625,40.111328125 L 49.62890625,21.3125 C 49.62890625,17.251953125 46.87890625,14.609375 42.947265625,14.609375 L 25.029296875,14.609375 C 24.4921875,14.609375 24.234375,14.501953125 23.740234375,14.072265625 Z M 20.109375,31.904296875 C 20.109375,29.94921875 21.44140625,28.509765625 23.396484375,28.509765625 C 24.27734375,28.509765625 25.072265625,28.810546875 25.587890625,29.498046875 L 25.73828125,29.498046875 C 25.115234375,27.607421875 23.203125,26.490234375 22.322265625,26.232421875 C 21.828125,26.103515625 21.677734375,25.888671875 21.677734375,25.587890625 C 21.677734375,25.201171875 21.935546875,24.943359375 22.322265625,24.943359375 C 23.67578125,24.943359375 27.521484375,26.8125 27.521484375,31.23828125 C 27.521484375,33.81640625 25.6953125,35.427734375 23.71875,35.427734375 C 21.677734375,35.427734375 20.109375,33.859375 20.109375,31.904296875 Z M 30.013671875,31.904296875 C 30.013671875,29.94921875 31.345703125,28.509765625 33.30078125,28.509765625 C 34.181640625,28.509765625 34.9765625,28.810546875 35.4921875,29.498046875 L 35.642578125,29.498046875 C 35.01953125,27.607421875 33.107421875,26.490234375 32.2265625,26.232421875 C 31.732421875,26.103515625 31.58203125,25.888671875 31.58203125,25.587890625 C 31.58203125,25.201171875 31.83984375,24.943359375 32.2265625,24.943359375 C 33.580078125,24.943359375 37.42578125,26.8125 37.42578125,31.23828125 C 37.42578125,33.81640625 35.599609375,35.427734375 33.623046875,35.427734375 C 31.560546875,35.427734375 30.013671875,33.859375 30.013671875,31.904296875 Z");
+    scale: 0.5;
+    transform: scale(1, -1) translate(-16px, -16px);
+    transform-origin: center;
+    stroke: currentColor;
+    stroke-width: 1;
+}
+
+.main-globalNav-searchInputContainer .main-topBar-searchBar{
+padding-right: 15px !important;}
+
+
+.main-trackList-trackList.main-trackList-indexable[aria-colcount="3"] .main-trackList-trackListRowGrid{
+grid-template-columns: [index] var(--tracklist-index-column-width, 16px) [first] minmax(120px, var(--col1, 4fr)) [last] minmax(20px, var(--col2, 1fr));}
