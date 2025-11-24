@@ -16,16 +16,6 @@
 </div>
 
 
-
-
-
-# Installation
-1. Get [Spicetify](https://spicetify.app/docs/getting-started)
-2. Run `iwr -useb https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.ps1 | iex && spicetify config current_theme marketplace` on Terminal
-3. Go to **Marketplace** > **Themes**, find **Appletify** and install.
-<br>
-
-
 **Make sure to also install the following extensions on Marketplace:**
 
 
