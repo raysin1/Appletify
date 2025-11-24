@@ -5,9 +5,10 @@
   <h1>Appletify</h1>
 
   
-</div>
 
-![Preview](https://github.com/raysin1/Appletify/blob/main/screenshots/preview.png)
+<div>
+  <img src="https://github.com/raysin1/Appletify/blob/main/screenshots/preview.png" width="800">
+</div>
 
 <div style="display: flex; flex-direction: row; gap: 10px;">
   <img src="https://raw.githubusercontent.com/raysin1/Appletify/main/screenshots/album.png" alt="Image 1" width="400">
