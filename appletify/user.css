@@ -56,7 +56,7 @@ body, button, input, select, textarea {
 
 
 #Desktop_LeftSidebar_Id .main-yourLibraryX-libraryContainer.YourLibraryX .main-gridContainer-gridContainer.main-gridContainer-uniformRowHeight{
---min-column-width: 122px!important;}
+    grid-template-columns: repeat(2, 1fr);}
 
 /*COLORS*/
   :root {--spice-button:#fa586a;}
@@ -418,7 +418,7 @@ display:none;}
 
 /*Sidebar*/
 
-.main-yourLibraryX-entryPoints, ..main-yourLibraryX-libraryContainer{background-color:transparent!important;}
+.main-yourLibraryX-entryPoints, .main-yourLibraryX-libraryContainer{background-color:transparent!important;}
 
 .main-yourLibraryX-libraryContainer.YourLibraryX > div.main-globalNav-searchSection > div > div > span > div > form > div.ODl7TwNawIfBwiZv1Czg > div.dM_TEJo05MxBvrLzfNrW > span.IYex0sXu8fnCz1FqFbRe{display:none;}
 
@@ -642,7 +642,6 @@ display:none;}
   outline: 4px solid #a03f4a!important;
 }
 
-#recent-searches-dropdown{display:none;}
 
 .TTB3lAVAhCK9Apl8quWw{
   gap:2px;
@@ -722,17 +721,11 @@ margin-left:-50px;}
   display:none;
 }
 
-v.Root__now-playing-bar > footer > div > div.main-nowPlayingBar-right > div > button.Button-sc-1dqy6lx-0.Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle.e-9890-overflow-wrap-anywhere.e-9890-button-tertiary--icon-only.main-genericButton-button.main-nowPlayingBar-lyricsButton{
-  display:none;}
-}
 
-.Root__now-playing-bar > footer > div > div.main-nowPlayingBar-right > div > div.GlueDropTarget.GlueDropTarget--tracks.GlueDropTarget--local-tracks.GlueDropTarget--episodes{
-  display:none;
-}
 
 .Root__now-playing-bar > footer > div > div.main-nowPlayingBar-center > div > div.playback-bar.gglUjikTBtMzCZFgSmpS > div.playback-progressbar-container > div > div > div.x-progressBar-progressBarBg > div.progress-bar__slider.oShi2lRbnhFkEr2LlUqC{
   display:none;}
-}
+
 
 .Svg-sc-ytk21e-0.Svg-img-16-icon.LyricsPageIcon g > path:nth-child(1),
 .Svg-sc-ytk21e-0.Svg-img-16-icon.LyricsPageIcon g > path:nth-child(2),
@@ -1012,7 +1005,7 @@ button[data-testid="control-button-skip-forward"] svg {
 
 
 
-.#Desktop_LeftSidebar_Id{
+#Desktop_LeftSidebar_Id{
   zoom:1.05;
   transition: width 0.25s ease;max-width:310px}
 
@@ -1091,7 +1084,6 @@ button[data-testid="control-button-skip-forward"] svg {
 }
 .main-card-PlayButtonContainer button span span svg{fill:white;
   scale:1.2;}
-}
 
 .main-card-PlayButtonContainer{
   transform:none;
@@ -1401,6 +1393,9 @@ color:white;
 border-bottom-left-radius:15px;
 border-bottom-right-radius:15px;}
 
+[data-testid="album-page"] [data-encore-id="popoverTrigger"],
+[data-testid="album-page"] .main-entityHeader-pretitle{display:none;}
+
 
 /*Make tracklist bigger*/
 [data-testid="album-page"] .Xo8dgIGCCWjHXWBoKhaV{
@@ -1647,7 +1642,6 @@ letter-spacing:0.25px;
 
 #main > div.Root.global-nav.centered-layout > div.Root__top-container > div.Root__main-view > div.Root__now-playing-bar > footer > div > div.main-nowPlayingBar-left > div > div.ZbFkATBbLkWh2SHMXDt6{
   display:none;}
-}
 
 
 
@@ -1773,7 +1767,7 @@ letter-spacing:0.25px;
   outline: 6px solid #a03f4a!important;
 }
 
-#recent-searches-dropdown{display:none;}
+
 
 .TTB3lAVAhCK9Apl8quWw{
   gap:2px;
@@ -2035,7 +2029,6 @@ font-size:22px;
 }
 .main-yourLibraryX-libraryContainer .ix_8kg3iUb9VS5SmTnBY button span span svg{fill:white;
   scale:1.3;}
-}
 
 
 .main-yourLibraryX-libraryContainer ._7kcfiJ2UNEh3CDR9Wau{
@@ -2174,7 +2167,6 @@ color:rgba(255, 255, 255, 0.64);}
 }
 #searchPage [aria-label="Top result"] .ix_8kg3iUb9VS5SmTnBY  button span span svg{fill:white;
   scale:1.2;}
-}
 
 #searchPage [aria-label="Top result"] .ix_8kg3iUb9VS5SmTnBY{
   transform:none;
@@ -2659,3 +2651,12 @@ padding-right: 15px !important;}
 
 .main-trackList-trackList.main-trackList-indexable[aria-colcount="3"] .main-trackList-trackListRowGrid{
 grid-template-columns: [index] var(--tracklist-index-column-width, 16px) [first] minmax(120px, var(--col1, 4fr)) [last] minmax(20px, var(--col2, 1fr));}
+
+
+.notistack-CollapseWrapper{
+margin-top: -80px;}
+
+[data-test-uri^="spotify:artist"] [aria-label="Artist Playlists"],
+[aria-label="Fans also like"],
+[aria-label="Appears On"]
+{overflow:hidden;}
