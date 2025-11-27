@@ -2688,3 +2688,5 @@ background-image:unset;}
     transform: translateY(-2px);}
 
 
+[data-test-uri^="spotify:artist"] .main-gridContainer-gridContainer.qELskYs6YdzzafmETrAg .main-trackList-rowMarker{
+display:none;}
