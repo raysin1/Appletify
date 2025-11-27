@@ -2664,7 +2664,8 @@ margin-top: -80px;}
 
 
 [data-test-uri^="spotify:artist"] .main-entityHeader-container.JYKKZFIXuf9lIHVeszuS{
-height:45vh}
+height:45vh;
+min-height:unset;}
 
 [data-test-uri^="spotify:artist"] .main-entityHeader-container.JYKKZFIXuf9lIHVeszuS .eFZahdafW8vQ7xY1kfBg > .main-entityHeader-imageContainer{
 position:absolute;
@@ -2685,4 +2686,5 @@ background-image:unset;}
 .main-globalNav-historyButtons [aria-label="Update Spicetify"] > svg{
     scale: 1.4;
     transform: translateY(-2px);}
+
 
