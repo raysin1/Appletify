@@ -2690,3 +2690,6 @@ background-image:unset;}
 
 [data-test-uri^="spotify:artist"] .main-gridContainer-gridContainer.qELskYs6YdzzafmETrAg .main-trackList-rowMarker{
 display:none;}
+
+.main-trackList-playingIcon{
+    filter: hue-rotate(-142deg);}
