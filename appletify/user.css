@@ -1,5 +1,6 @@
 .main-contextMenu-tippyWrapper{display:none!important;}
 
+[data-testid="playlist-page"] .main-trackList-rowMainContent{color:white;}
 
 [data-testid="playlist-page"]  .main-trackList-rowMainContent {
   column-gap: 4px;
@@ -2695,6 +2696,7 @@
     filter: hue-rotate(-142deg);}
   .main-trackList-rowSectionEnd [aria-label="Add to Liked Songs"]{
   display:none;}
+
 
 
 
