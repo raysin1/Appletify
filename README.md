@@ -37,9 +37,3 @@
 7. Close and reopen Spotify
 
 *Credit to [Ingan121](https://github.com/Ingan121/)*
-
-<br><br>
-
-**To do:**
-- Workaround to blank empty queue
-- Refine progress bar
