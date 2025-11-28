@@ -6,7 +6,7 @@
 </div> <!-- close center div -->
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/raysin1/Appletify/blob/main/screenshots/preview.png" width="800">
+  <img src="https://raw.githubusercontent.com/raysin1/Appletify/refs/heads/main/screenshots/preview.png" width="800">
 </div>
 
 <div style="display: flex; flex-direction: row; gap: 10px;" align="center">
