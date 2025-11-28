@@ -1351,8 +1351,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 15%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  height: 20%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
   z-index: -1;
   }
   
@@ -2693,4 +2693,5 @@
     filter: hue-rotate(-142deg);}
   .main-trackList-rowSectionEnd [aria-label="Add to Liked Songs"]{
   display:none;}
+
 
