@@ -1,5 +1,36 @@
 .main-contextMenu-tippyWrapper{display:none!important;}
 
+
+[data-testid="playlist-page"]  .main-trackList-rowMainContent {
+  column-gap: 4px;
+  display: flex; /* Changed from grid to flex */
+  flex-direction: row; /* Side by side */
+  align-items: center;
+  justify-content: space-between; /* Space between with 2nd item pushed right */
+  padding-inline-end: 8px;}
+  
+[data-testid="playlist-page"]  .UudGCx16EmBkuFPllvss {position:absolute;left:45%}
+    
+[data-testid="playlist-page"]  .main-trackList-rowSectionVariable > span:nth-child(1){display:none;}
+    
+[data-testid="playlist-page"] .main-trackList-rowSectionVariable[aria-colindex="3"] span{color:transparent;position:relative;}
+[data-testid="playlist-page"] .main-trackList-rowSectionVariable[aria-colindex="3"] span::before {
+  content: "Artists";       /* text you want to show */
+  color: rgba(253, 253, 253, 0.392);              /* visible color */
+
+}
+
+[data-testid="playlist-page"] .main-trackList-trackListHeaderRow .main-trackList-rowSectionIndex{visibility:hidden;}
+
+[data-testid="playlist-page"] .main-trackList-rowSectionVariable[aria-colindex="3"] {
+  position: absolute;
+  top: 9px;
+  left: 45.5%;
+}
+
+
+#context-menu{zoom:1.15}
+
 .main-nowPlayingWidget-nowPlaying{
   display:grid;
    grid-template-columns: auto 1fr;
@@ -280,12 +311,11 @@
   
   .playlist-playlist-playlistContent .main-trackList-rowMarker{visibility: hidden;}
   
-  
-  
+
   
   [data-testid="playlist-page"] .main-entityHeader-imageContainer{zoom:1.6;}
   
-  
+  [data-testid="playlist-page"] .main-entityHeader-shadow{box-shadow:unset;-webkit-box-shadow:unset;}
   
   
   [data-testid="playlist-page"] .main-entityHeader-title .e-9890-text.encore-text-headline-large.encore-internal-color-text-base{
@@ -346,8 +376,7 @@
   color:transparent;
   }
   
-  [data-testid="playlist-page"] .Xo8dgIGCCWjHXWBoKhaV{margin-left: 20px;
-    margin-right: 20px;}
+
   
   [data-testid="playlist-page"] [aria-label="Explicit"]{display:none;}
   
@@ -385,8 +414,8 @@
   display:none;}
   /*Margins*/
   [data-testid="playlist-page"]{
-  margin-left:10px;
-  margin-right:10px;}
+  margin-left:30px;
+  margin-right:30px;}
   
   
    [data-testid="playlist-page"] .e-9890-button-primary:hover .e-9890-button-primary__inner {
@@ -444,12 +473,10 @@
     }
     
     
-    [data-testid="playlist-page"] .main-entityHeader-container.JYKKZFIXuf9lIHVeszuS{
+[data-testid="playlist-page"] .main-entityHeader-container.JYKKZFIXuf9lIHVeszuS{
       height: 450px;
-       margin-left: 30px;
-        margin-right: 30px;
       }
-      [data-testid="playlist-page"] .x-sortBox-sortDropdown span{
+[data-testid="playlist-page"] .x-sortBox-sortDropdown span{
         display:none;
         }
   
@@ -644,10 +671,7 @@
   }
   
   
-  .main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg > div:nth-child(2) > header > div > div.main-yourLibraryX-collapseButton.iYP0xuQiJCgi7gx1jUPJ > div > button{
-  color:#fa586a;
-  }
-  
+ 
   
   
   
@@ -728,8 +752,6 @@
   
   
   
-  
-  
   .encore-dark-theme .encore-bright-accent-set{
   --background-press: #fa586a;
   }
@@ -737,14 +759,6 @@
   .e-9890-button--hover, .e-9890-button:hover{
   transform:none;
   }
-  
-  
-  .main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover{
-  background-color:#a30012;
-  
-  }
-  
-  
   
   
   
@@ -1272,16 +1286,6 @@
   }
   
   
-  [data-test-uri^="spotify:artist"] > div > div.EmeHQXR87mUskYK6xEde > div.contentSpacing > div:nth-child(1) > div > div.fnphAtjtCDYY99lYBfLK.PHHrto0Qhh4dJcnnPhwu > h2:after{
-  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22%23999999%22%20stroke%3D%22none%22%3E%3Cpath%20d%3D%22M19.817%2061.863c1.48%200%202.672-.515%203.702-1.546l24.243-23.63c1.352-1.385%201.996-2.737%202.028-4.443%200-1.674-.644-3.09-2.028-4.443L23.519%204.138c-1.03-.998-2.253-1.513-3.702-1.513-2.994%200-5.409%202.382-5.409%205.344%200%201.481.612%202.833%201.739%203.96l20.99%2020.347-20.99%2020.283c-1.127%201.126-1.739%202.478-1.739%203.96%200%202.93%202.415%205.344%205.409%205.344Z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center;
-  content: "";
-  display: inline-block;
-  width: 17px; /* Adjust width */
-  height: 17px; /* Adjust height */
-  margin-left:-80px;
-  margin-bottom:-1px;
-  }
-  
   
   [data-test-uri^="spotify:artist"] .main-shelf-header h2 span a:After{
     background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22%23999999%22%20stroke%3D%22none%22%3E%3Cpath%20d%3D%22M19.817%2061.863c1.48%200%202.672-.515%203.702-1.546l24.243-23.63c1.352-1.385%201.996-2.737%202.028-4.443%200-1.674-.644-3.09-2.028-4.443L23.519%204.138c-1.03-.998-2.253-1.513-3.702-1.513-2.994%200-5.409%202.382-5.409%205.344%200%201.481.612%202.833%201.739%203.96l20.99%2020.347-20.99%2020.283c-1.127%201.126-1.739%202.478-1.739%203.96%200%202.93%202.415%205.344%205.409%205.344Z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center;
@@ -1392,7 +1396,7 @@
   
   [data-test-uri^="spotify:artist"] > div > div.EmeHQXR87mUskYK6xEde > div.contentSpacing > div:nth-child(1){
   margin-bottom: -30px;
-  margin-right:35vw;
+  margin-right:32vw;
   }
   
   [data-test-uri*="spotify:artist"] .EmeHQXR87mUskYK6xEde > div.contentSpacing > [aria-label="Discography"] > .main-gridContainer-gridContainer > div:nth-child(1){
@@ -1818,9 +1822,7 @@
   }
   
   
-  .main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg > div:nth-child(2) > header > div > div.main-yourLibraryX-collapseButton.iYP0xuQiJCgi7gx1jUPJ > div > button{
-  color:#fa586a;
-  }
+
   
   
   
@@ -1950,19 +1952,30 @@
   background-size: contain;
   }
   
+    
+  .main-yourLibraryX-libraryContainer.YourLibraryX:not(.sikBfynL1Y6I25nVpbAg) > div:nth-child(2) > header > div > div.main-yourLibraryX-collapseButton > div > button > span > svg > path:nth-child(1){
+    display:none;}
+    
+    
+    .main-yourLibraryX-libraryContainer.YourLibraryX > div:nth-child(2) > header > div > div.main-yourLibraryX-collapseButton > div > button > span > svg > path:nth-child(2){
+    d:path("M34.752 19.746V6.243h-.088l-5.433 13.503h-2.074L21.711 6.243h-.087v13.503h-2.548V1.399h3.235l5.833 14.621h.1l5.82-14.62h3.248v18.347h-2.56zm16.649 0h-2.586v-2.263h-.062c-.725 1.602-2.061 2.504-4.072 2.504-2.86 0-4.61-1.894-4.61-4.958V6.37h2.698v8.125c0 2.034.95 3.127 2.81 3.127 1.95 0 3.124-1.373 3.124-3.458V6.37H51.4v13.376zm7.394-13.618c3.06 0 5.046 1.73 5.134 4.196h-2.536c-.15-1.296-1.087-2.11-2.598-2.11-1.462 0-2.436.724-2.436 1.793 0 .839.6 1.41 2.023 1.741l2.136.496c2.686.636 3.71 1.704 3.71 3.636 0 2.442-2.236 4.12-5.333 4.12-3.285 0-5.26-1.64-5.509-4.183h2.673c.25 1.398 1.187 2.085 2.836 2.085 1.623 0 2.623-.687 2.623-1.78 0-.865-.487-1.373-1.924-1.704l-2.136-.508c-2.498-.585-3.735-1.806-3.735-3.75 0-2.391 2.049-4.032 5.072-4.032zM66.1 2.836c0-.878.7-1.577 1.561-1.577.862 0 1.55.7 1.55 1.577 0 .864-.688 1.576-1.55 1.576a1.573 1.573 0 0 1-1.56-1.576zm.212 3.534h2.698v13.376h-2.698zm14.089 4.603c-.275-1.424-1.324-2.556-3.085-2.556-2.086 0-3.46 1.767-3.46 4.64 0 2.938 1.386 4.642 3.485 4.642 1.66 0 2.748-.928 3.06-2.48H83C82.713 18.067 80.477 20 77.317 20c-3.76 0-6.208-2.62-6.208-6.942 0-4.247 2.448-6.93 6.183-6.93 3.385 0 5.446 2.213 5.683 4.845h-2.573zM10.824 3.189c-.698.834-1.805 1.496-2.913 1.398-.145-1.128.41-2.33 1.036-3.065C9.644.662 10.848.05 11.835 0c.121 1.178-.336 2.33-1.01 3.19zm.999 1.619c.624.049 2.425.244 3.578 1.98-.096.074-2.137 1.272-2.113 3.79.024 3.01 2.593 4.012 2.617 4.037-.024.074-.407 1.419-1.344 2.812-.817 1.224-1.657 2.422-3.002 2.447-1.297.024-1.73-.783-3.218-.783-1.489 0-1.97.758-3.194.807-1.297.048-2.28-1.297-3.097-2.52C.368 14.908-.904 10.408.825 7.375c.84-1.516 2.377-2.47 4.034-2.495 1.273-.023 2.45.857 3.218.857.769 0 2.137-1.027 3.746-.93z");
+    fill:#fa586a;
+    scale:0.5;
+    transform:translate(-30px,5px);
+     
+    }
+
+.main-yourLibraryX-headerIsCollapsed [aria-label="Open Your Library"] .Gj4v3278oIywygaUyBbt > svg{
+  scale: 1.3;
+}
   
-  
-  
-  
-  
-  .main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg .main-yourLibraryX-collapseButton.iYP0xuQiJCgi7gx1jUPJ [aria-label="Open Your Library"] span svg path{
+.main-yourLibraryX-headerIsCollapsed [aria-label="Open Your Library"] .Gj4v3278oIywygaUyBbt > svg > path{
   d:path("M14.5498331,5.79055576 L14.8667346,5.79824073 C15.6519271,5.85753895 17.9167852,6.09354452 19.3663083,8.18658259 C19.2454992,8.2761902 16.6786385,9.72115188 16.7091378,12.7589876 C16.7390911,16.3870553 19.9696682,17.5970079 20,17.6265086 C19.9696682,17.7155832 19.487499,19.3381578 18.3096405,21.0185738 C17.2829229,22.4941235 16.2256873,23.9394547 14.5345925,23.9689736 C12.9038728,23.9984743 12.3599697,23.0246181 10.4887983,23.0246181 C8.61624942,23.0246181 8.01243658,23.9394547 6.47193668,23.9984743 C4.84148068,24.056773 3.60409403,22.4336653 2.57735781,20.9595512 C0.463094554,17.9799264 -1.13731196,12.5531248 1.03685791,8.89465382 C2.09390733,7.06587112 4.02671959,5.91602544 6.10974825,5.88615523 C7.71015477,5.85753895 9.18984525,6.91939744 10.1566562,6.91939744 C11.1229398,6.91939744 12.8433271,5.68057112 14.8667346,5.79824073 Z M14.882569,-1.50990331e-14 C15.034318,1.42063421 14.4589476,2.81085604 13.6110595,3.84623659 C12.7325883,4.85257077 11.3405768,5.6504798 9.94727779,5.53248307 C9.76560653,4.17140151 10.4624841,2.72297789 11.2498451,1.83563692 C12.1267465,0.799444643 13.6413789,0.0602553239 14.882569,-1.50990331e-14 Z");
-  
-  
+      fill:#fa586a;
+      scale: 0.98;
+      transform: translate(2px, 0px);
   }
-  .main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg .main-yourLibraryX-collapseButton.iYP0xuQiJCgi7gx1jUPJ [aria-label="Open Your Library"] span svg{
-  scale:1.3
-  }
+
   
   
   .bRRTUCB99PsPsPVYchRh .oaVwShR89gQxLH2tco5G{
@@ -1991,18 +2004,7 @@
   
   
   
-  
-  .main-yourLibraryX-libraryContainer.YourLibraryX:not(.sikBfynL1Y6I25nVpbAg) > div:nth-child(2) > header > div > div.main-yourLibraryX-collapseButton > div > button > span > svg > path:nth-child(1){
-  display:none;}
-  
-  
-  .main-yourLibraryX-libraryContainer.YourLibraryX > div:nth-child(2) > header > div > div.main-yourLibraryX-collapseButton > div > button > span > svg > path:nth-child(2){
-  d:path("M34.752 19.746V6.243h-.088l-5.433 13.503h-2.074L21.711 6.243h-.087v13.503h-2.548V1.399h3.235l5.833 14.621h.1l5.82-14.62h3.248v18.347h-2.56zm16.649 0h-2.586v-2.263h-.062c-.725 1.602-2.061 2.504-4.072 2.504-2.86 0-4.61-1.894-4.61-4.958V6.37h2.698v8.125c0 2.034.95 3.127 2.81 3.127 1.95 0 3.124-1.373 3.124-3.458V6.37H51.4v13.376zm7.394-13.618c3.06 0 5.046 1.73 5.134 4.196h-2.536c-.15-1.296-1.087-2.11-2.598-2.11-1.462 0-2.436.724-2.436 1.793 0 .839.6 1.41 2.023 1.741l2.136.496c2.686.636 3.71 1.704 3.71 3.636 0 2.442-2.236 4.12-5.333 4.12-3.285 0-5.26-1.64-5.509-4.183h2.673c.25 1.398 1.187 2.085 2.836 2.085 1.623 0 2.623-.687 2.623-1.78 0-.865-.487-1.373-1.924-1.704l-2.136-.508c-2.498-.585-3.735-1.806-3.735-3.75 0-2.391 2.049-4.032 5.072-4.032zM66.1 2.836c0-.878.7-1.577 1.561-1.577.862 0 1.55.7 1.55 1.577 0 .864-.688 1.576-1.55 1.576a1.573 1.573 0 0 1-1.56-1.576zm.212 3.534h2.698v13.376h-2.698zm14.089 4.603c-.275-1.424-1.324-2.556-3.085-2.556-2.086 0-3.46 1.767-3.46 4.64 0 2.938 1.386 4.642 3.485 4.642 1.66 0 2.748-.928 3.06-2.48H83C82.713 18.067 80.477 20 77.317 20c-3.76 0-6.208-2.62-6.208-6.942 0-4.247 2.448-6.93 6.183-6.93 3.385 0 5.446 2.213 5.683 4.845h-2.573zM10.824 3.189c-.698.834-1.805 1.496-2.913 1.398-.145-1.128.41-2.33 1.036-3.065C9.644.662 10.848.05 11.835 0c.121 1.178-.336 2.33-1.01 3.19zm.999 1.619c.624.049 2.425.244 3.578 1.98-.096.074-2.137 1.272-2.113 3.79.024 3.01 2.593 4.012 2.617 4.037-.024.074-.407 1.419-1.344 2.812-.817 1.224-1.657 2.422-3.002 2.447-1.297.024-1.73-.783-3.218-.783-1.489 0-1.97.758-3.194.807-1.297.048-2.28-1.297-3.097-2.52C.368 14.908-.904 10.408.825 7.375c.84-1.516 2.377-2.47 4.034-2.495 1.273-.023 2.45.857 3.218.857.769 0 2.137-1.027 3.746-.93z");
-  fill:#fa586a;
-  scale:0.5;
-  transform:translate(-30px,5px);
-   
-  }
+
   
   .main-yourLibraryX-libraryContainer.YourLibraryX .main-yourLibraryX-libraryContainer.YourLibraryX > div:nth-child(2) > header > div > div.main-yourLibraryX-collapseButton > div > button > span > svg > path:nth-child(1){
   display:none;}
@@ -2443,16 +2445,11 @@
   display:none;
   }
   
-  .cubl27eU3uN3hmAiqdmQ{padding-top:75px;}
-  
+
   .cubl27eU3uN3hmAiqdmQ .main-entityHeader-title > h1{
   font-size:2.5rem!important;
   }
   
-  .cubl27eU3uN3hmAiqdmQ .main-actionBar-ActionBarRow{
-  zoom:1.2;
-  margin-left:20px;
-  }
   
   
   .znVZUymLCaOkuN62U7Sf{background-color:unset;}
