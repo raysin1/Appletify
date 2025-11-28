@@ -15,17 +15,18 @@
     
 [data-testid="playlist-page"] .main-trackList-rowSectionVariable[aria-colindex="3"] span{color:transparent;position:relative;}
 [data-testid="playlist-page"] .main-trackList-rowSectionVariable[aria-colindex="3"] span::before {
-  content: "Artists";       /* text you want to show */
-  color: rgba(253, 253, 253, 0.392);              /* visible color */
-
+  content: "Artists";     
+  color: rgba(253, 253, 253, 0.64);           
 }
+
+[data-testid="playlist-page"] .main-trackList-rowMainContent{max-width:78%;}
 
 [data-testid="playlist-page"] .main-trackList-trackListHeaderRow .main-trackList-rowSectionIndex{visibility:hidden;}
 
 [data-testid="playlist-page"] .main-trackList-rowSectionVariable[aria-colindex="3"] {
   position: absolute;
   top: 9px;
-  left: 45.5%;
+  left: 48%;
 }
 
 
@@ -369,7 +370,7 @@
   
   [data-testid="playlist-page"] div.contentSpacing .main-trackList-trackListHeader .main-trackList-rowSectionStart > div:nth-child(1) > button > span:before{
   content:"Songs";
-  color:rgba(253, 253, 253, 0.392);
+  color:rgba(253, 253, 253, 0.64);
   }
   
   [data-testid="playlist-page"] div.contentSpacing .main-trackList-trackListHeader .main-trackList-rowSectionStart > div:nth-child(1) > button > span{
@@ -386,7 +387,9 @@
   
   
   [data-testid="playlist-page"] .main-trackList-trackListHeader{
-  margin-top:24px;
+  margin-top: 24px;
+    margin-bottom: 5px;
+    position: sticky;
   }
   
   
@@ -2692,6 +2695,7 @@
     filter: hue-rotate(-142deg);}
   .main-trackList-rowSectionEnd [aria-label="Add to Liked Songs"]{
   display:none;}
+
 
 
 
