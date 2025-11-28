@@ -570,8 +570,8 @@
   }
   
   .main-yourLibraryX-libraryContainer.YourLibraryX .main-globalNav-searchContainer{
-  zoom:0.9;
-  margin:6px;
+  zoom:0.95;
+  margin:10px;
   }
   
   
@@ -2693,6 +2693,7 @@
     filter: hue-rotate(-142deg);}
   .main-trackList-rowSectionEnd [aria-label="Add to Liked Songs"]{
   display:none;}
+
 
 
 
