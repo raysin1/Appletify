@@ -1725,7 +1725,7 @@
     [data-testid="album-page"] .main-entityHeader-metaData .GI8QLntnaSCh2ONX_y2c{display:none;}
     [data-testid="album-page"] .main-entityHeader-metaData [data-separator="true"]:last-of-type{display:none;}
     [data-testid="album-page"] .main-entityHeader-metaData [data-encore-id="text"] [data-testid="creator-link"]{
-    font-size:34px ;font-weight:400;color:#fa586a; 
+    font-size:29px ;font-weight:400;color:#fa586a; 
     }
     
     [data-testid="album-page"] .main-entityHeader-metaData .main-entityHeader-creatorWrapper [title="Various Artists"] ~ [data-encore-id="text"] {
@@ -2693,3 +2693,4 @@
     filter: hue-rotate(-142deg);}
   .main-trackList-rowSectionEnd [aria-label="Add to Liked Songs"]{
   display:none;}
+
