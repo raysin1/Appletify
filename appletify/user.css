@@ -1127,7 +1127,7 @@
   
   
   [id="global-nav-bar"]{
-  zoom:0.85;
+  zoom:0.88;
   }
   
   [placeholder="What do you want to play?"]{
@@ -2693,5 +2693,6 @@
     filter: hue-rotate(-142deg);}
   .main-trackList-rowSectionEnd [aria-label="Add to Liked Songs"]{
   display:none;}
+
 
 
