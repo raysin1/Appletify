@@ -1768,7 +1768,7 @@ right: 6vw;
 
   
   
-  .main-nowPlayingBar-left{zoom: 1.1; margin-bottom: -6px;}
+  .main-nowPlayingBar-left{zoom: 1.1; margin-bottom: -6px;width:23%;}
   
   
     
@@ -2698,6 +2698,7 @@ right: 6vw;
     filter: hue-rotate(-142deg);}
   .main-trackList-rowSectionEnd [aria-label="Add to Liked Songs"]{
   display:none;}
+
 
 
 
