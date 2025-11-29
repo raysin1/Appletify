@@ -1400,7 +1400,6 @@
   
   
   [data-test-uri^="spotify:artist"] > div > div.EmeHQXR87mUskYK6xEde > div.contentSpacing > div:nth-child(1){
-  margin-bottom: -80px;
   margin-right:32vw;
   }
   
@@ -2698,6 +2697,7 @@ right: 6vw;
     filter: hue-rotate(-142deg);}
   .main-trackList-rowSectionEnd [aria-label="Add to Liked Songs"]{
   display:none;}
+
 
 
 
