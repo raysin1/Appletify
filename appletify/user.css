@@ -1,5 +1,9 @@
 .main-contextMenu-tippyWrapper{display:none!important;}
 
+.main-globalNav-searchInputContainer:focus-within .EJttP30F1zYHeAw7ISHb, .main-globalNav-searchInputContainer:focus-within .M9l40ptEBXPm03dU3X1k,
+.main-globalNav-searchInputContainer:hover .EJttP30F1zYHeAw7ISHb, .main-globalNav-searchInputContainer:hover .M9l40ptEBXPm03dU3X1k,
+{color:unset;}
+
 [data-testid="playlist-page"] .main-trackList-rowMainContent{color:white;}
 
 [data-testid="playlist-page"] .main-trackList-trackListRow{height:62px;}
@@ -2697,6 +2701,7 @@ right: 6vw;
     filter: hue-rotate(-142deg);}
   .main-trackList-rowSectionEnd [aria-label="Add to Liked Songs"]{
   display:none;}
+
 
 
 
