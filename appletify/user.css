@@ -1744,7 +1744,7 @@ right: 6vw;
     margin-top:90px;
     font-size:20px;
     font-weight:600;
-    margin-left:1px;
+    margin-left:5px;
     color:rgba(255, 255, 255, 0.64);}
   
   
@@ -2701,6 +2701,7 @@ right: 6vw;
     filter: hue-rotate(-142deg);}
   .main-trackList-rowSectionEnd [aria-label="Add to Liked Songs"]{
   display:none;}
+
 
 
 
