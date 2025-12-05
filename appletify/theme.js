@@ -3,7 +3,7 @@
    const navTarget = document.querySelector("#Desktop_LeftSidebar_Id > nav > div");
    const searchSection = document.querySelector("#global-nav-bar > div.main-globalNav-searchSection");
    const libraryContainer = document.querySelector("#Desktop_LeftSidebar_Id > nav > div > div.main-yourLibraryX-libraryContainer.YourLibraryX");
-   const newElement = document.querySelector(".gglUjikTBtMzCZFgSmpS");
+   const newElement = document.querySelector(".playback-bar");
    const nowPlayingWidget = document.querySelector(".main-nowPlayingWidget-nowPlaying");
    
    if (!globalNavBar || !navTarget || !searchSection || !libraryContainer || !newElement || !nowPlayingWidget) {
