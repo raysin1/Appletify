@@ -23,6 +23,8 @@
 
 *Credits to [ohitstom](https://github.com/ohitstom) and [Cali](https://github.com/surfbryce)*
 
+*Fixed by [ItsKKing](https://github.com/KKingOfficial)*
+
 <br>
 
 ## Transparency (optional)
@@ -37,3 +39,4 @@
 7. Close and reopen Spotify
 
 *Credit to [Ingan121](https://github.com/Ingan121/)*
+*Credit to [ItsKKing](https://github.com/KKingOfficial)*
