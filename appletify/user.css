@@ -1,8 +1,25 @@
-[id="queue-panel"] .Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle-condensed {
+.Lom0j0CR3sg_fjQE3n1n {
+    padding-bottom: 75px;
+}
+
+/*search categories*/
+.e_N7UqrrJQ0fAw9IkNAL{    zoom: 120%;
+    padding: 30px 30px 0px 30px;}
+
+
+[id="queue-panel"] .Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle-condensed,
+.MxiF3v51hJ2zMb3pXjtJ .QKghX7qNjypCKU_XBBcc[aria-label*="More options for"] {
     opacity: 1;
     zoom: 1.2;
     color: #fa586a;
 }
+
+/*Hide your episodes thing*/
+.main-useDropTarget-base:has([aria-labelledby*="spotify:collection:your-episodes"]),.main-yourLibraryX-listItem:has([aria-labelledby*="spotify:collection:your-episodes"]){
+display:none;}
+
+
+/*Queue title*/
 
 .StyledTabItem-tab-tabItem-useBrowserDefaultFocusStyle:hover {
     background-color:unset; border-radius: 8px;}
@@ -10,13 +27,18 @@
 
     
 [data-encore-id="tabList"]{background: #0000002e;
-        border-radius: 10px;
-        border: 1px solid rgb(173 173 173 / 20%);}
+background: #0000002e;
+    border-radius: 13px;
+    border: 1px solid rgb(173 173 173 / 20%);
+    padding: 4px 6px 4px 6px;}
+
+
+
 
 .StyledTabItem-tab-tabItem-useBrowserDefaultFocusStyle[aria-selected="true"] {
     color: var(--text-base, #000000);
-    background: #848484;font-weight: 500;
-    border-radius: 8px;
+    background: #8f8f8f;font-weight: 500;
+    border-radius: 10px;
 }
     
 #history-tab{
@@ -37,19 +59,20 @@ justify-content: center;
 
 #queue-tab{font-size:0px}
 #queue-tab:after {
-        content: "Playing next";
-        font-size: 14px;
-    }
-
-.ohuGeCup1xpyPDQGSNBZ > div::After {
-    content: "";
-    position: absolute;
-    left: 65px;
-    right: 10px;
-    bottom: 0;
-    height: 0.5px;
-    background: hsla(0, 0%, 100%, .1);
+ content: "Playing next";
+font-size: 14px;
 }
+
+
+
+.ohuGeCup1xpyPDQGSNBZ > li > div::After {
+    content: "";
+    left: 65px;
+    top: -1px;
+    height: 0.5px;
+    background: hsl(0deg 0% 100% / 10%);}
+
+
 .fYX4XCQz81A_L1WZ88uc{
     padding-bottom: 11px;
     margin-bottom: 10px;
@@ -66,9 +89,11 @@ justify-content: center;
 
 .StyledTabItem-tab-tabItem-useBrowserDefaultFocusStyle[aria-selected="true"]::before{background-color: unset;}
 
+/*Clear from queue? popup*/
 .nudJQcNXhCuwAY6LXxqM{
     background: ;
 }
+
 
 .fYX4XCQz81A_L1WZ88uc > button{font-weight:}
 .o2XKI0nqmrWC2u7UWUr7{font-size: 0px;}
@@ -81,19 +106,23 @@ justify-content: center;
 
 .lO04cmltuHk9IMvEcI3E{gap:0;}
 
+
 .Root.global-nav.centered-layout {
     --panel-gap: 3px!important;
 }
 
+/*Tab categories*/
+
 :is(.cZ5498xUueALcCfoJpeb, .KWELaOpzQy72R2cyZ4ke) {
     display: inline-grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  background: #282828;
-  border-radius: 9px;
-  box-shadow: inset 0 -1px 0 #5555552e;
-  border: 1px solid #80808005;
-  width: max-content;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    background: #282828;
+    border-radius: 16px;
+    border: 3px solid #ffffff03;
+    width: max-content;
+    padding: 3px 5px 3px 5px;
+    zoom: 85%;
 }
 
 .cZ5498xUueALcCfoJpeb:has(.ChipClearComponent-chipClear-sm-useBrowserDefaultFocusStyle) {
@@ -120,24 +149,28 @@ justify-content: center;
 }
 
 :is(.cZ5498xUueALcCfoJpeb, .KWELaOpzQy72R2cyZ4ke) button > span {
-    font-family: SF Pro Display;
-  font-size: 16px;
-  border-radius:9px;
-  letter-spacing: .5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+font-size: 17px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
-.KWELaOpzQy72R2cyZ4ke > button:first-child {
-    display:none!important;
+[data-test-uri*="spotify:artist"] :is(.cZ5498xUueALcCfoJpeb, .KWELaOpzQy72R2cyZ4ke) button:nth-child(1) > span{
+    font-size:0px!important;
 }
+[data-test-uri*="spotify:artist"] :is(.cZ5498xUueALcCfoJpeb, .KWELaOpzQy72R2cyZ4ke) button:nth-child(1) > span:before{
+    font-size:17px;
+    content: "Popular";
+}
+
 
 .ChipInnerComponent-sm-selected {
-    background-color: #676565;color: white; border: 2px solid #ffffff10;
+    background-color: #8f8f8f;color: white; border: 2px solid #ffffff10;
 }
+
 
 .LegacyChip__LegacyChipComponent-sc-tzfq94-0:hover > .ChipInnerComponent-sm-selected.ChipInnerComponent-sm-selected {background-color: #676565;}
 
@@ -152,6 +185,7 @@ justify-content: center;
 .LegacyChip__LegacyChipComponent-sc-tzfq94-0:hover > .ChipInnerComponent-sm.ChipInnerComponent-sm {
     background-color:unset;
 }
+
 
 body:not(:has(.Root__main-view-overlay #SpicyLyricsPage:is(.Fullscreen))) #SpicyLyrics_FullscreenButton {
     display:none;
@@ -181,6 +215,7 @@ section > section > div.artist-artistDiscography-cardGrid > div {
     position: relative;margin-inline: 22px;
 }
 
+/*Queue*/
 [id="queue-panel"] > div > div > div:nth-child(1) {
     display:none;
 }
@@ -188,7 +223,12 @@ section > section > div.artist-artistDiscography-cardGrid > div {
 [id="queue-panel"] * {
     --box-hover-background-color:rgba(255,255,255,.1)!important;
 }
+.ohuGeCup1xpyPDQGSNBZ[aria-label="Recently played"] > li > div{
+    --box-hover-background-color:rgba(255,255,255,.1)!important;
+}
 
+
+/*Queue "About recommendations bs*/
 .GKKQhbK3VJXjYYRV7bSk {
     display:none;
 }
@@ -211,6 +251,7 @@ section > section > div.artist-artistDiscography-cardGrid > div {
     display:none;
 }
 
+/*I really shouldve just done all the colors and the font weights first omg LOL. ANyways this is to remove the hover color*/
 :root {
     --spice-main-elevated:unset;
 }
@@ -255,6 +296,7 @@ section > section > div.artist-artistDiscography-cardGrid > div {
     line-height: 23px;
 }
 
+/*On tour*/
 [data-test-uri*="spotify:artist"]  div:Has(> ._at4B8TNnOvLAPLPKRVC) .HzFr0RR3h12KSHxTlDOJ .U0CfehPhmc8AfmCxs8WY {
     color: var(--spice-text);
     letter-spacing: -.04em;
@@ -296,7 +338,7 @@ section > section > div.artist-artistDiscography-cardGrid > div {
     background: rgb(43, 43, 43);
     left: -60px;
     width: 115%;
-    height: 118%;
+    height: 143%;
 }
 
 .iyhPyoc2dxd1Eno74TCO.sImgVQU3N98T8KTr1pz9 .vnK5OJ59KEKrw4PdWruZ {
@@ -305,6 +347,7 @@ section > section > div.artist-artistDiscography-cardGrid > div {
     padding: 0;
 }
 
+/*Credits*/
 .main-trackCreditsModal-mainSection {
     overflow-y:unset;
   padding: 20px 0 0px 30px;
@@ -365,6 +408,7 @@ section > section > div.artist-artistDiscography-cardGrid > div {
     font-weight:600;
 }
 
+/*Popups*/
 .e-91000-box--elevated {
     background-color: #525050cf;
   backdrop-filter: blur(28px) saturate(200%);
@@ -378,7 +422,7 @@ section > section > div.artist-artistDiscography-cardGrid > div {
     color:white;
 }
 
-:is(.x-filterBox-expandButton, .e-91000-icon):has(
+/*Search*/:is(.x-filterBox-expandButton, .e-91000-icon):has(
   path[d^="M10.533"]) path {
     d:path('M458.008,47.875C459.31,47.875 460.612,47.7122 461.914,47.3867C463.216,47.0612 464.518,46.5729 465.82,45.9219C467.122,45.2708 468.424,44.6198 469.727,43.9688C471.029,43.3177 472.005,42.6667 472.656,42.0156C473.958,40.7135 474.935,39.5742 475.586,38.5977C476.237,37.6211 476.888,36.4818 477.539,35.1797C477.539,33.8776 477.702,32.5755 478.027,31.2734C478.353,29.9714 478.516,28.6693 478.516,27.3672C478.516,25.4141 478.353,23.7865 478.027,22.4844C477.702,21.1823 477.539,19.8802 477.539,18.5781C476.888,17.276 476.074,16.1367 475.098,15.1602C474.121,14.1836 473.307,13.3698 472.656,12.7188C472.005,11.4167 471.029,10.4401 469.727,9.78906C468.424,9.13802 467.122,8.48698 465.82,7.83594C464.518,7.83594 463.216,7.51042 461.914,6.85938C460.612,6.20833 459.31,5.88281 458.008,5.88281C456.706,5.88281 455.404,6.04557 454.102,6.37109C452.799,6.69661 451.497,7.1849 450.195,7.83594C448.893,8.48698 447.754,9.13802 446.777,9.78906C445.801,10.4401 444.661,11.4167 443.359,12.7188C442.057,14.0208 441.081,14.9974 440.43,15.6484C439.779,16.2995 439.128,17.276 438.477,18.5781C438.477,19.8802 438.314,21.1823 437.988,22.4844C437.663,23.7865 437.5,25.4141 437.5,27.3672C437.5,28.6693 437.663,29.9714 437.988,31.2734C438.314,32.5755 438.477,33.8776 438.477,35.1797C439.128,36.4818 439.779,37.6211 440.43,38.5977C441.081,39.5742 442.057,40.7135 443.359,42.0156C444.01,42.6667 444.987,43.3177 446.289,43.9688C447.591,44.6198 448.893,45.2708 450.195,45.9219C451.497,46.5729 452.799,47.0612 454.102,47.3867C455.404,47.7122 456.706,47.875 458.008,47.875M458.008,53.7344C456.055,53.7344 454.264,53.7344 452.637,53.7344C451.009,53.7344 449.219,53.0833 447.266,51.7813C445.964,51.1302 444.661,50.3164 443.359,49.3398C442.057,48.3633 440.755,47.224 439.453,45.9219C438.151,44.6198 437.012,43.3177 436.035,42.0156C435.059,40.7135 434.245,39.0859 433.594,37.1328C432.943,35.8307 432.454,34.2031 432.129,32.25C431.803,30.2969 431.641,28.6693 431.641,27.3672C431.641,25.4141 431.803,23.6237 432.129,21.9961C432.454,20.3685 432.943,18.5781 433.594,16.625C434.245,15.3229 435.059,13.8581 436.035,12.2305C437.012,10.6029 438.151,9.13802 439.453,7.83594C440.755,7.1849 442.057,6.37109 443.359,5.39453C444.661,4.41797 445.964,3.60417 447.266,2.95313C449.219,2.30208 451.009,1.8138 452.637,1.48828C454.264,1.16276 456.055,1 458.008,1C459.961,1 461.751,1.16276 463.379,1.48828C465.007,1.8138 466.797,2.30208 468.75,2.95313C470.052,3.60417 471.354,4.41797 472.656,5.39453C473.958,6.37109 475.26,7.1849 476.563,7.83594C477.865,9.13802 479.004,10.6029 479.98,12.2305C480.957,13.8581 481.771,15.3229 482.422,16.625C483.073,18.5781 483.561,20.3685 483.887,21.9961C484.212,23.6237 484.375,25.4141 484.375,27.3672C484.375,28.6693 484.212,30.2969 483.887,32.25C483.561,34.2031 483.073,35.8307 482.422,37.1328C481.771,39.0859 480.957,40.7135 479.98,42.0156C479.004,43.3177 477.865,44.6198 476.563,45.9219C475.26,47.224 473.958,48.3633 472.656,49.3398C471.354,50.3164 470.052,51.1302 468.75,51.7813C466.797,53.0833 465.007,53.7344 463.379,53.7344C461.751,53.7344 459.961,53.7344 458.008,53.7344M492.188,65.4531C492.188,65.4531 492.025,65.4531 491.699,65.4531C491.374,65.4531 491.211,65.4531 491.211,65.4531C490.56,65.4531 490.234,65.4531 490.234,65.4531C490.234,65.4531 489.909,65.1276 489.258,64.4766L471.68,46.8984L477.539,41.0391L495.117,59.5938C495.117,59.5938 495.28,59.7565 495.605,60.082C495.931,60.4076 496.094,60.5703 496.094,60.5703C496.094,60.5703 496.094,60.7331 496.094,61.0586C496.094,61.3841 496.094,61.5469 496.094,61.5469C496.094,62.1979 496.094,62.6862 496.094,63.0117C496.094,63.3372 496.094,63.8255 496.094,64.4766C496.094,64.4766 495.931,64.6393 495.605,64.9648C495.28,65.2904 494.792,65.4531 494.141,65.4531C494.141,65.4531 493.978,65.4531 493.652,65.4531C493.327,65.4531 492.839,65.4531 492.188,65.4531');
      scale: 35%;
@@ -392,7 +436,8 @@ section > section > div.artist-artistDiscography-cardGrid > div {
      transform: translate(-429px, 0px);
 }
 
-:is(.main-trackList-rowImagePlayButton, [data-encore-id="buttonPrimary"]):has(
+/*Comprehensive change play and pause buttons everywhere*/
+/*Pause*/:is(.main-trackList-rowImagePlayButton, [data-encore-id="buttonPrimary"]):has(
   path[d^="M5.7"]
 ) path {
     d: path("M7.39 0.82h4.49c1.35 0 1.89 0.56 1.89 1.91v28.83c0 1.38-0.54 1.91-1.89 1.91H7.39c-1.38 0-1.91-0.54-1.91-1.91V2.73c0-1.35 0.54-1.91 1.91-1.91zm13.49 0h4.49c1.38 0 1.91 0.56 1.91 1.91v28.83c0 1.38-0.54 1.91-1.91 1.91h-4.49c-1.35 0-1.89-0.54-1.89-1.91V2.73c0-1.35 0.54-1.91 1.89-1.91z");
@@ -400,7 +445,7 @@ section > section > div.artist-artistDiscography-cardGrid > div {
     scale: 0.6;
 }
 
-:is(.main-trackList-rowImagePlayButton, [data-encore-id="buttonPrimary"]):has(
+/*Play*/:is(.main-trackList-rowImagePlayButton, [data-encore-id="buttonPrimary"]):has(
   path[d^="m7.05"]
 ) path {
     d:path("M-13.58 -17.7c0.43 0 0.75 0.11 1.29 0.43l26.88 15.86c0.75 0.41 1.2 0.82 1.2 1.5c0 0.67-0.45 1.08-1.2 1.5L-12.29 17.45c-0.54 0.32-0.86 0.43-1.29 0.43c-0.86 0-1.44-0.62-1.44-1.7V-16c0-1.07 0.58-1.7 1.44-1.7z");
@@ -428,6 +473,8 @@ section > section > div.artist-artistDiscography-cardGrid > div {
     zoom:1.1;
 }
 
+/*Pop-up search bar, sorted by DOM*/
+
 .GenericModal__overlay {
     background-color: rgb(0 0 0 / 30%);
 }
@@ -438,12 +485,12 @@ section > section > div.artist-artistDiscography-cardGrid > div {
 
 .VZpSxFV1mVKehHTF1r9W {
     height:unset;
-box-shadow:
-0 60px 120px rgba(0,0,0,.55),
-0 30px 60px rgba(0,0,0,.4),
-inset 0 1px 1px rgba(255,255,255,.08);
-border-radius: 12px;
-backdrop-filter: blur(45px) saturate(150%);
+    box-shadow:
+      0 60px 120px rgba(0,0,0,.55),
+      0 30px 60px rgba(0,0,0,.4),
+      inset 0 1px 1px rgba(255,255,255,.08);
+    border-radius: 12px;
+    backdrop-filter: blur(45px);
 }
 
 .VZpSxFV1mVKehHTF1r9W {
@@ -452,11 +499,13 @@ backdrop-filter: blur(45px) saturate(150%);
   max-height: 600px;
 }
 
+/*Search bar only*/
 .ZuOMABESRg0Bpv8S9642 {
     background-color:unset;
     padding: 0px;
 }
 
+/*Search bar and results*/
 .jX1eb5CcZMAuXo_wmZI0, .yOSFN8gjw7LPo74pYe_g, .mWktZnvirv5K8ssiI4vC, .iIaWJ3qSDLsKHwNCvv_g {
     background-color: rgb(82 82 86 / 33%);
   border: 1px solid rgba(255,255,255,.12);
@@ -475,6 +524,7 @@ backdrop-filter: blur(45px) saturate(150%);
     border-radius:12px;
 }
 
+/*Shortcut bar*/
 .iIaWJ3qSDLsKHwNCvv_g {
     padding:10px;
    padding-inline: 18px;
@@ -484,6 +534,7 @@ backdrop-filter: blur(45px) saturate(150%);
     display:none;
 }
 
+/*Results*/
 [id="search-modal-listbox"] {
     scrollbar-width: none; 
   padding: 3px;
@@ -512,10 +563,12 @@ backdrop-filter: blur(45px) saturate(150%);
   height: 0;
 }
 
+/*Round artist images*/
 .gmNQCzeK5b2wiebA87rg {
     border-radius:100%!important;
 }
 
+/*search icon color and text*/
 .qSZ_ggNRWVfmr9V3H2Pw {
     color: rgb(254 254 254 / 64%)!important;
 }
@@ -524,14 +577,17 @@ backdrop-filter: blur(45px) saturate(150%);
     color:white!important;
 }
 
+/*Make top artist songs bigger*/
 [data-test-uri^="spotify:artist:"] .fNzI6FqqYnAGcGmJjQRG {
     zoom: 105%;
 }
 
+/*Hide see more*/
 .NIccMWgYS0OibP_70DRO {
     display:none;
 }
 
+/*Hide artist page artist picture overlay*/
 .XR9tiExSLOuxgWTKxzse.ZLQMyiECjwh0Fat0ymny {
     display:none;
 }
@@ -545,10 +601,12 @@ backdrop-filter: blur(45px) saturate(150%);
     height: 48vh;
 }
 
+/*Hide shuffle button artist page*/
 [data-test-uri^="spotify:artist:"] .hx2nVeuQRL7Q9YEU5imA {
     display: none;
 }
 
+/*make artist spearators commmas)*/
 .main-entityHeader-metaDataText:not(:first-child):before, ._ZYeMqgDc3B_5T_4G16j:before {
     content: ",";
     font-size: 2rem;
@@ -556,42 +614,36 @@ backdrop-filter: blur(45px) saturate(150%);
     color: #fa586a;
 }
 
-.main-nowPlayingWidget-nowPlaying::Before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgb(77, 77, 77);
-    border-radius: 13px;
-    z-index: -1;
-    width: 106%;
-    height: 106%;
-    top: -2px;
-    left: -9px;
-    outline: 2px solid hsl(0deg 100% 97.17% / 30%);
-}
 
+
+/*Hide show all*/
 .ZC2VS0_OWUFpCb5ryKXQ>div>div:nth-child(2) {
     display: none;
 }
 
+/*Hide added to playlist on selected songs*/
 .main-trackList-trackListRow.MxoETbR0GSKhCd1hp6Np .Up3ALJRog0ejdGp8Bbyo {
     display:none;
 }
 
+/*Unset highlight color of track text being player*/
 .main-trackList-trackListRow.dAFQydUa_3YLPaMsqWAv .main-trackList-rowMarker, .main-trackList-trackListRow.dAFQydUa_3YLPaMsqWAv .eYJgrgW01l7dHKuMJidG {
     color:unset;
 }
 
+/*playlist song amount and duration*/
 .eJbkaBhDfq9NfV5_QS8V {
     display:none;
 }
 
+/*Tracklist numbers*/
 .main-trackList-rowSectionIndex > div > span {
     transform:translateY(3px);
   letter-spacing: -2px;
   color:rgba(255, 255, 255, 0.64);
 }
 
+/*More by background*/
 .lLVLck3qrPA1TLtWobAd {
     margin-bottom: 13px;
   margin-top: 66px;
@@ -599,14 +651,16 @@ backdrop-filter: blur(45px) saturate(150%);
 
 section.lLVLck3qrPA1TLtWobAd.main-shelf-shelf.Shelf.Sq2ZlLQM6q75ALS7Xctj::before {
     content: "";
-  position: absolute;
-  inset: -30px;
-  background: rgb(43, 43, 43);
-  z-index: -1;
-  left: -10%;
-  width: 100vw;
-  bottom: -9%;
+    position: absolute;
+    inset: -30px;
+    background: rgb(43, 43, 43);
+    z-index: -1;
+    left: -10%;
+    width: 100vw;
+    bottom: -8vh;
 }
+
+/*Album/page cover glow*/
 
 .glow-wrap {
     position: relative; 
@@ -624,7 +678,7 @@ filter: blur(28px) saturate(2);
 transform: scale(0.96);
 transform-origin: bottom center;
 opacity: 0.4;
-z-index: -1;                 
+z-index: -1;                 /* sits behind the real cover */
 pointer-events: none;
 border-radius: inherit;
 }
@@ -640,19 +694,22 @@ border-radius: inherit;
   transform: scale(0.96);
   transform-origin: bottom center;
   opacity: 0.24;
-  z-index: -1;                 
+  z-index: -1;                 /* sits behind the real cover */
   pointer-events: none;
   border-radius: inherit;
 }
 
+/*Hide library search bar button*/
 .Ckze8wMFNiDXk_f1IqjJ {
     display:none;
 }
 
+/*No drag recent search dropdown*/
 .JkvrLi4Txzq1Oo8ckPM7 {
     -webkit-app-region: no-drag;
 }
 
+/*Play button track hover colors*/
 .main-trackList-trackListRow:not(.MxoETbR0GSKhCd1hp6Np) .main-trackList-rowImagePlayButton {
     color:#fa586a;
 }
@@ -661,6 +718,7 @@ border-radius: inherit;
     color:white;
 }
 
+/*Try to fix different liked songs image popup*/
 .notistack-CollapseWrapper .x-entityImage-imageContainer {
 &:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"]) {
 
@@ -671,18 +729,22 @@ height: 24px;
 
 }}
 
+/*Round artist images*/
 [aria-labelledby*="card-title-spotify:artist"] .main-cardImage-imageWrapper {
     border-radius:100%;
 }
 
+/*Spicylyrics right bar borderradius*/
 body.SpicySidebarLyrics__Active #SpicyLyricsPage:not(.Fullscreen) {
     border-radius:unset!important;
 }
 
+/*Hide download on context menu*/
 .main-contextMenu-menuItemButton.tT_JypfxNakuY1jHgyBN {
     display:none;
 }
 
+/*Shuffle button*/
 :is([data-testid="album-page"], [data-testid="playlist-page"]) .hx2nVeuQRL7Q9YEU5imA {
     border-radius: 14px;
 width: 130px;
@@ -719,6 +781,7 @@ color:white;
     align-items:center;
 }
 
+/*Make explicit badge be to the right*/
 .main-trackList-rowMainContent {
     grid-template: "title badges" "subtitle subtitle" / auto 1fr;
 }
@@ -731,6 +794,7 @@ color:white;
     background-color: rgba(255, 255, 255, 0.64);zoom:0.7
 }
 
+/*Hide second copyright line*/
 .kphFOs0nW4yaFE_2DJr2 > .TypeElement-type-finale:nth-child(2) {
     display:none;
 }
@@ -739,22 +803,33 @@ color:white;
     font-size:.875rem;
 }
 
+/*Hide artist underneath track*/
+
 [data-testid="playlist-page"] .ET4SVjxyjH4WkA3kSo5G {
     position: absolute;
   position: absolute;
   left: 26.1vw;
   white-space: nowrap;
 }
-.ET4SVjxyjH4WkA3kSo5G {    grid-column: 1 / -1;grid-area: subtitle;}
+
+.E5B9sQzoDPDXBM6wP8A1+.ET4SVjxyjH4WkA3kSo5G, .E5B9sQzoDPDXBM6wP8A1~.AwGYv4uwZrqJYy5Hti82 {    grid-column: 1 / -1;grid-area: subtitle;}
+
+.E5B9sQzoDPDXBM6wP8A1{grid-area: badges;
+    grid-row: 1;
+}
+
 
 [data-testid="album-page"]:not(:has(.main-avatar-avatar[title="Various Artists"])) .ET4SVjxyjH4WkA3kSo5G {
     display: none;
 }
 
+/*New version*/
+/*Red selected hover*/
 .main-trackList-trackListRow.MxoETbR0GSKhCd1hp6Np, .main-trackList-trackListRow.MxoETbR0GSKhCd1hp6Np:hover {
     background-color: #d60017;
 }
 
+/*Album page make 3 dots visible*/
 .zeEKLLKAQgCfbY6qzb9A {
     opacity: 1 !important;
   color: #fa586a!important;
@@ -766,47 +841,54 @@ color:white;
     color:unset;
 }
 
+/*Album page make track text time better*/
 .Q4mk1oUBywa1PuZZZ0Mr {
     color: rgba(255, 255, 255, 0.64);
   font-size: 15px;
   padding-right: 8px;
 }
 
+/*Hide playbar slider*/
 .progress-bar__slider {
     display:none!important;
 }
 
+/*Hide notifications and friend activity buttons*/
 .YaU17q8G6eTc2eoKRwnL.main-actionButtons {
     display:none;
 }
 
+/*Hide leftmost undo/forward box space*/
 .ZIgg4O2heaZyD8Z7o7MQ {
     display:none;
 }
 
+/*Hide artist page "Liked songs"*/
 .kUfGKvvpJSSaH6icTmfn {
     display:none;
 }
 
+/*Hide artist page monthly listeners*/
 .VmDxGgs77HhmKczsLLBQ {
     display:none;
 }
 
+/*Hide playbar add to playlist currently playing song*/
 .qqAX5M23YurntqVJ_8Dt {
     display:none;
 }
 
-.main-nowPlayingWidget-nowPlaying button:not([data-testid="cover-art-button"]) {
-    display:none;
-}
+/*Hide verified artist badge*/
 .uRaGTNlhRgP6shlQgYLz {
     display:none;
 }
 
+/*Center currently playing song title*/
 .Ot1yAtVbjD2owYqmw6BK > span {
     margin-inline: auto;
 }
 
+/*Remove album page art cover interactable*/
 .ISK8eElFBziYNg9EbJ8c {
     pointer-events:none;
 }
@@ -822,36 +904,44 @@ color:white;
 
 .main-nowPlayingWidget-nowPlaying {
     display:grid;
-grid-template-columns: auto 1fr;
-grid-template-rows: auto auto;     top: 3px;
+grid-template-columns: auto auto 1fr;
+grid-template-rows: auto auto;
+top: 3px;
+overflow: hidden;
+}
+
+.main-nowPlayingWidget-nowPlaying > div.ZbFkATBbLkWh2SHMXDt6 {
+    display:flex!important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    padding: 0 6px;
 }
 
 .main-coverSlotCollapsed-container {
-    grid-row: 1 / span 2;; grid-column: 1;
+    grid-row: 1 / span 2; grid-column: 2;
+    position: relative;
+    z-index: 1;
 }
 
 .main-nowPlayingWidget-trackInfo {
     grid-row: 1;
-grid-column: 2;
+grid-column: 3;
 margin-top: 10px;
 margin-bottom: 8px;
 scale:1.1;
+overflow: hidden;
 display: flex;
 flex-direction: column;
 align-items: center;
-min-width: 0;
-overflow: hidden;
-}
-
-.main-nowPlayingWidget-trackInfo .main-watchFeed-contentWrapper {
-    overflow: hidden;
-    width: 100%;
-    text-align: center;
 }
 
 .playback-bar {
     grid-row: 2;
-grid-column: 2;
+grid-column: 3;
 -webkit-app-region: no-drag;
 }
 
@@ -869,10 +959,12 @@ grid-column: 2;
 .main-yourLibraryX-library [aria-controls="sort-and-view-picker"],
 .main-yourLibraryX-library .main-gridContainer-gridContainer > *,
 .main-yourLibraryX-libraryRootlist.G4x1juhr8jVza8dirSUd > presentation *,
-.main-yourLibraryX-library [aria-label="Your Library"] {
+.main-yourLibraryX-library [aria-label="Your Library"],
+.main-yourLibraryX-headerContent {
     -webkit-app-region: no-drag;
 }
 
+/*FONT*/
 @font-face {
     font-family: 'San Francisco Pro';
 src: url('https://raw.githubusercontent.com/sahibjotsaggu/San-Francisco-Pro-Fonts/master/SF-Pro.ttf') format('truetype');
@@ -888,6 +980,7 @@ body, button, input, select, textarea {
 --encore-variable-font-stack: 'SF Pro Text', SpotifyMixUITitleVariable, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
 }
 
+/*COLORS*/
 :root {
     --spice-button:#fa586a;
 }
@@ -947,6 +1040,7 @@ color:white;
     color:#fa586a;
 }
 
+/*Improve scrollbar*/
 .os-scrollbar-handle, ::-webkit-scrollbar {
     width:80%!important;
 height:20%!important;
@@ -959,13 +1053,8 @@ border-radius:15px !important;
   width: 0px;
 }
 
-.Root__top-container {
-    grid-template-areas:
-  "left-sidebar now-playing-bar right-sidebar"
-  "left-sidebar main-view right-sidebar";
-grid-template-rows:auto 1fr;
-}
 
+/*Change buttons order*/
 .main-nowPlayingBar-center {
     order: 1;
 }
@@ -992,14 +1081,6 @@ grid-template-rows:auto 1fr;
 
 .main-nowPlayingBar-right .volume-bar {
     order:1; min-width:80px;
-    -webkit-app-region: no-drag;
-}
-
-.main-nowPlayingBar-right .volume-bar *,
-.volume-bar__slider-container,
-.volume-bar__slider-container *,
-input[type="range"] {
-    -webkit-app-region: no-drag;
 }
 
 .main-nowPlayingBar-right button:has(.LyricsPageIcon) {
@@ -1022,10 +1103,12 @@ input[type="range"] {
     order:4
 }
 
+/*Make library grid view always 2 columns*/
 #Desktop_LeftSidebar_Id .main-yourLibraryX-libraryContainer.YourLibraryX .main-gridContainer-gridContainer.main-gridContainer-uniformRowHeight {
     grid-template-columns: repeat(2, 1fr);
 }
 
+/*SEARCH PAGE*/
 [id="searchPage"] .w7SWsAZah4vovAuFxjgk.Qmu4FPZCnrDpQ85s4az5 {
     zoom:1.2;
 }
@@ -1072,6 +1155,7 @@ margin-top:-.9px;
 left:6px;
 }
 
+/*Remove shadow from and make bigger first result image*/
 .pueeb339I8KrXZr0SDm1 > div:nth-child(1) {
     box-shadow:none;
 zoom:1.4;
@@ -1096,6 +1180,7 @@ width:unset;
     font-size:22px;
 }
 
+/*Subtle border to first result*/
 .mXNT9H2GU7lDW4cGx0q1 {
     border:1px solid #3d3d3d;
 border-radius:10px;
@@ -1105,6 +1190,7 @@ border-radius:10px;
     align-self: center;
 }
 
+/*Make first result title smaller*/
 #searchPage .cofBW8sjoBtMAmzDgqKt > a > div {
     font-size:20px;
 font-weight:300;
@@ -1114,11 +1200,12 @@ font-weight:300;
     background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22%23999999%22%20stroke%3D%22none%22%3E%3Cpath%20d%3D%22M19.817%2061.863c1.48%200%202.672-.515%203.702-1.546l24.243-23.63c1.352-1.385%201.996-2.737%202.028-4.443%200-1.674-.644-3.09-2.028-4.443L23.519%204.138c-1.03-.998-2.253-1.513-3.702-1.513-2.994%200-5.409%202.382-5.409%205.344%200%201.481.612%202.833%201.739%203.96l20.99%2020.347-20.99%2020.283c-1.127%201.126-1.739%202.478-1.739%203.96%200%202.93%202.415%205.344%205.409%205.344Z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center;
 content: "";
 display: inline-block;
-width: 14px; 
-height: 14px; 
+width: 14px; /* Adjust width */
+height: 14px; /* Adjust height */
 margin-left:7px;
 }
 
+/*Song thumbnail zoom*/
 #searchPage .main-gridContainer-gridContainer .main-trackList-rowSectionStart > div.main-trackList-rowImageWithPlay > img {
     zoom:1.25;
 transform:translateY(1.0px);
@@ -1158,10 +1245,12 @@ margin-right:40px;
     display:none;
 }
 
+/*Hides search categories*/
 div.search-searchCategory-SearchCategory {
     display:none;
 }
 
+/*Adjust artist result shelf*/
 #searchPage [data-shelf="shelf"][aria-label="Artists"] {
     zoom:0.8
 }
@@ -1184,6 +1273,7 @@ div.search-searchCategory-SearchCategory {
   margin-top:5px;
 }
 
+/*                 ALBUM PAGE                 */
   
 [data-testid="album-page"] .main-entityHeader-backgroundColor {
     display:none;
@@ -1194,6 +1284,7 @@ div.search-searchCategory-SearchCategory {
     display:none;
 }
 
+/*Make tracklist bigger*/
   [data-testid="album-page"] .Xo8dgIGCCWjHXWBoKhaV {
     zoom:1.1;
 }
@@ -1203,7 +1294,7 @@ div.search-searchCategory-SearchCategory {
 opacity:0!important;
     
     
-  
+  /*Hide song artists*/
   [data-testid="album-page"] .main-entityHeader-pretitle {
     display:none!important;
 }
@@ -1216,6 +1307,7 @@ opacity:0!important;
     display:none;
 }
 
+/*Correct active tracklist color*/
   .main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker {
     color:rgba(253, 253, 253, 0.392);
 }
@@ -1224,6 +1316,7 @@ opacity:0!important;
     color:white;
 }
 
+/*Make playing icon white*/
   .main-trackList-playingIcon {
     filter: grayscale(100%) brightness(200%);
 }
@@ -1240,29 +1333,32 @@ opacity:0!important;
 
 }
 
+/*Remove add playlist button*/
   [data-testid="album-page"] .main-rootlist-wrapper [aria-label="Add to playlist"] {
     display:none;
 }
 
+/*Remove album cover interactable*/
   [data-testid="album-page"] .main-entityHeader-imageContainer.main-entityHeader-imageContainerNew.main-entityHeader-imageContainerClickable {
     pointer-events:none;
 }
 
-[data-testid="album-page"] .main-trackList-rowPlayCount,
-  [data-testid="album-page"] .main-trackList-trackListHeader,
+/*Hide play count*/[data-testid="album-page"] .main-trackList-rowPlayCount,
+  /*Hide tracklist header*/[data-testid="album-page"] .main-trackList-trackListHeader,
   [data-testid="album-page"] .yLmA5f7x65en2MdKbIhX,
-  .x-downloadButton-DownloadButton,
-  [data-testid="album-page"] [aria-label="Save to Your Library"],
-  [data-testid="album-page"] .main-avatar-avatar,
-  [data-testid="album-page"] .Button-sc-1dqy6lx-0.Button-small-small-buttonTertiary-iconOnly-condensed-useBrowserDefaultFocusStyle.main-trackList-curationButton[aria-label="Add to Liked Songs"],
-  
+  /*Hide download button*/.x-downloadButton-DownloadButton,
+  /*Hide add to library*/[data-testid="album-page"] [aria-label="Save to Your Library"],
+  /*Hide artist pic*/[data-testid="album-page"] .main-avatar-avatar,
+  /*Hide add to liked hover*/[data-testid="album-page"] .Button-sc-1dqy6lx-0.Button-small-small-buttonTertiary-iconOnly-condensed-useBrowserDefaultFocusStyle.main-trackList-curationButton[aria-label="Add to Liked Songs"],
+  /*Information*/
   [data-testid="album-page"] .main-entityHeader-headerText > div > span:nth-last-child(1),
   [data-testid="album-page"] .encore-text.encore-text-body-small.main-entityHeader-pretitle,
-  [data-testid="album-page"] .DmrVJc9vWCbjU_DuRvfe > div > div > p:nth-child(2),
+  /*Hide second copyright line*/[data-testid="album-page"] .DmrVJc9vWCbjU_DuRvfe > div > div > p:nth-child(2),
   [data-testid="album-page"] [aria-label="Merch"] {
     display:none;
 }
 
+/*Overlay adjustment*/
   [data-testid="album-page"] .XVz4BMGP5zAEE5p90mYK {
     border-radius:9px;
     transform:scaleX(1.03);
@@ -1270,10 +1366,12 @@ opacity:0!important;
     opacity:.75;
 }
 
+/*Hide gradient*/
   .Bdcf5g__Rug3TGqSdbiy {
     display:none;
 }
 
+/*Margins*/
   [data-testid="album-page"] {
     margin-left: 40px;
     margin-right: 40px;
@@ -1293,15 +1391,18 @@ opacity:0!important;
     display:none;
 }
 
+/*Main text align*/
   [data-testid="album-page"] .iWTIFTzhRZT0rCD0_gOK.contentSpacing .main-entityHeader-headerText {
     height:240px;
 }
 
+/*Move titles right and align*/
   :is([data-testid="playlist-page"], [data-testid="album-page"]) .main-entityHeader-headerText {
     margin-left: 25px;
     height: 237px;
 }
 
+/*Move play button bar up and customize it*/
   [data-testid="album-page"] > div:nth-child(3) {
     top: -80px;
   left:450px;
@@ -1331,6 +1432,7 @@ opacity:0!important;
     color:white
 }
 
+/*Make album cover big*/
 :is([data-testid="album-page"], [data-testid="playlist-page"]) div.main-entityHeader-container {
     min-height: 450px !important;
 }
@@ -1340,36 +1442,43 @@ opacity:0!important;
     height: 380px;
 }
 
+/*Alternating gray background*/
   [data-testid="album-page"] .main-rootlist-wrapper > div:nth-child(2) > :nth-child(odd) {
     background-color:#ffffff05;
     border-radius:12px;
 }
 
+/*Hover play button*/
   .main-trackList-rowImagePlayButton {
     scale:1.5!important;
 }
 
+/*Align tracklist*/
   [data-testid="album-page"] > div:nth-child(4) {
     transform:translateY(-30px) translateX(-5px);
 }
 
+/*Three dots*/
   .main-trackList-rowMoreButton {
     opacity:1;
     color:#fa586a;
     margin-left:10px;
 }
 
+/*Copyright text*/
   [data-testid="album-page"] .DmrVJc9vWCbjU_DuRvfe > div > div > p:nth-child(1) {
     font-size:14px;
     margin-top:6px;
 }
 
+/*Tracklist text*/
   [data-testid="album-page"] .main-trackList-rowMainContent div {
     font-weight:300;
     font-size: 16px;
     font-family:SF Pro Text;
     letter-spacing:0.25px;
     color: white !important;
+    grid-area: title;
 }
 
 [data-testid="album-page"] .main-actionBar-ActionBarRow .Button-large-large-buttonTertiary-iconOnly-condensed-useBrowserDefaultFocusStyle {
@@ -1385,6 +1494,7 @@ opacity:0!important;
     border-radius: 100px;
 }
 
+/*Round main image corners*/
   [data-testid="album-page"] .main-entityHeader-image,
   .main-editImage-buttonContainer [data-testid="edit-image-button"] {
     border-radius:13px;
@@ -1394,7 +1504,7 @@ opacity:0!important;
     background-color:#fa586a;
 }
 
-  
+/*Round the hover shape*/  
   .main-trackList-trackListRow {
     border-radius:12px!important;
 }
@@ -1403,23 +1513,28 @@ opacity:0!important;
     display:none;
 }
 
+/*Hide album information*/
   [data-testid="album-page"] .eJbkaBhDfq9NfV5_QS8V {
     display:none;
 }
 
+/*Hide album information dividers*/
   [data-testid="album-page"] .oi4PTxu0hTut9JM0goui {
     display:none;
 }
 
+/*Make title smaller*/
   :is([data-testid="playlist-page"], [data-testid="album-page"]) :is(.main-entityHeader-titleInner, .main-entityHeader-title) > h1 {
     font-size:2.3rem !important;
   font-weight:500;
 }
 
+/*Hide play count*/
   [data-testid="album-page"] .htbmhRXsxePzCR3HsX0V {
     display:none;
 }
 
+/*Hide display dropbox*/
   [data-testid="album-page"] .nnVL0g1_0T2_zxstl_Wr {
     display:none;
 }
@@ -1428,6 +1543,7 @@ opacity:0!important;
     margin-top:-1px;
 }
 
+/*Sub title*/
   [data-testid="album-page"] .main-entityHeader-metaData .GI8QLntnaSCh2ONX_y2c {
     display:none;
 }
@@ -1477,6 +1593,7 @@ opacity:0!important;
     font-size:2.3rem!important;
 }
 
+/*Alternating gray background*/
   [data-testid="playlist-page"] .main-rootlist-wrapper > div:nth-child(2) > :nth-child(odd) {
     background-color:#ffffff05;
   border-radius:8px;
@@ -1566,6 +1683,7 @@ border-bottom:unset;
     width:0px;
 }
 
+/*Overlay adjustment*/
 [data-testid="playlist-page"] .main-entityHeader-backgroundColor {
     display:none;
 }
@@ -1676,10 +1794,10 @@ font-size:24px;
 
 [data-testid="playlist-page"]  .main-trackList-rowMainContent {
     column-gap: 4px;
-display: flex; 
-flex-direction: row; 
+display: flex; /* Changed from grid to flex */
+flex-direction: row; /* Side by side */
 align-items: center;
-justify-content: space-between; 
+justify-content: space-between; /* Space between with 2nd item pushed right */
 padding-inline-end: 8px;
 }
 
@@ -1722,6 +1840,7 @@ left: 27vw;
     display:none;
 }
 
+/*Sidebar*/
   
 .main-yourLibraryX-entryPoints, .main-yourLibraryX-libraryContainer {
     background-color:transparent!important;
@@ -1736,6 +1855,7 @@ left: 27vw;
 }
 
 .main-globalNav-searchContainer [aria-label="Home"] {
+    display:none;
 }
 
 .main-globalNav-searchSection {
@@ -1755,9 +1875,16 @@ left: 27vw;
 }
 
 .Root__now-playing-bar {
-    background: #2c2c2c;
-    width: 100%;
-    margin-inline: auto;
+    background: #222222e3;
+    width: 66%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 30px;
+    border-radius: 32px;
+    box-shadow:0 2px 6px rgba(0, 0, 0, 0.25), 0 18px 40px rgba(0, 0, 0, 0.35), 0 40px 90px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgb(255 255 255 / 20%), inset 0 -1px 2px rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px) saturate(180%);
+    border: 2px solid hsl(0deg 0% 100% / 6%);
 }
 
 .Root__top-container {
@@ -1780,7 +1907,8 @@ padding-top:0px!important;
 }
 
 .main-topBar-searchBar {
-    border-radius:8px!important;
+    border-radius: 11px !important;
+    font-size: 18px;
 }
 
 .main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg .main-globalNav-searchSection .main-topBar-searchBar {
@@ -1833,11 +1961,11 @@ padding-top:0px!important;
     content: '';
 position: absolute;
 height: 100%;
-top: -60px; 
+top: -60px; /* Extend 20px upward */
 left: 0;
 right: 0;
 bottom: 0;
-z-index: 1; 
+z-index: 1; /* Ensure it’s clickable */
 }
 
 .WHTLfjA4oq5AQak5E8CQ .oaVwShR89gQxLH2tco5G:hover .WJFlv_VJkA5oNs0XJMsQ {
@@ -1862,7 +1990,7 @@ margin-left:5px;
 }
 
 .bRRTUCB99PsPsPVYchRh .oaVwShR89gQxLH2tco5G:hover {
-    transform: scale(1.1) scale(0.85)!important; 
+    transform: scale(1.1) scale(0.85)!important; /* Zooms in then shrinks */
 }
 
 .b7r2WRiu5f9Q99qmyreh .main-topBar-searchBar {
@@ -1954,9 +2082,7 @@ top: 54px;
     gap:14px; margin-right:15px
 }
 
-.Root__now-playing-bar > footer > div > div.main-nowPlayingBar-left > div > div.ZbFkATBbLkWh2SHMXDt6 {
-    display:none;
-}
+/* ZbFkATBbLkWh2SHMXDt6 buttons shown in grid */
 
 .Root__now-playing-bar > footer > div > div.main-nowPlayingBar-center > div > div.playback-bar.gglUjikTBtMzCZFgSmpS > div.playback-progressbar-container > div > div > div.x-progressBar-progressBarBg > div.progress-bar__slider.oShi2lRbnhFkEr2LlUqC {
     display:none;
@@ -1968,6 +2094,7 @@ top: 54px;
     display:none;
 }
 
+/*Hide objects*/
 .main-coverSlotCollapsed-expandButton,
 .Button-sc-1dqy6lx-0.Button-small-small-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle[aria-label="Add to Liked Songs"],
 .Button-sc-1dqy6lx-0.Button-small-small-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle[aria-label="Lyrics"],
@@ -1980,6 +2107,7 @@ top: 54px;
     display:none;
 }
 
+/*Playback times hover effect*/
 [data-testid="playback-position"],[data-testid="playback-duration"] {
     opacity: 0;transition: opacity 0.15s ease;
 }
@@ -2018,6 +2146,7 @@ justify-self: stretch;
     margin-bottom:7px;
 }
 
+/*Compress play buttons*/
 .player-controls__left {
     translate:10px;
 }
@@ -2026,12 +2155,14 @@ justify-self: stretch;
     translate:-10px;
 }
 
+/*Text*/
 .encore-text.encore-text-marginal.encore-internal-color-text-subdued.main-trackInfo-artists,
 .encore-text.encore-text-body-small.K9Nj3oI7bTNFh5AGp5GA {
     font-size:16px;
 margin-left:10px;
 }
 
+/*Progress bar colors*/
 .x-progressBar-fillColor {
     background-color:#9f9f9f;
 }
@@ -2044,14 +2175,16 @@ margin-left:10px;
     --is-active-fg-color:white;
 }
 
+/*Volume bar thumb*/
 .volume-bar__slider-container .progress-bar__slider {
     display:block!important;
 border:1.5px solid gray;
 zoom:1.3;
 }
 
+/*       Apple style icons       */
   
-
+/*Play/Pause button*/
 [data-testid="control-button-playpause"][aria-label="Play"] svg path {
     d:path("M-13.58 -17.7c0.43 0 0.75 0.11 1.29 0.43l26.88 15.86c0.75 0.41 1.2 0.82 1.2 1.5c0 0.67-0.45 1.08-1.2 1.5L-12.29 17.45c-0.54 0.32-0.86 0.43-1.29 0.43c-0.86 0-1.44-0.62-1.44-1.7V-16c0-1.07 0.58-1.7 1.44-1.7z");
   scale: 0.35;
@@ -2084,6 +2217,7 @@ zoom:1.3;
   height: 38px;
 }
 
+/*Previous/Forward buttons*/
 [data-testid="control-button-skip-back"] svg path {
     d: path("M25.76 0.06C26.79 0.06 27.82 0.82 27.82 2.56v12.38c0.17-0.47 0.51-0.84 0.97-1.1l22.43-13.19c0.47-0.28 1.11-0.58 1.69-0.58c1.03 0 2.06 0.75 2.06 2.49v26.02c0 1.76-1.03 2.53-2.06 2.53-0.58 0-1.18-0.3-1.69-0.58L28.79 17.32c-0.47-0.28-0.81-0.6-0.97-1.06v12.31c0 1.76-1.03 2.53-2.06 2.53-0.58 0-1.18-0.3-1.69-0.58L1.63 17.32c-0.69-0.41-1.07-0.91-1.07-1.72 0-0.82 0.43-1.4 1.07-1.76l22.43-13.19c0.47-0.28 1.11-0.58 1.69-0.58z");
   scale: 0.35;
@@ -2114,6 +2248,7 @@ button[data-testid="control-button-skip-forward"] svg {
   height: 28px;
 }
 
+/*Shuffle button*/
 [data-testid="now-playing-bar"] :is([aria-label*="Enable Shuffle for"], .x_I4_QDM5MZhGKhtI6fb) span svg path {
     d: path("M5.478515625,10.419921875 C5.478515625,9.58203125 6.080078125,8.98046875 6.91796875,8.98046875 L11.64453125,8.98046875 C14.888671875,8.98046875 16.80078125,9.947265625 19.142578125,12.71875 L23.9765625,18.4765625 L28.83203125,12.697265625 C31.173828125,9.904296875 33.0859375,8.958984375 36.330078125,8.958984375 L39.208984375,8.958984375 L39.208984375,3.91015625 C39.208984375,3.115234375 39.74609375,2.599609375 40.5625,2.599609375 C40.94921875,2.599609375 41.25,2.70703125 41.59375,2.986328125 L49.328125,8.830078125 C50.251953125,9.5390625 50.208984375,10.849609375 49.328125,11.515625 L41.59375,17.337890625 C41.25,17.6171875 40.94921875,17.724609375 40.5625,17.724609375 C39.74609375,17.724609375 39.208984375,17.208984375 39.208984375,16.4140625 L39.208984375,11.81640625 L36.158203125,11.81640625 C34.03125,11.81640625 32.634765625,12.6328125 30.701171875,14.931640625 L25.845703125,20.7109375 L30.701171875,26.490234375 C32.634765625,28.810546875 34.03125,29.60546875 36.158203125,29.60546875 L39.208984375,29.60546875 L39.208984375,24.986328125 C39.208984375,24.19140625 39.74609375,23.67578125 40.5625,23.67578125 C40.94921875,23.67578125 41.25,23.783203125 41.59375,24.0625 L49.328125,29.90625 C50.251953125,30.63671875 50.208984375,31.947265625 49.328125,32.591796875 L41.59375,38.4140625 C41.25,38.693359375 40.94921875,38.80078125 40.5625,38.80078125 C39.74609375,38.80078125 39.208984375,38.28515625 39.208984375,37.490234375 L39.208984375,32.484375 L36.330078125,32.484375 C33.0859375,32.484375 31.173828125,31.517578125 28.83203125,28.724609375 L23.9765625,22.9453125 L19.142578125,28.703125 C16.80078125,31.49609375 14.888671875,32.44140625 11.64453125,32.44140625 L6.91796875,32.44140625 C6.080078125,32.44140625 5.478515625,31.83984375 5.478515625,31.001953125 C5.478515625,30.228515625 6.123046875,29.5625 6.91796875,29.5625 L11.81640625,29.5625 C13.921875,29.5625 15.33984375,28.767578125 17.2734375,26.46875 L22.107421875,20.7109375 L17.2734375,14.953125 C15.33984375,12.654296875 13.921875,11.859375 11.81640625,11.859375 L6.91796875,11.859375 C6.123046875,11.859375 5.478515625,11.193359375 5.478515625,10.419921875 Z");
   scale:0.35;
@@ -2150,6 +2285,7 @@ button[data-testid="control-button-skip-forward"] svg {
     display:none;
 }
 
+/*Repeat button*/
 [data-testid="control-button-repeat"][aria-label="Enable repeat"] span svg path,
   [data-testid="control-button-repeat"][aria-label="Enable repeat one"] span svg path {
     d: path('M 5.478515625,21.69921875 C 5.478515625,20.904296875 6.166015625,20.216796875 6.9609375,20.216796875 C 7.77734375,20.216796875 8.46484375,20.904296875 8.46484375,21.69921875 L 8.46484375,22.751953125 C 8.46484375,27.0703125 11.021484375,29.712890625 15.189453125,29.712890625 L 28.982421875,29.712890625 L 28.982421875,25.09375 C 28.982421875,24.298828125 29.51953125,23.783203125 30.3359375,23.783203125 C 30.72265625,23.783203125 31.0234375,23.890625 31.3671875,24.169921875 L 39.1015625,30.013671875 C 40.025390625,30.744140625 39.9609375,32.0546875 39.1015625,32.69921875 L 31.3671875,38.521484375 C 31.0234375,38.80078125 30.72265625,38.908203125 30.3359375,38.908203125 C 29.51953125,38.908203125 28.982421875,38.392578125 28.982421875,37.59765625 L 28.982421875,32.548828125 L 15.68359375,32.548828125 C 9.28125,32.548828125 5.478515625,29.025390625 5.478515625,23.095703125 Z M 23.203125,16.478515625 C 23.203125,17.2734375 22.666015625,17.7890625 21.849609375,17.7890625 C 21.462890625,17.7890625 21.162109375,17.681640625 20.818359375,17.40234375 L 13.083984375,11.580078125 C 12.203125,10.9140625 12.16015625,9.603515625 13.083984375,8.89453125 L 20.818359375,3.05078125 C 21.162109375,2.771484375 21.462890625,2.6640625 21.849609375,2.6640625 C 22.666015625,2.6640625 23.203125,3.1796875 23.203125,3.974609375 L 23.203125,9.044921875 L 36.48046875,9.044921875 C 42.904296875,9.044921875 46.70703125,12.58984375 46.70703125,18.498046875 L 46.70703125,19.89453125 C 46.70703125,20.7109375 46.01953125,21.376953125 45.203125,21.376953125 C 44.38671875,21.376953125 43.720703125,20.7109375 43.720703125,19.89453125 L 43.720703125,18.86328125 C 43.720703125,14.544921875 41.1640625,11.90234375 36.974609375,11.90234375 L 23.203125,11.90234375 Z');
@@ -2178,12 +2314,14 @@ button[data-testid="control-button-skip-forward"] svg {
   overflow:visible;
 }
 
+/*Remove active dots*/
 [data-testid="control-button-shuffle"]::before,
 [data-testid="control-button-repeat"]::before,
   .main-nowPlayingBar-extraControls .main-genericButton-button.Button-sc-1dqy6lx-0.Button-small-small-buttonTertiary-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle.main-genericButton-buttonActive.main-genericButton-buttonActiveDot::after {
     display:none;
 }
 
+/*Lyrics button*/
 .Root__now-playing-bar .main-nowPlayingBar-extraControls > button:nth-child(2) > span > svg > g > path:nth-child(3) {
     d: path("M 16.048828125,6.466796875 C 16.392578125,6.466796875 16.671875,6.66015625 16.97265625,6.896484375 L 24.79296875,13.556640625 L 42.990234375,13.556640625 C 47.673828125,13.556640625 50.681640625,16.62890625 50.681640625,21.26953125 L 50.681640625,40.17578125 C 50.681640625,44.794921875 47.673828125,47.8671875 42.990234375,47.8671875 L 13.169921875,47.8671875 C 8.486328125,47.8671875 5.478515625,44.859375 5.478515625,40.17578125 L 5.478515625,21.26953125 C 5.478515625,16.564453125 8.486328125,13.556640625 13.169921875,13.556640625 L 15.25390625,13.556640625 L 15.25390625,7.34765625 C 15.25390625,6.810546875 15.59765625,6.466796875 16.048828125,6.466796875 Z M 16.2421875,7.60546875 L 16.2421875,14.09375 C 16.2421875,14.458984375 16.091796875,14.609375 15.7265625,14.609375 L 13.234375,14.609375 C 9.173828125,14.609375 6.53125,17.251953125 6.53125,21.3125 L 6.53125,40.111328125 C 6.53125,44.171875 9.173828125,46.814453125 13.234375,46.814453125 L 42.947265625,46.814453125 C 46.87890625,46.814453125 49.62890625,44.171875 49.62890625,40.111328125 L 49.62890625,21.3125 C 49.62890625,17.251953125 46.87890625,14.609375 42.947265625,14.609375 L 25.029296875,14.609375 C 24.4921875,14.609375 24.234375,14.501953125 23.740234375,14.072265625 Z M 20.109375,31.904296875 C 20.109375,29.94921875 21.44140625,28.509765625 23.396484375,28.509765625 C 24.27734375,28.509765625 25.072265625,28.810546875 25.587890625,29.498046875 L 25.73828125,29.498046875 C 25.115234375,27.607421875 23.203125,26.490234375 22.322265625,26.232421875 C 21.828125,26.103515625 21.677734375,25.888671875 21.677734375,25.587890625 C 21.677734375,25.201171875 21.935546875,24.943359375 22.322265625,24.943359375 C 23.67578125,24.943359375 27.521484375,26.8125 27.521484375,31.23828125 C 27.521484375,33.81640625 25.6953125,35.427734375 23.71875,35.427734375 C 21.677734375,35.427734375 20.109375,33.859375 20.109375,31.904296875 Z M 30.013671875,31.904296875 C 30.013671875,29.94921875 31.345703125,28.509765625 33.30078125,28.509765625 C 34.181640625,28.509765625 34.9765625,28.810546875 35.4921875,29.498046875 L 35.642578125,29.498046875 C 35.01953125,27.607421875 33.107421875,26.490234375 32.2265625,26.232421875 C 31.732421875,26.103515625 31.58203125,25.888671875 31.58203125,25.587890625 C 31.58203125,25.201171875 31.83984375,24.943359375 32.2265625,24.943359375 C 33.580078125,24.943359375 37.42578125,26.8125 37.42578125,31.23828125 C 37.42578125,33.81640625 35.599609375,35.427734375 33.623046875,35.427734375 C 31.560546875,35.427734375 30.013671875,33.859375 30.013671875,31.904296875 Z");
   scale:0.5;
@@ -2199,6 +2337,7 @@ button[data-testid="control-button-skip-forward"] svg {
   overflow:visible;
 }
 
+/*Fullscreen Icon*/
 .main-nowPlayingBar-extraControls #BeautifulLyricsFullscreenButton span svg path, .main-nowPlayingBar-extraControls #SpicyLyrics_FullscreenButton span svg path {
     d: path('M 5.994140625,28.123046875 C 6.337890625,28.123046875 6.552734375,28.359375 6.552734375,28.703125 L 6.552734375,35.814453125 L 6.380859375,42.603515625 L 14.544921875,34.439453125 L 22.21484375,26.7265625 C 22.322265625,26.619140625 22.451171875,26.5546875 22.580078125,26.5546875 C 22.923828125,26.5546875 23.138671875,26.76953125 23.138671875,27.11328125 C 23.138671875,27.2421875 23.07421875,27.37109375 22.98828125,27.478515625 L 15.189453125,35.255859375 L 7.068359375,43.333984375 L 13.87890625,43.119140625 L 21.01171875,43.119140625 C 21.291015625,43.119140625 21.5703125,43.333984375 21.5703125,43.677734375 C 21.5703125,44.021484375 21.333984375,44.21484375 21.01171875,44.21484375 L 6.4453125,44.21484375 C 5.865234375,44.21484375 5.478515625,43.828125 5.478515625,43.248046875 L 5.478515625,28.703125 C 5.478515625,28.380859375 5.650390625,28.123046875 5.994140625,28.123046875 Z M 29.77734375,4.404296875 L 44.34375,4.404296875 C 44.90234375,4.404296875 45.310546875,4.791015625 45.310546875,5.37109375 L 45.310546875,19.916015625 C 45.310546875,20.23828125 45.1171875,20.49609375 44.7734375,20.49609375 C 44.4296875,20.49609375 44.236328125,20.259765625 44.236328125,19.916015625 L 44.236328125,12.8046875 L 44.38671875,6.015625 L 36.22265625,14.1796875 L 28.552734375,21.892578125 C 28.4453125,22.0 28.31640625,22.064453125 28.1875,22.064453125 C 27.84375,22.064453125 27.650390625,21.849609375 27.650390625,21.505859375 C 27.650390625,21.376953125 27.693359375,21.248046875 27.80078125,21.140625 L 35.578125,13.36328125 L 43.720703125,5.28515625 L 36.888671875,5.5 L 29.77734375,5.5 C 29.498046875,5.5 29.240234375,5.28515625 29.197265625,4.94140625 C 29.197265625,4.59765625 29.43359375,4.404296875 29.77734375,4.404296875 Z');
   stroke: currentColor;
@@ -2212,6 +2351,7 @@ button[data-testid="control-button-skip-forward"] svg {
 scale:1.2;
 }
 
+/*Volume Icon*/
 .volume-bar > button [id="volume-icon"] path:nth-child(2) {
     display:none;
 }
@@ -2252,6 +2392,7 @@ scale:1.2;
   stroke-width:0.5;
 }
 
+/*Queue button*/
 .Root__now-playing-bar [data-testid="control-button-queue"] span svg {
     scale: 1.5;
 margin-top: -2px;
@@ -2270,11 +2411,13 @@ transition: width 0.25s ease;max-width:310px
     display:none;
 }
 
+/*Improve scrollbar*/
 .os-scrollbar-handle {
     width:30%!important;
 border-radius:15px !important;
 }
 
+/*Translucent context menu*/
 .main-contextMenu-menu {
     border-radius: 10px;
 overflow: visible; 
@@ -2386,22 +2529,27 @@ backdrop-filter:blur(30px)!important;
 margin-bottom:5px;
 }
 
+/*Hide top songs duration*/
 [data-test-uri*="spotify:artist"] :is(.htbmhRXsxePzCR3HsX0V, .Q4mk1oUBywa1PuZZZ0Mr) {
     display:none;
 }
 
+/*Hide verified artist*/
 .artist-artistVerifiedBadge-wrapper {
     display:none;
 }
 
+/*Hide merch*/
 .SMBqsyNXIMb0yeYVwPxv {
     display:none;
 }
 
+/*Hide follow button*/
 [data-test-uri*="spotify:artist"] > div > div.YO0Nd3lMQrVPmjcdqV8p > div:nth-child(2) > div:nth-child(2) > div > div > button.Button-sc-y0gtbx-0.Button-small-buttonSecondary-useBrowserDefaultFocusStyle.encore-text-body-small-bold {
     display:none;
 }
 
+/*Hide featuring and discovered shelves*/
 [data-test-uri*="spotify:artist"] [aria-label*="Featuring"],
 [data-test-uri*="spotify:artist"] [aria-label*="Discovered"] {
     display:none;
@@ -2422,6 +2570,7 @@ margin-left:7px;
 transform: translateY(1px);
 }
 
+/* All rows: top border */
 [data-test-uri*="spotify:artist"] .main-trackList-trackListRow.main-trackList-trackListRowGrid::after {
     content: "";
     position: absolute;
@@ -2432,6 +2581,7 @@ transform: translateY(1px);
     background: hsla(0, 0%, 100%, .1);
 }
 
+/* Last row: extra bottom border */
 [data-test-uri*="spotify:artist"] .main-rootlist-wrapper > div:nth-child(2) > div:last-child 
 .main-trackList-trackListRow.main-trackList-trackListRowGrid::before {
     content: "";
@@ -2442,6 +2592,11 @@ transform: translateY(1px);
     height: 0.5px;
     background: hsla(0, 0%, 100%, .1);
 }
+
+
+
+
+
 
 [data-test-uri*="spotify:artist"] [aria-label="Artist Playlists"] div:nth-child(2) {
     --min-column-width:290px!important;
@@ -2477,8 +2632,8 @@ margin-left:20px;
     background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22%23999999%22%20stroke%3D%22none%22%3E%3Cpath%20d%3D%22M19.817%2061.863c1.48%200%202.672-.515%203.702-1.546l24.243-23.63c1.352-1.385%201.996-2.737%202.028-4.443%200-1.674-.644-3.09-2.028-4.443L23.519%204.138c-1.03-.998-2.253-1.513-3.702-1.513-2.994%200-5.409%202.382-5.409%205.344%200%201.481.612%202.833%201.739%203.96l20.99%2020.347-20.99%2020.283c-1.127%201.126-1.739%202.478-1.739%203.96%200%202.93%202.415%205.344%205.409%205.344Z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center;
   content: "";
   display: inline-block;
-  width: 17px; 
-  height: 17px; 
+  width: 17px; /* Adjust width */
+  height: 17px; /* Adjust height */
   margin-bottom:-1px;
   margin-left:5px;
 }
@@ -2517,6 +2672,7 @@ zoom: 1.5;
   scale: 103%;
 }
 
+/* fullscreen artist page*/
 .under-main-view .main-entityHeader-background.main-entityHeader-gradient {
     height: 56vh;
 }
@@ -2669,6 +2825,7 @@ transform: translateY(-2px);
     width: 73%;
 }
 
+/*Make highlighted release title bigger*/
 [data-test-uri*="spotify:artist"] .YO0Nd3lMQrVPmjcdqV8p > div.contentSpacing > [aria-label="Discography"] > .main-gridContainer-gridContainer > div:nth-child(1) .MainArea {
     margin-left: 15px;
     zoom: 1.05;
@@ -2742,9 +2899,9 @@ margin-left: auto;
 
 [data-test-uri*="spotify:artist"] .YO0Nd3lMQrVPmjcdqV8p > div.contentSpacing > [aria-label="Discography"] > .main-gridContainer-gridContainer {
     content-visibility: visible;
-grid-template-rows: 1fr; 
-overflow-x: auto; 
-overflow-y: hidden; 
+grid-template-rows: 1fr; /* Single row only */
+overflow-x: auto; /* Horizontal scroll when needed */
+overflow-y: hidden; /* Keep your required visible overflow */
 }
 
 [data-test-uri*="spotify:artist"] .YO0Nd3lMQrVPmjcdqV8p > div.contentSpacing > [aria-label="Discography"] > .main-gridContainer-gridContainer > div:nth-child(7),
@@ -2777,10 +2934,12 @@ font-weight:600!important;
     display:none;
 }
 
+/*Hide artist pick*/
 .BntgkZDiA74b6eLOX2rQ.fEQbotLa5WZFQ1FDls60 {
     display:none;
 }
 
+/*Make buttons no drag*/
 .Root__now-playing-bar button,
 .main-nowPlayingWidget-trackInfo.main-trackInfo-container,
 .volume-bar.main-nowPlayingBar-volumeBar {
@@ -2792,11 +2951,11 @@ font-weight:600!important;
 }
 
 .main-nowPlayingBar-nowPlayingBar [data-testid="lyrics-button"] {
-}
-
-#main > div.Root.global-nav.centered-layout > div.Root__top-container > div.Root__main-view > div.Root__now-playing-bar > footer > div > div.main-nowPlayingBar-left > div > div.ZbFkATBbLkWh2SHMXDt6 {
     display:none;
 }
+
+
+
 
 .al8f6ds34QJ4LZ74vbVP {
     padding-inline: 48px 16px;
@@ -2905,6 +3064,8 @@ color:var(--text-subdued);
     border-right: 2px solid hsl(0deg 0% 100% / 8%)
 }
 
+
+
 .Root__right-sidebar {
   -webkit-app-region: no-drag;
   max-width: 20vw;
@@ -2950,6 +3111,9 @@ left:65px;
 right:20px;
 }
 
+.main-globalNav-historyButtonsContainer > div > div:nth-child(1){display:none;}
+
+/*Back/forward buttons*/
 .main-globalNav-historyButtonsContainer [aria-label="Go back"] span svg path {
     d: path("M344.727,306.176 L207.52,169.457 C203.613,165.551 201.66,161.156 201.66,156.273 C201.66,150.74 203.613,146.345 207.52,143.09 L344.727,6.37109 C348.307,2.79036 352.702,1 357.91,1 C363.118,1 367.513,2.79036 371.094,6.37109 C374.674,9.95182 376.465,14.3464 376.465,19.5547 C376.465,24.4375 374.674,28.832 371.094,32.7383 L236.328,166.527 L236.328,146.02 L371.094,279.809 C374.674,283.715 376.465,288.109 376.465,292.992 C376.465,298.201 374.674,302.595 371.094,306.176 C367.513,309.757 363.118,311.547 357.91,311.547 C352.702,311.547 348.307,309.757 344.727,306.176 ");
 scale:0.07;
@@ -2970,6 +3134,7 @@ transform:Translate(-135px,20px);
     color:rgb(176,176,176);
 }
 
+/*Default grid view play button*/
 .main-yourLibraryX-libraryContainer ._7kcfiJ2UNEh3CDR9Wau {
     bottom:0;
 right:0;
@@ -3082,6 +3247,7 @@ zoom:1.15
     width:110%;
 }
 
+/*Marketplace*/
 .marketplace-card--installed {
     border:unset;
 }
@@ -3198,6 +3364,7 @@ box-shadow: 8px 0 0 5px #404040, -8px 0 0 5px #404040;
     display:none;
 }
 
+/*Change liked songs thumbnail*/
 [data-testid="playlist-image"] .main-entityHeader-image,
 .GOcsybnoHYyJGQGDRuwj > div{
 &:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"]) {
@@ -3208,7 +3375,7 @@ box-shadow: 8px 0 0 5px #404040, -8px 0 0 5px #404040;
         pointer-events: none;
         inset: 0;
         background: transparent;
-        border-radius: 4px;
+        border-radius: 13px;
         background-repeat: no-repeat;
         background-size: cover;
         background-image: url("https://github.com/raysin1/Appletify/blob/main/screenshots/liked%20songs.jpg?raw=true");
@@ -3216,7 +3383,6 @@ box-shadow: 8px 0 0 5px #404040, -8px 0 0 5px #404040;
 
 }}
   
-.x-entityImage-imageContainer{
 &:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"]) {
 
 &::after {
@@ -3235,6 +3401,9 @@ box-shadow: 8px 0 0 5px #404040, -8px 0 0 5px #404040;
 
 }}
 
+
+[data-testid="playlist-page"] .profile-editImage-imageContainer img {display:none;}
+
 .main-contextMenu-menuItemButton.egE6UQjF_UUoCzvMxREj {
     display:none;
 }
@@ -3251,6 +3420,8 @@ box-shadow: 8px 0 0 5px #404040, -8px 0 0 5px #404040;
     background-color:unset;
 }
 
+.bVJH37qfz55VdpglJjHJ{background:unset;}
+
 .Root__right-sidebar::before {
     content: "";
   position: absolute;
@@ -3258,12 +3429,12 @@ box-shadow: 8px 0 0 5px #404040, -8px 0 0 5px #404040;
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: inset 0 0 0 100vmax rgb(91 91 91 / 50%);
+  box-shadow: inset 0 0 0 100vmax rgb(57 57 57 / 50%);
   z-index: -1;
 }
 
 #Desktop_LeftSidebar_Id::before {
-    content: "";
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -3282,8 +3453,12 @@ box-shadow: 8px 0 0 5px #404040, -8px 0 0 5px #404040;
     justify-content: center;
 }
 
-.main-nowPlayingBar-left, .main-nowPlayingBar-right {
+.main-nowPlayingBar-left {
     -webkit-app-region: drag;
+}
+
+.main-nowPlayingBar-right {
+    -webkit-app-region: no-drag;
 }
 
 .main-nowPlayingBar-extraControls > [data-testid="control-button-npv"] {
@@ -3373,8 +3548,6 @@ transition: none!important;
 }
 
 .main-nowPlayingBar-center {
-    zoom: 0.93;
-margin-right: -60px;
 margin-top: 5px;
 }
 
@@ -3402,7 +3575,7 @@ margin-top: 5px;
 .main-globalNav-searchInputContainer .main-topBar-searchBar:focus {
     -webkit-box-shadow:unset;
     box-shadow:unset;
-    outline:8px solid rgba(250,88,106,.6);
+    outline:6px solid rgba(250,88,106,.6);
 }
 
 .main-trackList-trackList.main-trackList-indexable[aria-colcount="3"] .main-trackList-trackListRowGrid {
@@ -3421,11 +3594,15 @@ margin-top: 5px;
     display:none;
 }
 
+/*Try to fix different liked songs image popup*/
 .notistack-CollapseWrapper .x-entityImage-imageContainer {
 &:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"]) {
 
 }}
 
+/*New version*/
+
+/*Red selected hover*/
 .main-trackList-trackListRow.MxoETbR0GSKhCd1hp6Np, .main-trackList-trackListRow.MxoETbR0GSKhCd1hp6Np:hover {
     background-color: #d60017;
 }
@@ -3434,6 +3611,7 @@ margin-top: 5px;
 
 }
 
+/*Change liked songs thumbnail*/
 [data-testid="playlist-image"] .main-entityHeader-image,
 .GOcsybnoHYyJGQGDRuwj > div{
 &:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"]) {
@@ -3444,3 +3622,19 @@ margin-top: 5px;
 &:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"]) {
 
 }}
+
+/* ── Center track title above artists ── */
+/* Name row fills column so centering has space to work */
+.main-nowPlayingWidget-trackInfo .main-trackInfo-name {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Short titles: center the text. Spotify's marquee replaces this with
+   its own scrolling span when the text overflows, so this won't block scrolling. */
+.main-nowPlayingWidget-trackInfo .main-trackInfo-name > a,
+.main-nowPlayingWidget-trackInfo .main-trackInfo-name > span {
+    text-align: center;
+}
