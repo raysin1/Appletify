@@ -1,20 +1,37 @@
 (function moveNavElementsMod() {
-   const globalNavBar = document.querySelector("#global-nav-bar");
-   const navTarget = document.querySelector("#Desktop_LeftSidebar_Id > nav > div");
-   const searchSection = document.querySelector("#global-nav-bar > div.main-globalNav-searchSection");
-   const libraryContainer = document.querySelector("#Desktop_LeftSidebar_Id > nav > div > div.main-yourLibraryX-libraryContainer.YourLibraryX");
-   const newElement = document.querySelector(".playback-bar");
-   const nowPlayingWidget = document.querySelector(".main-nowPlayingWidget-nowPlaying");
-   
-   if (!globalNavBar || !navTarget || !searchSection || !libraryContainer || !newElement || !nowPlayingWidget) {
-       setTimeout(moveNavElementsMod, 300);
-       return;
-   }
-   
-   navTarget.insertBefore(globalNavBar, navTarget.firstChild);
-   libraryContainer.insertBefore(searchSection, libraryContainer.firstChild);
-   nowPlayingWidget.appendChild(newElement);
+  const globalNavBar = document.querySelector("#global-nav-bar");
+  const navTarget = document.querySelector("#Desktop_LeftSidebar_Id > nav > div");
+  const searchSection = document.querySelector("#global-nav-bar > div.main-globalNav-searchSection");
+  const libraryContainer = document.querySelector("#Desktop_LeftSidebar_Id > nav > div > div.main-yourLibraryX-libraryContainer.YourLibraryX");
+  const newElement = document.querySelector(".playback-bar");
+  const nowPlayingWidget = document.querySelector(".main-nowPlayingWidget-nowPlaying");
+
+  const nowPlayingBar = document.querySelector(".Root__now-playing-bar");
+  const mainViewContainer = document.querySelector(".main-view-container");
+
+  if (
+    !globalNavBar ||
+    !navTarget ||
+    !searchSection ||
+    !libraryContainer ||
+    !newElement ||
+    !nowPlayingWidget ||
+    !nowPlayingBar ||
+    !mainViewContainer
+  ) {
+    setTimeout(moveNavElementsMod, 300);
+    return;
+  }
+
+  navTarget.insertBefore(globalNavBar, navTarget.firstChild);
+  libraryContainer.insertBefore(searchSection, libraryContainer.firstChild);
+  nowPlayingWidget.appendChild(newElement);
+
+  // move into .main-view-container, keep natural DOM order
+  mainViewContainer.appendChild(nowPlayingBar);
 })();
+
+
 
 (function SpotifySearchMod() {
     const selector = '[data-encore-id="formInput"]';
