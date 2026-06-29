@@ -1795,11 +1795,11 @@ div.search-searchCategory-SearchCategory { display: none; }
 [data-testid="album-page"] .main-trackList-trackListRowGrid::after {
     content: "";
     position: absolute;
-    left: 11px;
+    left: 42px;
     right: 10px;
-    top: -1.2px;
-    height: 0.5px;
+    height: 0.1px;
     background: hsla(0, 0%, 100%, .1);
+    bottom: 0px;
 }
 
 /* Index column opacity */
