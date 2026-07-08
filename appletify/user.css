@@ -1,14 +1,6 @@
 
 /* =============================================================================
-   APPLETIFY THEME — user.css
-   Dynamic hash classes are marked ⚠️ DYNAMIC CLASS
-   and may need re-inspection in DevTools after a Spotify update.
-   Search "⚠️" to find all classes that could break on updates.
-   ============================================================================= */
-
-
-/* =============================================================================
-   1. CSS VARIABLES & COLORS
+   1. COLORS
    ============================================================================= */
 
    :root {
@@ -16,6 +8,7 @@
     --spice-button-active: #ff375f;
     --spice-sidebar: rgb(20, 20, 20);
     --panel-gap: 3px !important;
+    --spice-text: rgba(255, 255, 255, 0.92);
 }
 
 /*Buttons color*/
@@ -66,15 +59,15 @@ height:32px;
 }
 
 
-/*In case I wanted to remove tippys*/
+/*In case I want to remove tippys
 [id^="tippy-"]{
     display:;
-}
+}*/
 
 
 
 /* =============================================================================
-   2. TYPOGRAPHY & FONT
+   2. FONTs
    ============================================================================= */
 
 @font-face {
@@ -157,12 +150,6 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar {
     border-left: 2px solid hsl(0deg 0% 100% / 8%);
 }
 
-/* Library/sidebar containers transparent */
-/* ⚠️ DYNAMIC CLASS — .ffFwfKcPDbmAPLXzxzKq = library container bg */
-.ffFwfKcPDbmAPLXzxzKq::before { background-color: transparent; }
-
-/* ⚠️ DYNAMIC CLASS — .ffFwfKcPDbmAPLXzxzKq */
-.ffFwfKcPDbmAPLXzxzKq,
 .main-yourLibraryX-entryPoints,
 .main-yourLibraryX-libraryContainer {
     background-color: transparent !important;
@@ -209,14 +196,7 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar {
 /* ⚠️ DYNAMIC CLASS — .LedDBMWCxYhMD20KtPJo = action buttons row (alt) */
 .LedDBMWCxYhMD20KtPJo.main-actionButtons { display: none; }
 
-/* Notistack (toast) nudge up */
-.notistack-CollapseWrapper { margin-top: -80px; }
 
-/* Try to fix liked songs image in popup */
-.notistack-CollapseWrapper .x-entityImage-imageContainer:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"])::after {
-    width: 24px;
-    height: 24px;
-}
 
 /* Spicetify update button */
 .main-globalNav-historyButtons [aria-label="Update Spicetify"] { margin-left: 5px; }
@@ -336,15 +316,6 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar {
    6. DRAG REGIONS (macOS titlebar / app-region)
    ============================================================================= */
 
-.Root__now-playing-bar { -webkit-app-region: drag; }
-
-.Root__now-playing-bar button,
-.main-nowPlayingWidget-trackInfo.main-trackInfo-container,
-.volume-bar.main-nowPlayingBar-volumeBar { -webkit-app-region: no-drag; }
-
-.main-nowPlayingBar-left,
-.main-nowPlayingBar-right { -webkit-app-region: drag; }
-
 #Desktop_LeftSidebar_Id { -webkit-app-region: drag; }
 
 /* Library items must remain clickable */
@@ -357,12 +328,6 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar {
 .main-yourLibraryX-library [aria-label="Your Library"],
 .main-yourLibraryX-headerContent,
 .main-yourLibraryX-filterArea { -webkit-app-region: no-drag; }
-
-.playback-bar { -webkit-app-region: no-drag; }
-
-/* No drag on search dropdown */
-/* ⚠️ DYNAMIC CLASS — .JkvrLi4Txzq1Oo8ckPM7 = recent search dropdown */
-.JkvrLi4Txzq1Oo8ckPM7 { -webkit-app-region: no-drag; }
 
 
 /* =============================================================================
@@ -389,7 +354,7 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar {
 
 /* Reorder sections: center first, left second, right third */
 .main-nowPlayingBar-center { order: 1; width: 30%; }
-.main-nowPlayingBar-left { order: 2; margin-top: -6px; }
+.main-nowPlayingBar-left { order: 2; margin-top: -6px;width: 40%;}
 .main-nowPlayingBar-right { order: 3; }
 
 /* Center section top spacing */
@@ -415,35 +380,24 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar {
 
 /* Now playing widget layout (track info + progress bar stacked) */
 .main-nowPlayingWidget-nowPlaying {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
+    display: grid;  grid-template-columns: auto 1fr;  grid-template-rows: auto auto;
     top: 3px;
 }
 
-.main-coverSlotCollapsed-container {
-    grid-row: 1;
-    grid-column: 1;
-}
+.main-coverSlotCollapsed-container {grid-row: 1;grid-column: 1;}
 
-.main-nowPlayingWidget-trackInfo {
-    grid-row: 1;
-    grid-column: 2;
-    margin-top: 5px;
-    margin-bottom: 4px;
-    scale: 1.1;
-}
+.main-nowPlayingWidget-trackInfo {grid-row: 1; grid-column: 2;}
 
-.playback-bar {
-    grid-row: 2;
-    grid-column: 1 / 3;
-    -webkit-app-region: no-drag;
-}
+.playback-bar { grid-row: 2; grid-column: 1 / 3;}
+
+
+.main-nowPlayingWidget-trackInfo .main-trackInfo-overlay a{ font-size:16px;}
+.main-trackInfo-artists a{ font-size: 15px;color: rgb(255 255 255 / 66%);}
 
 /* Album art size in now playing bar */
 .main-nowPlayingWidget-nowPlaying .cover-art {
-    height: 34px !important;
-    width: 34px !important;
+    height: 44px !important;
+    width: 44px !important;
 }
 .main-nowPlayingWidget-coverArtContainer {
     border-radius: 7px;
@@ -461,9 +415,6 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar {
 
 /* Hide add to library button (but also music video i think? check later) */
 .main-nowPlayingWidget-actionButtonWrapper { display: none; }
-
-/* ⚠️ DYNAMIC CLASS — same element, longer selector version */
-#main > div.Root.global-nav.centered-layout > div.Root__top-container > div.Root__main-view > div.Root__now-playing-bar > footer > div > div.main-nowPlayingBar-left > div > div.ZbFkATBbLkWh2SHMXDt6 { display: none; }
 
 
 /* Hide various playbar buttons */
@@ -484,12 +435,17 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar {
 }
 
 /* Progress bar colors */
-.x-progressBar-fillColor { background-color: rgba(255, 255, 255, .92) !important; border-radius: 0px;}
+.x-progressBar-fillColor { background-color: rgba(255, 255, 255, .64) !important; border-radius: 0px;}
 .x-progressBar-progressBarBg { background-color: #ffffff1c; }
 .x-progressBar-progressFillColor {display:none;}
 
 /* Hide both progress bar slider thumbs  */
 .progress-bar__slider { display: none!important; }
+
+
+
+
+
 
 /*Undo weird Spicy lyrics playbar styling*/
 body:has(#SpicyLyricsPage):not(:has([id*=dribbblish])):not(.sltm__ThemeMatch__textdt) .playback-bar>.playback-progressbar-container, body:has(#SpicyLyricsPage):not(:has([id*=dribbblish])):not(.sltm__ThemeMatch__textdt) .playback-bar>:has(.playback-progressbar){
@@ -526,8 +482,6 @@ body:has(#SpicyLyricsPage):not(:has([id*=dribbblish])):not(.sltm__ThemeMatch__te
 .player-controls__left { translate: 10px; }
 .player-controls__right { translate: -10px; }
 
-/* Repeat button color */
-.Root__now-playing-bar [aria-label="Enable repeat"] svg { color: rgb(179, 179, 179); }
 
 
 /* =============================================================================
@@ -536,24 +490,33 @@ body:has(#SpicyLyricsPage):not(:has([id*=dribbblish])):not(.sltm__ThemeMatch__te
 
 /*Play/Pause animations*/
 
-[data-testid="control-button-playpause"]:active{transform: scale(0.9);}
+[data-testid="control-button-playpause"] {
+    transition: transform 190ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-testid="control-button-playpause"]:active {
+    transform: scale(0.72);
+}
+
+.player-controls__buttons button{padding:0;}
+
 
 /*Size fix*/
 .main-nowPlayingBar-extraControls span > svg{height:28px;width: 28px;}
 
 /* --- Play/Pause (main control) --- */
 [data-testid="control-button-playpause"][aria-label="Play"] svg path {
-    d: path("M10.345 23.287c.415 0 .763-.15 1.22-.407l12.742-7.404c.838-.481 1.178-.855 1.178-1.46 0-.599-.34-.972-1.178-1.462L11.565 5.158c-.457-.265-.805-.407-1.22-.407-.789 0-1.345.606-1.345 1.57V21.71c0 .971.556 1.577 1.345 1.577z");
-    scale: 70%;
-    transform: translate(-4px, -3px);
+    d: path("m184.57 775.41c10.417 0 20.834-1.546 31.25-4.639 10.417-3.092 22.624-8.707 36.621-16.845l475.59-276.37c19.206-11.394 34.668-24.089 46.387-38.086 11.719-13.998 17.578-31.088 17.578-51.27s-5.859-37.353-17.578-51.514c-11.719-14.16-27.181-26.774-46.387-37.841l-475.59-276.37c-13.997-8.138-26.204-13.753-36.621-16.846-10.416-3.0924-20.833-4.6387-31.25-4.6387-22.135 0-42.155 8.2194-60.058 24.658-17.904 16.439-26.856 39.632-26.856 69.58v585.94c0 29.948 8.9517 53.141 26.856 69.58 17.903 16.439 37.923 24.658 60.058 24.658");
+    scale: 1.8%;
+    transform: translateY(52px);
 }
 
 [data-testid="control-button-playpause"][aria-label="Play"]:hover svg path { fill: #eeeeee !important; }
 
 [data-testid="control-button-playpause"][aria-label="Pause"] svg path {
-    d: path("M7.39 0.82h4.49c1.35 0 1.89 0.56 1.89 1.91v28.83c0 1.38-0.54 1.91-1.89 1.91H7.39c-1.38 0-1.91-0.54-1.91-1.91V2.73c0-1.35 0.54-1.91 1.91-1.91zm13.49 0h4.49c1.38 0 1.91 0.56 1.91 1.91v28.83c0 1.38-0.54 1.91-1.91 1.91h-4.49c-1.35 0-1.89-0.54-1.89-1.91V2.73c0-1.35 0.54-1.91 1.89-1.91z");
-    scale: 39%;
-    transform: translate(3px, 3px);
+    d: path("m170.9 697.78h102.54c48.828 0 73.242-24.414 73.242-73.242v-550.29c0-46.875-24.414-71.289-73.242-73.242h-102.54c-48.828 0-73.242 24.414-73.242 73.242v550.29c-1.3021 48.828 23.112 73.242 73.242 73.242m346.68 0h102.54c48.828 0 73.242-24.414 73.242-73.242v-550.29c0-48.828-24.414-73.242-73.242-73.242h-102.54c-48.828 0-73.242 24.414-73.242 73.242v550.29c0 48.828 24.414 73.242 73.242 73.242");
+    scale: 1.8%;
+    transform: translate(47px, 88px);
 }
 
 [data-testid="control-button-playpause"][aria-label="Pause"]:hover svg path { fill: #eeeeee !important; }
@@ -599,60 +562,32 @@ button[data-testid="control-button-skip-forward"] svg {
 }
 
 /* --- Shuffle button --- */
-.main-actionBar-shuffleButton path {
+:is([aria-label^="Enable Shuffle for"], [aria-label^="Disable Shuffle for"]) path {
     d: path("M20.767 20.44a.81.81 0 00.49-.183l2.58-2.174c.316-.266.316-.681 0-.955l-2.58-2.183a.81.81 0 00-.49-.183c-.415 0-.673.258-.673.673v1.245h-1.162c-.739 0-1.195-.233-1.718-.847l-1.527-1.801 1.527-1.81c.54-.63.946-.847 1.677-.847h1.203v1.279c0 .407.258.664.673.664a.801.801 0 00.49-.174l2.58-2.175c.316-.266.316-.69 0-.955l-2.58-2.183a.761.761 0 00-.49-.183c-.415 0-.673.258-.673.665v1.386h-1.212c-1.228 0-1.992.34-2.863 1.386l-1.412 1.668-1.469-1.751c-.805-.946-1.569-1.303-2.747-1.303H8.896c-.53 0-.896.348-.896.838s.365.838.896.838h1.437c.697 0 1.162.225 1.685.847l1.519 1.801-1.52 1.81c-.53.623-.954.847-1.643.847H8.896c-.53 0-.896.348-.896.838s.365.838.896.838h1.536c1.179 0 1.901-.356 2.706-1.303l1.478-1.751 1.444 1.718c.822.98 1.627 1.336 2.822 1.336h1.212v1.412c0 1.415.258.672.673.672z");
+    transform: translate(-8px, -6px);
 }
-
-.main-actionBar-ActionBarRow .main-actionBar-shuffleButton path {
-    transform: translate(-6px, -3px) scale(130%);  transform-origin: center; fill: #ff375f;
-}
-.main-actionBar-ActionBarRow .main-actionBar-shuffleButton {
-    scale: 120%;
-    background-color: #2f2f2f;
-    padding: 5px;
-    margin-right: 17px;
-    margin-bottom: 2px;
-}
-
-.main-actionBar-shuffleButton[aria-label^="Enable Shuffle for"] { padding:0; }
-
-
-.main-nowPlayingBar-nowPlayingBar :is([aria-label^="Enable Shuffle for"], [aria-label^="Disable shuffle for"]) path {
-    transform: translate(-6px, -5px) scale(90%);
-}
-
-
-.main-nowPlayingBar-nowPlayingBar[aria-label^="Enable Shuffle for"] span svg {
+.main-nowPlayingBar-nowPlayingBar [aria-label^="Enable Shuffle for"] span svg {
     width: 22px;
     height: 22px;
-    fill: rgba(255, 255, 255, 0.64);
+    fill: rgba(255, 255, 255, 0.46);
 }
 
-.main-nowPlayingBar-nowPlayingBar[aria-label^="Disable Shuffle for"] span svg {
+.main-nowPlayingBar-nowPlayingBar [aria-label^="Disable Shuffle for"] span svg {
     width: 22px;
     height: 22px;
     fill: #ff375f;
 }
 
-.main-nowPlayingBar-nowPlayingBar[aria-label*="Disable Shuffle for"]::after { display: none; }
-
-/* Remove active dots on shuffle/repeat */
-[data-testid="control-button-shuffle"]::before,
-[data-testid="control-button-repeat"]::before,
-.main-nowPlayingBar-extraControls .main-genericButton-button.Button-sc-1dqy6lx-0.Button-small-small-buttonTertiary-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle.main-genericButton-buttonActive.main-genericButton-buttonActiveDot::after {
-    display: none;
+.main-actionBar-shuffleButton:after, [data-testid="control-button-repeat"]:before{
+    content: unset;
 }
-
-
 /* --- Repeat button --- */
 
 /*Repeat disabled*/[data-testid="control-button-repeat"][aria-label="Enable repeat"] span svg path,
 /*Repeat enabled*/[data-testid="control-button-repeat"][aria-label="Enable repeat one"] span svg path {
     d: path('M 9.545 14.272 a 0.856 0.856 0 0 0 0.863 -0.855 v -0.448 c 0 -1.004 0.706 -1.677 1.785 -1.677 h 5.005 v 1.362 c 0 0.407 0.258 0.664 0.673 0.664 a 0.745 0.745 0 0 0 0.49 -0.183 l 2.581 -2.166 c 0.316 -0.266 0.316 -0.69 0 -0.955 l -2.581 -2.183 a 0.745 0.745 0 0 0 -0.49 -0.183 c -0.415 0 -0.672 0.258 -0.672 0.665 v 1.294 h -4.881 c -2.217 0 -3.628 1.254 -3.628 3.213 v 0.597 c 0 0.474 0.382 0.855 0.855 0.855 Z m 4.864 5.952 c 0.407 0 0.664 -0.257 0.664 -0.664 v -1.303 h 4.881 c 2.225 0 3.628 -1.254 3.628 -3.213 v -0.597 a 0.854 0.854 0 1 0 -1.71 0 v 0.448 c 0 1.004 -0.714 1.677 -1.793 1.677 h -5.006 v -1.353 c 0 -0.407 -0.257 -0.664 -0.664 -0.664 a 0.767 0.767 0 0 0 -0.498 0.182 l -2.573 2.175 c -0.324 0.257 -0.315 0.68 0 0.946 l 2.573 2.192 a 0.807 0.807 0 0 0 0.498 0.174 Z');
-    transform: translate(-8px, -6px);
+   transform: translate(-8px, -6px);
 }
-
-[data-testid="control-button-repeat"] { padding:0; }
 
 
 /*Repeat disabled*/[data-testid="control-button-repeat"] span svg {
@@ -979,11 +914,24 @@ body:not(:has(.Root__main-view-overlay #SpicyLyricsPage:is(.Fullscreen))) #Spicy
    10. CARDS & PLAY BUTTONS (grid cards everywhere)
    ============================================================================= */
 
+/*Card image border radius and shadow*/
+[data-encore-id="card"]:not(:has([aria-labelledby^="card-title-spotify:artist:"])) :is(.main-cardImage-image, .main-cardImage-imageWrapper){
+  border-radius: 9px;
+}
+.main-cardImage-imageWrapper{
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .01), 0 2px 2px rgba(0, 0, 0, .01), 0 4px 4px rgba(0, 0, 0, .02), 0 8px 8px rgba(0, 0, 0, .03), 0 14px 14px rgba(0, 0, 0, .03);
+}
 
 /*Remove native item hover color*/
 .e-10451-box--interactive:after{
     content:unset;
 }
+
+
+.e-10451-card__column:has(>[href^="/artist/"]){
+    align-items: center;
+}
+
 
 /*Set the button to the left and hide native effects*/
 .main-card-PlayButtonContainer {
@@ -997,13 +945,14 @@ body:not(:has(.Root__main-view-overlay #SpicyLyricsPage:is(.Fullscreen))) #Spicy
 
 .main-card-PlayButtonContainer button > span {
     background-color: transparent !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(60px) !important;
 }
 
 .main-card-PlayButtonContainer .e-9890-button-primary:hover .e-9890-button-primary__inner { background-color: unset; }
 
 /* Round artist card images everywhere */
-[aria-labelledby*="card-title-spotify:artist"] .main-cardImage-imageWrapper { border-radius: 100%; }
+[aria-labelledby*="card-title-spotify:artist"] .main-cardImage-imageWrapper { border-radius: 100%!important; }
+
 
 /* Card header text */
 .main-cardHeader-text { font-weight: 600; zoom: 1.21; }
@@ -1116,8 +1065,23 @@ body:not(:has(.Root__main-view-overlay #SpicyLyricsPage:is(.Fullscreen))) #Spicy
 
 
 /* =============================================================================
-   12. POPUPS & MODALS
+   12. POP-UPS & MODALS (POP UPS)
    ============================================================================= */
+
+/* Notistack (toast) nudge up */
+.notistack-CollapseWrapper { margin-top: -200px; }
+
+.e-10451-box--elevated {Background-color: rgb(61 61 61 / 92%);    border-radius: 20px;}
+
+.encore-light-theme{--background-base:rgb(61 61 61 / 92%); }
+
+/* Try to fix liked songs image in popup */
+.notistack-CollapseWrapper .x-entityImage-imageContainer:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"])::after {
+    width: 24px;
+    height: 24px;
+}
+
+
 
 /*Playlist edit popup*/
 .main-playlistEditDetailsModal-container{
@@ -1234,6 +1198,10 @@ body:not(:has(.Root__main-view-overlay #SpicyLyricsPage:is(.Fullscreen))) #Spicy
     border: 1px solid rgba(255, 255, 255, .12);
 }
 
+[role="dialog"][aria-label="Search"] > div > div:nth-child(1){
+    padding: 7px;
+}
+
 .VZpSxFV1mVKehHTF1r9W:has([data-testid="search-modal-results"]) .mWktZnvirv5K8ssiI4vC {
     border-bottom: none;
     border-radius: 12px 12px 0 0;
@@ -1301,7 +1269,7 @@ body:not(:has(.Root__main-view-overlay #SpicyLyricsPage:is(.Fullscreen))) #Spicy
 [data-test-uri^="spotify:artist"] div:has(> [data-encore-id="chip"]) {
     background: #252525;
     width: fit-content;
-    padding: 3px;
+    padding: 4px 3px 4px;
     border-radius: 100px;
     box-shadow: inset 0 1.5px 1px rgb(255 255 255 / 8%), inset 0 -1px 1px rgb(155 155 155 / 19%);
 }
@@ -1309,11 +1277,12 @@ body:not(:has(.Root__main-view-overlay #SpicyLyricsPage:is(.Fullscreen))) #Spicy
     padding: 8px;
     padding-inline: 18px;
     background-color:unset;
+    font-size: 15px;
 }
 
 [data-test-uri^="spotify:artist"] .e-10451-legacy-chip__inner--selected{
     color: rgba(255, 255, 255, .92);
-    background-color: #565656;
+    background-color: #747474;
     box-shadow: inset 0 1px 1px rgb(255 255 255 / 10%), inset 0 -1px 1px rgb(255 255 255 / 10%);
 }
 [aria-checked="true"] .e-10451-legacy-chip:hover>.e-10451-legacy-chip__inner{background-color:unset;}
@@ -1407,13 +1376,6 @@ div.search-searchCategory-SearchCategory { display: none; }
     text-align: center;
     margin-top: 5px;
 }
-
-/* Round artist images in search modal */
-/* ⚠️ DYNAMIC CLASS — .gmNQCzeK5b2wiebA87rg = artist image wrapper in popup search */
-.gmNQCzeK5b2wiebA87rg { border-radius: 100% !important; }
-
-/* Round artist images on search results */
-[aria-labelledby*="card-title-spotify:artist"] .main-cardImage-imageWrapper { border-radius: 100%; }
 
 /* Search focus ring */
 .main-globalNav-searchInputContainer .main-topBar-searchBar:focus {
@@ -1671,7 +1633,7 @@ div.search-searchCategory-SearchCategory { display: none; }
 
 /* Image */
 :is([data-testid="playlist-page"], [data-testid="album-page"]) .main-entityHeader-image, .main-editImage-buttonContainer [data-testid="edit-image-button"]{
-    border-radius: 13px;
+    border-radius: 14px;
     outline: .5px solid #ffffff08;
 }
 /*box shadow*/
@@ -1841,7 +1803,7 @@ div.search-searchCategory-SearchCategory { display: none; }
 :is([data-testid="album-page"], [data-testid="playlist-page"]) .hx2nVeuQRL7Q9YEU5imA > span { align-items: center; }
 
 /* Tracklist area */
-[data-testid="album-page"] > div:nth-child(4) { transform: translateY(-38px) translateX(10px); }
+[data-testid="album-page"] > div:nth-child(4) { transform: translateY(-55px) translateX(10px); }
 
 /* ⚠️ DYNAMIC CLASS — .Xo8dgIGCCWjHXWBoKhaV = tracklist wrapper */
 [data-testid="album-page"] .Xo8dgIGCCWjHXWBoKhaV { zoom: 1.1; }
@@ -1878,8 +1840,8 @@ div.search-searchCategory-SearchCategory { display: none; }
 [data-testid="playlist-page"] [role="row"] > .main-trackList-trackListRowGrid::after {
     content: "";
     position: absolute;
-    left: 43px;
-    right: 0px;
+    left: 70px;
+    right: 12px;
     height: 2px;
     background: white;
     bottom: -2px;
@@ -1992,8 +1954,6 @@ div.search-searchCategory-SearchCategory { display: none; }
    16. PLAYLIST PAGE
    ============================================================================= */
 
-
-[data-testid="playlist-page"] .main-entityHeader-shadow { box-shadow: unset; -webkit-box-shadow: unset; }
 
 
 /* Play button bar position */
@@ -2130,7 +2090,7 @@ div.search-searchCategory-SearchCategory { display: none; }
 .eJbkaBhDfq9NfV5_QS8V { display: none; }
 
 /* Artist page "All songs" page */
-[aria-label*="All songs for "] { margin-top: 50px; margin-left: 60px; margin-right: 90px; zoom: 1.15; }
+[aria-label*="All songs for "] { margin-top: 50px; margin-left: 60px; margin-right: 90px; }
 [aria-label*="All songs for "] .main-rootlist-wrapper > div:nth-child(2) > div:nth-child(1) > div::after { border-top: none; }
 [aria-label*="All songs for "] .main-rootlist-wrapper > div:nth-child(2) > div:nth-child(1) > div { margin-top: -10px; }
 
@@ -2262,8 +2222,11 @@ div.search-searchCategory-SearchCategory { display: none; }
 [data-test-uri^="spotify:artist"] .main-actionBar-ActionBarContainer + .contentSpacing > div:nth-child(1) .main-card-imageContainer
 {width:260px;}
 
+[data-test-uri^="spotify:artist"] .main-actionBar-ActionBarContainer + .contentSpacing > div:nth-child(1) .e-10451-card__main
+{width:260px;}
+
 [data-test-uri^="spotify:artist"] .main-actionBar-ActionBarContainer + .contentSpacing > div:nth-child(1) .e-10451-card__button{
-    width:320px;
+    display:none;
 }
 
 [data-test-uri^="spotify:artist"] .main-gridContainer-gridContainerMargin .main-rootlist-wrapper > div:nth-child(2){
@@ -2315,14 +2278,9 @@ div.search-searchCategory-SearchCategory { display: none; }
 /* ⚠️ DYNAMIC CLASS — .PHHrto0Qhh4dJcnnPhwu = another tracklist variant */
 [data-test-uri^="spotify:artist"] .PHHrto0Qhh4dJcnnPhwu .Xo8dgIGCCWjHXWBoKhaV { zoom: 1.15; }
 
-/* Hide top songs play count / duration */
-[data-test-uri^="spotify:artist"] :is(.htbmhRXsxePzCR3HsX0V, .Q4mk1oUBywa1PuZZZ0Mr) { display: none; }
 
 /* Hide row markers */
 [data-test-uri^="spotify:artist"] .main-trackList-rowMarker { display: none; }
-
-/* ⚠️ DYNAMIC CLASS — .qELskYs6YdzzafmETrAg = top songs grid container */
-[data-test-uri^="spotify:artist"] .main-gridContainer-gridContainer.qELskYs6YdzzafmETrAg .main-trackList-rowMarker { display: none; }
 
 /* Row dividers for top songs */
 [data-test-uri^="spotify:artist"] .main-trackList-trackListRow.main-trackList-trackListRowGrid::after {
@@ -2341,9 +2299,6 @@ div.search-searchCategory-SearchCategory { display: none; }
 [data-test-uri^="spotify:artist"] .YO0Nd3lMQrVPmjcdqV8p .main-trackList-rowSectionStart > img { transform: unset; scale: 108%; }
 
 
-
-/* ⚠️ DYNAMIC CLASS — .jTlip_2p9QBKtt5Po88H = track action buttons container */
-.jTlip_2p9QBKtt5Po88H [aria-label="Add to playlist"] { display: none; }
 [data-test-uri^="spotify:artist"] .contentSpacing .jTlip_2p9QBKtt5Po88H { margin: 8px 0 0; }
 
 /* "Fans also like" section */
