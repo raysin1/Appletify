@@ -59,6 +59,94 @@
     }
 })();
 
+(function discographyMod() {
+  if (!Spicetify?.Platform?.History || !Spicetify?.CosmosAsync) {
+      setTimeout(discographyMod, 300);
+      return;
+  }
+
+  const ARTIST_SELECTOR = "[data-test-uri^='spotify:artist']";
+  const SOURCE_SELECTOR = ".main-actionBar-ActionBarContainer + .contentSpacing > [aria-label='Discography'] > .main-gridContainer-gridContainer > div:nth-child(1)";
+  const TARGET_SELECTOR = ".main-actionBar-ActionBarContainer + .contentSpacing > div:nth-child(1)";
+  const BUTTON_SELECTOR = ".main-gridContainer-gridContainerMargin > div:nth-child(1) > button";
+  const CLONE_ID = "discography-first-card-clone";
+  const DONE_ATTR = "data-discography-done";
+
+  function addClickHandler(clone) {
+      clone.addEventListener("click", (e) => {
+          e.preventDefault();
+          const anchor = e.target.closest("a") || clone.querySelector("a[href]");
+          if (!anchor) return;
+          const href = anchor.getAttribute("href");
+          if (href) Spicetify.Platform.History.push(href);
+      });
+  }
+
+  function run(retries = 10) {
+      const page = document.querySelector(ARTIST_SELECTOR);
+      if (!page) return;
+
+      let somethingPending = false;
+
+      // --- See more button ---
+      if (!page.hasAttribute(DONE_ATTR)) {
+          const button = page.querySelector(BUTTON_SELECTOR);
+          if (button) {
+              button.click();
+              button.style.display = "none";
+              page.setAttribute(DONE_ATTR, "true");
+          } else {
+              somethingPending = true;
+          }
+      }
+
+      // --- Discography clone ---
+      if (!document.getElementById(CLONE_ID)) {
+          const source = page.querySelector(SOURCE_SELECTOR);
+          const target = page.querySelector(TARGET_SELECTOR);
+
+          if (source && target) {
+              const img = source.querySelector("img");
+              if (img && !img.complete) {
+                  img.addEventListener("load", () => {
+                      if (document.getElementById(CLONE_ID)) return;
+                      const clone = source.cloneNode(true);
+                      clone.id = CLONE_ID;
+                      target.insertBefore(clone, target.firstChild);
+                      addClickHandler(clone);
+                  }, { once: true });
+              } else {
+                  const clone = source.cloneNode(true);
+                  clone.id = CLONE_ID;
+                  target.insertBefore(clone, target.firstChild);
+                  addClickHandler(clone);
+                  const clonedImg = clone.querySelector("img");
+                  if (clonedImg) clonedImg.style.opacity = "1";
+              }
+          } else {
+              somethingPending = true;
+          }
+      }
+
+      // Retry if something wasn't in the DOM yet
+      if (somethingPending && retries > 0) {
+          setTimeout(() => run(retries - 1), 500);
+      }
+  }
+
+  function onNavigate() {
+      document.getElementById(CLONE_ID)?.remove();
+      document.querySelector(ARTIST_SELECTOR)?.removeAttribute(DONE_ATTR);
+      setTimeout(run, 800);
+  }
+
+  if (Spicetify?.Platform?.History) {
+      Spicetify.Platform.History.listen(onNavigate);
+  }
+
+  setTimeout(run, 800);
+})();
+
 function enhanceImageSizes() {
   document.querySelectorAll(".main-image-image.main-entityHeader-image[srcset]").forEach(img => {
     img.setAttribute("sizes", "9999px");
