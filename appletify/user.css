@@ -135,10 +135,10 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar {
     -webkit-app-region: no-drag;
 }
 
-/* Hide right sidebar when now playing view is open */
+/* Hide right sidebar when now playing view is open
 .Root__right-sidebar:has([aria-label="Now playing view"]) {
     display: none;
-}
+}*/
 
 /* Nav bar border */
 .main-navBar-mainNav {
@@ -773,7 +773,7 @@ body:not(:has(.Root__main-view-overlay #SpicyLyricsPage:is(.Fullscreen))) #Spicy
 }
 
 /* Hover play button scale */
-.main-trackList-rowImagePlayButton { scale: 1.5 !important; }
+.main-trackList-rowImagePlayButton { scale: 1.5 !important;    z-index: 1; }
 
 /* Play button color on non-playing rows */
 .main-trackList-trackListRow:not(.MxoETbR0GSKhCd1hp6Np) .main-trackList-rowImagePlayButton { color: #fa586a; }
@@ -1169,26 +1169,6 @@ body:not(:has(.Root__main-view-overlay #SpicyLyricsPage:is(.Fullscreen))) #Spicy
 [role="dialog"][aria-label="Search"] > div {height:unset; max-height: 800px;}
 
 
-/* Pop-up search modal */
-
-[role="dialog"][aria-label="Search"] {
-    box-shadow:  0 60px 120px rgba(0, 0, 0, .55),
-                 0 30px 60px rgba(0, 0, 0, .4),
-                 inset 0 1px 1px rgba(255, 255, 255, .08);
-    backdrop-filter: blur(45px);
-    background: #2929297d;
-    border-radius:20px;
-    zoom: 105%;
-}
-
-
-[role="dialog"][aria-label="Search"]:not(:has([data-testid="search-modal-results"])), [role="dialog"][aria-label="Search"]:not(:has([data-testid="search-modal-results"])) > div > div{
-    border-radius:36px;
-}
-
-
-[role="dialog"][aria-label="Search"] > div {height:unset; max-height: 800px;}
-
 /*Search area*/
 [role="dialog"][aria-label="Search"] div:has(> [data-testid="search-modal-input"]) {background-color: unset; padding: 0; }
 
@@ -1202,22 +1182,6 @@ body:not(:has(.Root__main-view-overlay #SpicyLyricsPage:is(.Fullscreen))) #Spicy
     padding: 7px;
 }
 
-.VZpSxFV1mVKehHTF1r9W:has([data-testid="search-modal-results"]) .mWktZnvirv5K8ssiI4vC {
-    border-bottom: none;
-    border-radius: 12px 12px 0 0;
-}
-
-.mWktZnvirv5K8ssiI4vC { border-radius: 12px; height: 54px; }
-
-/* ⚠️ DYNAMIC CLASS — .CqXpLitKxRFvrULhC2kW = search modal bar wrapper */
-.CqXpLitKxRFvrULhC2kW:has([data-testid="search-modal-results"]).mWktZnvirv5K8ssiI4vC { border-radius: 12px; }
-
-/* Shortcut bar */
-.iIaWJ3qSDLsKHwNCvv_g { padding: 10px; padding-inline: 18px; }
-
-/* ⚠️ DYNAMIC CLASS — .jX1eb5CcZMAuXo_wmZI0 = shortcut section */
-/* ⚠️ DYNAMIC CLASS — ._7KcNGw4aZIGWk4fJvZS0 = shortcut items */
-.jX1eb5CcZMAuXo_wmZI0:has(._7KcNGw4aZIGWk4fJvZS0) { display: none; }
 
 /* Results list */
 [id="search-modal-listbox"] {
@@ -1229,25 +1193,11 @@ body:not(:has(.Root__main-view-overlay #SpicyLyricsPage:is(.Fullscreen))) #Spicy
 
 [id="search-modal-listbox"] > a { border-radius: 13px; }
 
-/* ⚠️ DYNAMIC CLASS — .Z35LRd6m4Po7n12dYmKu = search result row */
-.Z35LRd6m4Po7n12dYmKu:focus-within,
-.Z35LRd6m4Po7n12dYmKu:hover:not([disabled]) { background-color: rgb(255 255 255 / 10%); }
 
-/* ⚠️ DYNAMIC CLASS — .tm2KfFBSL0DwJdxDxnvq = result item text */
-.tm2KfFBSL0DwJdxDxnvq > p:nth-child(1),
-.encore-internal-color-text-bright-accent { color: white !important; }
-
-/* ⚠️ DYNAMIC CLASS — .Z35LRd6m4Po7n12dYmKu.JFITZPkvP8evQ3h7K2UQ = active/selected result */
-.Z35LRd6m4Po7n12dYmKu.JFITZPkvP8evQ3h7K2UQ { background-color: hsl(353deg 94% 66% / 75%) !important; }
-
-/* ⚠️ DYNAMIC CLASS — .qSZ_ggNRWVfmr9V3H2Pw = search icon color */
-.qSZ_ggNRWVfmr9V3H2Pw { color: rgb(254 254 254 / 64%) !important; }
 
 [data-testid="search-modal-input"] { color: white !important; }
 
-/* Search page margin */
-/* ⚠️ DYNAMIC CLASS — .e_N7UqrrJQ0fAw9IkNAL = search categories grid */
-.e_N7UqrrJQ0fAw9IkNAL { zoom: 120%; padding: 30px 30px 0 30px; }
+
 
 
 
@@ -1255,126 +1205,8 @@ body:not(:has(.Root__main-view-overlay #SpicyLyricsPage:is(.Fullscreen))) #Spicy
    13. SEARCH PAGE
    ============================================================================= */
 
-#searchPage { padding: 0 calc(var(--content-spacing) + 30px); }
-
-/* Search categories filter pills */
-/* ⚠️ DYNAMIC CLASS — .cZ5498xUueALcCfoJpeb, .KWELaOpzQy72R2cyZ4ke = tab pill container */
-
-/* Rename "Popular" tab on artist page */
-[data-test-uri^="spotify:artist"] :is(.cZ5498xUueALcCfoJpeb, .KWELaOpzQy72R2cyZ4ke) button:nth-child(1) > span { font-size: 0 !important; }
-[data-test-uri^="spotify:artist"] :is(.cZ5498xUueALcCfoJpeb, .KWELaOpzQy72R2cyZ4ke) button:nth-child(1) > span::before { font-size: 17px; content: "Popular"; }
-
-
-/*Artist page pills*/
-[data-test-uri^="spotify:artist"] div:has(> [data-encore-id="chip"]) {
-    background: #252525;
-    width: fit-content;
-    padding: 4px 3px 4px;
-    border-radius: 100px;
-    box-shadow: inset 0 1.5px 1px rgb(255 255 255 / 8%), inset 0 -1px 1px rgb(155 155 155 / 19%);
-}
-[data-test-uri^="spotify:artist"] .e-10451-legacy-chip__inner{
-    padding: 8px;
-    padding-inline: 18px;
-    background-color:unset;
-    font-size: 15px;
-}
-
-[data-test-uri^="spotify:artist"] .e-10451-legacy-chip__inner--selected{
-    color: rgba(255, 255, 255, .92);
-    background-color: #747474;
-    box-shadow: inset 0 1px 1px rgb(255 255 255 / 10%), inset 0 -1px 1px rgb(255 255 255 / 10%);
-}
-[aria-checked="true"] .e-10451-legacy-chip:hover>.e-10451-legacy-chip__inner{background-color:unset;}
-[data-test-uri^="spotify:artist"] [data-encore-id="chip"] {margin-bottom: 0px;}
-
-
-
-
-
-/* Search page zoom */
-/* ⚠️ DYNAMIC CLASS — .w7SWsAZah4vovAuFxjgk.Qmu4FPZCnrDpQ85s4az5 = search results area */
-[id="searchPage"] .w7SWsAZah4vovAuFxjgk.Qmu4FPZCnrDpQ85s4az5 { zoom: 1.2; }
-
-/* "Top result" card */
-#searchPage [aria-label="Top result"] .ix_8kg3iUb9VS5SmTnBY button { zoom: 0.8; }
-#searchPage [aria-label="Top result"] .ix_8kg3iUb9VS5SmTnBY button span span svg { fill: white; scale: 1.2; }
-#searchPage [aria-label="Top result"] .ix_8kg3iUb9VS5SmTnBY { transform: none; transition: none; }
-#searchPage [aria-label="Top result"] .ix_8kg3iUb9VS5SmTnBY button > span { background-color: #00000080 !important; backdrop-filter: blur(30px) !important; }
-#searchPage [aria-label="Top result"] .main-playButton-PlayButton > button > span > span { color: white; scale: 1.2; }
-#searchPage [aria-label="Top result"] .ix_8kg3iUb9VS5SmTnBY .e-9890-button-primary:hover .e-9890-button-primary__inner { background-color: unset; }
-
-/* Tracklist row dividers on search page */
-[id="searchPage"] .main-trackList-trackListRow.main-trackList-trackListRowGrid::after {
-    border-top: 0.5px solid hsla(0, 0%, 100%, .1);
-    content: "";
-    inset-inline-end: 0;
-    inset-inline-start: 0;
-    position: absolute;
-    top: 0;
-    margin-top: -0.9px;
-    left: 6px;
-}
-
-/* Top result image (bigger, no shadow) */
-/* ⚠️ DYNAMIC CLASS — .pueeb339I8KrXZr0SDm1 = top result layout container */
-.pueeb339I8KrXZr0SDm1 > div:nth-child(1) { box-shadow: none; zoom: 1.4; }
-.pueeb339I8KrXZr0SDm1 { display: flex; flex-direction: row; }
-
-/* ⚠️ DYNAMIC CLASS — .cofBW8sjoBtMAmzDgqKt = result info text block */
-#searchPage .cofBW8sjoBtMAmzDgqKt { text-overflow: ellipsis; overflow: hidden; }
-.cofBW8sjoBtMAmzDgqKt { align-self: center; }
-
-/* ⚠️ DYNAMIC CLASS — .GOcsybnoHYyJGQGDRuwj = entity image wrapper */
-.GOcsybnoHYyJGQGDRuwj.CByZAgiDBSO7504EXktW { aspect-ratio: 1 / 1; width: unset; }
-
-.ListRowTitle__LineClamp-sc-1xe2if1-0.LineClamp { font-size: 22px; }
-
-#searchPage .cofBW8sjoBtMAmzDgqKt > a > div { font-size: 20px; font-weight: 300; }
-
-#searchPage .ListRowTitle__LineClamp-sc-1xe2if1-0.LineClamp::after {
-    background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22%23999999%22%20stroke%3D%22none%22%3E%3Cpath%20d%3D%22M19.817%2061.863c1.48%200%202.672-.515%203.702-1.546l24.243-23.63c1.352-1.385%201.996-2.737%202.028-4.443%200-1.674-.644-3.09-2.028-4.443L23.519%204.138c-1.03-.998-2.253-1.513-3.702-1.513-2.994%200-5.409%202.382-5.409%205.344%200%201.481.612%202.833%201.739%203.96l20.99%2020.347-20.99%2020.283c-1.127%201.126-1.739%202.478-1.739%203.96%200%202.93%202.415%205.344%205.409%205.344Z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center;
-    content: "";
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    margin-left: 7px;
-}
-
-/* Song thumbnail zoom on search */
-#searchPage .main-gridContainer-gridContainer .main-trackList-rowSectionStart > div.main-trackList-rowImageWithPlay > img { zoom: 1.25; transform: translateY(1px); }
-#searchPage .main-gridContainer-gridContainer .main-trackList-rowSectionStart > div.main-trackList-rowImageWithPlay > .main-trackList-rowImagePlayButton.main-trackList-rowImagePlayPauseButton { background-color: transparent; }
-
-#searchPage [aria-label="Albums"] .main-gridContainer-gridContainer.main-shelf-shelfGrid { --min-column-width: 220px !important;}
-
-/* ⚠️ DYNAMIC CLASS — .DIYNtp69Gd1l3eaBT3Bg = search page content margin wrapper */
-.DIYNtp69Gd1l3eaBT3Bg { margin-left: 40px; margin-right: 40px; }
-
-/* Hide items on search page */
-#searchPage .main-rootlist-wrapper [aria-label="Add to Liked Songs"],
-#searchPage .main-trackList-rowDuration { display: none; }
-
-#searchPage [aria-label*="Featuring"],
-#searchPage [aria-label="Authors"],
-[aria-label="Podcasts"],
-[aria-label="Audiobooks"],
-[aria-label="Episodes"],
-[aria-label="Genres & Moods"] { display: none; }
-
-/* Hide search category tiles */
-div.search-searchCategory-SearchCategory { display: none; }
-
-/* Artists shelf adjustments */
-#searchPage [data-shelf="shelf"][aria-label="Artists"] { zoom: 0.8; }
-#searchPage [data-shelf="shelf"][aria-label="Artists"] .main-shelf-header { zoom: 1.4; }
-#searchPage [data-shelf="shelf"][aria-label="Artists"] [data-encore-id="cardSubtitle"] { display: none; }
-#searchPage [data-shelf="shelf"][aria-label="Artists"] .Areas__InteractiveArea-sc-1tea2mc-0.Areas__MainArea-sc-1tea2mc-1.MWEhk.MainArea { zoom: 1.2; }
-
-/* ⚠️ DYNAMIC CLASS — .Gi6Lr1whYBA2jutvHvjQ = artist name label on artist card */
-#searchPage [data-shelf="shelf"][aria-label="Artists"] .Gi6Lr1whYBA2jutvHvjQ {
-    width: 100% !important;
-    text-align: center;
-    margin-top: 5px;
+main[aria-label="Spotify – Search"] > div > div:nth-child(1){
+    padding-top: 60px;
 }
 
 /* Search focus ring */
@@ -1399,49 +1231,6 @@ div.search-searchCategory-SearchCategory { display: none; }
     border: 1px solid hsla(0, 0%, 100%, .1);
 }
 
-
-
-/* Search icon color */
-.main-globalNav-searchInputContainer .x-searchInput-searchInputSearchIcon { color: #fa586a !important; }
-
-/* Search input color changes on hover/focus */
-/* ⚠️ DYNAMIC CLASS — .EJttP30F1zYHeAw7ISHb, .M9l40ptEBXPm03dU3X1k = search icon/text */
-.main-globalNav-searchInputContainer:focus-within .EJttP30F1zYHeAw7ISHb,
-.main-globalNav-searchInputContainer:focus-within .M9l40ptEBXPm03dU3X1k,
-.main-globalNav-searchInputContainer:hover .EJttP30F1zYHeAw7ISHb,
-.main-globalNav-searchInputContainer:hover .M9l40ptEBXPm03dU3X1k { color: unset; }
-
-/* ⚠️ DYNAMIC CLASS — .TTmGm8qVTZIyhkzEGOqr = search icon on hover */
-.main-globalNav-searchInputContainer:hover .TTmGm8qVTZIyhkzEGOqr { color: #fa586a; }
-
-/* ⚠️ DYNAMIC CLASS — search bar state variants */
-/* ⚠️ DYNAMIC CLASS — .b7r2WRiu5f9Q99qmyreh = search bar container */
-.b7r2WRiu5f9Q99qmyreh .main-topBar-searchBar {
-    background: #1b1b1b;
-    -webkit-box-shadow: inset 0 0 0 1px rgba(var(--spice-rgb-selected-row), .1);
-    box-shadow: inset 0 0 0 1px rgba(var(--spice-rgb-selected-row), .1);
-}
-
-.b7r2WRiu5f9Q99qmyreh:hover .main-topBar-searchBar,
-.b7r2WRiu5f9Q99qmyreh .main-topBar-searchBar:focus { background: #1b1b1b; }
-
-.b7r2WRiu5f9Q99qmyreh .main-topBar-searchBar:focus { box-shadow: inset 0 0 0 1px rgba(var(--spice-rgb-selected-row), .1); outline: 4px solid #a03f4a !important; }
-
-.b7r2WRiu5f9Q99qmyreh:hover .EJttP30F1zYHeAw7ISHb,
-.b7r2WRiu5f9Q99qmyreh:hover .M9l40ptEBXPm03dU3X1k { color: #fa586a !important; }
-
-.b7r2WRiu5f9Q99qmyreh:focus-within .EJttP30F1zYHeAw7ISHb,
-.b7r2WRiu5f9Q99qmyreh:focus-within .M9l40ptEBXPm03dU3X1k { color: #fa586a; }
-
-/* ⚠️ DYNAMIC CLASS — .sikBfynL1Y6I25nVpbAg = sidebar expanded state */
-.sikBfynL1Y6I25nVpbAg .main-topBar-searchBar { background-color: transparent !important; }
-.main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg .main-globalNav-searchSection .main-topBar-searchBar { background-color: transparent; }
-.main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg .main-globalNav-searchSection [data-encore-id="formInput"] { background-color: transparent; }
-.main-yourLibraryX-libraryContainer.YourLibraryX.sikBfynL1Y6I25nVpbAg .b7r2WRiu5f9Q99qmyreh .main-topBar-searchBar { box-shadow: none !important; }
-
-/* ⚠️ DYNAMIC CLASS — .TTB3lAVAhCK9Apl8quWw = search container gap */
-.TTB3lAVAhCK9Apl8quWw { gap: 2px; }
-
 [data-encore-id="formInputIcon"] { border-radius: 8px !important; }
 .e-9890-form-input-icon--trailing .e-9890-form-input { border-radius: 8px !important; }
 
@@ -1453,10 +1242,8 @@ div.search-searchCategory-SearchCategory { display: none; }
 .main-globalNav-searchContainer [aria-label="Home"] { display: none; }
 .main-globalNav-searchSection { position: relative; }
 
-/* Hide search bar button in library */
-/* ⚠️ DYNAMIC CLASS — .Ckze8wMFNiDXk_f1IqjJ = library search expand button */
-.Ckze8wMFNiDXk_f1IqjJ { display: none; }
-
+/* Search icon color */
+.main-globalNav-searchInputContainer .x-searchInput-searchInputSearchIcon { color: #fa586a !important; }
 
 
 
@@ -2029,8 +1816,6 @@ div.search-searchCategory-SearchCategory { display: none; }
 [data-testid="playlist-page"] .main-trackList-playingIcon { display: block; z-index: 99; margin-left: 5px; }
 [data-testid="playlist-page"] .main-trackList-rowImagePlayButton { display: block; z-index: 99; }
 
-/* Hide row marker (currently playing highlight) */
-[data-testid="playlist-page"] .main-trackList-rowMarker { display: none; }
 
 /* Hide artist track subtitle on album pages / show on playlist */
 [data-testid="playlist-page"] .ET4SVjxyjH4WkA3kSo5G { position: absolute; left: 26.1vw; white-space: nowrap; }
@@ -2271,16 +2056,6 @@ div.search-searchCategory-SearchCategory { display: none; }
 [data-test-uri^="spotify:artist"] .main-gridContainer-gridContainerMargin > div > h2 { color: transparent; }
 [data-test-uri^="spotify:artist"] .main-gridContainer-gridContainerMargin > div > h2::before { content: "Top Songs"; color: white; font-size: 23px; font-weight: 600; margin-left: 10px; }
 
-/* Top songs tracklist zoom */
-/* ⚠️ DYNAMIC CLASS — .fNzI6FqqYnAGcGmJjQRG = top songs tracklist area */
-[data-test-uri^="spotify:artist:"] .fNzI6FqqYnAGcGmJjQRG { zoom: 105%; }
-
-/* ⚠️ DYNAMIC CLASS — .PHHrto0Qhh4dJcnnPhwu = another tracklist variant */
-[data-test-uri^="spotify:artist"] .PHHrto0Qhh4dJcnnPhwu .Xo8dgIGCCWjHXWBoKhaV { zoom: 1.15; }
-
-
-/* Hide row markers */
-[data-test-uri^="spotify:artist"] .main-trackList-rowMarker { display: none; }
 
 /* Row dividers for top songs */
 [data-test-uri^="spotify:artist"] .main-trackList-trackListRow.main-trackList-trackListRowGrid::after {
@@ -2368,7 +2143,7 @@ scrollbar-width: none;}
 [aria-label="Appears On"] > .main-gridContainer-gridContainer { --min-column-width: 230px !important; }
 /* Artist playlists grid */
 [data-test-uri^="spotify:artist"] [aria-label="Artist Playlists"] div:nth-child(2){
-    --min-column-width: 23vw !important;}
+    --min-column-width: 18vw !important;}
 
 
 
@@ -2393,6 +2168,30 @@ section > section > div.artist-artistDiscography-cardGrid > div { --min-column-w
 .T0fKO6B7LQSCE_VaSM1P[aria-label*="Artists Fans of"] { margin-top: 50px; }
 .T0fKO6B7LQSCE_VaSM1P[aria-label*="Artists Fans of"] .main-gridContainer-gridContainer.main-shelf-shelfGrid { --min-column-width: 230px !important; gap: 40px; }
 
+
+
+/*Artist page pills*/
+[data-test-uri^="spotify:artist"] div:has(> [data-encore-id="chip"]) {
+    background: #252525;
+    width: fit-content;
+    padding: 4px 3px 4px;
+    border-radius: 100px;
+    box-shadow: inset 0 1.5px 1px rgb(255 255 255 / 8%), inset 0 -1px 1px rgb(155 155 155 / 19%);
+}
+[data-test-uri^="spotify:artist"] .e-10451-legacy-chip__inner{
+    padding: 8px;
+    padding-inline: 18px;
+    background-color:unset;
+    font-size: 15px;
+}
+
+[data-test-uri^="spotify:artist"] .e-10451-legacy-chip__inner--selected{
+    color: rgba(255, 255, 255, .92);
+    background-color: #747474;
+    box-shadow: inset 0 1px 1px rgb(255 255 255 / 10%), inset 0 -1px 1px rgb(255 255 255 / 10%);
+}
+[aria-checked="true"] .e-10451-legacy-chip:hover>.e-10451-legacy-chip__inner{background-color:unset;}
+[data-test-uri^="spotify:artist"] [data-encore-id="chip"] {margin-bottom: 0px;}
 
 
 
@@ -2882,12 +2681,37 @@ section.lLVLck3qrPA1TLtWobAd.main-shelf-shelf.Shelf.Sq2ZlLQM6q75ALS7Xctj::before
 }
 
 .marketplace-tabBar-header {
-    zoom: 1.2;
+    zoom: 110%;
     display: flex;
     justify-content: center;
-    gap: 60px;
-    padding: 0;
-    margin: 0;
+    gap: 51px;
+    padding: 5px 7px;
+    margin-inline: auto;
+    width: fit-content;
+    background: #252424;
+    border-radius: 100px;
+    box-shadow: inset 0 1.5px 1px rgb(255 255 255 / 8%), inset 0 -1px 1px rgb(155 155 155 / 19%);
+}
+
+
+.marketplace-tabBar-active {
+        background-color: #5f5f5f;
+        border-radius: 100px;
+        box-shadow: inset 0 1.5px 1px rgb(255 255 255 / 8%), inset 0 -1px 1px rgb(155 155 155 / 19%);
+}
+.marketplace-tabBar-headerItemLink{
+      margin:unset;
+      padding: 11px 18px;
+      font-weight: 450;
+}
+.searchbar-bar{
+    font-size: 14px;
+    border: none;
+    background-color: rgb(58 58 58) !important;
+    border-radius: 100px;
+    padding: 10px 14px;
+    color: var(--spice-text) !important;
+    box-shadow: inset 0 2px 1px rgb(255 255 255 / 8%), inset 0 -2px 1px rgb(155 155 155 / 19%);
 }
 
 
