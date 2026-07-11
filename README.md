@@ -2,7 +2,7 @@
 	<img src="https://github.com/raysin1/Appletify/blob/main/screenshots/icon.png?raw" width="80" alt="Logo"/><br/>
 </h3>
 <div align="center">
-  <h1>Appletify (in development)</h1>
+  <h1>Appletify</h1>
 </div> <!-- close center div -->
 
 <div align="center">
