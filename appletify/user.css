@@ -128,10 +128,18 @@ html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar {
     max-width: 310px;
 }
 
-/* Collapsed sidebar (class toggled by theme.js): keep only nav arrows and
-   icon-only search so the 72px rail doesn't overflow */
-#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-contentRight { display: none; }
-#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-historyButtonsContainer > :not(:nth-child(-n+2)) { display: none; }
+/* Global nav row: allow wrapping and never squeeze out custom-app buttons
+   (Marketplace lives in .custom-navlinks-scrollable_container) */
+#Desktop_LeftSidebar_Id #global-nav-bar { flex-wrap: wrap; height: auto; row-gap: 2px; }
+#Desktop_LeftSidebar_Id .main-globalNav-historyButtonsWrapper { flex-wrap: wrap; height: auto; row-gap: 2px; }
+#Desktop_LeftSidebar_Id #global-nav-bar .custom-navlinks-scrollable_container { flex-shrink: 0; }
+
+/* Collapsed sidebar (class toggled by theme.js): the 72px rail keeps nav
+   arrows, custom-app buttons (Marketplace) and the profile avatar; only the
+   noisy extras (extension status pill, What's New / friend activity) hide */
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .SLT_ConnectionIndicator,
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-contentRight .main-actionButtons { display: none; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-contentRight { min-width: 0; }
 #Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchContainer { flex-direction: column; align-items: center; gap: 6px; }
 #Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchSection input,
 #Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchSection input::placeholder { color: transparent; }
@@ -684,19 +692,22 @@ button[data-testid="control-button-skip-forward"] svg {
 /* --- Back / Forward navigation icons --- */
 .main-globalNav-historyButtonsContainer > div > div:nth-child(1) { display: none; }
 
-.main-globalNav-historyButtonsContainer button:first-child span svg path {
+/* Scoped to .main-globalNav-historyButtons (the arrows' own wrapper) — the
+   outer container also holds custom-app buttons (Marketplace etc.) which must
+   not get the arrow icon override */
+.main-globalNav-historyButtons button:first-child span svg path {
     d: path("M344.727,306.176 L207.52,169.457 C203.613,165.551 201.66,161.156 201.66,156.273 C201.66,150.74 203.613,146.345 207.52,143.09 L344.727,6.37109 C348.307,2.79036 352.702,1 357.91,1 C363.118,1 367.513,2.79036 371.094,6.37109 C374.674,9.95182 376.465,14.3464 376.465,19.5547 C376.465,24.4375 374.674,28.832 371.094,32.7383 L236.328,166.527 L236.328,146.02 L371.094,279.809 C374.674,283.715 376.465,288.109 376.465,292.992 C376.465,298.201 374.674,302.595 371.094,306.176 C367.513,309.757 363.118,311.547 357.91,311.547 C352.702,311.547 348.307,309.757 344.727,306.176 ");
     scale: 0.07;
     transform: Translate(-135px, 20px);
 }
 
-.main-globalNav-historyButtonsContainer button:last-child span svg path {
+.main-globalNav-historyButtons button:last-child span svg path {
     d: path("M220.215,312.523 C225.098,312.523 229.329,310.733 232.91,307.152 L370.605,169.945 C374.512,166.365 376.465,161.97 376.465,156.762 C376.465,151.228 374.512,146.833 370.605,143.578 L232.91,6.85938 C229.329,2.95313 225.098,1 220.215,1 C215.007,1 210.612,2.79036 207.031,6.37109 C203.451,9.95182 201.66,14.3464 201.66,19.5547 C201.66,24.4375 203.451,28.832 207.031,32.7383 L341.797,167.016 L341.797,146.508 L207.031,280.785 C203.451,284.691 201.66,289.086 201.66,293.969 C201.66,299.177 203.451,303.572 207.031,307.152 C210.612,310.733 215.007,312.523 220.215,312.523");
     scale: 0.07;
     transform: Translate(-135px, 20px);
 }
 
-.main-globalNav-historyButtonsContainer button { color: rgb(176, 176, 176); }
+.main-globalNav-historyButtons button { color: rgb(176, 176, 176); }
 
 /* --- Fullscreen icon override (SpicyLyrics + BeautifulLyrics) --- */
 .main-nowPlayingBar-extraControls #BeautifulLyricsFullscreenButton span svg path,
