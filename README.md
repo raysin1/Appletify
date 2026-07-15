@@ -37,3 +37,59 @@
 7. Close and reopen Spotify
 
 *Credit to [Ingan121](https://github.com/Ingan121/)*
+
+> The theme works without these mods too — you just get a solid dark
+> sidebar instead of a translucent one. macOS and Linux users don't need
+> (and can't use) Windhawk/MicaForEveryone.
+
+<br>
+
+## Installation
+
+**Marketplace (recommended)**
+1. Install [Spicetify](https://spicetify.app/docs/getting-started) and the [Marketplace](https://github.com/spicetify/marketplace/wiki/Installation)
+2. Open Spotify → Marketplace → **Themes**, search for `Appletify`, click **Install**
+3. Also install the extensions listed above (Marketplace → **Extensions**)
+
+**Manual**
+1. Download this repository (`Code` → `Download ZIP`) and unzip it
+2. Copy the inner `appletify` folder into your Spicetify `Themes` folder:
+   - Windows: `Win+R` → `%appdata%\spicetify\Themes`
+   - macOS/Linux: `~/.config/spicetify/Themes`
+3. Run:
+   ```
+   spicetify config current_theme appletify
+   spicetify apply
+   ```
+
+## Uninstall
+
+Appletify is a **theme**, not an extension — remove it from Marketplace → **Installed**,
+or if you installed manually:
+
+```
+spicetify config current_theme marketplace
+spicetify apply
+```
+
+(You can also delete the `appletify` folder from `%appdata%\spicetify\Themes` /
+`~/.config/spicetify/Themes` afterwards.)
+
+## Troubleshooting
+
+- **Theme doesn't show up in Marketplace** — make sure Marketplace itself is
+  installed and up to date, then restart Spotify. If it still doesn't appear,
+  use the manual installation above.
+- **UI looks broken after a Spotify update** — run `spicetify update` (or
+  `spicetify upgrade`), then `spicetify restore backup apply`.
+- **Wrong / serif-looking font** — the SF Pro font downloads from the internet
+  on first load; if it can't be reached the theme now falls back to your
+  system font. Installing SF Pro locally also fixes it permanently.
+- **Windows: window turns into a Vista-style frame behind the sidebar** — a
+  known Windhawk `Spotify Tweaks` issue; enabling `native frames and title
+  bars` in the mod settings works around it.
+- **MicaForEveryone has no "Backdrop Style" option** — newer MicaForEveryone
+  versions call it `Backdrop type` in the process rule.
+- **Some shelf titles/sections look unstyled in a non-English Spotify** — the
+  player controls and layout are language-independent now; a few cosmetic
+  tweaks (renamed shelf headers etc.) still only apply in English.

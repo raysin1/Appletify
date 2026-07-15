@@ -33,6 +33,18 @@
 
 
 
+(function sidebarStateMod() {
+  const sb = document.querySelector("#Desktop_LeftSidebar_Id");
+  if (!sb) {
+    setTimeout(sidebarStateMod, 300);
+    return;
+  }
+  const update = () =>
+    sb.classList.toggle("apple-sidebar-collapsed", sb.getBoundingClientRect().width < 120);
+  new ResizeObserver(update).observe(sb);
+  update();
+})();
+
 (function SpotifySearchMod() {
     const selector = '[data-encore-id="formInput"]';
     if (!document.querySelector(selector)) {
