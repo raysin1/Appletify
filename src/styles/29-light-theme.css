@@ -1,0 +1,54 @@
+/* =============================================================================
+   29. LIGHT THEME — setting "darkTheme" OFF → html.appletify-no-darkTheme
+   Apple Music light palette on top of the dark defaults. Overrides the most
+   visible surfaces and text colours; accent stays --appletify-accent.
+   ============================================================================= */
+html.appletify-no-darkTheme {
+    --spice-text: #1d1d1f; --spice-subtext: #6e6e73;
+    --spice-main: #ffffff; --spice-sidebar: #f5f5f7; --spice-card: #ffffff;
+    --background-base: #ffffff; --background-elevated-base: #f5f5f7;
+    --text-base: #1d1d1f; --text-subdued: #6e6e73;
+}
+html.appletify-no-darkTheme .encore-dark-theme, html.appletify-no-darkTheme .encore-dark-theme .encore-base-set { --background-base: #ffffff; --text-base: #1d1d1f; --text-subdued: #6e6e73; --text-bright-accent: #1d1d1f; --background-highlight: rgba(0, 0, 0, .06); --background-press: rgba(0, 0, 0, .1); --essential-base: #1d1d1f; }
+/* surfaces */
+html.appletify-no-darkTheme, html.appletify-no-darkTheme body, html.appletify-no-darkTheme .Root__top-container { background: #ffffff !important; }
+html.appletify-no-darkTheme .Root__main-view, html.appletify-no-darkTheme .main-view-container { background-color: #ffffff !important; }
+html.appletify-no-darkTheme #Desktop_LeftSidebar_Id { background: rgb(242 242 247 / 92%) !important; }
+html.appletify-no-darkTheme .main-navBar-mainNav { border-right-color: rgb(0 0 0 / 8%); }
+html.appletify-no-darkTheme .Root__now-playing-bar { background: rgb(246 246 247 / 88%); box-shadow: 0 1px 0 rgb(0 0 0 / 10%); }
+html.appletify-no-darkTheme .main-nowPlayingWidget-nowPlaying { background: rgb(0 0 0 / 4%); border-color: rgb(0 0 0 / 10%); box-shadow: inset 0 1px 0 rgb(255 255 255 / 60%); }
+html.appletify-no-darkTheme #Desktop_PanelContainer_Id, html.appletify-no-darkTheme .main-nowPlayingView-panel { background: rgb(245 245 247 / 94%) !important; border-left-color: rgb(0 0 0 / 8%); }
+html.appletify-no-darkTheme .main-nowPlayingView-section { background: rgb(0 0 0 / 4%); }
+html.appletify-no-darkTheme [role="menu"] { background-color: rgb(246 246 247 / 90%) !important; box-shadow: 0 0 0 0.5px rgb(0 0 0 / 20%), 0 12px 32px rgb(0 0 0 / 18%) !important; }
+html.appletify-no-darkTheme .GenericModal { background-color: rgb(246 246 247 / 96%) !important; box-shadow: 0 0 0 0.5px rgb(0 0 0 / 20%), 0 24px 60px rgb(0 0 0 / 25%) !important; }
+html.appletify-no-darkTheme .main-actionBar-ActionBar .main-playButton-PlayButton > button > span,
+html.appletify-no-darkTheme .main-actionBar-ActionBarRow > button:has(path[d^="M13.151"], path[d^="M18.788"]),
+html.appletify-no-darkTheme [data-testid="playlist-page"] :is(.x-sortBox-sortDropdown, .x-filterBox-filterInputContainer) { background-color: #e9e9ec !important; box-shadow: inset 0 1px 1px rgb(255 255 255 / 80%), 0 0 0 0.5px rgb(0 0 0 / 8%); }
+html.appletify-no-darkTheme .main-trackList-trackListRow[aria-selected="true"], html.appletify-no-darkTheme .main-trackList-trackListRow[aria-selected="true"]:hover { background-color: var(--appletify-accent, #ff375f); }
+html.appletify-no-darkTheme .main-trackList-trackListRow::after { background: rgb(0 0 0 / 8%); }
+html.appletify-no-darkTheme [data-testid="album-page"] .main-trackList-trackListContainer { border-top-color: rgb(0 0 0 / 10%); }
+html.appletify-no-darkTheme #queue-panel li [data-encore-id="listRow"]::after { background: rgb(0 0 0 / 8%); }
+html.appletify-no-darkTheme .main-home-homeHeader { background-color: transparent !important; }
+/* text */
+html.appletify-no-darkTheme :is(h1, h2, h3, .main-entityHeader-title, .main-entityHeader-title h1, section > [data-encore-id="listRow"] h2, .main-trackInfo-name, .main-trackInfo-name a,
+  .main-trackList-rowTitle, .main-trackList-rowTitle, .main-trackList-rowMarker > span, .main-trackList-rowDuration, .main-yourLibraryX-collapseButton *,
+  [data-encore-id="listRowTitle"], [data-encore-id="cardTitle"], .encore-internal-color-text-base, .main-nowPlayingBar-extraControls button, .e-10860-button-primary__inner,
+  :is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]), .main-nowPlayingView-sectionHeaderText, #queue-tab, #history-tab, .main-trackInfo-overlay a) { color: #1d1d1f !important; }
+html.appletify-no-darkTheme :is(.main-trackInfo-artists, .main-trackInfo-artists a, [data-encore-id="listRowSubtitle"], [data-encore-id="listRowSubtitle"] a, [data-encore-id="cardSubtitle"],
+  .main-trackList-rowMainContent > span.standalone-ellipsis-one-line, .main-trackList-rowMainContent > span.standalone-ellipsis-one-line a, [data-encore-id="text"], .encore-internal-color-text-subdued,
+  [data-testid="playback-position"], [data-testid="playback-duration"], .main-trackList-rowSectionVariable[aria-colindex="3"] *, #history-tab, .main-trackList-rowSectionVariable a) { color: #6e6e73 !important; }
+html.appletify-no-darkTheme #queue-tab[aria-selected="true"], html.appletify-no-darkTheme #history-tab[aria-selected="true"] { color: #1d1d1f !important; }
+html.appletify-no-darkTheme .main-trackList-trackListRow[aria-selected="true"] * { color: #fff !important; }
+html.appletify-no-darkTheme :is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):hover, html.appletify-no-darkTheme :is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):hover * { color: #fff !important; }
+/* icons */
+html.appletify-no-darkTheme .e-10860-icon, html.appletify-no-darkTheme .main-nowPlayingBar-extraControls svg, html.appletify-no-darkTheme .player-controls svg path,
+html.appletify-no-darkTheme [data-testid="control-button-repeat"][aria-checked="false"] span svg, html.appletify-no-darkTheme .main-globalNav-historyButtons svg path { fill: #1d1d1f; color: #1d1d1f; }
+html.appletify-no-darkTheme .main-globalNav-historyButtons button { color: #6e6e73; }
+html.appletify-no-darkTheme .main-nowPlayingBar-volumeBar [id="volume-icon"] path { stroke: #1d1d1f; }
+html.appletify-no-darkTheme .x-progressBar-fillColor { background-color: rgba(0, 0, 0, .55) !important; }
+html.appletify-no-darkTheme .x-progressBar-progressBarBg { background-color: rgba(0, 0, 0, .12); }
+html.appletify-no-darkTheme .main-nowPlayingBar-extraControls button { color: #1d1d1f; }
+html.appletify-no-darkTheme .apple-sidebar-collapsed .main-globalNav-searchSection input { color: #1d1d1f !important; }
+html.appletify-no-darkTheme.apple-search-open #Desktop_LeftSidebar_Id .main-globalNav-searchInputContainer { background: rgb(246 246 247 / 96%) !important; border-color: rgb(0 0 0 / 12%); }
+html.appletify-no-darkTheme .notistack-Snackbar .e-10860-legacy-box--elevated { background-color: #1d1d1f !important; }
+html.appletify-no-darkTheme .notistack-Snackbar .e-10860-legacy-box--elevated, html.appletify-no-darkTheme .notistack-Snackbar .e-10860-legacy-box--elevated * { color: #fff !important; }

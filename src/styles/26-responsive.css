@@ -1,0 +1,21 @@
+/* =============================================================================
+   26. RESPONSIVE — narrow windows
+   ============================================================================= */
+@media (max-width: 1180px) {
+    .main-nowPlayingBar-nowPlayingBar { grid-template-columns: minmax(0, 1fr) minmax(180px, 300px) minmax(0, 1fr); }
+    [data-testid="playback-position"], [data-testid="playback-duration"] { display: none; }
+    .main-nowPlayingBar-volumeBar .volume-bar__slider-container { width: 70px; }
+}
+@media (max-width: 980px) {
+    .main-nowPlayingBar-nowPlayingBar { grid-template-columns: auto minmax(160px, 1fr) auto; padding: 0 12px 0 16px; gap: 8px; }
+    .main-nowPlayingBar-center { width: 176px; }
+    .player-controls__buttons { gap: 2px; }
+    .main-nowPlayingBar-left { transform: none; }
+    .main-nowPlayingBar-volumeBar .volume-bar__slider-container { display: none; }
+    .main-nowPlayingBar-extraControls { gap: 4px; }
+    #catjam-webm { display: none !important; }
+    /* album / playlist headers */
+    :is([data-testid="album-page"], [data-testid="playlist-page"]) .main-entityHeader-imageContainer { width: 200px; height: 200px; }
+    :is([data-testid="album-page"], [data-testid="playlist-page"]) div.main-entityHeader-container { min-height: 260px !important; height: auto !important; }
+    :is([data-testid="album-page"], [data-testid="playlist-page"]) .main-entityHeader-title, :is([data-testid="album-page"], [data-testid="playlist-page"]) .main-entityHeader-title h1 { font-size: 24px !important; }
+}

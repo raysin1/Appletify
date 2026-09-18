@@ -1,0 +1,325 @@
+/* =============================================================================
+   7. NOW PLAYING BAR
+   ============================================================================= */
+
+/* Top bar, Apple Music style. theme.js moves .Root__now-playing-bar into
+   .main-view-container (position: relative), so the bar is pinned to the top
+   of the main view and page content scrolls underneath the frosted glass. */
+:root { --apple-playbar-height: 80px; }
+
+.Root__now-playing-bar {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: auto;
+    width: auto;
+    min-width: 0;
+    height: var(--apple-playbar-height);
+    margin: 0;
+    padding: 0;
+    transform: none;
+    border-radius: 0;
+    box-shadow: 0 1px 0 rgb(255 255 255 / 8%);
+    background: rgb(30 30 32 / 78%);
+    backdrop-filter: saturate(1.8) blur(20px);
+    z-index: 20;
+}
+.Root__now-playing-bar > aside {
+    box-shadow: none;
+    border-radius: 0;
+    height: 100%;
+}
+
+/* Window drag: Spotify overlays an invisible 60px drag strip (.body-drag-top)
+   across the top of the window, which swallows clicks on the playbar. Drop
+   it and make the bar itself the drag handle, keeping every control clickable. */
+.spotify__container--is-desktop:not(.fullscreen) .body-drag-top { display: none; }
+.Root__now-playing-bar { -webkit-app-region: drag; }
+.Root__now-playing-bar :is(button, input, a, [role="slider"], .playback-bar, .main-nowPlayingBar-volumeBar, .main-nowPlayingWidget-nowPlaying, .main-nowPlayingBar-extraControls, .player-controls) { -webkit-app-region: no-drag; }
+#Desktop_LeftSidebar_Id #global-nav-bar { -webkit-app-region: drag; }
+#Desktop_LeftSidebar_Id #global-nav-bar :is(button, a, input, form) { -webkit-app-region: no-drag; }
+
+/* Push page content below the bar */
+.main-view-container__scroll-node-child { padding-top: var(--apple-playbar-height); }
+
+/* Marketplace keeps its own tab bar — place it under the playbar */
+.main-topBar-container:has(.marketplace-tabBar.marketplace-tabBar-nav) { top: var(--apple-playbar-height); }
+
+/* Sections: controls left, now-playing widget centered, extras right.
+   .player-controls has container-type: inline-size, so its intrinsic width is
+   always 0 — the controls block needs an explicit width (#27, #29). */
+/* Three-column grid: controls | now-playing box | extras. The middle column
+   is `auto`, the sides are equal `1fr`, so the box sits at the exact centre of
+   the bar whatever the widths of the two button groups. */
+.main-nowPlayingBar-nowPlayingBar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(200px, 380px) minmax(0, 1fr);
+    align-items: center;
+    height: var(--apple-playbar-height);
+    padding: 0 20px 0 28px;
+    gap: 12px;
+}
+.main-nowPlayingBar-center { order: 1; width: 200px; max-width: none; margin: 0; justify-self: start; }
+.main-nowPlayingBar-left {
+    order: 2; min-width: 0; width: 100%; margin: 0; padding: 0;
+    display: flex; justify-content: center; justify-self: stretch;
+    /* centre on the whole window, not on the main view: shift left by half the
+       real sidebar width (set by theme.js) and by the bar's padding asymmetry
+       (28px left vs 20px right) */
+    transform: translateX(calc(var(--apple-sidebar-width, 72px) * -0.5 - 4px));
+}
+.main-nowPlayingBar-right { order: 3; width: auto; min-width: 0; justify-content: flex-end; justify-self: end; }
+
+/* Extra controls spacing */
+.main-nowPlayingBar-extraControls { gap: 10px; margin-right: 0; }
+
+/* Volume bar order */
+.main-nowPlayingBar-right [data-testid="volume-bar"] { order: 1; min-width: 110px; }
+.main-nowPlayingBar-volumeBar { flex: 0 0 auto; }
+.main-nowPlayingBar-volumeBar .volume-bar__slider-container { width: 90px; }
+.main-nowPlayingBar-right button:has(.LyricsPageIcon) { order: 2 !important; }
+.main-nowPlayingBar-right .GlueDropTarget { order: 3; }
+
+/* Extra controls ordering */
+.main-nowPlayingBar-extraControls > #SpicyLyrics_PopupLyricsButton { order: 1!important; }
+.main-nowPlayingBar-extraControls button:has(#SpicyLyricsPageSvg) { order: 2;}
+.main-nowPlayingBar-extraControls > .main-useDropTarget-base { order: 3; }
+.main-nowPlayingBar-extraControls > span { order: 4; }
+.main-nowPlayingBar-volumeBar { order: 5; }
+
+
+
+
+/* Now playing widget: the rounded "LCD" box — cover art, centered
+   title/artist, progress bar along the bottom edge */
+.main-nowPlayingWidget-nowPlaying {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 6px 8px 0 6px;
+    background: rgb(255 255 255 / 7%);
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: 10px;
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 6%), 0 4px 16px rgb(0 0 0 / 18%);
+    overflow: hidden;
+}
+
+.main-coverSlotCollapsed-container { grid-row: 1; grid-column: 1; margin: 0; }
+
+.main-nowPlayingWidget-trackInfo { grid-row: 1; grid-column: 2; min-width: 0; overflow: hidden; margin: 0 8px; }
+.main-trackInfo-container { justify-items: center; }
+
+/* Truncate long titles instead of overflowing the box */
+.main-trackInfo-name, .main-trackInfo-artists {
+    min-width: 0; max-width: 100%; width: auto;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    justify-self: center; justify-content: center; text-align: center;
+}
+
+/* Progress bar spans the full width of the box (cancels the box padding) */
+.playback-bar { grid-row: 2; grid-column: 1 / -1; width: auto; margin: 2px 0 0; padding: 0 2px 3px; }
+
+.main-nowPlayingWidget-trackInfo .main-trackInfo-overlay a { font-size: 13px; font-weight: 600; }
+.main-trackInfo-artists a { font-size: 12px; color: rgb(255 255 255 / 66%); }
+
+/* Album art size in now playing bar */
+.main-nowPlayingWidget-nowPlaying .cover-art {
+    height: 44px !important;
+    width: 44px !important;
+}
+.main-nowPlayingWidget-coverArtContainer {
+    border-radius: 7px;
+}
+
+
+/* Hide now playing bar top bar */
+.main-nowPlayingBar-nowPlayingBar .main-topBar-container { display: none; }
+
+/* Hide the native lyrics button ONLY when SpicyLyrics is installed and
+   provides its own — without the extension users were left with no lyrics
+   button at all (#20, #24) */
+body:has(#SpicyLyrics_PopupLyricsButton) .main-nowPlayingBar-nowPlayingBar [data-testid="lyrics-button"],
+body:has(#SpicyLyricsPageSvg) .main-nowPlayingBar-nowPlayingBar [data-testid="lyrics-button"] { display: none; }
+
+/* NPV button hidden */
+.main-nowPlayingBar-extraControls > [data-testid="control-button-npv"] { display: none; }
+
+/* Like / add-to-library button back in the playbar (#21), placed in its own
+   grid column right of the track info */
+.main-nowPlayingWidget-actionButtonWrapper {
+    grid-row: 1;
+    grid-column: 3;
+    align-self: center;
+    margin-left: 4px;
+}
+
+
+/* Hide various playbar buttons */
+.main-coverSlotCollapsed-expandButton,
+[data-testid="lyrics-button"]:disabled,
+[data-testid="lyrics-button"][aria-disabled="true"] {
+    display: none;
+}
+
+/* Artist text in now playing */
+.main-trackInfo-artists {
+    font-size: 12px;
+    margin-left: 0;
+}
+
+/* Progress bar colors */
+.x-progressBar-fillColor { background-color: rgba(255, 255, 255, .64) !important; border-radius: 0px;}
+.x-progressBar-progressBarBg { background-color: #ffffff1c; }
+.x-progressBar-progressFillColor {display:none;}
+
+/* Hide both progress bar slider thumbs  */
+.progress-bar__slider { display: none!important; }
+
+
+
+
+
+
+/*Undo weird Spicy lyrics playbar styling*/
+body:has(#SpicyLyricsPage):not(:has([id*=dribbblish])):not(.sltm__ThemeMatch__textdt) .playback-bar>.playback-progressbar-container, body:has(#SpicyLyricsPage):not(:has([id*=dribbblish])):not(.sltm__ThemeMatch__textdt) .playback-bar>:has(.playback-progressbar){
+    margin-left:unset;
+}
+
+/* Playback time: small subdued timers at both ends of the progress bar
+   (elapsed left, total/remaining right), always visible */
+.playback-bar { display: flex; align-items: center; gap: 6px; }
+.playback-progressbar-container { flex: 1 1 auto; min-width: 0; }
+[data-testid="playback-position"],
+[data-testid="playback-duration"] {
+    position: static !important;
+    inset: auto !important;
+    flex: 0 0 auto;
+    width: auto !important; min-width: 26px; height: auto;
+    font-size: 10px; line-height: 1;
+    opacity: 1;
+    color: rgb(255 255 255 / 55%);
+}
+[data-testid="playback-position"] { text-align: left; }
+[data-testid="playback-duration"] { text-align: right; }
+[data-testid="playback-position"] > *, [data-testid="playback-duration"] > * { position: static !important; }
+
+/* Hide the canvas / music-video preview that Spotify injects into the bar —
+   unstyled it renders on top of the track info (#25, #29) */
+.main-nowPlayingBar-nowPlayingBar video:not(#catjam-webm) { display: none !important; }
+#catjam-webm { height: 56px !important; width: 56px !important; align-self: center; }
+
+/* Hide the Lossless / quality badge row so it doesn't push the progress bar
+   down (#29) */
+.main-nowPlayingWidget-trackInfo .main-trackInfo-xsmallBadges { display: none; }
+.main-trackInfo-overlay .main-trackInfo-artists button { display: none; }
+
+/* --- Setting "topPlaybar" OFF: Apple Music mini-player pill at the bottom ---
+   [controls] [cover] [title]                    [lyrics] [queue] [volume]
+   with a thin progress line along the bottom of the pill. */
+html.appletify-no-topPlaybar .Root__now-playing-bar {
+    top: auto; bottom: 22px; left: 50%; right: auto;
+    width: min(820px, 94%); min-width: 0; height: 64px;
+    transform: translateX(-50%);
+    border-radius: 32px; background: rgb(44 44 46 / 88%);
+    backdrop-filter: blur(30px) saturate(180%);
+    box-shadow: 0 0 0 0.5px rgb(0 0 0 / 40%), inset 0 0 0 0.5px rgb(255 255 255 / 12%), 0 16px 40px rgb(0 0 0 / 40%);
+    overflow: hidden;
+}
+html.appletify-no-topPlaybar .main-view-container__scroll-node-child { padding-top: 0; padding-bottom: 110px; }
+html.appletify-no-topPlaybar .main-topBar-container:has(.marketplace-tabBar.marketplace-tabBar-nav) { top: 0; }
+html.appletify-no-topPlaybar .Root__now-playing-bar > aside { height: 100%; }
+html.appletify-no-topPlaybar .main-nowPlayingBar-nowPlayingBar {
+    display: flex; align-items: center; height: 64px; padding: 0 16px 0 12px; gap: 8px;
+}
+html.appletify-no-topPlaybar .main-nowPlayingBar-center { order: 1; width: 196px; flex: 0 0 auto; }
+html.appletify-no-topPlaybar .player-controls__buttons { gap: 2px; }
+html.appletify-no-topPlaybar .player-controls { height: 40px !important; width: 100% !important; container-type: normal !important; display: flex; align-items: center; justify-content: center; }
+html.appletify-no-topPlaybar .player-controls__buttons { margin: 0 !important; position: static !important; transform: none !important; }
+html.appletify-no-topPlaybar .main-nowPlayingBar-center { align-self: center; display: flex; align-items: center; }
+html.appletify-no-topPlaybar .main-nowPlayingBar-left {
+    order: 2; flex: 1 1 auto; min-width: 0; width: auto; transform: none; justify-content: flex-start;
+}
+html.appletify-no-topPlaybar .main-nowPlayingBar-right { order: 3; flex: 0 0 auto; }
+/* the "LCD" box becomes a plain cover + title row */
+html.appletify-no-topPlaybar .main-nowPlayingWidget-nowPlaying {
+    display: flex; align-items: center; gap: 10px;
+    width: 100%; padding: 0; background: none; border: 0; box-shadow: none; border-radius: 0; overflow: visible;
+}
+html.appletify-no-topPlaybar .main-nowPlayingWidget-nowPlaying .cover-art { width: 40px !important; height: 40px !important; }
+html.appletify-no-topPlaybar .main-nowPlayingWidget-coverArtContainer { border-radius: 6px; }
+html.appletify-no-topPlaybar .main-nowPlayingWidget-trackInfo { margin: 0; flex: 1 1 auto; min-width: 0; }
+html.appletify-no-topPlaybar .main-trackInfo-container { justify-items: start; }
+html.appletify-no-topPlaybar .main-trackInfo-name, html.appletify-no-topPlaybar .main-trackInfo-artists { justify-self: start; justify-content: flex-start; text-align: left; }
+html.appletify-no-topPlaybar .main-nowPlayingWidget-trackInfo .main-trackInfo-overlay a { font-size: 14px; font-weight: 600; }
+html.appletify-no-topPlaybar .main-trackInfo-artists, html.appletify-no-topPlaybar .main-trackInfo-artists a { font-size: 12px; }
+/* text runs right up to the buttons: no extra margin, the widget gap is the only spacing */
+html.appletify-no-topPlaybar .main-nowPlayingWidget-actionButtonWrapper { margin: 0 2px 0 0; }
+html.appletify-no-topPlaybar .main-nowPlayingWidget-nowPlaying:has(.main-nowPlayingWidget-actionButtonWrapper) { gap: 10px 4px; }
+html.appletify-no-topPlaybar .main-coverSlotCollapsed-container { margin-right: 6px; }
+/* the inner cover keeps no margin - it would widen the grey cover button and show as a strip next to the art */
+html.appletify-no-topPlaybar .main-nowPlayingWidget-coverArt { margin: 0 !important; }
+html.appletify-no-topPlaybar .main-nowPlayingWidget-coverArtContainer, html.appletify-no-topPlaybar .main-coverSlotCollapsed-container { width: 40px !important; }
+/* progress: thin line along the bottom of the pill, no timers */
+/* containing block = the pill itself (the widget and its column are made static) */
+html.appletify-no-topPlaybar .main-nowPlayingBar-left, html.appletify-no-topPlaybar .main-nowPlayingWidget-nowPlaying { position: static !important; }
+/* .main-nowPlayingBar-left is a size container (container-type: inline-size), which would become the
+   containing block of the absolutely positioned progress line — switch containment off here */
+html.appletify-no-topPlaybar .main-nowPlayingBar-left { container-type: normal !important; contain: none !important; }
+/* Spotify puts transform: translate(0) on the widget — another containing block; drop it too */
+html.appletify-no-topPlaybar .main-nowPlayingWidget-nowPlaying, html.appletify-no-topPlaybar .main-nowPlayingBar-left, html.appletify-no-topPlaybar .main-nowPlayingWidget-trackInfo { transform: none !important; will-change: auto !important; filter: none !important; perspective: none !important; }
+html.appletify-no-topPlaybar .main-nowPlayingBar-left,
+html.appletify-no-topPlaybar .main-nowPlayingWidget-trackInfo, html.appletify-no-topPlaybar .main-nowPlayingBar-nowPlayingBar { position: static !important; }
+html.appletify-no-topPlaybar .Root__now-playing-bar > aside { position: relative; }
+html.appletify-no-topPlaybar .playback-bar {
+    position: absolute !important; left: 216px !important; right: 300px !important; bottom: 0 !important; top: auto !important;
+    margin: 0 !important; padding: 0 !important; height: 6px !important; width: auto !important; z-index: 2;
+}
+html.appletify-no-topPlaybar [data-testid="playback-position"], html.appletify-no-topPlaybar [data-testid="playback-duration"] { display: none; }
+html.appletify-no-topPlaybar .playback-progressbar-container { height: 6px; }
+html.appletify-no-topPlaybar .x-progressBar-progressBarBg { background-color: rgb(255 255 255 / 10%); height: 3px; }
+html.appletify-no-topPlaybar .x-progressBar-fillColor { border-radius: 2px; }
+/* right group: icons only */
+html.appletify-no-topPlaybar .main-nowPlayingBar-extraControls { gap: 6px; }
+html.appletify-no-topPlaybar .main-nowPlayingBar-volumeBar .volume-bar__slider-container { width: 0; overflow: hidden; transition: width .2s ease; }
+html.appletify-no-topPlaybar .main-nowPlayingBar-volumeBar:hover .volume-bar__slider-container { width: 80px; }
+html.appletify-no-topPlaybar #catjam-webm { height: 40px !important; width: 40px !important; }
+
+/* --- Volume icon by level (class set by theme.js: apple-vol-high/medium/low/off) --- */
+.main-nowPlayingBar-volumeBar.apple-vol-medium > button:has(path[d^="M9.741"]) svg path { d: path('M 25.65234375,2.943359375 C 26.51171875,2.943359375 26.94140625,3.587890625 26.94140625,4.404296875 L 26.94140625,38.392578125 C 26.94140625,39.208984375 26.51171875,39.853515625 25.65234375,39.853515625 C 25.05078125,39.853515625 24.556640625,39.53125 24.169921875,39.166015625 L 13.943359375,29.197265625 C 13.70703125,28.9609375 13.427734375,28.853515625 13.041015625,28.853515625 L 5.84375,28.853515625 C 4.060546875,28.853515625 2.578125,27.392578125 2.578125,25.609375 L 2.578125,16.9296875 C 2.578125,15.146484375 4.060546875,13.6640625 5.84375,13.6640625 L 13.041015625,13.6640625 C 13.427734375,13.6640625 13.70703125,13.556640625 13.943359375,13.341796875 L 24.169921875,3.65234375 C 24.556640625,3.265625 25.05078125,2.943359375 25.65234375,2.943359375 Z M 47.201171875,6.939453125 C 47.458984375,6.74609375 47.73828125,6.83203125 47.931640625,7.068359375 C 50.896484375,10.87109375 52.486328125,15.8125 52.486328125,21.3984375 C 52.486328125,27.005859375 50.896484375,31.92578125 47.931640625,35.728515625 C 47.759765625,35.96484375 47.458984375,36.05078125 47.201171875,35.857421875 C 46.943359375,35.685546875 46.943359375,35.384765625 47.115234375,35.10546875 C 49.5859375,31.23828125 51.43359375,26.76953125 51.43359375,21.3984375 C 51.43359375,16.005859375 49.88671875,11.30078125 47.072265625,7.6484375 C 46.87890625,7.412109375 46.943359375,7.111328125 47.201171875,6.939453125 Z M 38.865234375,12.6328125 C 39.1015625,12.4609375 39.423828125,12.50390625 39.595703125,12.740234375 C 41.25,14.845703125 42.41015625,17.939453125 42.41015625,21.3984375 C 42.41015625,24.87890625 41.25,27.951171875 39.595703125,30.056640625 C 39.423828125,30.29296875 39.123046875,30.357421875 38.865234375,30.1640625 C 38.62890625,29.970703125 38.5859375,29.669921875 38.779296875,29.369140625 C 40.240234375,27.37109375 41.357421875,24.599609375 41.357421875,21.3984375 C 41.357421875,18.154296875 40.21875,15.318359375 38.71484375,13.3203125 C 38.54296875,13.10546875 38.62890625,12.826171875 38.865234375,12.6328125 Z'); }
+.main-nowPlayingBar-volumeBar.apple-vol-low > button:has(path[d^="M9.741"]) svg path { d: path('M 25.65234375,2.943359375 C 26.51171875,2.943359375 26.94140625,3.587890625 26.94140625,4.404296875 L 26.94140625,38.392578125 C 26.94140625,39.208984375 26.51171875,39.853515625 25.65234375,39.853515625 C 25.05078125,39.853515625 24.556640625,39.53125 24.169921875,39.166015625 L 13.943359375,29.197265625 C 13.70703125,28.9609375 13.427734375,28.853515625 13.041015625,28.853515625 L 5.84375,28.853515625 C 4.060546875,28.853515625 2.578125,27.392578125 2.578125,25.609375 L 2.578125,16.9296875 C 2.578125,15.146484375 4.060546875,13.6640625 5.84375,13.6640625 L 13.041015625,13.6640625 C 13.427734375,13.6640625 13.70703125,13.556640625 13.943359375,13.341796875 L 24.169921875,3.65234375 C 24.556640625,3.265625 25.05078125,2.943359375 25.65234375,2.943359375 Z M 38.865234375,12.6328125 C 39.1015625,12.4609375 39.423828125,12.50390625 39.595703125,12.740234375 C 41.25,14.845703125 42.41015625,17.939453125 42.41015625,21.3984375 C 42.41015625,24.87890625 41.25,27.951171875 39.595703125,30.056640625 C 39.423828125,30.29296875 39.123046875,30.357421875 38.865234375,30.1640625 C 38.62890625,29.970703125 38.5859375,29.669921875 38.779296875,29.369140625 C 40.240234375,27.37109375 41.357421875,24.599609375 41.357421875,21.3984375 C 41.357421875,18.154296875 40.21875,15.318359375 38.71484375,13.3203125 C 38.54296875,13.10546875 38.62890625,12.826171875 38.865234375,12.6328125 Z'); }
+
+/* --- "More" (…) button injected by theme.js next to the like button: opens the
+   track context menu (share, go to radio, …) --- */
+.appletify-more-button { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border: 0; background: none; color: rgba(255, 255, 255, .7); cursor: pointer; border-radius: 50%; padding: 0; }
+.appletify-more-button:hover { color: #fff; background: rgb(255 255 255 / 8%); }
+.appletify-more-button svg { width: 18px; height: 18px; fill: currentColor; }
+.main-nowPlayingWidget-actionButtonWrapper { display: flex; align-items: center; gap: 2px; }
+/* Hide / Add to Liked are 16px-wide buttons by default: give them the same 28px round hit area as the "..." button */
+.main-nowPlayingWidget-actionButtonWrapper > button { width: 28px !important; height: 28px !important; min-width: 28px; padding: 0 !important; margin: 0 !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; border-radius: 50%; }
+.main-nowPlayingWidget-actionButtonWrapper > button:hover { background: rgb(255 255 255 / 8%); }
+/* the "Hide" (x) button: Spotify only hides it for curated contexts (data-feedback-curated); make it hover-only everywhere.
+   It is always the first of three buttons (Hide, Add, ...), so target every button except the last two. */
+/* while hidden it also takes no space, so the title runs right up to "+"; it slides open on hover */
+.main-nowPlayingWidget-actionButtonWrapper > button:not(:nth-last-child(-n+2)) { opacity: 0; width: 0 !important; min-width: 0 !important; margin-right: -2px !important; overflow: hidden; transition: opacity .2s ease-in-out, width .2s ease-in-out, margin .2s ease-in-out; }
+.main-nowPlayingWidget-nowPlaying:hover .main-nowPlayingWidget-actionButtonWrapper > button:not(:nth-last-child(-n+2)),
+.main-nowPlayingWidget-nowPlaying:has(:focus-visible) .main-nowPlayingWidget-actionButtonWrapper > button:not(:nth-last-child(-n+2)) { opacity: 1; width: 28px !important; min-width: 28px !important; margin-right: 0 !important; }
+/* the medium / low / muted glyphs are drawn 3.82 units higher than the high one (speaker body 2.9..39.9 vs 6.8..43.7):
+   shift them down so the speaker body sits at the same height in every state */
+.main-nowPlayingBar-volumeBar:is(.apple-vol-medium, .apple-vol-low) > button:has(path[d^="M9.741"]) svg path,
+.main-nowPlayingBar-volumeBar > button:has(path[d^="M13.86"]) svg path { transform: translate(8px, 19.82px); }
+/* same story in the playbar: the (hidden) badges column + 8px gap shifted the artists line right of the title */
+.main-nowPlayingWidget-trackInfo.main-trackInfo-container { column-gap: 0 !important; }
+
+/* --- Setting "pillBottom" OFF (only matters with the top bar off): the same pill, docked at the top --- */
+html.appletify-no-topPlaybar.appletify-no-pillBottom .Root__now-playing-bar { top: 14px; bottom: auto; }
+html.appletify-no-topPlaybar.appletify-no-pillBottom .main-view-container__scroll-node-child { padding-top: 92px; padding-bottom: 24px; }
+html.appletify-no-topPlaybar.appletify-no-pillBottom .main-topBar-container:has(.marketplace-tabBar.marketplace-tabBar-nav) { top: 92px; }
+
+/* Spotify 1.3.0 extra controls: lyrics → queue → connect → volume; PiP and full-screen stay hidden */
+.main-nowPlayingBar-extraControls > [data-testid="volume-bar"] { order: 6 !important; }
+.main-nowPlayingBar-extraControls > [data-testid="control-button-queue"], .main-nowPlayingBar-extraControls > .main-useDropTarget-base { order: 3 !important; }
+.main-nowPlayingBar-extraControls > span:has(button[aria-label]) { order: 4 !important; }
+.main-nowPlayingBar-extraControls > [data-testid="pip-toggle-button"], .main-nowPlayingBar-extraControls > [data-testid="fullscreen-mode-button"] { display: none !important; }

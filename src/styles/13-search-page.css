@@ -1,0 +1,63 @@
+/* =============================================================================
+   13. SEARCH PAGE
+   ============================================================================= */
+
+/* Search page top spacing — localized aria-label, generated in theme.js */
+
+/* Search focus ring */
+.main-globalNav-searchInputContainer .main-globalNav-searchInputContainer:focus {
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    outline: 7px solid rgba(250, 88, 106, .6);
+}
+
+
+/*Hide browse button*/
+.main-globalNav-browseButtonWrapper{
+    display:none;
+}
+
+/* Search bar styling */
+.main-globalNav-searchInputContainer {
+    border-radius: 50px !important;
+    font-size: 20px;
+    background-color: rgb(0 0 0 / 20%) !important;
+    border: 1px solid hsla(0, 0%, 100%, .1);
+}
+
+[data-encore-id="formInputIcon"] { border-radius: 8px !important; }
+.e-10860-form-input-icon--trailing .e-10860-form-input { border-radius: 8px !important; }
+
+/* Search input placeholder */
+[placeholder="What do you want to play?"] { margin-left: 10px; zoom: 1.2; }
+
+/* Hide trailing icon in form input */
+.main-globalNav-searchContainer .e-10860-form-input-icon__icon.e-10860-form-input-icon__icon--trailing { display: none; }
+/* Home button is intentionally visible again — the homepage is back (#8, #4) */
+/* Home page: no coloured header band (Spotify paints an inline background-color) */
+.main-home-homeHeader { background-color: transparent !important; }
+.main-globalNav-searchSection { position: relative; }
+
+/* Search icon color */
+.main-globalNav-searchInputContainer .x-searchInput-searchInputSearchIcon { color: var(--appletify-accent, #ff375f) !important; }
+
+/* Browse tiles: rounded like Apple Music category cards */
+main section[class*="shelf"] a[href^="/genre/"], main section[class*="shelf"] a[href^="/genre/"] > *,
+main section[class*="shelf"] a[href^="/genre/"] img { border-radius: 10px !important; overflow: hidden; }
+main section[class*="shelf"] a[href^="/genre/"] { transition: transform .15s ease; }
+main section[class*="shelf"] a[href^="/genre/"]:hover { transform: scale(1.02); }
+
+/* --- Search results (Spotify ≥1.2.9x list layout): Apple-style rows -------
+   Top result = tinted list row with a large cover; the rest are 80px rows. */
+main [aria-label="Search results"] > div > [class*="legacy-box--tinted"] { border-radius: 14px; background: rgb(255 255 255 / 6%) !important; }
+main [aria-label="Search results"] > div > [class*="legacy-box--tinted"] [class*="header-side"] img,
+main [aria-label="Search results"] > div > [class*="legacy-box--tinted"] [class*="header-side"] [class*="imageContainer"] { border-radius: 10px !important; }
+main [aria-label="Search results"] > div > [class*="legacy-box--naked"] { border-radius: 10px; }
+main [aria-label="Search results"] > div > [class*="legacy-box--naked"] [class*="header-side"] img,
+main [aria-label="Search results"] > div > [class*="legacy-box--naked"] [class*="header-side"] [class*="imageContainer"] { border-radius: 6px !important; }
+main [aria-label="Search results"] [data-encore-id="listRowTitle"] { font-size: 15px; font-weight: 600; }
+main [aria-label="Search results"] [data-encore-id="listRowSubtitle"] { font-size: 13px; color: rgb(255 255 255 / 55%); }
+main [aria-label="Search results"] > div + div > [class*="legacy-box--naked"]::after { content: ""; display: block; position: absolute; left: 88px; right: 16px; top: -1px; height: 1px; background: rgb(255 255 255 / 8%); }
+main [aria-label="Search results"] > div > [class*="legacy-box"] { position: relative; --box-hover-background-color: rgb(255 255 255 / 8%) !important; }
+/* filter chips (All / Songs / Artists …) */
+main .search-searchCategory-categoryGrid [role="checkbox"], main .search-searchCategory-categoryGrid button { border-radius: 999px; }

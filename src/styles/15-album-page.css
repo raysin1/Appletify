@@ -1,0 +1,315 @@
+/* =============================================================================
+   15. ALBUM PAGE
+   ============================================================================= */
+
+/* Margins and padding */
+:is([data-testid="album-page"],[data-testid="playlist-page"]) {
+    padding: 10px 35px 90px 35px;
+}
+
+[data-testid="album-page"] > div > div > div.contentSpacing { padding-top: 20px; }
+
+/* Header height and image size */
+:is([data-testid="album-page"], [data-testid="playlist-page"]) div.main-entityHeader-container { min-height: 450px !important; }
+:is([data-testid="album-page"], .playlist-playlist-playlist, [data-testid="playlist-page"]) .main-entityHeader-imageContainer { width: 370px; height: 370px; }
+
+/* Image */
+:is([data-testid="playlist-page"], [data-testid="album-page"]) .main-entityHeader-image, .main-editImage-buttonContainer [data-testid="edit-image-button"]{
+    border-radius: 14px;
+    outline: .5px solid #ffffff08;
+}
+/*box shadow*/
+.main-entityHeader-shadow{
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .3);
+}
+
+[data-testid="playlist-page"] .profile-editImage-editImageButtonContainer{display:none;}
+
+
+[data-testid="album-page"] .main-entityHeader-container.main-entityHeader-nonWrapped > div.contentSpacing > button > div > img { box-shadow: none; }
+
+/* Album page content spacing container */
+.main-entityHeader-container > .contentSpacing { margin-left: 0; }
+
+/* Header text area */
+:is([data-testid="playlist-page"], [data-testid="album-page"]) .main-entityHeader-headerText { margin-left: 25px; height: 237px; }
+
+/* Album header text height */
+[data-testid="album-page"] .main-entityHeader-container > .contentSpacing .main-entityHeader-headerText { height: 240px; }
+
+/* Title size */
+:is([data-testid="playlist-page"], [data-testid="album-page"]) :is(.main-entityHeader-titleInner, .main-entityHeader-title) > h1 { 
+    font-size: 2.1rem !important; font-weight: 600;}
+
+/* Creator link (artist name) */
+:is([data-testid="album-page"], [data-testid="playlist-page"]) [data-testid="creator-link"], [data-testid="playlist-page"] button.main-entityHeader-creatorWrapper { 
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--appletify-accent, #ff375f);}
+
+
+
+
+/* "Various Artists" handling */
+[data-testid="album-page"] .main-entityHeader-metaData .main-entityHeader-creatorWrapper [title="Various Artists"] ~ [data-encore-id="text"] { font-size: 28px; font-weight: 400; color: var(--appletify-accent, #ff375f); }
+
+/* ⚠️ DYNAMIC CLASS — data-separator elements */
+[data-testid="album-page"] .main-entityHeader-headerText .e-10860-text[data-separator="true"] { display: none; }
+
+/* Metadata styling */
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-entityHeader-metaData { margin-top: 0; }
+
+[data-testid="album-page"] .main-entityHeader-metaData > [data-encore-id="text"], [data-testid="playlist-page"] .main-entityHeader-metaData > div.main-entityHeader-metaDataText {
+    font-size: 19px;
+    font-weight: 600;
+    margin-left: 3px;
+    color: rgba(255, 255, 255, 0.64);
+    flex-basis: 100%;
+}
+
+[data-testid="playlist-page"] .main-entityHeader-metaDataText:not(:first-child)::before{
+    content:unset;
+}
+
+[data-testid="album-page"] .main-entityHeader-metaData [data-separator="true"]:last-of-type { display: none; }
+
+/* Artwork glow */
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .glow-wrap::before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 4px;
+    right: 4px;
+    bottom: -7px;
+    background-image: var(--glow-img);
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px) saturate(2);
+    opacity: 30%;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+
+
+/* Play button bar position */
+[data-testid="album-page"] > div:nth-child(3) { top: -84px; left: 347px; width: auto; min-width: 340px; }
+
+/* Action bar play button */
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBar .main-playButton-PlayButton > button > span {
+    border-radius: 30px;
+    width: 130px;
+    height: 40px;
+    gap: 4px;
+    color: white;
+    background-color: #2f2f2f;
+    box-shadow: inset 0 1px 1px rgb(255 255 255 / 10%), inset 0 -1px 1px rgb(255 255 255 / 10%);
+}
+
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBar .main-playButton-PlayButton > button > span::after {
+    content: var(--appletify-i18n-play, "Play");
+    font-size: 18px;
+    color: var(--appletify-accent, #ff375f);
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-playButton-PlayButton > button > span > span > svg{
+    scale: 85%;
+    fill: var(--appletify-accent, #ff375f);
+}
+
+
+/*Reorder action bar buttons*/
+/* Order: Play, Shuffle, more-options, search/sort. Shuffle is identified by its
+   stock icon path (it has no stable class in Spotify ≥1.2.9x). */
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBarRow > :is(.main-playButton-PlayButton, .main-actionBar-ActionBarPlayButtonContainer){order:1;margin-right: 15px; }
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBarRow > button:has(path[d^="M13.151"], path[d^="M18.788"]){order:2;}
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBarRow > button[aria-haspopup="menu"]{order:3;}
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBarRow > :is(.playlist-playlist-searchBoxContainer, :has(.x-filterBox-expandButton)){order:4;}
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBarRow > *{order:5;}
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBarRow { gap: 14px; }
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBarRow .playlist-playlist-searchBoxContainerFlexCenter { gap: 10px; }
+
+
+[data-testid="playlist-page"] .playlist-playlist-searchBoxContainer { zoom: 1; }
+[data-testid="playlist-page"] :is(.x-sortBox-sortDropdown, .x-filterBox-filterInputContainer){
+
+    border-radius: 20px;
+    box-shadow: inset 0 1px 1px rgb(255 255 255 / 10%), inset 0 -1px 1px rgb(255 255 255 / 10%);
+    background-color: #2f2f2f;
+}
+
+
+/*Hide album page display dropdown  button*/
+[data-testid="album-page"] .main-actionBar-ActionBarRow > div:last-of-type{display:none;}
+
+/* Action bar other buttons */
+[data-testid="album-page"] .main-actionBar-ActionBarRow .Button-large-large-buttonTertiary-iconOnly-condensed-useBrowserDefaultFocusStyle { color: white; }
+
+[data-testid="album-page"] .main-actionBar-ActionBarRow .Button-large-large-buttonTertiary-iconOnly-condensed-useBrowserDefaultFocusStyle::after {
+    content: "";
+    background-color: #ffffff17;
+    width: 140%;
+    height: 80%;
+    position: absolute;
+    border-radius: 100px;
+}
+
+/*Action bar three dots*/
+:is([data-testid="album-page"], [data-testid="playlist-page"])
+.main-actionBar-ActionBarRow > button[aria-haspopup="menu"] svg {
+    fill: var(--appletify-accent, #ff375f);stroke-width: 1.5px; stroke: var(--appletify-accent, #ff375f);}
+:is([data-testid="album-page"], [data-testid="playlist-page"])
+.main-actionBar-ActionBarRow > button[aria-haspopup="menu"] {
+    background: #2f2f2f;
+    border-radius: 100px;
+    padding: 4px;
+    box-shadow: inset 0 1px 1px rgb(255 255 255 / 10%), inset 0 -1px 1px rgb(255 255 255 / 10%);
+}
+
+
+/* ⚠️ DYNAMIC CLASS — .mpdgC9UTkN5_fMm1pFiz = action bar position wrapper */
+[data-testid="playlist-page"] .playlist-playlist-playlistContent .mpdgC9UTkN5_fMm1pFiz { position: absolute; left: 490px; right: 60px; top: 394px; }
+
+[data-testid="playlist-page"] > .mpdgC9UTkN5_fMm1pFiz { left: 490px; right: 60px; top: 402px; position: absolute; }
+
+
+.main-actionBar-ActionBarRow > button:has(path[d^="M13.151"], path[d^="M18.788"])::after { content: unset; }
+
+
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBarRow > button:has(path[d^="M13.151"]) svg > path:nth-child(2) { display: none; }
+
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBarRow > button:has(path[d^="M13.151"]) svg > path {
+    d: path("M5.478515625,10.419921875 C5.478515625,9.58203125 6.080078125,8.98046875 6.91796875,8.98046875 L11.64453125,8.98046875 C14.888671875,8.98046875 16.80078125,9.947265625 19.142578125,12.71875 L23.9765625,18.4765625 L28.83203125,12.697265625 C31.173828125,9.904296875 33.0859375,8.958984375 36.330078125,8.958984375 L39.208984375,8.958984375 L39.208984375,3.91015625 C39.208984375,3.115234375 39.74609375,2.599609375 40.5625,2.599609375 C40.94921875,2.599609375 41.25,2.70703125 41.59375,2.986328125 L49.328125,8.830078125 C50.251953125,9.5390625 50.208984375,10.849609375 49.328125,11.515625 L41.59375,17.337890625 C41.25,17.6171875 40.94921875,17.724609375 40.5625,17.724609375 C39.74609375,17.724609375 39.208984375,17.208984375 39.208984375,16.4140625 L39.208984375,11.81640625 L36.158203125,11.81640625 C34.03125,11.81640625 32.634765625,12.6328125 30.701171875,14.931640625 L25.845703125,20.7109375 L30.701171875,26.490234375 C32.634765625,28.810546875 34.03125,29.60546875 36.158203125,29.60546875 L39.208984375,29.60546875 L39.208984375,24.986328125 C39.208984375,24.19140625 39.74609375,23.67578125 40.5625,23.67578125 C40.94921875,23.67578125 41.25,23.783203125 41.59375,24.0625 L49.328125,29.90625 C50.251953125,30.63671875 50.208984375,31.947265625 49.328125,32.591796875 L41.59375,38.4140625 C41.25,38.693359375 40.94921875,38.80078125 40.5625,38.80078125 C39.74609375,38.80078125 39.208984375,38.28515625 39.208984375,37.490234375 L39.208984375,32.484375 L36.330078125,32.484375 C33.0859375,32.484375 31.173828125,31.517578125 28.83203125,28.724609375 L23.9765625,22.9453125 L19.142578125,28.703125 C16.80078125,31.49609375 14.888671875,32.44140625 11.64453125,32.44140625 L6.91796875,32.44140625 C6.080078125,32.44140625 5.478515625,31.83984375 5.478515625,31.001953125 C5.478515625,30.228515625 6.123046875,29.5625 6.91796875,29.5625 L11.81640625,29.5625 C13.921875,29.5625 15.33984375,28.767578125 17.2734375,26.46875 L22.107421875,20.7109375 L17.2734375,14.953125 C15.33984375,12.654296875 13.921875,11.859375 11.81640625,11.859375 L6.91796875,11.859375 C6.123046875,11.859375 5.478515625,11.193359375 5.478515625,10.419921875 Z");
+    scale: 0.4;
+    transform: translate(0px, 10px);
+}
+
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBarRow > button:has(path[d^="M13.151"]) > span { align-items: center; }
+
+/* Tracklist area */
+[data-testid="album-page"] > div:nth-child(4) { transform: translateY(-55px) translateX(10px); }
+
+/* Tracklist wrapper */
+[data-testid="album-page"] .main-trackList-trackListContainer { zoom: 1.1; }
+
+/* Tracklist text styling */
+[data-testid="album-page"] .main-trackList-rowMainContent div {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: SF Pro;
+    letter-spacing: 0.25px;
+    grid-area: title;
+}
+
+.main-trackList-rowMainContent > span.standalone-ellipsis-one-line > span > a{
+    font-size: 17px;
+    font-weight: 400;
+    color:rgba(255, 255, 255, 0.44);
+}
+
+
+/* Row lines between song items (MAKE THE SAME AS ARTIST PAGE PROBABLY FOR CONSISTENCY) */
+[data-testid="album-page"] [role="row"] > .main-trackList-trackListRowGrid::after {
+    content: "";
+    position: absolute;
+    left: 43px;
+    right: 0px;
+    height: 2px;
+    background: white;
+    bottom: -2px;
+    opacity: 5%;
+}
+
+[data-testid="playlist-page"] [role="row"] > .main-trackList-trackListRowGrid::after {
+    content: "";
+    position: absolute;
+    left: 70px;
+    right: 12px;
+    height: 2px;
+    background: white;
+    bottom: -2px;
+    opacity: 5%;
+}
+
+/* Index column opacity */
+[data-testid="album-page"] .main-rootlist-wrapper .in-trackList-rowSectionIndex { opacity: 0 !important; }
+
+
+/* Copyright text */
+[data-testid="album-page"] > div:nth-child(4) > div:nth-child(2) > div > div > p:nth-child(2){
+    display:none;
+}
+
+[data-testid="album-page"] > div:nth-child(4) > div:nth-child(2){
+    margin-top: 45px;
+}
+
+[data-testid="album-page"] > div:nth-child(4) > div:nth-child(2) > div > p, [data-testid="album-page"] > div:nth-child(4) > div:nth-child(2) > div > div > p:nth-child(1) {
+    font-size: 16px;
+    color:hsla(0,0%,100%,.64);
+}
+
+
+
+
+/* Action bar background width 0 */
+[data-testid="album-page"] .main-actionBarBackground-background { width: 0; }
+
+/* Things to HIDE on album page */
+[data-testid="album-page"] .main-trackList-trackListHeader,
+[data-testid="album-page"] .yLmA5f7x65en2MdKbIhX,
+.x-downloadButton-DownloadButton,
+[data-testid="album-page"] figure.main-image-image,
+[data-testid="album-page"] .main-entityHeader-headerText > div > span:nth-last-child(1),
+[data-testid="album-page"] .encore-text.encore-text-body-small.main-entityHeader-headerText > span[data-encore-id="text"]:first-child,
+[data-testid="album-page"] .DmrVJc9vWCbjU_DuRvfe > div > div > p:nth-child(2),
+[data-testid="album-page"] [data-encore-id="popoverTrigger"],
+[data-testid="album-page"] .main-entityHeader-headerText > span[data-encore-id="text"]:first-child,
+[data-testid="album-page"] .main-entityHeader-backgroundColor { pointer-events: none; }
+
+/*Hide album subtitle separators*/
+[data-testid="album-page"] .main-entityHeader-headerText .main-entityHeader-divider {
+    display:none;
+}
+/* Download button — localized aria-label, generated in theme.js
+   (.x-downloadButton-DownloadButton is hidden above as a stable fallback) */
+
+
+/* Consolidate: hide these (library / merch / explore / like buttons are
+   matched on localized aria-labels and generated in theme.js) */
+[data-testid="album-page"] .main-entityHeader-headerText > span[data-encore-id="text"]:first-child,
+[data-testid="album-page"] .main-trackList-trackListHeader,
+[data-testid="album-page"] .yLmA5f7x65en2MdKbIhX,
+[data-testid="album-page"] figure.main-image-image,
+[data-testid="album-page"] .main-entityHeader-headerText > div > span:nth-last-child(1),
+[data-testid="album-page"] .encore-text.encore-text-body-small.main-entityHeader-headerText > span[data-encore-id="text"]:first-child,
+[data-testid="album-page"] .DmrVJc9vWCbjU_DuRvfe > div > div > p:nth-child(2),
+[data-testid="album-page"] [data-encore-id="popoverTrigger"],
+[data-testid="album-page"] .main-entityHeader-backgroundColor { display: none; }
+
+
+
+
+
+/* ⚠️ DYNAMIC CLASS — .eJbkaBhDfq9NfV5_QS8V = album info section */
+[data-testid="album-page"] .eJbkaBhDfq9NfV5_QS8V { display: none; }
+
+/* ⚠️ DYNAMIC CLASS — .oi4PTxu0hTut9JM0goui = album info dividers */
+[data-testid="album-page"] .oi4PTxu0hTut9JM0goui { display: none; }
+
+/* Play count column is kept (see §23: Apple-style grey counter before the duration) */
+
+/* ⚠️ DYNAMIC CLASS — .nnVL0g1_0T2_zxstl_Wr = display dropdown */
+[data-testid="album-page"] .nnVL0g1_0T2_zxstl_Wr { display: none; }
+
+/* Artist subtitle link hide */
+[data-testid="album-page"] .main-entityHeader-metaData .main-entityHeader-creatorWrapper figure { display: none; }
+
+
+/* The cover stays clickable: Spotify opens its "View album artwork" viewer (640px art) */
+[data-testid="album-page"] .main-entityHeader-imageContainer { pointer-events: auto; cursor: zoom-in; }
+
+

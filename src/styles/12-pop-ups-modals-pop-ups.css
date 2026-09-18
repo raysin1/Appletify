@@ -1,0 +1,143 @@
+/* =============================================================================
+   12. POP-UPS & MODALS (POP UPS)
+   ============================================================================= */
+
+/* Notistack (toast) nudge up */
+.notistack-CollapseWrapper { margin-top: -200px; }
+
+.e-10860-box--elevated {Background-color: rgb(61 61 61 / 92%);    border-radius: 20px;}
+
+.encore-light-theme{--background-base:rgb(61 61 61 / 92%); }
+
+/* Try to fix liked songs image in popup */
+.notistack-CollapseWrapper .x-entityImage-imageContainer:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"])::after {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+/*Playlist edit popup*/
+.main-playlistEditDetailsModal-container{
+    border: 2px solid #ffffff1c;
+    zoom: 1.2;
+    background-color: #282828c9;
+    backdrop-filter: blur(16px) saturate(2.2);
+    border-radius:20px;
+    min-height: unset;
+}
+
+.main-playlistEditDetailsModal-content{
+    padding: 0 24px 4px; grid-gap: 28px;
+}
+
+
+.GenericModal__overlay {background-color: rgba(0, 0, 0, .2);}
+
+/* Translucent elevated box (toasts, tooltips) */
+.e-91000-box--elevated, .e-10860-box--elevated {
+    background-color: #525050cf;
+    backdrop-filter: blur(28px) saturate(200%);
+    border-radius: 13px;
+    zoom: 1.1;
+    margin-bottom: 10px;
+    border: 0.5px solid hsla(0, 0%, 100%, .1);
+}
+
+:is(.e-91000-box--elevated, .e-10860-box--elevated) span { color: white; }
+
+/* Track credits modal */
+.main-trackCreditsModal-container {
+    background-color: #3d3d3db0;
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
+    zoom: 1.1;
+    border: 2px solid hsla(0, 0%, 100%, .1);
+}
+
+.main-trackCreditsModal-mainSection {
+    overflow-y: unset;
+    padding: 20px 0 0 30px;
+}
+
+.main-trackCreditsModal-header { padding: 18px 21px 12px; }
+.main-trackCreditsModal-header .encore-text-title-medium .encore-text-title-medium { font-weight: 500; }
+.main-trackCreditsModal-header .encore-text-body-medium-bold { font-weight: 600; }
+.main-trackCreditsModal-header .encore-text-body-small-bold { font-weight: 400; }
+
+/* Confirm dialog */
+.main-confirmDialog-container {
+    background-color: #3d3d3db0;
+    backdrop-filter: blur(30px);
+    border-radius: 40px;
+    border: 2px solid hsla(0, 0%, 100%, .1);
+    padding: 32px 16px 28px 32px;
+}
+
+.main-confirmDialog-buttonContainer { justify-content: space-around; }
+
+/* Playlist edit modal — hide disclaimer */
+.main-playlistEditDetailsModal-disclaimer { display: none; }
+
+/* Marketplace snippet modal */
+.GenericModal[aria-label="View Snippet"] { border-radius: 20px; }
+
+
+/* Pop-up search modal */
+
+[role="dialog"]:has([data-testid="search-modal-input"]) {
+    box-shadow:  0 60px 120px rgba(0, 0, 0, .55),
+                 0 30px 60px rgba(0, 0, 0, .4),
+                 inset 0 1px 1px rgba(255, 255, 255, .08);
+    backdrop-filter: blur(45px);
+    background: #2929297d;
+    border-radius:20px;
+    zoom: 105%;
+}
+
+[role="dialog"]:has([data-testid="search-modal-input"]):not(:has([data-testid="search-modal-results"])), [role="dialog"]:has([data-testid="search-modal-input"]):not(:has([data-testid="search-modal-results"])) > div > div{
+    border-radius:36px;
+}
+
+
+[role="dialog"]:has([data-testid="search-modal-input"]) > div {height:unset; max-height: 800px;}
+
+
+/*Search area*/
+[role="dialog"]:has([data-testid="search-modal-input"]) div:has(> [data-testid="search-modal-input"]) {background-color: unset; padding: 0; }
+
+
+[role="dialog"]:has([data-testid="search-modal-input"]) > div > div{
+    background-color: rgb(82 82 86 / 33%);
+    border: 1px solid rgba(255, 255, 255, .12);
+}
+
+[role="dialog"]:has([data-testid="search-modal-input"]) > div > div:nth-child(1){
+    padding: 7px;
+}
+
+
+/* Results list */
+[id="search-modal-listbox"] {
+    scrollbar-width: none;
+    padding: 3px;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+}
+
+[id="search-modal-listbox"] > a { border-radius: 13px; }
+
+
+
+[data-testid="search-modal-input"] { color: white !important; }
+
+/* Toasts ("Added to playlist" etc.) are notistack snackbars on Spotify's white
+   elevated box; the theme's global white text made them unreadable — dark text */
+.notistack-Snackbar .e-10860-legacy-box--elevated,
+.notistack-Snackbar .e-10860-legacy-box--elevated *,
+.notistack-Snackbar [data-encore-id="text"] { color: #141414 !important; }
+.notistack-Snackbar .e-10860-legacy-box--elevated { background-color: rgba(255, 255, 255, 0.96) !important; border-radius: 12px; }
+
+/* --- macOS-style dialogs ------------------------------------------------- */
+.GenericModal { border-radius: 14px !important; background-color: rgb(44 44 46 / 92%) !important; backdrop-filter: blur(40px) saturate(180%); box-shadow: 0 0 0 0.5px rgb(0 0 0 / 50%), inset 0 0 0 0.5px rgb(255 255 255 / 12%), 0 24px 60px rgb(0 0 0 / 45%) !important; }
+.GenericModal__overlay { background-color: rgba(0, 0, 0, .35) !important; backdrop-filter: blur(2px); }

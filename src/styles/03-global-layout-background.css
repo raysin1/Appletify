@@ -1,0 +1,236 @@
+/* =============================================================================
+   3. GLOBAL LAYOUT & BACKGROUND
+   ============================================================================= */
+
+html, body, .Root__top-container, .Root__globalNav, .Root__nav-bar {
+    background: rgba(38, 38, 38, 0);
+}
+
+.Root__top-container {
+    gap: 0;
+    padding: 0;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+}
+
+.Root__main-view {
+    border-radius: 0;
+    border-top-left-radius: 0;
+}
+
+/* Left sidebar background.
+   Translucent dark tint instead of full transparency: with Mica/vibrancy the
+   blur still shows through, and without it (plain macOS, Windows without the
+   Mica mod) the sidebar no longer renders as a white sheet (#10, #14, #15, #23) */
+#Desktop_LeftSidebar_Id {
+    background: rgb(28 28 30 / 85%);
+    transition: width 0.25s ease;
+    max-width: 310px;
+}
+
+/* Global nav row: allow wrapping and never squeeze out custom-app buttons
+   (Marketplace lives in .custom-navlinks-scrollable_container) */
+#Desktop_LeftSidebar_Id #global-nav-bar { flex-wrap: wrap; height: auto; row-gap: 2px; }
+#Desktop_LeftSidebar_Id .main-globalNav-historyButtonsWrapper { flex-wrap: wrap; height: auto; row-gap: 2px; }
+#Desktop_LeftSidebar_Id #global-nav-bar .custom-navlinks-scrollable_container { flex-shrink: 0; }
+/* Collapsed rail order: arrows → profile avatar → Marketplace → (search, Apple).
+   The nav containers are flattened with display:contents so the avatar
+   (contentRight) and the Marketplace button (custom-navlinks) become siblings
+   in the wrapping #global-nav-bar flex row and can be re-ordered. */
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-historyButtonsContainer,
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-historyButtonsWrapper { display: contents; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed #global-nav-bar { display: flex !important; flex-direction: column !important; flex-wrap: nowrap !important; align-items: center !important; justify-content: flex-start; row-gap: 6px; height: auto !important; padding-top: 10px; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-historyButtons { order: 1; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-contentRight { order: 2; margin-top: 4px; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .custom-navlinks-scrollable_container { order: 3; }
+/* Marketplace button removed from the rail — it lives in the profile menu (theme.js) */
+#Desktop_LeftSidebar_Id .custom-navlinks-scrollable_container { display: none !important; }
+/* Marketplace icon in the accent colour, like search and the Apple logo */
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .custom-navlinks-scrollable_container svg { fill: var(--appletify-accent, #ff375f) !important; color: var(--appletify-accent, #ff375f) !important; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .custom-navlinks-scrollable_container :is(a, button) { color: var(--appletify-accent, #ff375f) !important; }
+/* Collapsed rail: Marketplace (custom app) button centered like the other icons */
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .custom-navlinks-scrollable_container { flex: 0 0 auto; width: 100%; height: auto; display: flex; justify-content: center; margin: 0; padding: 0; box-sizing: border-box; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .custom-navlinks-scrollable_container .spicetify-sc-contentArea { height: auto; }
+
+/* Collapsed sidebar (class toggled by theme.js): the 72px rail keeps nav
+   arrows, custom-app buttons (Marketplace) and the profile avatar; only the
+   noisy extras (extension status pill, What's New / friend activity) hide */
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .SLT_ConnectionIndicator { display: none; }
+   Keep the container, hide everything in it except the avatar (the only button with a <figure>). */
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-contentRight .main-actionButtons { display: flex !important; justify-content: center; width: 100%; margin: 0 !important; padding: 0 !important; gap: 0 !important; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-contentRight .main-actionButtons > :not(:has(figure)) { display: none !important; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-contentRight .main-actionButtons > button:has(figure) { margin: 0 !important; width: 42px !important; height: 42px !important; padding: 0 !important; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-contentRight .main-actionButtons > button:has(figure) figure { width: 28px !important; height: 28px !important; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-contentRight { min-width: 0; width: 100%; height: auto; flex: 0 0 auto; justify-content: center; margin-top: 14px; }
+/* Profile avatar centered in the rail, in line with the search / Apple icons */
+/* Windows: Spotify gives .main-globalNav-contentRight a negative inline-end margin (room for the window controls)
+   and may add extra buttons (Install app, What's new, Friend activity) next to the avatar - both push the avatar
+   off-centre in the rail. Neutralise them: no margins/padding, only the avatar (the one button with a <figure>) stays. */
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-contentRight { margin: 14px 0 0 !important; padding: 0 !important; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-contentRight > :not(.main-actionButtons) { display: none !important; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchContainer { flex-direction: column; align-items: center; gap: 6px; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchSection input,
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchSection input::placeholder { color: transparent; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchSection svg { fill: rgba(255, 255, 255, 0.7); color: rgba(255, 255, 255, 0.7); }
+/* Collapsed rail: the search input does not fit (it overflowed to x < 0), so
+   only its leading search button is shown, centered, as a plain icon button */
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchContainer { width: 100%; box-sizing: border-box; padding-left: 0; padding-right: 0; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchInputSection { width: 100% !important; min-width: 0; margin: 0 0 10px; height: auto; order: 1; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchInputContainer { width: 100% !important; min-width: 0; height: auto; padding: 0; margin: 0; background: transparent !important; box-shadow: none !important; display: flex; justify-content: center; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchInputWrapper,
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchInputContainer [class*="form-input-icon__icon--trailing"] { display: none; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchInputContainer [class*="form-input-icon__icon--leading"] { position: static !important; transform: none !important; display: flex; justify-content: center; width: auto; height: auto; inset: auto; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchInputContainer [class*="form-input-icon__icon--leading"] button { display: flex; width: 41px; height: 41px; align-items: center; justify-content: center; }
+/* Collapsed rail, Apple Music style: accent search icon on top, then an Apple
+   logo in place of the Home icon (the button still navigates Home), and no
+   "Open Your Library" button (drag the sidebar edge to expand it) */
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchInputContainer [class*="form-input-icon__icon--leading"] svg { fill: var(--appletify-accent, #ff375f); color: var(--appletify-accent, #ff375f); }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchContainer > button { order: 2; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchContainer > button svg { fill: var(--appletify-accent, #ff375f); color: var(--appletify-accent, #ff375f); }
+/* (setting "appleLogo": html.appletify-no-appleLogo keeps the stock Home icon) */
+html:not(.appletify-no-appleLogo) #Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchContainer > button svg path {
+    d: path("M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701");
+}
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-yourLibraryX-collapseButton { display: none; }
+
+/* Left sidebar frosted glass overlay
+#Desktop_LeftSidebar_Id::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    box-shadow: inset 0 0 0 100vmax rgb(28 28 28 / 70%);
+    z-index: -1;
+}*/
+
+/* Right sidebar */
+.Root__right-sidebar {
+    -webkit-app-region: no-drag;
+}
+
+/* (Now Playing View is styled in module 27 and no longer hidden) */
+
+/* Nav bar border */
+.main-navBar-mainNav {
+    border-right: 2px solid hsl(0deg 0% 100% / 8%);
+}
+
+/* ⚠️ DYNAMIC CLASS — right sidebar left border */
+.oXO9_yYs6JyOwkBn8E4a {
+    border-left: 2px solid hsl(0deg 0% 100% / 8%);
+}
+
+.main-yourLibraryX-entryPoints,
+.main-yourLibraryX-libraryContainer {
+    background-color: transparent !important;
+}
+
+/* Layout resize bar hidden */
+.LayoutResizer__resize-bar { opacity: 0 !important; }
+
+/* Global nav bar zoom */
+[id="global-nav-bar"] {
+    zoom: 0.88;
+    margin-top: 4px;
+}
+
+/* Top bar hidden (but shown in marketplace) */
+.main-topBar-container { display: none; }
+
+.main-topBar-container:has(.marketplace-tabBar.marketplace-tabBar-nav) {
+    display: block;
+    height: 80px;
+}
+
+.main-topBar-background {
+    height: 150%;
+    background: linear-gradient(
+        to bottom,
+        rgb(10, 10, 10) 0%,
+        rgba(10, 10, 10, 0.8) 30%,
+        rgba(10, 10, 10, 0.4) 60%,
+        transparent 100%
+    );
+}
+
+/* Connect bar hidden */
+.main-connectBar-connectBar { display: none; }
+
+/* PiP toggle hidden */
+[data-testid="pip-toggle-button"] { display: none; }
+
+/* Notifications + friend activity */
+/* ⚠️ DYNAMIC CLASS — .YaU17q8G6eTc2eoKRwnL = action buttons row */
+.YaU17q8G6eTc2eoKRwnL.main-actionButtons { display: none; }
+
+/* ⚠️ DYNAMIC CLASS — .LedDBMWCxYhMD20KtPJo = action buttons row (alt) */
+.LedDBMWCxYhMD20KtPJo.main-actionButtons { display: none; }
+
+
+
+/* Spicetify update button */
+.main-globalNav-historyButtons [aria-label="Update Spicetify"] { margin-left: 5px; }
+.main-globalNav-historyButtons [aria-label="Update Spicetify"] > svg {
+    scale: 1.4;
+    transform: translateY(-2px);
+}
+
+/* Settings zoom */
+.x-settings-container { zoom: 1.2; }
+
+/* --- Collapsed rail: search field pops out next to the rail ---------------
+   theme.js toggles .apple-search-open on the sidebar and sets
+   --apple-search-top / --apple-search-zoom. The section keeps its slot in the
+   rail (so the Home button below does not move); the form inside becomes a
+   floating field (icon + input + clear button) starting at the icon. */
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed.apple-search-open .main-globalNav-searchInputSection { position: relative; height: 41px; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed.apple-search-open .main-globalNav-searchInputContainer {
+    position: fixed; left: calc(12px / var(--apple-search-zoom, 1)); top: var(--apple-search-top, 150px);
+    width: calc(360px / var(--apple-search-zoom, 1)) !important; height: 53px; z-index: 1000;
+    display: flex; align-items: center; justify-content: flex-start; gap: 4px;
+    margin: 0; padding: 6px; box-sizing: border-box;
+    background: rgb(44 44 46 / 96%) !important;
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: 14px;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 45%) !important;
+    backdrop-filter: blur(20px);
+}
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed.apple-search-open .main-globalNav-searchInputContainer [class*="form-input-icon__icon--leading"] { flex: 0 0 auto; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed.apple-search-open .main-globalNav-searchInputContainer [class*="form-input-icon__icon--leading"] button { width: 41px; height: 41px; background: transparent !important; outline: none !important; box-shadow: none !important; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed.apple-search-open .main-globalNav-searchInputWrapper { display: block; flex: 1 1 auto; min-width: 0; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed.apple-search-open .main-globalNav-searchInputContainer [class*="form-input-icon__icon--trailing"] { display: flex; position: static; flex: 0 0 auto; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed.apple-search-open .main-globalNav-searchSection input {
+    color: rgba(255, 255, 255, 0.92) !important; background: transparent !important;
+    border: 0 !important; box-shadow: none !important; outline: none !important; padding: 0 8px !important; height: 41px; font-size: 15px;
+}
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed.apple-search-open .main-globalNav-searchSection input:focus,
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed.apple-search-open .main-globalNav-searchSection input:focus-visible { outline: none !important; box-shadow: none !important; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed.apple-search-open .main-globalNav-searchSection input::placeholder { color: rgba(255, 255, 255, 0.45) !important; }
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed.apple-search-open .main-globalNav-searchInputTextWrapper { display: none; }
+/* No transitions inside the search block in the collapsed rail: Spotify animates
+   the form width / input shadow, which looked like a stray animation when the
+   field pops out */
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchSection,
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed .main-globalNav-searchSection * { transition: none !important; animation: none !important; }
+
+/* Guard: the app must never scroll horizontally (an overflowing element used
+   to shift the whole UI left by a few px) */
+html, body, #main, .Root { overflow-x: clip !important; }
+/* the grid is sized to the viewport; nothing may make it wider */
+.Root__top-container { width: 100vw !important; max-width: 100vw; box-sizing: border-box; overflow-x: clip; }
+/* Search suggestions dropdown (#search-dropdown) is positioned relative to the
+   form: align both edges with the floating field */
+#Desktop_LeftSidebar_Id.apple-sidebar-collapsed.apple-search-open #search-dropdown {
+    left: 0 !important; right: 0 !important; width: auto !important; max-width: none !important;
+    top: calc(100% + 6px) !important;
+    border-radius: 14px; overflow: hidden;
+    background: rgb(44 44 46 / 96%) !important;
+    border: 1px solid rgb(255 255 255 / 12%);
+    box-shadow: 0 12px 40px rgb(0 0 0 / 45%);
+    backdrop-filter: blur(20px);
+}
+
+/* ---- library rail: the accent highlight of the selected item is rounded like the cover inside it ---- */
+.main-yourLibraryX-libraryRootlist [role="row"][aria-selected="true"] > div[role="gridcell"] { border-radius: 12px; overflow: hidden; }
+/* square 64px cell in the collapsed rail: 48px cover + 8px on every side (the default cell is 62px wide, 6px on the right) */
+.Root__nav-bar.apple-sidebar-collapsed .main-yourLibraryX-libraryRootlist [role="row"] > div[role="gridcell"] { width: 64px !important; min-width: 64px !important; box-sizing: border-box; }

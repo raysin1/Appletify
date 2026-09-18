@@ -1,0 +1,41 @@
+/* =============================================================================
+   22. LIKED SONGS CUSTOM THUMBNAIL
+   ============================================================================= */
+
+/* Custom image for Liked Songs in entity header and grid */
+[data-testid="playlist-image"] .main-entityHeader-image,
+.GOcsybnoHYyJGQGDRuwj > div {
+    &:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"]) {
+        &::after {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            inset: 0;
+            background: transparent;
+            border-radius: 13px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("https://github.com/raysin1/Appletify/blob/main/screenshots/liked%20songs.jpg?raw=true");
+        }
+    }
+}
+
+/* Custom image for Liked Songs in small entity image containers */
+.x-entityImage-imageContainer, .main-cardImage-imageWrapper > div {
+    &:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"]) {
+        &::after {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            width: 48px;
+            height: 48px;
+            background: transparent;
+            border-radius: 4px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-image: url("https://github.com/raysin1/Appletify/blob/main/screenshots/liked%20songs.jpg?raw=true");
+        }
+    }
+}
+

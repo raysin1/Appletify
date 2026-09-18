@@ -1,0 +1,50 @@
+/* =============================================================================
+   10. CARDS & PLAY BUTTONS (grid cards everywhere)
+   ============================================================================= */
+
+/*Card image border radius and shadow*/
+[data-encore-id="card"]:not(:has([aria-labelledby^="card-title-spotify:artist:"])) :is(.main-cardImage-image, .main-cardImage-imageWrapper){
+  border-radius: 10px;
+  outline: .5px solid #ffffff08;
+}
+.main-cardImage-imageWrapper{
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .01), 0 2px 2px rgba(0, 0, 0, .01), 0 4px 4px rgba(0, 0, 0, .02), 0 8px 8px rgba(0, 0, 0, .03), 0 14px 14px rgba(0, 0, 0, .03);
+}
+
+/*Remove native item hover color*/
+.e-10860-box--interactive:after{
+    content:unset;
+}
+
+
+.e-10860-card__column:has(>[href^="/artist/"]){
+    align-items: center;
+}
+
+
+/*Set the button to the left and hide native effects*/
+.main-card-PlayButtonContainer {
+    inset-inline-start: 10px;
+    inset-inline-end: unset;
+    transform: none !important;-webkit-transform: none !important;transition: none !important;-webkit-transition: none !important;
+}
+
+.main-card-PlayButtonContainer button {zoom: 80%;}
+.main-card-PlayButtonContainer button span span svg {fill: rgba(255,255,255,.92);scale: 1.2;}
+
+.main-card-PlayButtonContainer button > span {
+    background-color: transparent !important;
+    backdrop-filter: blur(60px) !important;
+}
+
+.main-card-PlayButtonContainer .e-10860-button-primary:hover .e-10860-button-primary__inner { background-color: unset; }
+
+/* Round artist card images everywhere */
+[aria-labelledby*="card-title-spotify:artist"] .main-cardImage-imageWrapper { border-radius: 100%!important; }
+
+
+/* Card header text */
+[class*="_title-area_"] > span:first-child { font-weight: 600; zoom: 1.21; }
+[class*="_card-container_"] .main-cardHeader-link { margin-top: 30px; }
+
+

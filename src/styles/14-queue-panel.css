@@ -1,0 +1,147 @@
+/* =============================================================================
+   14. QUEUE PANEL
+   ============================================================================= */
+
+/* (queue section headers are handled in §24: "Now playing" section hidden, "Next from:" shown) */
+
+/* Queue hover background */
+[id="queue-panel"] * { --box-hover-background-color: rgba(255, 255, 255, .1) !important; }
+
+/* Hide "About recommendations" */
+/* ⚠️ DYNAMIC CLASS — .GKKQhbK3VJXjYYRV7bSk = recommendations info box */
+.GKKQhbK3VJXjYYRV7bSk { display: none; }
+
+/* Hide queue close button */
+.Root__right-sidebar [data-testid="PanelHeader_CloseButton"] { display: none; }
+
+/* Queue tab styling */
+[data-encore-id="tabList"] {
+    background: #0000002e;
+    border-radius: 13px;
+    border: 1px solid rgb(173 173 173 / 20%);
+    padding: 4px 6px;
+}
+
+.StyledTabItem-tab-tabItem-useBrowserDefaultFocusStyle { min-block-size: unset; }
+
+.StyledTabItem-tab-tabItem-useBrowserDefaultFocusStyle:hover {
+    background-color: unset !important;
+    background: transparent !important;
+}
+
+.StyledTabItem-tab-tabItem-useBrowserDefaultFocusStyle[aria-selected="true"] {
+    color: var(--text-base, #000000);
+    background: #8f8f8f;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.StyledTabItem-tab-tabItem-useBrowserDefaultFocusStyle[aria-selected="true"]::before { background-color: unset; }
+
+/* ⚠️ DYNAMIC CLASS — .ELBNLm3p55pH7fmnfdh7.McZwDDNGwU2p2w8adtDr = tab bar row */
+.ELBNLm3p55pH7fmnfdh7.McZwDDNGwU2p2w8adtDr {
+    flex-direction: column;
+    height: 42px;
+    min-height: 42px;
+    margin-top: 17px;
+}
+
+/* Rename queue tabs */
+
+/* (queue tab headings are styled in §24) */
+
+/* "Up Next" title override */
+/* ⚠️ DYNAMIC CLASS — .zWuImjrUI1hWtDOHcRZA = "Up next" title element */
+.zWuImjrUI1hWtDOHcRZA { font-size: 0; }
+.zWuImjrUI1hWtDOHcRZA::after { content: "Up Next"; font-size: 19px; }
+
+/* Queue "clear" button section */
+/* ⚠️ DYNAMIC CLASS — .fYX4XCQz81A_L1WZ88uc = queue header with clear button */
+.fYX4XCQz81A_L1WZ88uc {
+    padding-bottom: 11px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+    border-top: 1px solid hsla(0, 0%, 100%, .14);
+    padding-top: 10px;
+}
+
+/* ⚠️ DYNAMIC CLASS — .o2XKI0nqmrWC2u7UWUr7 = "Clear queue" button text */
+.o2XKI0nqmrWC2u7UWUr7 { font-size: 0; }
+.o2XKI0nqmrWC2u7UWUr7::after { content: "Clear"; font-size: 15px; font-weight: 400; margin-right: 5px; }
+
+/* ⚠️ DYNAMIC CLASS — .lO04cmltuHk9IMvEcI3E = queue panel content wrapper */
+.lO04cmltuHk9IMvEcI3E .fYX4XCQz81A_L1WZ88uc:not(:has(button)) { display: none; }
+.lO04cmltuHk9IMvEcI3E { gap: 0; }
+
+/* Queue row dividers */
+/* ⚠️ DYNAMIC CLASS — .ohuGeCup1xpyPDQGSNBZ = queue list container */
+.ohuGeCup1xpyPDQGSNBZ > li > div::after {
+    content: "";
+    left: 65px;
+    top: -1px;
+    height: 0.5px;
+    background: hsl(0deg 0% 100% / 10%);
+}
+
+/* "Recently played" hover — localized aria-label, generated in theme.js */
+
+/* Queue more options button */
+[id="queue-panel"] .Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle-condensed {
+    opacity: 1;
+    zoom: 1.2;
+    color: var(--appletify-accent, #ff375f);
+}
+
+/* Queue "more options" button — localized aria-label, generated in theme.js */
+
+/* ⚠️ DYNAMIC CLASS — .UrfDp0_mKGL9hkfh9g_R = queue row hover/active background */
+.UrfDp0_mKGL9hkfh9g_R::before { content: unset; }
+.UrfDp0_mKGL9hkfh9g_R { background-color: unset; }
+
+/* Queue row "Up Next" label in right sidebar */
+.Root__right-sidebar:not(:has([data-testid="NPV_Panel_OpenDiv"])) .W3E0IT3_STcazjTeyOJa { display: none; }
+
+/* ⚠️ DYNAMIC CLASS — .u842BXnznGeq38O3DUTQ, .NWVZ_rxlezZ8xTHlMg4Y = queue sections */
+.Root__right-sidebar:not(:has([data-testid="NPV_Panel_OpenDiv"])) .u842BXnznGeq38O3DUTQ .NWVZ_rxlezZ8xTHlMg4Y:nth-child(1) { display: none; }
+
+/* ⚠️ DYNAMIC CLASS — .LFdMliaHVgrpBcqNKHU3 = queue "Now Playing" section */
+.Root__right-sidebar:not(:has([data-testid="NPV_Panel_OpenDiv"])) .u842BXnznGeq38O3DUTQ .NWVZ_rxlezZ8xTHlMg4Y:nth-child(2) .LFdMliaHVgrpBcqNKHU3 { height: 50px; }
+
+.Root__right-sidebar:not(:has([data-testid="NPV_Panel_OpenDiv"])) .u842BXnznGeq38O3DUTQ .NWVZ_rxlezZ8xTHlMg4Y:nth-child(2) .LFdMliaHVgrpBcqNKHU3 h2,
+.Root__right-sidebar:not(:has([data-testid="NPV_Panel_OpenDiv"])) .u842BXnznGeq38O3DUTQ .NWVZ_rxlezZ8xTHlMg4Y:nth-child(2) .LFdMliaHVgrpBcqNKHU3 h2 a { color: transparent; font-size: 0; }
+
+.Root__right-sidebar:not(:has([data-testid="NPV_Panel_OpenDiv"])) .u842BXnznGeq38O3DUTQ .NWVZ_rxlezZ8xTHlMg4Y:nth-child(2) .LFdMliaHVgrpBcqNKHU3 h2::before {
+    content: "Up Next";
+    color: white;
+    display: block;
+    font-size: 22px;
+}
+
+/* ⚠️ DYNAMIC CLASS — .yvjS3DPkDIHgMUZxL972 = queue row divider */
+.Root__right-sidebar:not(:has([data-testid="NPV_Panel_OpenDiv"])) .yvjS3DPkDIHgMUZxL972::before {
+    border-top: 0.5px solid hsla(0, 0%, 100%, .1);
+    content: "";
+    inset-inline-end: 0;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    left: 65px;
+    right: 20px;
+}
+
+[id="queue-panel"] .yvjS3DPkDIHgMUZxL972 [data-encore-id="listRowTitle"] { width: 110%; }
+
+/* ⚠️ DYNAMIC CLASS — .ppjvheuqvs8mmcHwKkK5 = queue gap wrapper */
+.ppjvheuqvs8mmcHwKkK5 { gap: 0; }
+
+/* ⚠️ DYNAMIC CLASS — .SrfZ87xJMiJ7OYEB4Ziz = queue background element */
+.SrfZ87xJMiJ7OYEB4Ziz { background: none; }
+
+/* ⚠️ DYNAMIC CLASS — .rk32VTG0b6NU0RicbiOH = queue item background */
+.rk32VTG0b6NU0RicbiOH { background-color: unset; }
+
+/* ⚠️ DYNAMIC CLASS — .E912cqRfb05FrRPFKDZ_ = some hidden queue element */
+.E912cqRfb05FrRPFKDZ_ { display: none; }
+
+
+

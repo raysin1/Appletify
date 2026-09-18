@@ -1,0 +1,13 @@
+/* =============================================================================
+   21. SPICY LYRICS
+   ============================================================================= */
+
+body.SpicySidebarLyrics__Active #SpicyLyricsPage:not(.Fullscreen) {
+    border-radius: unset !important;
+}
+
+body:not(:has(.Root__main-view-overlay #SpicyLyricsPage:is(.Fullscreen))) #SpicyLyrics_FullscreenButton {
+    display: none;
+}
+
+

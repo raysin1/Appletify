@@ -1,0 +1,39 @@
+/* =============================================================================
+   5. SCROLLBARS
+   ============================================================================= */
+
+.os-scrollbar-handle,
+::-webkit-scrollbar {
+    width: 80% !important;
+    height: 20% !important;
+    margin-right: 8px;
+    border-radius: 15px !important;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+}
+
+.os-scrollbar-handle {
+    width: 30% !important;
+    border-radius: 15px !important;
+}
+
+.Root__nav-bar .os-scrollbar-handle {
+    width: 40% !important;
+    border-radius: 15px !important;
+    opacity: 0.85;
+}
+
+#search-modal-listbox::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+
+/* Right panel (queue / Now Playing view): Spotify draws its own overlay scrollbar (.os-scrollbar), so the native one
+   must never show next to it - Spotify 1.3.0 sometimes leaves a native track visible inside the list. */
+#Desktop_PanelContainer_Id, #Desktop_PanelContainer_Id * { scrollbar-width: none !important; }
+#Desktop_PanelContainer_Id::-webkit-scrollbar, #Desktop_PanelContainer_Id *::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }

@@ -1,0 +1,69 @@
+/* =============================================================================
+   4. COLORS (accent, buttons, interactive elements)
+   ============================================================================= */
+
+/* Primary button colors */
+.e-91000-button-primary__inner,
+.e-10860-button-primary__inner,
+.ButtonInner-medium-iconOnly {
+    background-color: var(--appletify-accent, #ff375f);
+}
+
+/* Large play button */
+.ButtonInner-large-iconOnly {
+    background-color: #d60017;
+    color: white;
+}
+
+/* Search "top result" card bg */
+[data-testid="top-result-card"] {
+    background-color: #363636;
+    border: 1px solid #3d3d3d;
+    border-radius: 10px;
+}
+
+/* Tertiary icon buttons */
+.Button-checkbox-small-small-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle,
+.Button-small-small-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle {
+    color: #b3b3b3;
+}
+
+/* Artist/track link hover */
+.main-trackInfo-artists a:active,
+.main-trackInfo-artists a:focus,
+.main-trackInfo-artists a:hover { color: var(--appletify-accent, #ff375f); }
+
+/* Active generic button */
+.main-nowPlayingBar-extraControls button[aria-pressed="true"],
+.main-nowPlayingBar-extraControls button[aria-pressed="true"]:focus,
+.main-nowPlayingBar-extraControls button[aria-pressed="true"]:hover { color: var(--appletify-accent, #ff375f); }
+
+/* Hide active dot indicators */
+.main-nowPlayingBar-extraControls button[aria-pressed="true"]::after { display: none; }
+.main-nowPlayingBar-extraControls button[aria-pressed="true"]::after { background-color: transparent !important; }
+
+
+
+/* Nav link active */
+.Root__globalNav .main-globalNav-navLinkActive { color: var(--appletify-accent, #ff375f); }
+.Root__globalNav .main-globalNav-navLink { background-color: unset; }
+.main-globalNav-navLink:hover { background-color: unset; }
+
+/* Change currently playing animation on song items */
+.main-trackList-rowMarker > img { filter: hue-rotate(-147deg); saturate(200%); }
+
+/* No button scale on hover */
+.e-10860-button--hover,
+.e-10860-button:hover { transform: none; }
+
+/* [add to playlist] button styling */
+[data-testid="add-to-playlist-button"] {
+    font-weight: 200;
+    color: var(--appletify-accent, #ff375f);
+    border: none !important;
+}
+
+
+
+
+

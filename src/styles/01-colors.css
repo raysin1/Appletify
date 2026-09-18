@@ -1,0 +1,67 @@
+/* =============================================================================
+   1. COLORS
+   ============================================================================= */
+
+   :root {
+    --spice-button: var(--appletify-accent, #ff375f);
+    --spice-button-active: var(--appletify-accent, #ff375f);
+    --spice-sidebar: rgb(20, 20, 20);
+    --panel-gap: 3px !important;
+    --spice-text: rgba(255, 255, 255, 0.92);
+}
+
+/*Buttons color*/
+.e-10860-icon{
+    fill: rgba(255, 255, 255, 0.92);}
+
+
+.encore-dark-theme, .encore-dark-theme .encore-base-set {
+    --background-base: #1f1f1f;
+    --background-press: unset;
+}
+
+.encore-dark-theme {
+    --text-subdued: #fdfdfd64;
+    --text-bright-accent: rgba(255, 255, 255, .92);
+}
+
+.encore-dark-theme .encore-bright-accent-set {
+    --background-highlight: var(--appletify-accent, #ff375f);
+    --background-press: var(--appletify-accent, #ff375f);
+}
+
+
+.encore-internal-color-text-base,
+.e-91000-button-primary__inner,
+.Button-buttonTertiary-textBase-medium-useBrowserDefaultFocusStyle-condensedAll {
+    color: rgba(255, 255, 255, 0.92)
+}
+
+.main-nowPlayingBar-extraControls button {
+color:rgba(255, 255, 255, .92);
+width:32px;
+height:32px;
+}
+
+
+/*Remove native button slight hover zoom*/
+@media (prefers-reduced-motion: no-preference) {
+    .e-10860-legacy-button:hover {
+        transform: unset;
+    }
+}
+
+/*Make it be a zoom in instead*/
+.e-10860-legacy-button:active {
+    transform: unset;
+    opacity:unset;
+}
+
+
+/*In case I want to remove tippys
+[id^="tippy-"]{
+    display:;
+}*/
+
+
+

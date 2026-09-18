@@ -1,0 +1,148 @@
+/* =============================================================================
+   16. PLAYLIST PAGE
+   ============================================================================= */
+
+
+
+/* Play button bar position */
+[data-testid="playlist-page"] :is(.playlist-playlist-actionBarBackground-background, .main-actionBarBackground-background) + .main-actionBar-ActionBarContainer {
+    margin-top: -120px;
+    left: 450px;
+    width: auto;
+    position: absolute;
+}
+
+[data-testid="playlist-page"] .main-actionBar-ActionBarPlayButtonContainer{ aspect-ratio: unset;}
+
+
+/* Title */
+[data-testid="playlist-page"] .main-entityHeader-title .e-10860-text.encore-text-headline-large.encore-internal-color-text-base { font-size: 2.3rem !important; }
+
+/* Container */
+[data-testid="playlist-page"] .main-entityHeader-container { max-width: 95%; margin-bottom: 29px; }
+[data-testid="playlist-page"] .main-entityHeader-container:is(.main-entityHeader-withBackgroundImage, [data-apple-hero]) { height: 450px; }
+[data-testid="playlist-page"] .main-entityHeader-titleButton { height: 40%; }
+
+
+/* Metadata */
+/* ⚠️ DYNAMIC CLASS — .GI8QLntnaSCh2ONX_y2c = playlist metadata (track count, duration) */
+[data-testid="playlist-page"] .main-entityHeader-creatorWrapper > div {
+    display:none;
+  
+}
+[data-testid="playlist-page"] .main-entityHeader-metaData > .main-entityHeader-metaDataText > * { 
+    font-size: 20px; opacity: 0.8;
+}
+
+[data-testid="playlist-page"] .main-entityHeader-metaData > [data-separator="true"] { display: none; }
+[data-testid="playlist-page"] .main-entityHeader-metaData > span { display: none; }
+
+/* Creator wrapper */
+[data-testid="playlist-page"] .main-entityHeader-creatorWrapper figure { display: none; }
+
+/* Tracklist header */
+[data-testid="playlist-page"] .main-trackList-trackListHeader { margin-bottom: 5px; position: static; }
+[data-testid="playlist-page"] .main-trackList-trackListHeaderRow { border-bottom: unset; }
+
+/* Tracklist header bar */
+.main-trackList-trackListHeader { background: unset; border-bottom: unset; -webkit-box-shadow: unset; box-shadow: unset; }
+
+/* Rename "# Title" header to "Songs" */
+[data-testid="playlist-page"] div.contentSpacing .main-trackList-trackListHeader .main-trackList-rowSectionStart > div:nth-child(1) > button > span::before { content: "Songs"; color: rgba(253, 253, 253, 0.64); }
+[data-testid="playlist-page"] div.contentSpacing .main-trackList-trackListHeader .main-trackList-rowSectionStart > div:nth-child(1) > button > span { color: transparent; }
+
+/* Hide index in header */
+[data-testid="playlist-page"] .main-trackList-trackListHeader > div > div > div.main-trackList-rowSectionIndex { visibility: hidden; }
+[data-testid="playlist-page"] .main-trackList-trackListHeaderRow .main-trackList-rowSectionIndex { visibility: hidden; }
+
+/* Duration header margin */
+[data-testid="playlist-page"] .SLiV_gdSoRxpqv9dgYbw,
+[dir=ltr] .main-trackList-durationHeader { margin-right: var(--tracklist-header-margin-inline-end, 49px); }
+
+
+/* ⚠️ DYNAMIC CLASS — .UudGCx16EmBkuFPllvss = date added column */
+[data-testid="playlist-page"] .UudGCx16EmBkuFPllvss { position: absolute; left: 45%; }
+
+/*Hide date added */
+[data-testid="playlist-page"] .main-trackList-rowSectionVariable[aria-colindex="4"] { display: none; }
+
+/* Track image zoom */
+/* Explicit size instead of zoom: zoom inside the virtualized tracklist breaks
+   row-height math and long playlists stop rendering on fast scroll (#5) */
+[data-testid="playlist-page"] .main-trackList-rowImage { width: 48px; height: 48px; }
+
+/* Track section start offset */
+[data-testid="playlist-page"] .contentSpacing > .main-trackList-trackListContainer .main-trackList-rowSectionStart { margin-left: 0; }
+/* Number column, then cover + title (no negative offsets, they overlapped) */
+[data-testid="playlist-page"] .main-trackList-rowSectionStart { left: 0; position: relative; }
+[data-testid="playlist-page"] .main-trackList-trackListRow { --tracklist-index-column-width: 28px; }
+/* Number / playing indicator / hover play button centered in the index column */
+[data-testid="playlist-page"] .main-trackList-rowMarker { display: flex; justify-content: center; align-items: center; padding: 0; }
+[data-testid="playlist-page"] .main-trackList-rowMarker .main-trackList-rowMarker > span { margin: 0; padding: 0; text-align: center; width: 100%; left: 0 !important; right: 0 !important; }
+[data-testid="playlist-page"] .main-trackList-rowMarker .main-trackList-rowImagePlayButton { left: 50%; top: 50%; translate: -50% -50%; }
+
+/* Playing icon */
+[data-testid="playlist-page"] .main-trackList-rowMarker > img { display: block; z-index: 99; margin-left: 5px; }
+[data-testid="playlist-page"] .main-trackList-rowImagePlayButton { display: block; z-index: 99; }
+
+
+/* Hide artist track subtitle on album pages / show on playlist */
+[data-testid="playlist-page"] .ET4SVjxyjH4WkA3kSo5G { position: absolute; left: 26.1vw; white-space: nowrap; }
+
+
+
+/*Hide artist underneath songs in abums if it is not multiple artists*/
+[data-testid="album-page"] .main-trackList-rowMainContent > span.standalone-ellipsis-one-line:not(:has(> span > a:nth-child(2))){
+    display: none;
+}
+
+[data-testid="album-page"] .main-trackList-rowMainContent > span.standalone-ellipsis-one-line{
+    grid-column: auto !important;
+    grid-area: subtitle;
+}
+
+/* Hide music video badge in song rows (stable class, locale-independent) */
+.main-trackList-rowMainContent .x-music-video {
+    display:none;
+}
+
+
+/* Sort box label hidden */
+[data-testid="playlist-page"] .x-sortBox-sortDropdown span { display: none; }
+
+/* Action bar background */
+[data-testid="playlist-page"] .main-actionBarBackground-background { width: 0; }
+.playlist-playlist-actionBarBackground-background { display: none; }
+
+/* Background/overlay hidden */
+[data-testid="playlist-page"] .main-entityHeader-backgroundColor { display: none; }
+
+/* Play button hover */
+[data-testid="playlist-page"] .e-10860-button-primary:hover .e-10860-button-primary__inner { background-color: var(--background-highlight); }
+
+/* Inline curation (add music) section */
+.playlist-playlist-playlistInlineCurationSection { margin-left: 20px; margin-right: 20px; }
+.playlist-playlist-playlistInlineCurationWrapper { width: 370px; }
+.playlist-playlist-playlistDescription.playlist-playlist-playlistDescription { display: none; }
+.playlist-inlineSearchBox-filterInput:focus { outline: 5px solid #a03f4a !important; }
+.playlist-inlineSearchBox-searchIconContainer > svg { fill: var(--appletify-accent, #ff375f); }
+
+.playlist-playlist-playlistInlineCurationSection > .playlist-playlist-playlistInlineCurationWrapper > h2 { color: transparent; font-size: 0; }
+.playlist-playlist-playlistInlineCurationSection > .playlist-playlist-playlistInlineCurationWrapper > h2::before { content: "Add Music"; color: white; font-weight: 300 !important; font-size: 24px; }
+
+.playlist-playlist-searchResultListContainer:has(.playlist-playlist-emptySearchTermContainer) { display: none; }
+
+/* Things to HIDE on playlist page */
+[data-testid="playlist-page"] [data-testid="recommended-track"],
+[data-testid="playlist-page"] .playlist-playlist-findMoreButton,
+[data-testid="playlist-page"] .main-entityHeader-headerText > span[data-encore-id="text"]:first-child,
+[data-testid="playlist-page"] [data-encore-id="popoverTrigger"] { display: none; }
+/* "Invite collaborators" button — localized aria-label, generated in theme.js */
+
+
+/* ⚠️ DYNAMIC CLASS — .eJbkaBhDfq9NfV5_QS8V = track count/duration info (shared with album) */
+.eJbkaBhDfq9NfV5_QS8V { display: none; }
+
+/* Artist "All songs for …" page — localized aria-label, generated in theme.js */
+
+

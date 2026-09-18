@@ -1,0 +1,37 @@
+/* =============================================================================
+   27. NOW PLAYING VIEW — Apple Music "Now Playing" panel
+   (right sidebar with [data-testid="NPV_Panel_OpenDiv"]; earlier versions of
+   the theme hid it entirely)
+   ============================================================================= */
+/* the sidebar keeps Spotify's own display (flex) — overriding it collapsed the panel wrappers */
+/* …but never the 32px collapsed "peek" strip Spotify leaves on the right */
+.Root__right-sidebar:has(> .Root__right-sidebar-peek.Root__right-sidebar-collapsed) { display: none !important; }
+/* the panel's own hide / expand buttons stay reachable */
+.main-nowPlayingView-panel button[aria-label*="Now Playing view"], .Root__right-sidebar button[aria-label*="Now Playing view"] { width: 32px !important; min-width: 32px; height: 32px !important; opacity: 1 !important; }
+.main-nowPlayingView-panel { background: rgb(28 28 30 / 92%) !important; border-left: 1px solid rgb(255 255 255 / 8%); padding: 12px 12px 24px !important; margin: 0 !important; width: auto !important; }
+.main-nowPlayingView-panel .main-nowPlayingView-nowPlayingWidget { padding: 0; }
+/* header row (context title + close/expand buttons) */
+.main-nowPlayingView-panel .main-nowPlayingView-contextTitle, .main-nowPlayingView-panel [class*="contextTitle"] { font-size: 13px; color: rgb(255 255 255 / 55%); }
+/* cover: big, rounded, no canvas / video enhancement */
+.main-nowPlayingView-coverArtContainer { border-radius: 14px !important; overflow: hidden; box-shadow: 0 16px 40px rgb(0 0 0 / 45%); }
+.main-nowPlayingView-coverArtContainer img { border-radius: 14px !important; }
+.main-nowPlayingView-canvasVisualEnhancement, .main-nowPlayingView-actionButtonContainer, .main-nowPlayingView-contextItemVisualEnhancement,
+[data-testid="track-visual-enhancement"], .main-nowPlayingView-coverArtVisualEnhancement { display: none !important; }
+.main-nowPlayingView-coverArtContainer { width: 100% !important; aspect-ratio: 1; }
+/* track info */
+.main-nowPlayingView-contextItemInfo { margin-top: 16px; }
+.main-nowPlayingView-trackInfo .main-trackInfo-name, .main-nowPlayingView-trackInfo .main-trackInfo-name a { font-size: 17px !important; font-weight: 700; }
+.main-nowPlayingView-trackInfo .main-trackInfo-artists, .main-nowPlayingView-trackInfo .main-trackInfo-artists a { font-size: 14px !important; color: rgb(255 255 255 / 60%) !important; }
+/* sections */
+.main-nowPlayingView-section { margin-top: 20px; padding: 14px; border-radius: 12px; background: rgb(255 255 255 / 5%); }
+.main-nowPlayingView-sectionHeader h2, .main-nowPlayingView-sectionHeaderText { font-size: 15px !important; font-weight: 700; }
+.main-nowPlayingView-section:has([aria-label*="Related music vide"]), .main-nowPlayingView-section:has(.search-searchCategory-carousel) { display: none; }
+.main-nowPlayingView-section [data-encore-id="listRowTitle"] { font-size: 14px; }
+.main-nowPlayingView-section [data-encore-id="listRowSubtitle"] { font-size: 12px; color: rgb(255 255 255 / 55%); }
+.main-nowPlayingView-section img { border-radius: 6px; }
+
+/* ---- Now Playing view only on request (Appletify setting "npvOnlyManual", guard in theme.js) ----
+   Spotify re-opens the view on launch and on playback start. Until theme.js has seen an explicit request
+   (cover click / Alt+Shift+R) it adds no "appletify-npv-allowed" class, and the auto-opened view stays
+   invisible while the guard closes it - no flash. The queue is unaffected: it has no NPV_Panel_OpenDiv. */
+html:not(.appletify-no-npvOnlyManual):not(.appletify-npv-allowed) .Root__right-sidebar:has([data-testid="NPV_Panel_OpenDiv"]) { display: none !important; }

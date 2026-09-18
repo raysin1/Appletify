@@ -1,0 +1,126 @@
+/* =============================================================================
+   11. CONTEXT MENU
+   ============================================================================= */
+
+/* Translucent frosted glass context menu */
+[role="menu"] {
+    border-radius: 16px;
+    overflow: visible; /* submenus live inside the parent menu, so the root must not clip */
+    background-color: rgba(40, 40, 40, 0.7);
+    box-shadow: 0 0 0 .5px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(255, 255, 255, 0.12) inset, 0 12px 32px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.3);
+    padding: 0px;
+}
+[role="menu"]::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    backdrop-filter: blur(60px) saturate(2.2);
+    border-radius: 26px;
+    z-index: -1;
+}
+
+/*Context menu separators*/
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    right: 17px;
+    height: 1px;
+    background: white;
+    bottom: -1px;
+    opacity: 11%;
+}
+/* Keep items that follow a divider (e.g. "Share"); only the divider line goes */
+.main-contextMenu-dividerBefore{ border-top: none; margin-top: 0; }
+
+
+/*Text size*/
+[role="menuitem"] [data-encore-id="text"],
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):has(> .appletify-dead) > div:nth-child(1) >span{
+    font-size:15px;
+    font-family:'SF Pro';
+}
+
+
+/* Context menu item row height */
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]) {
+    padding-inline: 20px;
+}
+
+
+/* Context menu hover: handled below (accent background on the button itself);
+   the old ::before overlay painted above the label and hid the text */
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"])::before { content: none !important; }
+
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):not([aria-checked=true]):focus, :is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):hover{
+    background-color:unset;
+}
+
+
+
+/* Context menu tooltip */
+.appletify-dead {
+    --generic-tooltip-background-color: #282828c7;
+    backdrop-filter: blur(90px);
+}
+
+/*Hide download button*/
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):has(path[d^="M4.995"]){display:none;}
+
+/* Hide context menu tooltip wrapper */
+.appletify-dead { display: none !important; }
+
+/* Reorder icons inside context menu items */
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]) > svg { order:2; }
+
+/*Hide icon if it has a dropdown menu*/
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):has(>.appletify-dead) > div > svg {display:none;}
+
+
+/* Icon wrapper in context menu */
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]) > .appletify-dead > svg { display: none; }
+
+
+/* Hide external link option — localized aria-label, generated in theme.js */
+
+/* ⚠️ DYNAMIC CLASS — .egE6UQjF_UUoCzvMxREj = some context menu item */
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]).egE6UQjF_UUoCzvMxREj { display: none; }
+
+
+/* ⚠️ DYNAMIC CLASS — .IEulmRakQT_FgH43ov2a = some hidden context menu element */
+.IEulmRakQT_FgH43ov2a { display: none; }
+
+/* --- macOS-style menu: frosted glass, rounded items, accent highlight ----- */
+[role="menu"] {
+    padding: 5px !important;
+    background-color: rgb(44 44 46 / 80%) !important;
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border-radius: 12px !important;
+    box-shadow: 0 0 0 0.5px rgb(0 0 0 / 50%), inset 0 0 0 0.5px rgb(255 255 255 / 15%), 0 12px 32px rgb(0 0 0 / 35%) !important;
+}
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]) {
+    border-radius: 7px !important;
+    height: 32px !important;
+    padding: 0 10px !important;
+    font-size: 13px !important;
+    color: rgba(255, 255, 255, 0.92) !important;
+}
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"])::after { content: none !important; }
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):hover, :is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):focus-visible { background-color: var(--appletify-accent, #ff375f) !important; color: #fff !important; }
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):hover *, :is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):focus-visible * { background-color: transparent !important; color: #fff !important; -webkit-text-fill-color: #fff !important; }
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):hover svg, :is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):focus-visible svg { fill: #fff !important; }
+/* Spotify 1.3.0: a separator is an empty div between the <li>s */
+[role="menu"] > div:empty, [role="menu"] > hr, [role="menu"] [role="separator"] {
+    height: 1px !important; padding: 0 !important; border: 0 !important; margin: 5px 0 !important; background: rgb(255 255 255 / 12%) !important;
+}
+
+/* nested submenus (Add to other playlist, Move to folder, Share...) stay compact and scroll */
+[role="menu"] > li [role="menu"],
+[role="menu"] [role="menu"] { max-height: min(440px, calc(100vh - 48px)) !important; overflow: hidden auto !important; }
+[role="menu"]::-webkit-scrollbar { width: 8px; }
+[role="menu"]::-webkit-scrollbar-thumb { background: rgb(255 255 255 / 25%); border-radius: 4px; border: 2px solid transparent; background-clip: padding-box; }
+
+/* "Create" (+) menu: items are Encore list rows (icon + title + subtitle), taller than a plain menu item */
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):has([data-encore-id="listRow"]) { height: auto !important; min-height: 56px !important; padding: 2px 10px !important; }
+:is([role="menuitem"],[role="menuitemcheckbox"],[role="menuitemradio"]):has([data-encore-id="listRow"]) [data-encore-id="listRow"] { --box-min-block-size: 52px; padding-block: 4px !important; }

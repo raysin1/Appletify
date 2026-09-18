@@ -1,0 +1,138 @@
+/* =============================================================================
+   23. ALBUM PAGE — Apple Music layout
+   Cover 300px, compact header text, Play + Shuffle pills, ruled track list
+   ============================================================================= */
+[data-testid="album-page"] div.main-entityHeader-container { min-height: 360px !important; }
+[data-testid="album-page"] .main-entityHeader-imageContainer { width: 300px; height: 300px; }
+[data-testid="album-page"] .main-entityHeader-container > .contentSpacing .main-entityHeader-headerText { height: auto; justify-content: flex-start; padding-top: 28px; }
+[data-testid="album-page"] .main-entityHeader-title { font-size: 30px !important; line-height: 1.15; }
+[data-testid="album-page"] .main-entityHeader-title h1 { font-size: 30px !important; font-weight: 700; }
+[data-testid="album-page"] .main-entityHeader-metaData .main-entityHeader-creatorWrapper,
+[data-testid="album-page"] .main-entityHeader-metaData .main-entityHeader-creatorWrapper a { font-size: 26px !important; font-weight: 500; }
+[data-testid="album-page"] .main-entityHeader-metaData > [data-encore-id="text"] { font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.55); margin-top: 6px; }
+
+/* Shuffle as a labelled pill next to Play */
+[data-testid="album-page"] .main-actionBar-ActionBarRow > button:has(path[d^="M13.151"], path[d^="M18.788"]) {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    width: auto; min-width: 130px; height: 40px; padding: 0 18px;
+    border-radius: 30px;
+    background-color: #2f2f2f;
+    box-shadow: inset 0 1px 1px rgb(255 255 255 / 10%), inset 0 -1px 1px rgb(255 255 255 / 10%);
+    color: var(--appletify-accent, #ff375f);
+}
+[data-testid="album-page"] .main-actionBar-ActionBarRow > button:has(path[d^="M13.151"], path[d^="M18.788"]) svg { width: 18px; height: 18px; fill: var(--appletify-accent, #ff375f); }
+[data-testid="album-page"] .main-actionBar-ActionBarRow > button:has(path[d^="M13.151"], path[d^="M18.788"])::after {
+    content: var(--appletify-i18n-shuffle, "Shuffle");
+    font-size: 18px; font-weight: 700; color: var(--appletify-accent, #ff375f); margin-bottom: 3px;
+}
+[data-testid="album-page"] .main-actionBar-ActionBarRow > button:has(path[d^="M13.151"], path[d^="M18.788"]) > span { align-items: center; }
+
+/* Ruled, compact track list */
+[data-testid="album-page"] .main-trackList-trackListContainer { border-top: 1px solid rgb(255 255 255 / 12%); padding-top: 6px; }
+[data-testid="album-page"] .main-trackList-trackListRow { height: 56px; }
+
+/* Play counts: grey, right-aligned, just before the duration
+   (setting "playCounts": html.appletify-no-playCounts hides the column) */
+html.appletify-no-playCounts [data-testid="album-page"] .main-trackList-rowSectionVariable[aria-colindex="3"] { display: none !important; }
+[data-testid="album-page"] .main-trackList-rowSectionVariable[aria-colindex="3"] { display: flex; justify-content: flex-end; }
+[data-testid="album-page"] .main-trackList-rowSectionVariable[aria-colindex="3"],
+[data-testid="album-page"] .main-trackList-rowSectionVariable[aria-colindex="3"] * { font-size: 14px; font-variant-numeric: tabular-nums; color: rgba(255, 255, 255, 0.55); text-align: right; }
+[data-testid="album-page"] .main-trackList-rowSectionVariable[aria-colindex="3"] { padding-right: 24px; }
+
+
+/* --- Playlist page: same header treatment as albums ----------------------- */
+[data-testid="playlist-page"] div.main-entityHeader-container { min-height: 360px !important; height: 360px !important; }
+[data-testid="playlist-page"] .main-entityHeader-imageContainer { width: 300px; height: 300px; }
+[data-testid="playlist-page"] .main-entityHeader-headerText { height: auto !important; justify-content: flex-start; padding-top: 28px; margin-bottom: 0; }
+[data-testid="playlist-page"] .main-entityHeader-title, [data-testid="playlist-page"] .main-entityHeader-title h1 { font-size: 30px !important; font-weight: 700; line-height: 1.15; }
+[data-testid="playlist-page"] .main-entityHeader-metaData .main-entityHeader-creatorWrapper,
+[data-testid="playlist-page"] .main-entityHeader-metaData .main-entityHeader-creatorWrapper a { font-size: 26px !important; font-weight: 500; }
+[data-testid="playlist-page"] .main-entityHeader-metaData > div.main-entityHeader-metaDataText:not(.main-entityHeader-creatorWrapper),
+[data-testid="playlist-page"] .main-entityHeader-metaData > div.main-entityHeader-metaDataText:not(.main-entityHeader-creatorWrapper) * { font-size: 13px !important; font-weight: 600; color: rgba(255, 255, 255, 0.55); }
+[data-testid="playlist-page"] .main-entityHeader-metaData > div.main-entityHeader-metaDataText:not(.main-entityHeader-creatorWrapper) { margin-top: 6px; }
+/* action bar: Play / Shuffle / search under the meta, flush with the cover bottom */
+[data-testid="playlist-page"] > .main-actionBar-ActionBarContainer,
+[data-testid="playlist-page"] > .playlist-playlist-playlistContent > .main-actionBar-ActionBarContainer { position: absolute !important; left: 382px !important; right: auto !important; top: 282px !important; margin: 0 !important; width: auto !important; min-width: 360px; z-index: 2; }
+/* the playlist "Add / Mix / Name & details" toolbar is a second ActionBarContainer inside
+   the content: keep it in flow under the header instead of on top of Play / Shuffle */
+/* own playlists: the Add / Mix / Name & details toolbar sits below the header, flush with the cover's and the track list's left edge */
+[data-testid="playlist-page"] .playlist-playlist-playlistContent > .contentSpacing .main-actionBar-ActionBarContainer { position: static !important; top: auto !important; left: auto !important; margin: 0 0 10px !important; padding: 0 !important; width: auto !important; min-width: 0; }
+[data-testid="playlist-page"] .playlist-playlist-playlistContent > .contentSpacing:has(.main-actionBar-ActionBarContainer) { height: auto !important; }
+/* the page section is the containing block, so the offset is the same with the playbar at the top or at the bottom */
+[data-testid="playlist-page"] { position: relative; }
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow > button:has(path[d^="M13.151"], path[d^="M18.788"]) {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    width: auto; min-width: 130px; height: 40px; padding: 0 18px; border-radius: 30px;
+    background-color: #2f2f2f; box-shadow: inset 0 1px 1px rgb(255 255 255 / 10%), inset 0 -1px 1px rgb(255 255 255 / 10%); color: var(--appletify-accent, #ff375f);
+}
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow > button:has(path[d^="M13.151"], path[d^="M18.788"]) svg { width: 18px; height: 18px; fill: var(--appletify-accent, #ff375f); }
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow > button:has(path[d^="M13.151"], path[d^="M18.788"])::after { content: var(--appletify-i18n-shuffle, "Shuffle"); font-size: 18px; font-weight: 700; color: var(--appletify-accent, #ff375f); margin-bottom: 3px; }
+
+/* --- Playlists with a banner instead of a cover (daylist): rounded hero ----
+   Spotify paints the banner on a fixed layer behind the page (with a dark
+   gradient); theme.js copies the image URL into --apple-banner on the header,
+   so the hero scrolls with the page and is shown undimmed. */
+.main-view-container:has([data-testid="playlist-page"] :is(.main-entityHeader-withBackgroundImage, [data-apple-hero])) > .before-scroll-node { display: none !important; }
+[data-testid="playlist-page"] div.main-entityHeader-container:is(.main-entityHeader-withBackgroundImage, [data-apple-hero]) {
+    height: 460px !important; min-height: 460px !important;
+    /* same left/right edges as the track list (25px inside the content box) */
+    width: calc(100% - 50px) !important; max-width: none !important; margin-left: 25px !important; margin-right: 25px !important; box-sizing: border-box;
+    background-image: var(--apple-banner, none); background-size: cover; background-position: center 35%;
+    border-radius: 16px; overflow: hidden; box-shadow: 0 16px 40px rgb(0 0 0 / 30%);
+}
+[data-testid="playlist-page"] .main-entityHeader-container:is(.main-entityHeader-withBackgroundImage, [data-apple-hero]) .main-entityHeader-headerText { padding-top: 36px; }
+[data-testid="playlist-page"] .main-entityHeader-container:is(.main-entityHeader-withBackgroundImage, [data-apple-hero]) .main-entityHeader-title,
+[data-testid="playlist-page"] .main-entityHeader-container:is(.main-entityHeader-withBackgroundImage, [data-apple-hero]) .main-entityHeader-metaData * { text-shadow: 0 1px 12px rgb(0 0 0 / 35%); }
+[data-testid="playlist-page"]:has(:is(.main-entityHeader-withBackgroundImage, [data-apple-hero])) > .main-actionBar-ActionBarContainer,
+[data-testid="playlist-page"]:has(:is(.main-entityHeader-withBackgroundImage, [data-apple-hero])) > .playlist-playlist-playlistContent > .main-actionBar-ActionBarContainer { top: 382px !important; left: 49px !important; }
+
+/* ---- playlist action row: uniform spacing and uniform round icon buttons ---- */
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow { gap: 14px !important; align-items: center !important; }
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow > *,
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow > button { margin: 0 !important; }
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow > .main-actionBar-ActionBarPlayButtonContainer { margin-right: 0 !important; }
+/* every secondary icon button (More, Mix, Download, Save...) gets the same 40px circle */
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow > button.e-10860-legacy-button-tertiary:not(:has(path[d^="M13.151"], path[d^="M18.788"])),
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow .x-filterBox-expandButton,
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow .x-sortBox-sortDropdown {
+    width: 40px !important; height: 40px !important; min-width: 40px !important; padding: 0 !important; box-sizing: border-box;
+    display: inline-flex !important; align-items: center !important; justify-content: center !important;
+    background: rgb(47 47 47) !important; border-radius: 50% !important;
+}
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow > button.e-10860-legacy-button-tertiary:not(:has(path[d^="M13.151"], path[d^="M18.788"])) svg { width: 24px !important; height: 24px !important; }
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow .playlist-playlist-searchBoxContainer { gap: 14px !important; margin: 0 !important; }
+/* the collapsed search box is a 32px box with the button hanging 8px outside it - make it a real 40px slot */
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow .x-filterBox-filterInputContainer { min-width: 40px !important; height: 40px !important; min-height: 40px !important; }
+/* collapsed: the wrapper is a 42px pill by default, which peeks out behind the 40px round button */
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow .x-filterBox-filterInputContainer:not(:has(> input[aria-hidden="false"])) { width: 40px !important; border-radius: 50% !important; overflow: hidden; }
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow .x-filterBox-filterInputContainer:not(:has(> input[aria-hidden="false"])) input.x-filterBox-filterInput { width: 40px !important; max-width: 40px !important; min-width: 0 !important; padding: 0 !important; }
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow .x-filterBox-expandButton { left: 0 !important; top: 0 !important; }
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow .x-filterBox-filterInput { height: 40px !important; border-radius: 20px !important; padding-left: 40px !important; }
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow .x-filterBox-overlay { height: 40px !important; align-items: center; }
+/* magnifier of the expanded field sits exactly where the collapsed button's icon is (12px from the left edge) */
+[data-testid="playlist-page"] .main-actionBar-ActionBarRow .x-filterBox-searchIconContainer { padding: 8px 8px 8px 12px !important; }
+
+/* ---- "Turn on mix": Spotify adds a decorative glow SVG (drawn for its 56px round button) under Play.
+   Stretched over our 130x40 pill it looks broken - hide it, keep the pill as-is. ---- */
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBarPlayButtonContainer > div[aria-hidden="true"]:has(svg) { display: none !important; }
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBar .main-playButton-PlayButton > button { background: transparent !important; box-shadow: none !important; }
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-actionBar-ActionBar .main-playButton-PlayButton > button > span { background-color: #2f2f2f !important; opacity: 1 !important; }
+
+/* ---- header text: title box starts at the cover's top edge (cover top = 46px, text column starts at 10px) ---- */
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-entityHeader-container:not(:is(.main-entityHeader-withBackgroundImage, [data-apple-hero])) .main-entityHeader-headerText { padding-top: 36px !important; }
+
+/* ---- track list flush with the cover's left edge: no row padding, index column left-aligned ---- */
+/* keep the 16px inner padding (so the hover highlight extends left of the number) but pull the row 16px left,
+   so the number itself still starts at the cover edge */
+[data-testid="playlist-page"] .main-trackList-trackListHeaderRow,
+[data-testid="playlist-page"] .main-trackList-trackListRowGrid { padding-left: 16px !important; margin-left: -16px !important; }
+[data-testid="playlist-page"] .main-trackList-trackListRowGrid .main-trackList-rowSectionIndex,
+[data-testid="playlist-page"] .main-trackList-trackListHeaderRow .main-trackList-rowSectionIndex { justify-self: start; }
+[data-testid="playlist-page"] .main-trackList-trackListRowGrid .main-trackList-rowSectionIndex { margin-left: -2px; } /* glyph side bearing: digit ink starts exactly at the cover edge */
+[data-testid="playlist-page"] .main-trackList-rowMarker { justify-content: flex-start !important; }
+[data-testid="playlist-page"] .main-trackList-rowMarker .main-trackList-rowMarker > span { text-align: left !important; }
+/* the button is scaled 1.5x around its centre (09-tracklist): -7px puts the triangle's left edge on the digit's left edge */
+[data-testid="playlist-page"] .main-trackList-rowMarker .main-trackList-rowImagePlayButton { left: -7px !important; translate: 0 -50% !important; }
+
+/* ---- Spotify 1.3.0 draws a cover-tinted colour layer + gradient inside the header; Apple Music headers are flat ---- */
+:is([data-testid="album-page"], [data-testid="playlist-page"]) .main-entityHeader-container:not([data-apple-hero]) > div:not(.main-entityHeader-contentWrapper) { display: none !important; }
